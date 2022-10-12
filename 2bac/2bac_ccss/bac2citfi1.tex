@@ -1,0 +1,178 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{2º Bachillerato CIT}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Final 1ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{105 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[6] Calcula el siguiente límite: $$\lim_{x \to 1} \left(\frac{x^{3} - 2 x + 2}{3 x^{2} - 2}\right)^{\frac{x^{2} - 3 x}{x^{2} + x - 2}}$$
+\begin{solution}
+$\lim_{x \to 1} \left(\frac{x^{3} - 2 x + 2}{3 x^{2} - 2}\right)^{\frac{x^{2} - 3 x}{x^{2} + x - 2}}=1^\infty$. Indeterminación \\ $g(x)\cdot\left[f(x)-1\right]=\frac{x \left(x - 3\right)}{\left(x - 1\right) \left(x + 2\right)}\cdot\frac{\left(x - 1\right) \left(x^{2} - 2 x - 4\right)}{3 x^{2} - 2}=\frac{x \left(x - 3\right) \left(x^{2} - 2 x - 4\right)}{\left(x + 2\right) \left(3 x^{2} - 2\right)}$. \\ $\lim_{x \to 1}\frac{x \left(x - 3\right) \left(x^{2} - 2 x - 4\right)}{\left(x + 2\right) \left(3 x^{2} - 2\right)}=\frac{10}{3}$. Por tanto: \\ $\lim_{x \to 1} \left(\frac{x^{3} - 2 x + 2}{3 x^{2} - 2}\right)^{\frac{x^{2} - 3 x}{x^{2} + x - 2}}=e^{\frac{10}{3}}$
+
+\end{solution}
+\addpoints
+
+\question[4] Hallar los puntos de la gráfica $y=2 x^{3} + 3 x^{2} - 30 x - 6$ en el cual la recta tangente es paralela a la recta $y=6 x - 5$
+\begin{solution}$f'(x)=6 x^{2} + 6 x - 30\land m=6$. Luego: \\ $6 x^{2} + 6 x - 30 = 6 \to x =\left[ -3, \  2\right] $. \ Los puntos de la gráfica son: \\   $\left(-3,57 \right)$ . \\  $\left(2,-38 \right)$ . \\ 
+\end{solution}
+\addpoints
+
+\question Halla la derivadas de la siguientes funciones:
+
+\begin{parts}
+\part[7] $\log{\left(\sqrt{\frac{\cos{\left(x \right)} + 1}{1 - \cos{\left(x \right)}}} \right)}$
+\begin{solution}
+$f'(x)=\left(- \frac{\log{\left(1 - \cos{\left(x \right)} \right)}}{2} + \frac{\log{\left(\cos{\left(x \right)} + 1 \right)}}{2}\right)^{'}=- \frac{\sin{\left(x \right)}}{2 \left(\cos{\left(x \right)} + 1\right)} - \frac{\sin{\left(x \right)}}{2 \left(1 - \cos{\left(x \right)}\right)}=\frac{\sin{\left(x \right)}}{\left(\cos{\left(x \right)} - 1\right) \left(\cos{\left(x \right)} + 1\right)}=- \frac{1}{\sin{\left(x \right)}}$
+\end{solution}
+
+\part[7] $\frac{x \sqrt{x^{2} - 1}}{2} - \tan{\left(x + \sqrt{x^{2} - 1} \right)}$
+\begin{solution}
+
+
+$f'(x)=\left(\frac{x \sqrt{x^{2} - 1}}{2}\right)^{'}+\left(- \tan{\left(x + \sqrt{x^{2} - 1} \right)}\right)^{'}=\frac{2x^{2} - 1}{2\sqrt{x^{2} - 1}}- \frac{\left(x + \sqrt{x^{2} - 1}\right) \left(\sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)} \right)}{\sqrt{x^{2} - 1}}=\frac{2 x^{2} - 2 \left(x + \sqrt{x^{2} - 1}\right) \sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)}-1}{2 \sqrt{x^{2} - 1}}
+$
+
+\end{solution}
+
+\end{parts}
+\addpoints
+
+
+\question[5] Determina a y b para que sea derivable en $\mathbb{R}$ la función: $$f(x)=\left\{\begin{matrix}
+\log{\left(\sin{\left(x \right)} + e \right)} & si & x<0 \\
+a x + b + x^{3} & si & x\geqslant 0 \\
+\end{matrix}\right.$$ 
+
+
+\begin{solution}
+Continuidad en 0:\\ $\lim_{x \to 0^-} \log{\left(\sin{\left(x \right)} + e \right)} = \lim_{x \to 0^+}\left(a x + b + x^{3}\right) \to 1 = b $ \\ Derivabilidad en 0: \\ $\lim_{x \to 0^-}\left(\frac{\cos{\left(x \right)}}{\sin{\left(x \right)} + e}\right) = \lim_{x \to 0^+}\left(a + 3 x^{2}\right) \to e^{-1} = a $ \\ Por tanto: $\left\{ a : e^{-1}, \  b : 1\right\} $ \\ 
+\end{solution}
+
+\addpoints
+
+\question[6] Aprovechando como hipotenusa una pared de $10 \sqrt{2}$ m. se desea acotar una superficie triangular de 
+área máxima.¿Qué medidas deberán tener los otros dos lados (catetos)?
+
+\begin{solution}
+Función a optimizar: $\frac{x \sqrt{200 - x^{2}}}{2}$ \\ $f'(x)=\frac{100 - x^{2}}{\sqrt{200 - x^{2}}}\land f''(x)=\frac{x \left(x^{2} - 300\right)}{\left(200 - x^{2}\right)^{\frac{3}{2}}}$ \\ Extremos relativos: \\ $-10\land f''(-10)=2$ \\ $10\land f''(10)=-2$ \\
+\end{solution}
+
+\addpoints
+
+
+\question Dada la función: $x + e^{- x}$ 
+
+\begin{parts}
+\part[5] Determina los intervalos de crecimiento y decrecimiento de f, así como los extremos relativos
+\begin{solution}
+$dom(f(x))=\mathbb{R}$ \\
+$f'(x)=1 - e^{- x} \to f'(x)=0 \to 1 - e^{- x} = 0 \to x=0 $  \\
+
+Intervalos de crecimiento: $\left[ \left[ \left(-\infty, 0\right), \  \text{False}\right], \  \left[ \left(0, \infty\right), \  \text{True}\right]\right]$ \\
+ 
+\end{solution}
+\part[5] Determina los intervalos de concavidad y convexidad de f
+\begin{solution}$f''(x)=e^{- x} \to f''(x)>0$ \\ Intervalos de convexidad:$\left[ \mathbb{R}, \  \text{True}\right]$ \\ 
+\end{solution}
+\part[5] Determina las asíntotas de la gráfica de f
+\begin{solution}
+$dom(f(x))=\mathbb{R} \to \nexists A.V.$ \\
+$lim_{x \to +\infty} f(x)= \infty + 0 = \infty \land lim_{x \to -\infty} f(x)= -\infty \to \nexists A.H.$ \\
+Asíntota oblícua: \\ 
+
+pendiente: $lim_{x \to \infty}\frac{f(x)}{x}=lim_{x \to \infty}1+ \frac{e^{-x}}{x} = 1$ \\
+ordenada: $lim_{x \to \infty}f-m\cdot x=lim_{x \to \infty}e^{-x}=0 \to A.O: y=x$
+
+\end{solution}
+
+
+\end{parts}
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
