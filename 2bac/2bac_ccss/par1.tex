@@ -1,0 +1,192 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 1ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question Dadas las matrices  $A=\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)$, $B=\left(\begin{matrix}2 & 1\\0 & -1\\1 & 2\end{matrix}\right)$ y $C=\left(\begin{matrix}1 & -1 & 0\\1 & 0 & 1\end{matrix}\right)$.
+%\noaddpoints % to omit double points count
+\begin{parts}
+\part[1] Encontrar si existe una matriz $X$ tal que $3\cdot X + 2\cdot A = B \cdot C$. 
+\begin{solution}
+$X = \frac{1}{3}\cdot (B \cdot C - 2 \cdot A)=\frac{1}{3}\left(\left(\begin{matrix}3 & -2 & 1\\-1 & 0 & -1\\3 & -1 & 2\end{matrix}\right)-\left(\begin{matrix}2 & 0 & -2\\-6 & 4 & 6\\-2 & 6 & 0\end{matrix}\right)\right)=\left(\begin{matrix}\frac{1}{3} & - \frac{2}{3} & 1\\\frac{5}{3} & - \frac{4}{3} & - \frac{7}{3}\\\frac{5}{3} & - \frac{7}{3} & \frac{2}{3}\end{matrix}\right)$ 
+\end{solution}
+
+
+\part[1] Encontrar si existe la matriz inversa de $A$, por determinantes
+\begin{solution}
+$\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & -3 & -1\\0 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-9 & -3 & 2\\-3 & -1 & 0\\-7 & -3 & 2\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{9}{2} & \frac{3}{2} & -1\\\frac{3}{2} & \frac{1}{2} & 0\\\frac{7}{2} & \frac{3}{2} & -1\end{matrix}\right)$.
+\end{solution}
+
+
+
+\end{parts}
+\addpoints
+
+
+
+\question Dada: $$A=\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)$$ 
+%\noaddpoints % to omit double points count
+
+\begin{parts}
+\part[1] Calcula $$A-2\cdot I$$ siendo $I$ la matriz identidad de orden 3. 
+\begin{solution}
+$A-2\cdot I=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$.  
+\end{solution}
+\part[2] Determina los valores del parámetro $k$ para que la matriz: $$A-k\cdot I$$ tenga inversa.
+\begin{solution}
+$A-k\cdot I =\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)-k \cdot \left(\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right)=\left(\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right)$$\to \left|\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right|=- k \left(k - 3\right) \left(k - 1\right)$$\to k \neq\left( 0, \  1, \  3\right)$.
+\end{solution}
+
+\part[2] Encuentra la matriz $X$ que verifica que:$$(A-2\cdot I )\cdot X = 2\cdot I$$.
+\begin{solution}
+
+$(A-2\cdot I )\cdot X = 2\cdot I \to X=(A-2\cdot I)^{-1}\cdot 2I$\\Obtengamos las matrices que necesitamos: $(A-2\cdot I )=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$ y $\left|\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right|=2$.$\rightarrow$ $\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)$.\\Por tanto $X=\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)\cdot\left(\begin{matrix}2 & 0 & 0\\0 & 2 & 0\\0 & 0 & 2\end{matrix}\right)=\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)$
+\end{solution}
+\end{parts}
+
+\addpoints
+
+
+\question Dadas las matrices  $A=\left(\begin{matrix}-2 & -1 & 1\\-1 & 0 & 1\end{matrix}\right)$ y $B=\left(\begin{matrix}1 & -1\\2 & 0\\-2 & 1\end{matrix}\right)$
+%\noaddpoints % to omit double points count
+
+\begin{parts}
+\part[1] Calcula $C=B\cdot A - A^t \cdot B^t$
+\begin{solution}
+$B\cdot A=\left(\begin{matrix}-1 & -1 & 0\\-4 & -2 & 2\\3 & 2 & -1\end{matrix}\right)$ y $A^t\cdot B^t=\left(\begin{matrix}-1 & -4 & 3\\-1 & -2 & 2\\0 & 2 & -1\end{matrix}\right)$.Luego $C=B\cdot A - A^t \cdot B^t=\left(\begin{matrix}0 & 3 & -3\\-3 & 0 & 0\\3 & 0 & 0\end{matrix}\right)$.
+\end{solution}
+
+\part[2] Halle la matriz $X$ siendo $A\cdot B \cdot X =\left(\begin{matrix}4\\2\end{matrix}\right)$
+\begin{solution}
+$A \cdot B = \left(\begin{matrix}-6 & 3\\-3 & 2\end{matrix}\right)$ y $(A \cdot B)^{-1}=\left(\begin{matrix}- \frac{2}{3} & 1\\-1 & 2\end{matrix}\right)\xrightarrow{X} X=\left(\begin{matrix}- \frac{2}{3} & 1\\-1 & 2\end{matrix}\right)\cdot \left(\begin{matrix}4\\2\end{matrix}\right)=\left(\begin{matrix}- \frac{2}{3}\\0\end{matrix}\right)$
+\end{solution}
+
+\end{parts}
+\addpoints
+
+
+
+\question Dada la matriz: $$A=\left(\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right)$$ 
+
+\begin{parts}
+
+
+\part[2] Determine el rango de A según los diferentes valores de k  \begin{solution} El único menor es el propio determinante $\to\left|\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right|=k \left(k + 1\right) \left(k + 2\right)\to k\neq\left( -2, \  -1, \  0\right)$ rango será 3 \\ 
+\\ caso k=-2: \\ $B=\left(\begin{matrix}-2 & 0 & -2\\0 & 0 & 0\\1 & 1 & 0\end{matrix}\right) \to ran(B)=2$. 
+\\ caso k=-1: \\ $B=\left(\begin{matrix}-1 & 0 & -1\\0 & 1 & 0\\1 & 1 & 1\end{matrix}\right) \to ran(B)=2$. 
+\\ caso k=0: \\ $B=\left(\begin{matrix}0 & 0 & 0\\0 & 2 & 0\\1 & 1 & 2\end{matrix}\right) \to ran(B)=2$.  \end{solution}
+\part[1] Determine la inversa de A para k=1  
+\begin{solution} $\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 0\\1 & 1 & 3\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 1\\1 & 0 & 3\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}9 & 1 & -3\\0 & 2 & 0\\-3 & -1 & 3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{3}{2} & \frac{1}{6} & - \frac{1}{2}\\0 & \frac{1}{3} & 0\\- \frac{1}{2} & - \frac{1}{6} & \frac{1}{2}\end{matrix}\right)$. \end{solution}
+\end{parts}
+
+\question Sabiendo que $\left|\begin{matrix}x & -3 & 1\\y & 0 & 1\\z & 7 & 1\end{matrix}\right|=6$, calcula usando las propiedades de los determinantes:
+\begin{parts}
+\part[1] $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y+0 & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|$
+\begin{solution}
+$\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y+0 & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|=
+\frac{3}{2}\cdot\left|\begin{matrix}z & z+7 & 1\\y & y+0 & 1\\x & x-3 & 1\end{matrix}\right|=
+\frac{3}{2}\cdot\left|\begin{matrix}z & z & 1\\y & y & 1\\x & x & 1\end{matrix}\right|+\frac{3}{2}\cdot\left|\begin{matrix}z & 7 & 1\\y & 0 & 1\\x & -3 & 1\end{matrix}\right|=\frac{3}{2}\cdot 0+\frac{3}{2}\cdot\left|\begin{matrix}z & 7 & 1\\y & 0 & 1\\x & -3 & 1\end{matrix}\right|=-\frac{3}{2}\cdot\left|\begin{matrix}x & -3 & 1\\y & 0 & 1\\z & 7 & 1\end{matrix}\right|=-\frac{3}{2}\cdot 6=-9
+$
+\end{solution}
+\part[1] $\left|\begin{matrix}x & -3 & 1 & 2\\ y & 0 & 1 &2\\z & 7 & 1&2 \\ 0&6&0&2\end{matrix}\right|$
+\begin{solution}
+Desarrollando por los ajuntos de la última fila: \\
+$\left|\begin{matrix}x & -3 & 1 & 2\\ y & 0 & 1 &2\\z & 7 & 1&2 \\ 0&6&0&2\end{matrix}\right|=
+0\cdot A_{41}+6\cdot A_{42}+0\cdot A_{43}+2\cdot A_{44}=6\cdot \left|\begin{matrix}x&1&2\\y&1&2\\z&1&2 \end{matrix}\right|+2\cdot \left|\begin{matrix}x&-3&1\\y&0&1\\z&7&1 \end{matrix}\right|=6\cdot 0+2\cdot 6=12
+$
+\end{solution}
+\end{parts}
+
+
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
