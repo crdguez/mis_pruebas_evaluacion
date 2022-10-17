@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
 \vpword{Puntos:}
@@ -88,50 +88,6 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %\end{parts}
 %\addpoints
 
-\question Dadas las matrices  $A=\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)$, $B=\left(\begin{matrix}2 & 1\\0 & -1\\1 & 2\end{matrix}\right)$ y $C=\left(\begin{matrix}1 & -1 & 0\\1 & 0 & 1\end{matrix}\right)$.
-%\noaddpoints % to omit double points count
-\begin{parts}
-\part[1] Encontrar si existe una matriz $X$ tal que $3\cdot X + 2\cdot A = B \cdot C$. 
-\begin{solution}
-$X = \frac{1}{3}\cdot (B \cdot C - 2 \cdot A)=\frac{1}{3}\left(\left(\begin{matrix}3 & -2 & 1\\-1 & 0 & -1\\3 & -1 & 2\end{matrix}\right)-\left(\begin{matrix}2 & 0 & -2\\-6 & 4 & 6\\-2 & 6 & 0\end{matrix}\right)\right)=\left(\begin{matrix}\frac{1}{3} & - \frac{2}{3} & 1\\\frac{5}{3} & - \frac{4}{3} & - \frac{7}{3}\\\frac{5}{3} & - \frac{7}{3} & \frac{2}{3}\end{matrix}\right)$ 
-\end{solution}
-
-
-\part[1] Encontrar si existe la matriz inversa de $A$, por determinantes
-\begin{solution}
-$\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & -3 & -1\\0 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-9 & -3 & 2\\-3 & -1 & 0\\-7 & -3 & 2\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{9}{2} & \frac{3}{2} & -1\\\frac{3}{2} & \frac{1}{2} & 0\\\frac{7}{2} & \frac{3}{2} & -1\end{matrix}\right)$.
-\end{solution}
-
-
-
-\end{parts}
-\addpoints
-
-
-
-\question Dada: $$A=\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)$$ 
-%\noaddpoints % to omit double points count
-
-\begin{parts}
-\part[1] Calcula $$A-2\cdot I$$ siendo $I$ la matriz identidad de orden 3. 
-\begin{solution}
-$A-2\cdot I=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$.  
-\end{solution}
-\part[2] Determina los valores del parámetro $k$ para que la matriz: $$A-k\cdot I$$ tenga inversa.
-\begin{solution}
-$A-k\cdot I =\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)-k \cdot \left(\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right)=\left(\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right)$$\to \left|\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right|=- k \left(k - 3\right) \left(k - 1\right)$$\to k \neq\left( 0, \  1, \  3\right)$.
-\end{solution}
-
-\part[2] Encuentra la matriz $X$ que verifica que:$$(A-2\cdot I )\cdot X = 2\cdot I$$.
-\begin{solution}
-
-$(A-2\cdot I )\cdot X = 2\cdot I \to X=(A-2\cdot I)^{-1}\cdot 2I$\\Obtengamos las matrices que necesitamos: $(A-2\cdot I )=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$ y $\left|\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right|=2$.$\rightarrow$ $\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)$.\\Por tanto $X=\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)\cdot\left(\begin{matrix}2 & 0 & 0\\0 & 2 & 0\\0 & 0 & 2\end{matrix}\right)=\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)$
-\end{solution}
-\end{parts}
-
-\addpoints
-
-
 \question Dadas las matrices  $A=\left(\begin{matrix}-2 & -1 & 1\\-1 & 0 & 1\end{matrix}\right)$ y $B=\left(\begin{matrix}1 & -1\\2 & 0\\-2 & 1\end{matrix}\right)$
 %\noaddpoints % to omit double points count
 
@@ -149,24 +105,70 @@ $A \cdot B = \left(\begin{matrix}-6 & 3\\-3 & 2\end{matrix}\right)$ y $(A \cdot 
 \end{parts}
 \addpoints
 
+% \question Dadas las matrices  $A=\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)$, $B=\left(\begin{matrix}2 & 1\\0 & -1\\1 & 2\end{matrix}\right)$ y $C=\left(\begin{matrix}1 & -1 & 0\\1 & 0 & 1\end{matrix}\right)$.
+% %\noaddpoints % to omit double points count
+% \begin{parts}
+% \part[1] Encontrar si existe una matriz $X$ tal que $3\cdot X + 2\cdot A = B \cdot C$. 
+% \begin{solution}
+% $X = \frac{1}{3}\cdot (B \cdot C - 2 \cdot A)=\frac{1}{3}\left(\left(\begin{matrix}3 & -2 & 1\\-1 & 0 & -1\\3 & -1 & 2\end{matrix}\right)-\left(\begin{matrix}2 & 0 & -2\\-6 & 4 & 6\\-2 & 6 & 0\end{matrix}\right)\right)=\left(\begin{matrix}\frac{1}{3} & - \frac{2}{3} & 1\\\frac{5}{3} & - \frac{4}{3} & - \frac{7}{3}\\\frac{5}{3} & - \frac{7}{3} & \frac{2}{3}\end{matrix}\right)$ 
+% \end{solution}
 
 
-\question Dada la matriz: $$A=\left(\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right)$$ 
+% \part[1] Encontrar si existe la matriz inversa de $A$, por determinantes
+% \begin{solution}
+% $\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & -3 & -1\\0 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-9 & -3 & 2\\-3 & -1 & 0\\-7 & -3 & 2\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{9}{2} & \frac{3}{2} & -1\\\frac{3}{2} & \frac{1}{2} & 0\\\frac{7}{2} & \frac{3}{2} & -1\end{matrix}\right)$.
+% \end{solution}
+
+
+
+% \end{parts}
+% \addpoints
+
+
+
+\question Dada: $$A=\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)$$ 
+%\noaddpoints % to omit double points count
 
 \begin{parts}
+\part[1] Calcula $$A-2\cdot I$$ siendo $I$ la matriz identidad de orden 3. 
+\begin{solution}
+$A-2\cdot I=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$.  
+\end{solution}
+\part[2] Determina los valores del parámetro $k$ para que tenga inversa la matriz: $$A-k\cdot I$$
+\begin{solution}
+$A-k\cdot I =\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)-k \cdot \left(\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right)=\left(\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right)$$\to \left|\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right|=- k \left(k - 3\right) \left(k - 1\right)$$\to k \neq\left( 0, \  1, \  3\right)$.
+\end{solution}
 
+\part[2] Encuentra la matriz $X$ que verifica que:$$(A-2\cdot I )\cdot X = 2\cdot I$$.
+\begin{solution}
 
-\part[2] Determine el rango de A según los diferentes valores de k  \begin{solution} El único menor es el propio determinante $\to\left|\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right|=k \left(k + 1\right) \left(k + 2\right)\to k\neq\left( -2, \  -1, \  0\right)$ rango será 3 \\ 
-\\ caso k=-2: \\ $B=\left(\begin{matrix}-2 & 0 & -2\\0 & 0 & 0\\1 & 1 & 0\end{matrix}\right) \to ran(B)=2$. 
-\\ caso k=-1: \\ $B=\left(\begin{matrix}-1 & 0 & -1\\0 & 1 & 0\\1 & 1 & 1\end{matrix}\right) \to ran(B)=2$. 
-\\ caso k=0: \\ $B=\left(\begin{matrix}0 & 0 & 0\\0 & 2 & 0\\1 & 1 & 2\end{matrix}\right) \to ran(B)=2$.  \end{solution}
-\part[1] Determine la inversa de A para k=1  
-\begin{solution} $\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 0\\1 & 1 & 3\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 1\\1 & 0 & 3\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}9 & 1 & -3\\0 & 2 & 0\\-3 & -1 & 3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{3}{2} & \frac{1}{6} & - \frac{1}{2}\\0 & \frac{1}{3} & 0\\- \frac{1}{2} & - \frac{1}{6} & \frac{1}{2}\end{matrix}\right)$. \end{solution}
+$(A-2\cdot I )\cdot X = 2\cdot I \to X=(A-2\cdot I)^{-1}\cdot 2I$\\Obtengamos las matrices que necesitamos: $(A-2\cdot I )=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$ y $\left|\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right|=2$.$\rightarrow$ $\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)$.\\Por tanto $X=\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)\cdot\left(\begin{matrix}2 & 0 & 0\\0 & 2 & 0\\0 & 0 & 2\end{matrix}\right)=\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)$
+\end{solution}
 \end{parts}
+
+\addpoints
+
+
+
+
+
+
+% \question Dada la matriz: $$A=\left(\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right)$$ 
+
+% \begin{parts}
+
+
+% \part[2] Determine el rango de A según los diferentes valores de k  \begin{solution} El único menor es el propio determinante $\to\left|\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right|=k \left(k + 1\right) \left(k + 2\right)\to k\neq\left( -2, \  -1, \  0\right)$ rango será 3 \\ 
+% \\ caso k=-2: \\ $B=\left(\begin{matrix}-2 & 0 & -2\\0 & 0 & 0\\1 & 1 & 0\end{matrix}\right) \to ran(B)=2$. 
+% \\ caso k=-1: \\ $B=\left(\begin{matrix}-1 & 0 & -1\\0 & 1 & 0\\1 & 1 & 1\end{matrix}\right) \to ran(B)=2$. 
+% \\ caso k=0: \\ $B=\left(\begin{matrix}0 & 0 & 0\\0 & 2 & 0\\1 & 1 & 2\end{matrix}\right) \to ran(B)=2$.  \end{solution}
+% \part[1] Determine la inversa de A para k=1  
+% \begin{solution} $\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 0\\1 & 1 & 3\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 1\\1 & 0 & 3\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}9 & 1 & -3\\0 & 2 & 0\\-3 & -1 & 3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{3}{2} & \frac{1}{6} & - \frac{1}{2}\\0 & \frac{1}{3} & 0\\- \frac{1}{2} & - \frac{1}{6} & \frac{1}{2}\end{matrix}\right)$. \end{solution}
+% \end{parts}
 
 \question Sabiendo que $\left|\begin{matrix}x & -3 & 1\\y & 0 & 1\\z & 7 & 1\end{matrix}\right|=6$, calcula usando las propiedades de los determinantes:
 \begin{parts}
-\part[1] $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y+0 & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|$
+\part[1] $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|$
 \begin{solution}
 $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y+0 & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|=
 \frac{3}{2}\cdot\left|\begin{matrix}z & z+7 & 1\\y & y+0 & 1\\x & x-3 & 1\end{matrix}\right|=
