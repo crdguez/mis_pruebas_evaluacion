@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-% \printanswers
+\printanswers
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
 \vpword{Puntos:}
@@ -77,16 +77,6 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 
 \begin{questions}
 
-%\question 
-%
-%\begin{parts}
-%\part[2] 
-%\begin{solution}
-%\end{solution}
-%
-%
-%\end{parts}
-%\addpoints
 
 \question[6] Calcula el siguiente límite: $$\lim_{x \to 1} \left(\frac{x^{3} - 2 x + 2}{3 x^{2} - 2}\right)^{\frac{x^{2} - 3 x}{x^{2} + x - 2}}$$
 \begin{solution}
@@ -95,34 +85,39 @@ $\lim_{x \to 1} \left(\frac{x^{3} - 2 x + 2}{3 x^{2} - 2}\right)^{\frac{x^{2} - 
 \end{solution}
 \addpoints
 
+\question[6] Determine qué valor debe tomar k para que: $$\lim_{x \to +\infty}2x-\sqrt{4x^2+kx-5}=1$$
+\begin{solution}
+$\lim_{x \to +\infty}2x-\sqrt{4x^2+kx-5}=\lim_{x \to +\infty}\dfrac{(2x-\sqrt{4x^2+kx-5})\cdot(2x+\sqrt{4x^2+kx-5})}{(2x+\sqrt{4x^2+kx-5})}=\lim_{x \to +\infty}\dfrac{4x^2-4x^2-kx+5}{(2x+\sqrt{4x^2+kx-5})}=\lim_{x \to +\infty}\dfrac{-kx+5}{(2x+\sqrt{4x^2+kx-5})}=\lim_{x \to +\infty}\dfrac{-k+\frac{5}{x}}{(2+\sqrt{4+\frac{k}{x})-\frac{5}{x^2}}}=\dfrac{-k}{2+2} \to k = -4$
+\end{solution}
+
 \question[4] Hallar los puntos de la gráfica $y=2 x^{3} + 3 x^{2} - 30 x - 6$ en los que la recta tangente es paralela a la recta $y=6 x - 5$
 \begin{solution}$f'(x)=6 x^{2} + 6 x - 30\land m=6$. Luego: \\ $6 x^{2} + 6 x - 30 = 6 \to x =\left[ -3, \  2\right] $. \ Los puntos de la gráfica son: \\   $\left(-3,57 \right)$ . \\  $\left(2,-38 \right)$ . \\ 
 \end{solution}
 \addpoints
 
-\question Halla la derivadas de la siguientes funciones:
+\question Halla la derivada:
 
 \begin{parts}
-\part[7] $y=\ln{\left(\sqrt{\dfrac{\cos{\left(x \right)} + 1}{1 - \cos{\left(x \right)}}} \right)}$
+\part[6] $y=\ln{\left(\sqrt{\dfrac{\cos{\left(x \right)} + 1}{1 - \cos{\left(x \right)}}} \right)}$
 \begin{solution}
 $f'(x)=\left(- \frac{\log{\left(1 - \cos{\left(x \right)} \right)}}{2} + \frac{\log{\left(\cos{\left(x \right)} + 1 \right)}}{2}\right)^{'}=- \frac{\sin{\left(x \right)}}{2 \left(\cos{\left(x \right)} + 1\right)} - \frac{\sin{\left(x \right)}}{2 \left(1 - \cos{\left(x \right)}\right)}=\frac{\sin{\left(x \right)}}{\left(\cos{\left(x \right)} - 1\right) \left(\cos{\left(x \right)} + 1\right)}=- \frac{1}{\sin{\left(x \right)}}$
 \end{solution}
 
-\part[7] $y=\dfrac{x \sqrt{x^{2} - 1}}{2} - \tan{\left(x + \sqrt{x^{2} - 1} \right)}$
-\begin{solution}
+% \part[7] $y=\dfrac{x \sqrt{x^{2} - 1}}{2} - \tan{\left(x + \sqrt{x^{2} - 1} \right)}$
+% \begin{solution}
 
 
-$f'(x)=\left(\frac{x \sqrt{x^{2} - 1}}{2}\right)^{'}+\left(- \tan{\left(x + \sqrt{x^{2} - 1} \right)}\right)^{'}=\frac{2x^{2} - 1}{2\sqrt{x^{2} - 1}}- \frac{\left(x + \sqrt{x^{2} - 1}\right) \left(\sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)} \right)}{\sqrt{x^{2} - 1}}=\frac{2 x^{2} - 2 \left(x + \sqrt{x^{2} - 1}\right) \sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)}-1}{2 \sqrt{x^{2} - 1}}
-$
+% $f'(x)=\left(\frac{x \sqrt{x^{2} - 1}}{2}\right)^{'}+\left(- \tan{\left(x + \sqrt{x^{2} - 1} \right)}\right)^{'}=\frac{2x^{2} - 1}{2\sqrt{x^{2} - 1}}- \frac{\left(x + \sqrt{x^{2} - 1}\right) \left(\sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)} \right)}{\sqrt{x^{2} - 1}}=\frac{2 x^{2} - 2 \left(x + \sqrt{x^{2} - 1}\right) \sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)}-1}{2 \sqrt{x^{2} - 1}}
+% $
 
-\end{solution}
+% \end{solution}
 
 \end{parts}
 \addpoints
 
 
-\question[5] Determina a y b para que sea derivable en $\mathbb{R}$ la función: $$f(x)=\left\{\begin{matrix}
-\ln{\left[\sen{\left(x \right)} + e \right]} & si & x<0 \\
+\question[4] Determina a y b para que sea derivable en $\mathbb{R}$ la función: $$f(x)=\left\{\begin{matrix}
+\ln{\left(\sen{\left(x \right)} + e \right)} & si & x<0 \\
 a x + b + x^{3} & si & x\geqslant 0 \\
 \end{matrix}\right.$$ 
 
@@ -140,38 +135,147 @@ Continuidad en 0:\\ $\lim_{x \to 0^-} \log{\left(\sin{\left(x \right)} + e \righ
 
 \addpoints
 
-
-\question Dada la función: $f(x)=x + e^{- x}$ 
-
+\question Dada la función: $$f(x)=\dfrac{x^2}{x-8}$$
 \begin{parts}
-\part[5] Determina los intervalos de crecimiento y decrecimiento de f, así como los extremos relativos (máximos o mínimos)
+\part[4] Determinar los intervalos de crecimiento y decrecimiento
 \begin{solution}
-$dom(f(x))=\mathbb{R}$ \\
-$f'(x)=1 - e^{- x} \to f'(x)=0 \to 1 - e^{- x} = 0 \to x=0 $  \\
-
-Intervalos de crecimiento: $\left[ \left[ \left(-\infty, 0\right), \  \text{False}\right], \  \left[ \left(0, \infty\right), \  \text{True}\right]\right]$ \\
+$(-\infty, 0) \cup (16,\infty)$ creciente. \\
+$(0,8) \cup (8,16)$ decreciente.
+\end{solution}
+\part[2] Hallar los máximos y mínimos relativos de la función
+\begin{solution}
+$f(x)$ es continua en $\mathbb{R}-\left\{8\right\}$. \\
+$f'(x)=0 \to \frac{x \left(x - 16\right)}{\left(x - 8\right)^{2}}=0  \to x=0 \land x=16$. \\
+$(0, f(0))=(0,0) \land (16,f(16))=(16,32)$ \\
+\includegraphics[scale=0.30]{2bac/2bac_cie/funcion2.jpg}
+\end{solution}
+\part[4] Determina las asíntotas de la gráfica de $f(x)$
+\begin{solution}
+$x=8$ Asíntota vertical \\
+$\lim_{x \to \infty}\frac{f(x)}{x}=1$ \\
+$\lim_{x \to \infty}f(x)-1\cdot x=8$ \\
+$y=x+8$ Asíntota oblicua
 \end{solution}
 
-% \part[5] Determina los intervalos de concavidad y convexidad de f
-% \begin{solution}$f''(x)=e^{- x} \to f''(x)>0$ \\ Intervalos de convexidad:$\left[ \mathbb{R}, \  \text{True}\right]$ \\ 
-% \end{solution}
-\part[5] Determina las asíntotas de la gráfica de f
+\part[2] Calcula, razonadamente, el máximo y el mínimo absoluto 
 \begin{solution}
-$dom(f(x))=\mathbb{R} \to \nexists A.V.$ \\
-$lim_{x \to +\infty} f(x)= \infty + 0 = \infty \land lim_{x \to -\infty} f(x)= -\infty \to \nexists A.H.$ \\
-Asíntota oblícua: \\ 
-
-pendiente: $lim_{x \to \infty}\frac{f(x)}{x}=lim_{x \to \infty}1+ \frac{e^{-x}}{x} = 1$ \\
-ordenada: $lim_{x \to \infty}f-m\cdot x=lim_{x \to \infty}e^{-x}=0 \to A.O: y=x$
-
+$$\lim_{x \to 8^-}\left(\frac{x^{2}}{x - 8}\right)=-\infty \to (8,-\infty)$$
+$$\lim_{x \to 8^-}\left(\frac{x^{2}}{x - 8}\right)=+\infty \to (8,\infty)$$
 \end{solution}
-
-
 \end{parts}
+
+% \question Dada la función: $f(x)=x + e^{- x}$ 
+% \begin{parts}
+% \part[5] Determina los intervalos de crecimiento y decrecimiento de f, así como los extremos relativos (máximos o mínimos)
+% \begin{solution}
+% $dom(f(x))=\mathbb{R}$ \\
+% $f'(x)=1 - e^{- x} \to f'(x)=0 \to 1 - e^{- x} = 0 \to x=0 $  \\
+% Intervalos de crecimiento: $\left[ \left[ \left(-\infty, 0\right), \  \text{False}\right], \  \left[ \left(0, \infty\right), \  \text{True}\right]\right]$ \\
+% \end{solution}
+% % \part[5] Determina los intervalos de concavidad y convexidad de f
+% % \begin{solution}$f''(x)=e^{- x} \to f''(x)>0$ \\ Intervalos de convexidad:$\left[ \mathbb{R}, \  \text{True}\right]$ \\ 
+% % \end{solution}
+% \part[5] Determina las asíntotas de la gráfica de f
+% \begin{solution}
+% $dom(f(x))=\mathbb{R} \to \nexists A.V.$ \\
+% $lim_{x \to +\infty} f(x)= \infty + 0 = \infty \land lim_{x \to -\infty} f(x)= -\infty \to \nexists A.H.$ \\
+% Asíntota oblícua: \\ 
+
+% pendiente: $lim_{x \to \infty}\frac{f(x)}{x}=lim_{x \to \infty}1+ \frac{e^{-x}}{x} = 1$ \\
+% ordenada: $lim_{x \to \infty}f-m\cdot x=lim_{x \to \infty}e^{-x}=0 \to A.O: y=x$
+
+% \end{solution}
+% \end{parts}
+
 \addpoints
 
 \question[4] Demuestra, razonadamente, que la función $g(x)=x^3+2x$ vale $4$ para algún valor de $x \in \left[1,2\right]$.
 \begin{solution} Sea $f(x)=x^3+2x-4 \to f(1)=1+2-4=-1 <0 \land f(2)=8+4-4=8>0 \land $ f es continua en $\mathbb{R}$. Aplicando Bolzano  $\to \exists x \in \left[1,2 \right], f(x)=0 \to g(x)=4$\end{solution}
+
+
+
+\question[4] OJO, está mal (no entra en EVAU). Determine el límite siguiente: 
+$$\lim_{x \to \frac{\pi}{2}} \left(\dfrac{1}{1-\sen{x}}\right)^\frac{\cos{x}}{\sen{x}}$$
+
+\begin{solution}
+$\lim_{x \to \frac{\pi}{2}} \left(\dfrac{1}{1-\sen{x}}\right)^\frac{\cos{x}}{\sen{x}}=
+e^{\lim_{x \to \frac{\pi}{2}} \left(\dfrac{1}{1-\sen{x}}-1\right)\cdot\frac{\cos{x}}{\sen{x}}}=
+e^{\lim_{x \to \frac{\pi}{2}} \left(\dfrac{\sen{x}}{1-\sen{x}}\right)\cdot\frac{\cos{x}}{\sen{x}}}=
+e^{\lim_{x \to \frac{\pi}{2}} \left(\dfrac{\cos{x}}{1-\sen{x}}\right)}=e^1=e
+$
+
+\end{solution}
+
+% % \question Se define la función f del modo siguiente:
+
+% % $$f(x)=\left\{\begin{matrix}
+% % \ln{x} -1   & si & x>1 \\
+% % 2 x^2 + ax + b & si & x\leqslant 1 \\
+% % \end{matrix}\right.$$
+% % \begin{parts}
+% % \part[] Encontrar los valores de a y b para que la función sea continua y su gráfica pase por el origen de
+% % coordenadas.
+% % \part[] Estudiar su derivabilidad
+% % \part[2] Hallar los puntos de su gráfica en los que
+% % la tangente es paralela al eje OX
+% % \end{parts}
+% % \begin{solution}
+% % a = -3 , b = 0. Derivable en R. x=3/4
+% % \end{solution}
+
+% %\question 
+% %
+% %\begin{parts}
+% %\part[2] 
+% %\begin{solution}
+% %\end{solution}
+% %
+% %
+% %\end{parts}
+% %\addpoints
+
+% \question[2] Halla el valor de $a$ para el cual la función $f(x)=\dfrac{x^2+x+a}{x^2+3x-4}$ tenga una discontinuidad evitable en $x=1$.
+
+
+% \question Dada la función $y=x+\dfrac{4}{(x-1)^2}$, calcula:
+% \begin{parts}
+% \part[4] Dominio de la función y asíntotas
+% \part[4] Intervalos de crecimiento y decrecimiento
+% \end{parts}
+
+% \question[4] Halla la derivada de  $y=\dfrac{x \sqrt{x^{2} - 1}}{2} - \tg{\left(x + \sqrt{x^{2} - 1} \right)}$
+% \begin{solution}
+
+
+% $f'(x)=\left(\frac{x \sqrt{x^{2} - 1}}{2}\right)^{'}+\left(- \tan{\left(x + \sqrt{x^{2} - 1} \right)}\right)^{'}=\frac{2x^{2} - 1}{2\sqrt{x^{2} - 1}}- \frac{\left(x + \sqrt{x^{2} - 1}\right) \left(\sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)} \right)}{\sqrt{x^{2} - 1}}=\frac{2 x^{2} - 2 \left(x + \sqrt{x^{2} - 1}\right) \sec^{2}{\left(x + \sqrt{x^{2} - 1} \right)}-1}{2 \sqrt{x^{2} - 1}}
+% $
+
+% \end{solution}
+
+% \question Dada la función $f(x)=\dfrac{2x^2-3x}{e^x}$:
+% \begin{parts}
+% \part[4] Estudia los intervalos de crecimiento y decrecimiento
+% \part[2] Determina, si existen, sus máximos y mínimos relativos
+% \end{parts}
+
+% \question[2] Demuestra que la función $f(x)=x^3-8x+2$ corta al eje de abscisas en el intervalo $\left(0,2\right)$
+
+
+% \question Dada $f(x)=\dfrac{|x-1|}{x}$:
+% \begin{parts}
+% \part[2] Estudiar la derivabilidad de $f$
+% \part[2] Tiene la función máximos o mínimos relativos. Razona tu respuesta
+% \end{parts}
+
+% \question[4] Hallar $a>0$ y $b>0$ sabiendo que en el punto $P(1,2)$ la recta tangente a la gráfica de la función $f(x)=\dfrac{bx^2}{1+ax^4}$  es horizontal.
+% \begin{solution}
+% $f'(x)=- \frac{2 b x \left(a x^{4} - 1\right)}{\left(a x^{4} + 1\right)^{2}}\to$\\
+% $f'(1)=0 \to \left(a \cdot 1^{4} - 1\right)=0 \to a =1 $\\
+% $f(1)=2 \to \frac{b\cdot1^{2}}{1^{4} + 1}=2 \to b=4$\\
+% $a=1$, $b=4$.
+% \end{solution}
+
+
 
 \end{questions}
 
