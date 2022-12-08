@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.5)  8 DEC 2022 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.5)  8 DEC 2022 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1029,8 +1029,8 @@ tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \arrowsize=\dimen195
 )) (build/rec1.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 )
 \openout1 = `rec1.aux'.
 
@@ -1186,336 +1186,111 @@ Overfull \hbox (38.5127pt too wide) in alignment at lines 58--62
 <../../img/header_left.png, id=4, 856.19875pt x 332.24126pt>
 File: ../../img/header_left.png Graphic file (type png)
 <use ../../img/header_left.png>
-Package pdftex.def Info: ../../img/header_left.png  used on input line 105.
+Package pdftex.def Info: ../../img/header_left.png  used on input line 111.
 (pdftex.def)             Requested size: 76.9351pt x 29.84972pt.
 <../../img/header_right.jpeg, id=5, 197.73875pt x 181.67876pt>
 File: ../../img/header_right.jpeg Graphic file (type jpg)
 <use ../../img/header_right.jpeg>
-Package pdftex.def Info: ../../img/header_right.jpeg  used on input line 105.
+Package pdftex.def Info: ../../img/header_right.jpeg  used on input line 111.
 (pdftex.def)             Requested size: 38.47049pt x 35.34543pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <../../img/header_left.png> <../../img/header_right.jpeg>]
-
-! Package inputenc Error: Unicode char € (U+20AC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 ...co de 10 kg obtiene un beneficio de 5 €
-                                                   y por
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char € (U+20AC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 ...aco de 5 kg obtiene un beneficio de 2 €
-                                                  . Determine cuántos sacos...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<prglin1.png, id=22, 458.71375pt x 452.69125pt>
-File: prglin1.png Graphic file (type png)
-<use prglin1.png>
-Package pdftex.def Info: prglin1.png  used on input line 126.
-(pdftex.def)             Requested size: 229.35631pt x 226.34506pt.
-<prglin2.png, id=23, 333.245pt x 211.79124pt>
-File: prglin2.png Graphic file (type png)
-<use prglin2.png>
-Package pdftex.def Info: prglin2.png  used on input line 127.
-(pdftex.def)             Requested size: 266.59634pt x 169.43321pt.
-
-Underfull \vbox (badness 10000) detected at line 128
+Underfull \vbox (badness 1077) detected at line 133
  []
 
 [2]
-<prglin3.png, id=28, 445.665pt x 459.7175pt>
+<prglin1.png, id=26, 458.71375pt x 452.69125pt>
+File: prglin1.png Graphic file (type png)
+<use prglin1.png>
+Package pdftex.def Info: prglin1.png  used on input line 143.
+(pdftex.def)             Requested size: 229.35631pt x 226.34506pt.
+<prglin2.png, id=27, 333.245pt x 211.79124pt>
+File: prglin2.png Graphic file (type png)
+<use prglin2.png>
+Package pdftex.def Info: prglin2.png  used on input line 144.
+(pdftex.def)             Requested size: 266.59634pt x 169.43321pt.
+
+Underfull \vbox (badness 10000) detected at line 145
+ []
+
+[3 <./prglin1.png>]
+<prglin3.png, id=32, 445.665pt x 459.7175pt>
 File: prglin3.png Graphic file (type png)
 <use prglin3.png>
-Package pdftex.def Info: prglin3.png  used on input line 139.
+Package pdftex.def Info: prglin3.png  used on input line 156.
 (pdftex.def)             Requested size: 222.83195pt x 229.85818pt.
-<prglin4.png, id=29, 331.2375pt x 202.7575pt>
+<prglin4.png, id=33, 331.2375pt x 202.7575pt>
 File: prglin4.png Graphic file (type png)
 <use prglin4.png>
-Package pdftex.def Info: prglin4.png  used on input line 140.
+Package pdftex.def Info: prglin4.png  used on input line 157.
 (pdftex.def)             Requested size: 264.99034pt x 162.2062pt.
 
-Underfull \vbox (badness 7081) detected at line 141
+Underfull \vbox (badness 5771) detected at line 158
  []
 
-[3 <./prglin1.png> <./prglin2.png>]
-Overfull \hbox (57.6649pt too wide) in paragraph at lines 151--152
-[]$ \OT1/cmr/m/n/12 y $(2\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 )[] : [] [] [] [] []
- []
- []
+[4 <./prglin2.png> <./prglin3.png>]
+<sis2.png, id=37, 593.21625pt x 471.7625pt>
+File: sis2.png Graphic file (type png)
+<use sis2.png>
+Package pdftex.def Info: sis2.png  used on input line 174.
+(pdftex.def)             Requested size: 474.57364pt x 377.4105pt.
 
-[4 <./prglin3.png> <./prglin4.png>]
-<sol1.jpg, id=37, 574.145pt x 477.785pt>
-File: sol1.jpg Graphic file (type jpg)
-<use sol1.jpg>
-Package pdftex.def Info: sol1.jpg  used on input line 183.
-(pdftex.def)             Requested size: 459.31662pt x 382.22852pt.
-
-Overfull \hbox (139.12912pt too wide) in paragraph at lines 182--184
+Overfull \hbox (129.58084pt too wide) in paragraph at lines 173--175
 [] 
  []
 
-[5 <./sol1.jpg>]
-Overfull \hbox (33.84875pt too wide) in paragraph at lines 210--211
-\OT1/cmr/bx/n/12 Soluci^^Son:$[] \OMS/cmsy/m/n/12 ! [] !
+
+Underfull \vbox (badness 10000) detected at line 175
+ []
+
+[5 <./prglin4.png>]
+<sis1.png, id=41, 589.20125pt x 468.75125pt>
+File: sis1.png Graphic file (type png)
+<use sis1.png>
+Package pdftex.def Info: sis1.png  used on input line 193.
+(pdftex.def)             Requested size: 471.36163pt x 375.0015pt.
+
+Overfull \hbox (126.36884pt too wide) in paragraph at lines 192--194
+[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
-
+Underfull \vbox (badness 4144) detected at line 194
  []
 
-
-Overfull \hbox (56.54684pt too wide) in paragraph at lines 210--211
-[] \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 ran\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]
-\OT1/cmr/m/n/12 ) = 2 \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 ran\OT1/cmr/m/n/12 (\
-OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) = 2 \OMS/cmsy/m/n/12 !$ \OT1/cmr/m/n/12 S.C.
-I. $\OMS/cmsy/m/n/12 !$ \OT1/cmr/m/n/12 Sol:$[]$ 
- []
-
-
-! LaTeX Error: File `fi1_1' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \includegraphics[scale=0.6]{fi1_1}
-                                        
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--238
-
- []
-
-[6]
-
-! LaTeX Error: File `fi1_2' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241 \includegraphics[scale=0.6]{fi1_2}
-                                        
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--251
-
- []
-
-<region1.jpg, id=45, 295.1025pt x 184.69pt>
-File: region1.jpg Graphic file (type jpg)
-<use region1.jpg>
-Package pdftex.def Info: region1.jpg  used on input line 276.
-(pdftex.def)             Requested size: 88.53142pt x 55.40741pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--277
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-
-! Package inputenc Error: Unicode char → (U+2192)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.280 (5, 4)→
-               6000⋅5+8000⋅4=62000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.280 (5, 4)→6000⋅
-                      5+8000⋅4=62000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.280 (5, 4)→6000⋅5+8000⋅
-                               4=62000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char → (U+2192)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.281 (0, 9)→
-               6000⋅0+8000⋅9=72000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.281 (0, 9)→6000⋅
-                      0+8000⋅9=72000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.281 (0, 9)→6000⋅0+8000⋅
-                               9=72000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char → (U+2192)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.282 (0, 8)→
-               6000⋅0+8000⋅8=64000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.282 (0, 8)→6000⋅
-                      0+8000⋅8=64000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.282 (0, 8)→6000⋅0+8000⋅
-                               8=64000\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
-
- []
-
-[7 <./region1.jpg>]
-This exam contains 9 questions with 12 parts, 0 subparts, and 0 subsubparts.
-This exam has a total of 24 points.
+[6 <./sis2.png>] [7 <./sis1.png>]
+This exam contains 8 questions with 6 parts, 0 subparts, and 0 subsubparts.
+This exam has a total of 20 points.
 This exam has a total of 0 bonus points.
-
-Class exam Warning: Point totals have changed. Rerun to get point totals right.
-
-
 (build/rec1.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
-)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+) ) 
 Here is how much of TeX's memory you used:
- 25554 strings out of 494747
- 626160 string characters out of 6176208
- 832777 words of memory out of 5000000
- 28413 multiletter control sequences out of 15000+600000
+ 25510 strings out of 494747
+ 625665 string characters out of 6176208
+ 837785 words of memory out of 5000000
+ 28380 multiletter control sequences out of 15000+600000
  10256 words of font info for 40 fonts, out of 8000000 for 9000
  107 hyphenation exceptions out of 8191
- 69i,14n,119p,1307b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on build/rec1.pdf (7 pages, 288937 bytes).
+ 69i,14n,119p,1308b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/eurosym/
+feymr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on build/rec1.pdf (7 pages, 302546 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
