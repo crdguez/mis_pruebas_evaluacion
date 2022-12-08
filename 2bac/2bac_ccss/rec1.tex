@@ -77,17 +77,68 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 
 \begin{questions}
 
-\question
-2015 pag 49 http://five-fingers.es/index.php/topmatematicasccnn \\
-$\left\{\begin{matrix} x+y+z  =  -2 \\
--\lambda x + 3y +z  =  -7 \\
-x + 2y  + (\lambda +2)z  = -5 
-\end{matrix}\right.
-$
+\question Dado el siguiente sistema:
+$$\left\{ \begin{matrix}x + y + z = -2 \\ - k x + 3 y + z = -7 \\ x + 2 y + z \left(k + 2\right) = -5 \\ \end{matrix}\right.
+$$
 \begin{parts}
-    \part  Estudiar las soluciones del sistema según los valores del parámetro $\lambda$.
-    \part  Resolver el sistema cuando sea compatible indeterminado.
+    \part[2]  Estudiar las soluciones del sistema según los valores del parámetro $k$.
+    \begin{solution}
+    $|A|=\left|\begin{matrix}1 & 1 & 1\\- k & 3 & 1\\1 & 2 & k + 2\end{matrix}\right|=\left(k + 1\right) \left(k + 2\right)$
+    \\ - Si $k \neq -2, -1\to |A| \neq 0 \to \exists A^{-1}$ 
+    \\ Como $rg(A)=rg(A^*)=3$  --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer
+    \\ - Si $k=-2\to |A| = 0 \to \nexists A^{-1}$
+        \\ Como $rg(A)=rg(A^*)=2 \to$  S.C.I --> Solo se puede resolver por Gauss
+        \\ - Si $k=-1\to |A| = 0 \to \nexists A^{-1}$
+        \\ Como $rg(A)=2 \land rg(A^*)=3 \to$  S.I. 
+
+    \end{solution}
+    \part[2]  Resolver el sistema cuando sea compatible indeterminado.
+    \begin{solution}$A^*=\left(\begin{matrix}1 & 1 & 1 & -2\\2 & 3 & 1 & -7\\1 & 2 & 0 & -5\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & 1 & -2\\0 & 1 & -1 & -3\\0 & 0 & 0 & 0\end{matrix}\right)\to x=1 - 2 \lambda, y=\lambda - 3, z=\lambda$\end{solution}
 \end{parts}
+
+\question Dadas las matrices  $A=\left(\begin{matrix}k & k & k^{2}\\1 & -1 & k\\2 k & -2 & 2\end{matrix}\right)$,  $B=\left(\begin{matrix}12\\6\\8\end{matrix}\right)$
+\begin{parts}
+\part[2] Hallar el rango de $A$ en función de los valores de $k$.
+\begin{solution} 
+- Si $k \neq -1, 0, 1\to |A| \neq 0 \to \exists A^{-1} \to rg(A)=3$
+- Si no $rg(A)=2$
+\end{solution}
+\part[2] Para $k = 2$, hallar, si existe, la solución de la ecuación $AX = B$
+\begin{solution}
+- Gauss: \\
+$A^*=\left(\begin{matrix}2 & 2 & 4 & 12\\1 & -1 & 2 & 6\\4 & -2 & 2 & 8\end{matrix}\right)\sim\left(\begin{matrix}2 & 2 & 4 & 12\\0 & -2 & 0 & 0\\0 & 0 & -6 & -16\end{matrix}\right)\to x=\frac{2}{3}, y=0, z=\frac{8}{3}$
+- Matriz inversa: \\
+$A^{-1}=\left(\begin{matrix}\frac{1}{12} & - \frac{1}{2} & \frac{1}{3}\\\frac{1}{4} & - \frac{1}{2} & 0\\\frac{1}{12} & \frac{1}{2} & - \frac{1}{6}\end{matrix}\right) \to  X=A^{-1}\cdot b =\left(\begin{matrix}\frac{1}{12} & - \frac{1}{2} & \frac{1}{3}\\\frac{1}{4} & - \frac{1}{2} & 0\\\frac{1}{12} & \frac{1}{2} & - \frac{1}{6}\end{matrix}\right)\cdot \left(\begin{matrix}12\\6\\8\end{matrix}\right) =\left(\begin{matrix}\frac{2}{3}\\0\\\frac{8}{3}\end{matrix}\right)$
+- Cramer: \\
+$x=\frac{\left|\begin{matrix}12 & 2 & 4\\6 & -1 & 2\\8 & -2 & 2\end{matrix}\right|}{24}=\frac{16}{24}=\frac{2}{3}$ \\
+$y=\frac{\left|\begin{matrix}2 & 12 & 4\\1 & 6 & 2\\4 & 8 & 2\end{matrix}\right|}{24}=\frac{0}{24}=0$ \\
+$z=\frac{\left|\begin{matrix}2 & 2 & 12\\1 & -1 & 6\\4 & -2 & 8\end{matrix}\right|}{24}=\frac{64}{24}=\frac{8}{3}$
+\end{solution}
+\end{parts}
+
+\question Un almacén de legumbres al por mayor tiene sacos de dos tipos, con
+capacidad para 5 kg de peso y con capacidad para 10 kg de peso. Sólo tiene 180 sacos de capacidad
+10 kg. Debe poner a la venta como mucho 2000 kg de alubias en sacos de ambos tipos. Por cada
+3 sacos de 10 kg puede vender como mucho 2 sacos de 5 kg, y como mínimo tiene que poner a la
+venta 20 sacos de 5 kg y 60 de 10 kg. Por cada saco de 10 kg obtiene un beneficio de 5 € y por
+cada saco de 5 kg obtiene un beneficio de 2 €. Determine cuántos sacos de cada tipo debe vender para obtener el máximo beneficio y calcule dicho beneficio. (Justifica todos los pasos realizados)
+\begin{solution}\\
+\includegraphics[scale=0.5]{prglin1}\\
+\includegraphics[scale=0.8]{prglin2}
+\end{solution}
+
+\question Una voluntaria quiere preparar helado artesano y horchata de
+auténtica chufa para un rastrillo solidario. La elaboración de cada litro de helado lleva 1 hora
+de trabajo y la elaboración de un litro de horchata 2 horas. Como la horchata no necesita leche,
+sabe que puede preparar hasta 15 litros de helado con la leche que tiene. Para que haya suficiente
+para todos los asistentes, tiene que preparar al menos 10 litros entre helado y horchata, en un
+máximo de 20 horas.Si el beneficio por litro es de 25 euros para el helado y 12 euros para la horchata, obténgase
+la cantidad de cada producto que se deberá preparar para maximizar el beneficio y calcúlese
+el beneficio máximo que podría obtenerse (Justifica todos los pasos realizados)
+\begin{solution}\\
+\includegraphics[scale=0.5]{prglin3}\\
+\includegraphics[scale=0.8]{prglin4}
+\end{solution}
 
 \question Dadas las matrices  $A=\left(\begin{matrix}2 & 1 & 3\\1 & -1 & 0\end{matrix}\right)$,  $B=\left(\begin{matrix}1 & -1\\2 & 0\\0 & 1\end{matrix}\right)$, $C=\left(\begin{matrix}2 & 3\\1 & 4\end{matrix}\right)$ y $D=\left(\begin{matrix}1 & 8\\0 & 5\end{matrix}\right)$ 
 %\noaddpoints % to omit double points count
