@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
 \vpword{Puntos:}
@@ -35,7 +35,7 @@
 \newcommand{\tipo}{A}
 
 
-\newcommand{\timelimit}{105 minutos}
+\newcommand{\timelimit}{50 minutos}
 
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
 
@@ -76,13 +76,13 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 \rule[2ex]{\textwidth}{2pt}
 
 \begin{questions}
-\question[1] Dadas las matrices:
-$$A=\left(\begin{matrix}1 & 0\\2 & k\\0 & 1\end{matrix}\right) ,
- B=\left(\begin{matrix}k & 0 & 1\\1 & 1 & 2\end{matrix}\right)$$
-Calcular los valores que puede tomar $k$ para que la matriz $AB$ tenga inversa.
-\begin{solution}
-$AB=\left(\begin{matrix}k & 0 & 1\\3 k & k & 2 k + 2\\1 & 1 & 2\end{matrix}\right) \land |AB|=0 \to \nexists k$
-\end{solution}
+% \question[1] Dadas las matrices:
+% $$A=\left(\begin{matrix}1 & 0\\2 & k\\0 & 1\end{matrix}\right) ,
+%  B=\left(\begin{matrix}k & 0 & 1\\1 & 1 & 2\end{matrix}\right)$$
+% Calcular los valores que puede tomar $k$ para que la matriz $AB$ tenga inversa.
+% \begin{solution}
+% $AB=\left(\begin{matrix}k & 0 & 1\\3 k & k & 2 k + 2\\1 & 1 & 2\end{matrix}\right) \land |AB|=0 \to \nexists k$
+% \end{solution}
 
 \question[1] Dadas las matrices:
 $$A=\left(\begin{matrix}1 & 0\\2 & k\\0 & 1\end{matrix}\right) ,
@@ -94,24 +94,24 @@ $BA=\left(\begin{matrix}k & 1\\3 & k + 2\end{matrix}\right)
  \to \exists \ si k\neq\left\{1,3\right\}$
 \end{solution}
 
-\question Dado el siguiente sistema:
-$$\left\{ \begin{matrix}x + y + z = -2 \\ - k x + 3 y + z = -7 \\ x + 2 y + z \left(k + 2\right) = -5 \\ \end{matrix}\right.
-$$
-\begin{parts}
-    \part[2]  Estudiar las soluciones del sistema según los valores del parámetro $k$.
-    \begin{solution}
-    $|A|=\left|\begin{matrix}1 & 1 & 1\\- k & 3 & 1\\1 & 2 & k + 2\end{matrix}\right|=\left(k + 1\right) \left(k + 2\right)$
-    \\ - Si $k \neq -2, -1\to |A| \neq 0 \to \exists A^{-1}$ 
-    \\ Como $rg(A)=rg(A^*)=3$  --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer
-    \\ - Si $k=-2\to |A| = 0 \to \nexists A^{-1}$
-        \\ Como $rg(A)=rg(A^*)=2 \to$  S.C.I --> Solo se puede resolver por Gauss
-        \\ - Si $k=-1\to |A| = 0 \to \nexists A^{-1}$
-        \\ Como $rg(A)=2 \land rg(A^*)=3 \to$  S.I. 
+% \question Dado el siguiente sistema:
+% $$\left\{ \begin{matrix}x + y + z = -2 \\ - k x + 3 y + z = -7 \\ x + 2 y + z \left(k + 2\right) = -5 \\ \end{matrix}\right.
+% $$
+% \begin{parts}
+%     \part[2]  Estudiar las soluciones del sistema según los valores del parámetro $k$.
+%     \begin{solution}
+%     $|A|=\left|\begin{matrix}1 & 1 & 1\\- k & 3 & 1\\1 & 2 & k + 2\end{matrix}\right|=\left(k + 1\right) \left(k + 2\right)$
+%     \\ - Si $k \neq -2, -1\to |A| \neq 0 \to \exists A^{-1}$ 
+%     \\ Como $rg(A)=rg(A^*)=3$  --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer
+%     \\ - Si $k=-2\to |A| = 0 \to \nexists A^{-1}$
+%         \\ Como $rg(A)=rg(A^*)=2 \to$  S.C.I --> Solo se puede resolver por Gauss
+%         \\ - Si $k=-1\to |A| = 0 \to \nexists A^{-1}$
+%         \\ Como $rg(A)=2 \land rg(A^*)=3 \to$  S.I. 
 
-    \end{solution}
-    \part[2]  Resolver el sistema cuando sea compatible indeterminado.
-    \begin{solution}$A^*=\left(\begin{matrix}1 & 1 & 1 & -2\\2 & 3 & 1 & -7\\1 & 2 & 0 & -5\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & 1 & -2\\0 & 1 & -1 & -3\\0 & 0 & 0 & 0\end{matrix}\right)\to x=1 - 2 \lambda, y=\lambda - 3, z=\lambda$\end{solution}
-\end{parts}
+%     \end{solution}
+%     \part[2]  Resolver el sistema cuando sea compatible indeterminado.
+%     \begin{solution}$A^*=\left(\begin{matrix}1 & 1 & 1 & -2\\2 & 3 & 1 & -7\\1 & 2 & 0 & -5\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & 1 & -2\\0 & 1 & -1 & -3\\0 & 0 & 0 & 0\end{matrix}\right)\to x=1 - 2 \lambda, y=\lambda - 3, z=\lambda$\end{solution}
+% \end{parts}
 
 \question Dadas las matrices  $A=\left(\begin{matrix}k & k & k^{2}\\1 & -1 & k\\2 k & -2 & 2\end{matrix}\right)$,  $B=\left(\begin{matrix}12\\6\\8\end{matrix}\right)$
 \begin{parts}
@@ -133,16 +133,16 @@ $z=\frac{\left|\begin{matrix}2 & 2 & 12\\1 & -1 & 6\\4 & -2 & 8\end{matrix}\righ
 \end{solution}
 \end{parts}
 
-\question[3] Un almacén de legumbres al por mayor tiene sacos de dos tipos, con
-capacidad para 5 kg de peso y con capacidad para 10 kg de peso. Sólo tiene 180 sacos de capacidad
-10 kg. Debe poner a la venta como mucho 2000 kg de alubias en sacos de ambos tipos. Por cada
-3 sacos de 10 kg puede vender como mucho 2 sacos de 5 kg, y como mínimo tiene que poner a la
-venta 20 sacos de 5 kg y 60 de 10 kg. Por cada saco de 10 kg obtiene un beneficio de 5 \euro. y por
-cada saco de 5 kg obtiene un beneficio de 2 \euro. Determine cuántos sacos de cada tipo debe vender para obtener el máximo beneficio y calcule dicho beneficio. (Justifica todos los pasos realizados)
-\begin{solution}\\
-\includegraphics[scale=0.5]{prglin1}\\
-\includegraphics[scale=0.8]{prglin2}
-\end{solution}
+% \question[3] Un almacén de legumbres al por mayor tiene sacos de dos tipos, con
+% capacidad para 5 kg de peso y con capacidad para 10 kg de peso. Sólo tiene 180 sacos de capacidad
+% 10 kg. Debe poner a la venta como mucho 2000 kg de alubias en sacos de ambos tipos. Por cada
+% 3 sacos de 10 kg puede vender como mucho 2 sacos de 5 kg, y como mínimo tiene que poner a la
+% venta 20 sacos de 5 kg y 60 de 10 kg. Por cada saco de 10 kg obtiene un beneficio de 5 \euro. y por
+% cada saco de 5 kg obtiene un beneficio de 2 \euro. Determine cuántos sacos de cada tipo debe vender para obtener el máximo beneficio y calcule dicho beneficio. (Justifica todos los pasos realizados)
+% \begin{solution}\\
+% \includegraphics[scale=0.5]{prglin1}\\
+% \includegraphics[scale=0.8]{prglin2}
+% \end{solution}
 
 \question[3] Una voluntaria quiere preparar helado artesano y horchata de
 auténtica chufa para un rastrillo solidario. La elaboración de cada litro de helado lleva 1 hora
@@ -157,32 +157,31 @@ el beneficio máximo que podría obtenerse (Justifica todos los pasos realizados
 \includegraphics[scale=0.8]{prglin4}
 \end{solution}
 
-\question Una empresa desea disponer de dinero en efectivo en euros, dólares
-y libras esterlinas. El valor total entre las tres monedas ha de ser igual a 264000 euros. Se quiere
-que el valor del dinero disponible en euros sea el doble del valor del dinero en dólares, y que el
-valor del dinero en libras esterlinas sea la décima parte del dinero en euros.
-Si se supone que una libra esterlina es igual a 1,5 euros y un dólar es igual a 1,1 euros. Si se quiere
-determinar la cantidad de euros, dólares y libras esterlinas que la empresa ha de tener disponible.
-\begin{parts}
-\part[2] Plantea un sistema de ecuaciones que refleje el enunciado
+% \question Una empresa desea disponer de dinero en efectivo en euros, dólares
+% y libras esterlinas. El valor total entre las tres monedas ha de ser igual a 264000 euros. Se quiere
+% que el valor del dinero disponible en euros sea el doble del valor del dinero en dólares, y que el
+% valor del dinero en libras esterlinas sea la décima parte del dinero en euros.
+% Si se supone que una libra esterlina es igual a 1,5 euros y un dólar es igual a 1,1 euros. Si se quiere
+% determinar la cantidad de euros, dólares y libras esterlinas que la empresa ha de tener disponible.
+% \begin{parts}
+% \part[2] Plantea un sistema de ecuaciones que refleje el enunciado
 
-%\part[1] Resuelva el problema por cualquiera de los métodos vistos en clase
+% %\part[1] Resuelva el problema por cualquiera de los métodos vistos en clase
 
-\end{parts}
+% \end{parts}
 
-\begin{solution}\\
-\includegraphics[scale=0.8]{sis2}
-\end{solution}
+% \begin{solution}\\
+% \includegraphics[scale=0.8]{sis2}
+% \end{solution}
 
 \question Un hipermercado inicia una campaña de ofertas. En la primera de
 ellas descuenta un 4 \% en un cierto producto A, un 6 \% en el producto B y un 5 \% en el producto
-C. A las dos semanas pone en marcha la segunda oferta descontando un 8 \% sobre el precio inicial
-de A, un 10 \% sobre el precio inicial de B y un 6\% sobre el precio inicial de C.
+C. A la semana pone en marcha la segunda oferta descontando un 8 \% sobre el precio inicial
+de A, un 10 \% sobre el de B y un 6\% sobre el de C.
 Se sabe que si un cliente compra durante la primera oferta un producto A, dos B y tres C, se
 ahorra 16 euros respecto del precio inicial. Si compra tres productos A, uno B y cinco C en la
 segunda oferta, el ahorro es de 29 euros. Si compra un producto A, uno B y uno C, sin ningún
-tipo de descuento, debe abonar 135 euros.\\
-Si se quiere calcular el precio de cada producto antes de las ofertas
+tipo de descuento, debe abonar 135 euros. Se quiere calcular el precio de cada producto antes de las ofertas.
 \begin{parts}
 \part[2] Plantea un sistema de ecuaciones que refleje el enunciado
 
@@ -192,6 +191,19 @@ Si se quiere calcular el precio de cada producto antes de las ofertas
 \begin{solution}\\
 \includegraphics[scale=0.8]{sis1}
 \end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\question Dadas las matrices  $A=\left(\begin{matrix}2 & 1 & 3\\1 & -1 & 0\end{matrix}\right)$,  $B=\left(\begin{matrix}1 & -1\\2 & 0\\0 & 1\end{matrix}\right)$, $C=\left(\begin{matrix}2 & 3\\1 & 4\end{matrix}\right)$ y $D=\left(\begin{matrix}1 & 8\\0 & 5\end{matrix}\right)$ 
 %%\noaddpoints % to omit double points count
