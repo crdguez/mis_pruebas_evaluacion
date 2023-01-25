@@ -117,6 +117,69 @@ $\left(x - \frac{1}{2}\right)^{2}
 \addpoints
 
 
+\question[1] Dada la función $f(x)=ax+\frac{b}{x}$:
+
+
+\begin{parts}
+\part[2] Determine los valores de los parámetros 
+$a$, $b \in \mathbb{R}$  para que pase por el punto $(2,4)$ y tenga un extremo relativo en ese punto.
+\begin{solution}
+$ 
+\left\{
+\begin{matrix}
+f(2)=4 \\
+f'(2)=0
+\end{matrix}
+\right.
+\to f'(x)=a-\frac{b}{x^2}
+\to
+\left\{
+\begin{matrix}
+2 a + \frac{b}{2}
+=4 \\
+a - \frac{b}{4}
+=0
+\end{matrix}
+\right.
+\to a=1 \land b=4$
+
+\end{solution}
+\part[1] Justifica qué tipo de extremo relativo es (máximo relativo o mínimo relativo)
+\begin{solution}
+$f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN REL$ 
+\end{solution}
+\end{parts}
+
+\question Sea la función $f(x)=\frac{x^2-x+1}{x-1}$:
+\begin{parts}
+\part[1] Determine sus asíntotas
+\begin{solution}
+$\lim_{x \to 1^-}\left(\frac{x^{2} - x + 1}{x - 1}\right)= -\infty
+\land
+\lim_{x \to 1^+}\left(\frac{x^{2} - x + 1}{x - 1}\right)=\infty \to x=1 A.V.
+$\\
+$\lim_{x \to \infty}\left(\frac{x^{2} - x + 1}{x - 1}\right)=\infty
+\land
+\lim_{x \to -\infty}\left(\frac{x^{2} - x + 1}{x - 1}\right)=-\infty \to \nexists A.H.
+$ \\
+$\lim_{x \to \infty}\frac{f(x)}{x}=\left(\frac{x^{2} - x + 1}{x^2 - x}\right)=1 \to m = 1 \land \lim_{x \to \infty} \left(f(x)-mx\right)=0 \to y=x A.O.$
+
+
+\end{solution}
+\part[1] Calcule $f'(2)$
+\begin{solution}
+$f'(x)=\frac{x \left(x - 2\right)}{x^{2} - 2 x + 1} \to f'(2)=0$
+\end{solution}
+\end{parts}
+\addpoints
+
+\question 22.2.2 Se considera la función $f(x)=\frac{10}{x^2+2x-3}$:
+\begin{parts}
+\part[1] Determine el dominio de $f$ y sus asíntotas
+
+\part[1] Obtenga los intervalos de crecimiento y decrecimiento de $f(x)$ y determine los extremos relativos indicando si corresponden a máximos o mínimos 	
+\end{parts}
+
 \end{questions}
 
 \end{document}
