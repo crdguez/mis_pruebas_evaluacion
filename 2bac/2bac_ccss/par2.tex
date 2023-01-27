@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-% \printanswers
+\printanswers
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
 \vpword{Puntos:}
@@ -32,7 +32,7 @@
 \newcommand{\class}{2º Bachillerato CCSS}
 \newcommand{\examdate}{\today}
 \newcommand{\examnum}{Parcial 2ªEv.}
-\newcommand{\tipo}{A}
+\newcommand{\tipo}{B}
 
 
 \newcommand{\timelimit}{45 minutos}
@@ -88,114 +88,103 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %\end{parts}
 %\addpoints
 
-\question Calcula los siquientes límites:
-
+\question Calcula:
 
 
 \begin{parts}
-\part[2] 
-$$\lim_{x \to -1}\left(\dfrac{x^{3} + x^{2} - x - 1}{2 x^{3} + 5 x^{2} + 4 x + 1}\right)$$
-
-\begin{solution}
-$2$
-\end{solution}
-
-\part[2] 
-$$\lim_{x \to 3}\left(\frac{\sqrt{x + 1} - 2}{x^{2} - 3 x}\right)$$
-
-\begin{solution}
-$\frac{1}{12}$
-\end{solution}
-\part[1] 
-$$\lim_{x \to -\infty} \left(\dfrac{x+3}{2x}\right)^{\frac{x^{2}}{x - 3}}$$
-\begin{solution}
-$\frac{1}{2^{-\infty}}=\infty$
-\end{solution}
+% \part[2] 
+% $$\lim_{x \to -1}\left(\dfrac{x^{3} + x^{2} - x - 1}{2 x^{3} + 5 x^{2} + 4 x + 1}\right)$$
+% \begin{solution}
+% $2$
+% \end{solution}
+% \part[2] 
+% $$\lim_{x \to 3}\left(\frac{\sqrt{x + 1} - 2}{x^{2} - 3 x}\right)$$
+% \begin{solution}
+% $\frac{1}{12}$
+% \end{solution}
+% \part[1] 
+% $$\lim_{x \to -\infty} \left(\dfrac{x+3}{2x}\right)^{\frac{x^{2}}{x - 3}}$$
+% \begin{solution}
+% $\frac{1}{2^{-\infty}}=\infty$
+% \end{solution}
 
 \part[2] 
 $$\lim_{x \to -1}\left(\frac{x^{3} - 3 x - 2}{2 x^{3} + 5 x^{2} + 4 x + 1}\right)$$
 \begin{solution}
 $3$
 \end{solution}
-
 \part[2] 
 $$\lim_{x \to 8}\left(\frac{\sqrt{x + 1} - 3}{x^{2} - 8 x}\right)$$
 \begin{solution}
 $\frac{1}{48}$
 \end{solution}
-
-
 \part[1] 
 $$\lim_{x \to \infty} \left(\dfrac{x+3}{2x}\right)^{\frac{x^{2}}{x - 3}}$$
 \begin{solution}
 $\frac{1}{2^{\infty}}=0$
 \end{solution}
-
-
 \end{parts}
 \addpoints
 
-\question Se considera la función $$f(x)=\left\{ \begin{matrix}
-ax^2-1 &  si & x<1 \\
-(x-a)^2 &  si & x \geq 1
-\end{matrix}\right.$$ 
+% \question Se considera la función $$f(x)=\left\{ \begin{matrix}
+% ax^2-1 &  si & x<1 \\
+% (x-a)^2 &  si & x \geq 1
+% \end{matrix}\right.$$ 
 
-\begin{parts}
-\part[2] Determine los valores de 
-$a \in \mathbb{R}$ que hacen que $f$ es continua en su dominio
-\begin{solution}
-$f=\begin{cases} a x^{2} - 1 & \text{for}\: x < 1 \\\left(- a + x\right)^{2} & \text{otherwise} \end{cases}
-$ \\
-$\lim_{x \to 1^-} f=a - 1
- \land \lim_{x \to 1^-} f=\left(1 - a\right)^{2} \to - a^{2} + 3 a - 2
-=0 \to a=1, a=2$
-\end{solution}
-\part[2] Para 
-$a=\dfrac{1}{2}$, determine, si existen, los puntos de corte de la gráfica con el eje de las $x$
-\begin{solution}
-$\dfrac{{x}^{2}}{2} - 1=0 \to x=-\sqrt{2}$
+% \begin{parts}
+% \part[2] Determine los valores de 
+% $a \in \mathbb{R}$ que hacen que $f$ es continua en su dominio
+% \begin{solution}
+% $f=\begin{cases} a x^{2} - 1 & \text{for}\: x < 1 \\\left(- a + x\right)^{2} & \text{otherwise} \end{cases}
+% $ \\
+% $\lim_{x \to 1^-} f=a - 1
+%  \land \lim_{x \to 1^-} f=\left(1 - a\right)^{2} \to - a^{2} + 3 a - 2
+% =0 \to a=1, a=2$
+% \end{solution}
+% \part[2] Para 
+% $a=\dfrac{1}{2}$, determine, si existen, los puntos de corte de la gráfica con el eje de las $x$
+% \begin{solution}
+% $\dfrac{{x}^{2}}{2} - 1=0 \to x=-\sqrt{2}$
 
-$\left(x - \frac{1}{2}\right)^{2}
-\to x=\frac{1}{2}=0 \notin x\geq1$
-\end{solution}
-
-
-\end{parts}
-\addpoints
+% $\left(x - \frac{1}{2}\right)^{2}
+% \to x=\frac{1}{2}=0 \notin x\geq1$
+% \end{solution}
+% \end{parts}
+% \addpoints
 
 
-\question Dada la función $f(x)=ax+\frac{b}{x}$:
+% \question Dada la función $f(x)=ax+\frac{b}{x}$:
+% \begin{parts}
+% \part[2] Determine los valores de los parámetros 
+% $a$, $b \in \mathbb{R}$  para que pase por el punto $(2,4)$ y tenga un extremo relativo en ese punto.
+% \begin{solution}
+% $ 
+% \left\{
+% \begin{matrix}
+% f(2)=4 \\
+% f'(2)=0
+% \end{matrix}
+% \right.
+% \to f'(x)=a-\frac{b}{x^2}
+% \to
+% \left\{
+% \begin{matrix}
+% 2 a + \frac{b}{2}
+% =4 \\
+% a - \frac{b}{4}
+% =0
+% \end{matrix}
+% \right.
+% \to a=1 \land b=4$
+% \end{solution}
+% \part[2] Justifica qué tipo de extremo relativo es (máximo relativo o mínimo relativo)
+% \begin{solution}
+% $f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN REL$ 
+% \end{solution}
+% \end{parts}
 
 
-\begin{parts}
-\part[2] Determine los valores de los parámetros 
-$a$, $b \in \mathbb{R}$  para que pase por el punto $(2,4)$ y tenga un extremo relativo en ese punto.
-\begin{solution}
-$ 
-\left\{
-\begin{matrix}
-f(2)=4 \\
-f'(2)=0
-\end{matrix}
-\right.
-\to f'(x)=a-\frac{b}{x^2}
-\to
-\left\{
-\begin{matrix}
-2 a + \frac{b}{2}
-=4 \\
-a - \frac{b}{4}
-=0
-\end{matrix}
-\right.
-\to a=1 \land b=4$
 
-\end{solution}
-\part[2] Justifica qué tipo de extremo relativo es (máximo relativo o mínimo relativo)
-\begin{solution}
-$f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN REL$ 
-\end{solution}
-\end{parts}
 
 % \question Sea la función $f(x)=\dfrac{x^2-x+1}{x-1}$:
 % \begin{parts}
@@ -228,12 +217,14 @@ $f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN
 % \end{solution}
 % \end{parts}
 
-\question Dada la función $f(x)=\dfrac{2x}{1-x^2}$:
-\begin{parts}
-\part[2] Determine el dominio de $f$ y sus asíntotas
-\part[2] Obtenga los intervalos de crecimiento y decrecimiento de $f(x)$
-\part[2] Determine los extremos relativos indicando si corresponden a máximos o mínimos 	
-\end{parts}
+
+
+% \question Dada la función $f(x)=\dfrac{2x}{1-x^2}$:
+% \begin{parts}
+% \part[2] Determine el dominio de $f$ y sus asíntotas
+% \part[2] Obtenga los intervalos de crecimiento y decrecimiento de $f(x)$
+% \part[2] Determine los extremos relativos indicando si corresponden a máximos o mínimos 	
+% \end{parts}
 
 
 \question Dada la función $f(x)=\dfrac{-3x}{1-x^2}$:
@@ -243,22 +234,23 @@ $f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN
 \part[2] Determine los extremos relativos indicando si corresponden a máximos o mínimos 	
 \end{parts}
 
+
+
 % \question Dada la función $f(x)=x+\sqrt{1-x}$:
 % \begin{parts}
 % \part[1] Determine el dominio de $f$ 
-
 % \part[2] Obtenga los intervalos de crecimiento y decrecimiento de $f(x)$ y determine los extremos relativos indicando si corresponden a máximos o mínimos 	
 % \end{parts}
 
-\question Dada la función: $$f(x)=\left\{ \begin{matrix}
-\dfrac{x+2}{x-1} &  si & x\leq 2 \\
-\dfrac{3x^2-2x}{x+2} &  si & x > 2
-\end{matrix}\right.$$
-\begin{parts}
-\part[1] Estudie la continuidad de $f$ 
-\part[2] Determine la recta tangente a $f$ en el punto donde $x=3$
-\part[2] Calcule las asíntotas oblicuas 	
-\end{parts}
+% \question Dada la función: $$f(x)=\left\{ \begin{matrix}
+% \dfrac{x+2}{x-1} &  si & x\leq 2 \\
+% \dfrac{3x^2-2x}{x+2} &  si & x > 2
+% \end{matrix}\right.$$
+% \begin{parts}
+% \part[1] Estudie la continuidad de $f$ 
+% \part[2] Determine la recta tangente a $f$ en el punto donde $x=3$
+% \part[2] Calcule las asíntotas oblicuas 	
+% \end{parts}
 
 
 \question Dada la función: $$f(x)=\left\{ \begin{matrix}
