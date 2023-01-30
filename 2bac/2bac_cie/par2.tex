@@ -1,0 +1,144 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CIT}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 2ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1] Determine los valores de $a$ y $b$ para sea
+continua la función:
+$$f(x)=\left\{\begin{array}{ll}
+\dfrac{1}{e^x} & si \ x\leq 0 \\
+a\cos(x) + b & si \  0 < x \leq \pi \\
+\sen(x)-ax & si \ \pi<x
+\end{array}\right.$$
+\begin{solution}
+Fuera de $x=0$ y $x=\pi$ la función es continua por serlo sus trozos en sus dominios. \\
+
+En $x=0$: \\
+$\lim_{x \to 0^-}f=\frac{1}{e^0}=1$\\
+$\lim_{x \to 0^+}f=a\cdot \cos(0) +b =a+b \to a+b=1$\\
+
+En $x=\pi$: \\
+$\lim_{x \to \pi^-}f=a\cdot \cos(\pi) +b =b-a$\\
+$\lim_{x \to \pi^+}f=\sen(\pi) - a\cdot \pi =- a\cdot \pi \to b-a=-a\cdot \pi$\\
+
+$(2-\pi)\cdot a= 1 \to a=\frac{1}{2- \pi} \to b=\frac{1-\pi}{2-\pi}$
+
+\end{solution}
+
+\question Calcula las siguientes integrales:
+\begin{parts}
+\part[1]
+$$\int x^{2} \ln{\left(x \right)}\, dx$$
+\begin{solution}
+$\left|\begin{matrix}
+u = \ln x & du=\frac{1}{x} \, dx \\ dv= x^2 \, dx & v=\frac{x^3}{3}
+\end{matrix}\right| \to \frac{x^{3} \ln{\left(x \right)}}{3} - \frac{x^{3}}{9}+K$
+\end{solution}
+
+\part[2]
+$$\int x^{2} \ln^2{\left(x \right)}\, dx$$
+\begin{solution}
+$\left|\begin{matrix}
+u = \ln^2 x & du=\frac{2}{x}\cdot \ln x \, dx \\ dv= x^2 \, dx & v=\frac{x^3}{3}
+\end{matrix}\right| \to \frac{x^{3} \ln{\left(x \right)}^{2}}{3} - \frac{2 x^{3} \ln{\left(x \right)}}{9} + \frac{2 x^{3}}{27}+K$
+\end{solution}
+
+\part[1]
+$$\int\limits_{2}^{3} \frac{1}{2 x^{2} - 4 x + 2}\, dx$$
+\begin{solution}
+$\frac{1}{4}  \land F(x)= -\frac{1}{2 x - 2}$
+\end{solution}
+\end{parts}
+
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
