@@ -31,11 +31,11 @@
 
 \newcommand{\class}{2º Bachillerato CIT}
 \newcommand{\examdate}{\today}
-\newcommand{\examnum}{Parcial 2ªEv.}
+\newcommand{\examnum}{Parcial 2ªEv. - Global de Análisis}
 \newcommand{\tipo}{A}
 
 
-\newcommand{\timelimit}{45 minutos}
+\newcommand{\timelimit}{105 minutos}
 
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
 
@@ -88,7 +88,7 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %\end{parts}
 %\addpoints
 
-\question[1] Determine los valores de $a$ y $b$ para sea
+\question[2] Determine los valores de $a$ y $b$ para sea
 continua la función:
 $$f(x)=\left\{\begin{array}{ll}
 \dfrac{1}{e^x} & si \ x\leq 0 \\
@@ -110,6 +110,24 @@ $(2-\pi)\cdot a= 1 \to a=\frac{1}{2- \pi} \to b=\frac{1-\pi}{2-\pi}$
 
 \end{solution}
 
+\question Dada la función $f(x)= x^6-4x^4$ se pide:
+\begin{parts}
+    \part[1] Estudiar los intervalos de crecimiento y decrecimiento
+    \begin{solution}
+        $f=x^{6} - 4 x^{4} \to f'(x)=6 x^{5} - 16 x^{3} \to 30 x^{4} - 48 x^{2}$\\
+        Puntos críticos: $f'(x)=0 \to  x=0, \ x= - \frac{2 \sqrt{6}}{3}, \  x=\frac{2 \sqrt{6}}{3} \to dec, crec, dec, crec $
+    \end{solution}
+    \part[1] Encontrar los máximos y mínimos relativos y determinar si son o no absolutos
+    \begin{solution}
+        Relativos: $x=0 \ max, \  x= - \frac{2 \sqrt{6}}{3} \ min, \  x=\frac{2 \sqrt{6}}{3} \ min$
+        Absolutos: Max = $\infty$, Min = $x= - \frac{2 \sqrt{6}}{3} \ , \  x=\frac{2 \sqrt{6}}{3}$
+    \end{solution}
+    \part[1] Encontrar los puntos de inflexión
+    \begin{solution}
+        $f''(x)=0 \land f'''(x) \neq 0 \to  \  x=- \frac{2 \sqrt{10}}{5}, \  x=\frac{2 \sqrt{10}}{5}$
+    \end{solution}
+\end{parts}
+
 \question Calcula las siguientes integrales:
 \begin{parts}
 \part[1]
@@ -117,7 +135,7 @@ $$\int x \ln{\left(x \right)}\, dx$$
 \begin{solution}
 $\left|\begin{matrix}
 u = \ln x & du=\frac{1}{x} \, dx \\ dv= x \, dx & v=\frac{x^3}{3}
-\end{matrix}\right| \to \frac{x^{3} \ln{\left(x \right)}}{3} - \frac{x^{3}}{9}+K$
+\end{matrix}\right| \to \frac{x^{2} \log{\left(x \right)}}{2} - \frac{x^{2}}{4}+K$
 \end{solution}
 
 \part[2]
@@ -136,17 +154,17 @@ $\frac{1}{4}  \land F(x)= -\frac{1}{2 x - 2}$
 \end{parts}
 
 
-\question[3] Calcule las dimensiones de tres campos cuadrados que no tienen ningún lado común y que
-satisfacen que el perímetro de uno de ellos es triple que el de otro y, además, se necesitan 1248 metros de
-valla para vallar completamente los tres campos, de manera que la suma de las áreas es la mínima posible.
-\begin{solution}
-    Lados= $x$, $3x$ e $y$ \\
-    $4x+4(3x)+4y=1248 \to 4(x+3x+y)=1248 \to 4x+y=312 \to y=312-4x$ \\
-    maximizar $f(x)=x^2+(3x)^2+(312-4x)^2=26 x^{2} - 2496 x + 97344= x^{2} - 96 x + 3744$ \\
-    $f'(x)=0 \to 2x-96=0 \to x=48 \land f''(48)=2>0 \to$ en $x=48$ hay un mínimo.
-    Solución: 48, 144, 120 m  
+% \question[3] Calcule las dimensiones de tres campos cuadrados que no tienen ningún lado común y que
+% satisfacen que el perímetro de uno de ellos es triple que el de otro y, además, se necesitan 1248 metros de
+% valla para vallar completamente los tres campos, de manera que la suma de las áreas es la mínima posible.
+% \begin{solution}
+%     Lados= $x$, $3x$ e $y$ \\
+%     $4x+4(3x)+4y=1248 \to 4(x+3x+y)=1248 \to 4x+y=312 \to y=312-4x$ \\
+%     maximizar $f(x)=x^2+(3x)^2+(312-4x)^2=26 x^{2} - 2496 x + 97344= x^{2} - 96 x + 3744$ \\
+%     $f'(x)=0 \to 2x-96=0 \to x=48 \land f''(48)=2>0 \to$ en $x=48$ hay un mínimo.
+%     Solución: 48, 144, 120 m  
     
-\end{solution}
+% \end{solution}
 
 \question[2] Descomponer el número 12 en dos sumandos positivos de forma que el producto
 del primero por el cuadrado del segundo sea máximo.
@@ -162,20 +180,28 @@ del primero por el cuadrado del segundo sea máximo.
     L'H $\lim = \frac{2a+1}{2} \to a = \frac{1}{3}$
 \end{solution}
 
-\question[2] Calcule el valor de $k$ para que: $$\lim_{x \to 0}\dfrac{e^x-e^{-x}+kx}{x-\sen{x}}=2$$
-\begin{solution}
-    L'H $\lim =\frac{2+k}{0}  \to k = -2$
-\end{solution}
-\addpoints
+% \question[2] Calcule el valor de $k$ para que: $$\lim_{x \to 0}\dfrac{e^x-e^{-x}+kx}{x-\sen{x}}=2$$
+% \begin{solution}
+%     L'H $\lim =\frac{2+k}{0}  \to k = -2$
+% \end{solution}
+% \addpoints
 
-% problema 23.2.2 p523
-\question[2] Determine el área de la región limitada inferiormente por la parábola $y=9x-x^2$ y superiormente por las rectas tangentes a la parábola en los puntos de corte de ella con el eje $OX$
+% % problema 23.2.2 p523
+% \question[2] Determine el área de la región limitada inferiormente por la parábola $y=9x-x^2$ y superiormente por las rectas tangentes a la parábola en los puntos de corte de ella con el eje $OX$
+
+
 
 % problema 3.3.2 p69
 \question Sea la función $f(x)=x\cdot e^{x^2}$
 \begin{parts}
     \part[1]Hallar la ecuación de la recta tangente a la gráfica de $f (x)$ en el punto de abscisa $x = 1$.
+    \begin{solution}
+        $y=e\left(3x-2\right)$
+    \end{solution}
     \part[1] Calcula el área del recinto plano acotado limitado por la gráfica de $f(x)$ para $x \geq 0$, el eje $OX$ y la recta $x = 2$.
+    \begin{solution}
+        $\frac{e^4}{2}-\frac{1}{2} \ u^2$ 
+    \end{solution}
 \end{parts}
 \addpoints
 
