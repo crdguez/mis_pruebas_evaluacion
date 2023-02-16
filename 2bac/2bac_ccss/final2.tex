@@ -89,17 +89,32 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %\addpoints
 
 \question[2] Halla el límite de la función $f(x)=\dfrac{x^2-2x}{2x^2-8}$ cuando $x\to 2$, $x\to -2$, $x\to \infty$, $x\to -\infty$.
+\begin{solution}
+    $\left[ \frac{1}{4}, \  -\infty, \  \frac{1}{2}, \  \frac{1}{2}\right]$
+\end{solution}
 
 \question Dada la función $f(x)=\left\{ \begin{matrix}
-x^2+2x-1 &  si & x\leq 1 \\
+x^{2} - 4 x + 5 &  si & x\leq 1 \\
 \dfrac{4}{x+1} &  si & x > 1
 \end{matrix}\right.$
+% f=Piecewise((x**2-4*x+5,x<=1),(4/(x+1),True))
 \begin{parts}
     \part[1] Estudia la continuidad de la función
+    \begin{solution}
+        Fuera de x=1 f es continua por serlo sus trozos en 
+ sus dominios \\
+        $\lim_{x\to1^-}f=\lim_{x\to1^+}f=2$ \\ Por tanto $f$ es continua en $\mathbf{R}$    
+    \end{solution}
     \part[1] ¿Existe algún punto dónde $f'(x)=0$ ?
+    \begin{solution}
+        $\begin{cases} 2 x - 4 & \text{for}\: x \leq 1 \\- \frac{4}{\left(x + 1\right)^{2}} & \text{otherwise} \end{cases}$ \\ El segundo trozo no se anula para ningún valor. El primer trozo se anularía en x=2 pero no pertenece al dominio. Por tanto, no hay ninguno
+    \end{solution}
 \end{parts}
 
 \question Halla las derivadas de las siguientes funciones:
+\begin{solution}
+    $\displaystyle \left[ \frac{2 - x}{\left(x + 2\right)^{3}}, \  \frac{4 \left(x - 1\right)}{\left(x + 1\right)^{3}}, \  \frac{1}{x + 3}, \  2 e^{2 x + 1}\right]$
+\end{solution}
 \begin{parts}
     \part[1] $f(x)=\dfrac{x}{\left(x+2\right)^2}$
     \part[1] $f(x)=\left(\dfrac{1-x}{1+x}\right)^2$
@@ -109,9 +124,20 @@ x^2+2x-1 &  si & x\leq 1 \\
  
 % \question[2] Halla la ecuación de la recta tangente a $f(x)=x^2\sqrt{1-3x}$ en el punto de abscisa $x=-1$
 
-\question[4] Estudia las asíntotas y los intervalos de crecimiento y decrecimiento de la función $f(x)=\dfrac{2x}{1-x^2}$
+\question[4] Calcula las ecuaciones de las asíntotas y los intervalos de crecimiento y decrecimiento de la función $f(x)=\dfrac{2x}{1-x^2}$
+\begin{solution}
+    A.V: $x=-1$ y $x=1$ \\
+    A.H: $y=0$ \\
+    $f'(x)=\frac{2 \left(x^{2} + 1\right)}{\left(x^{2} - 1\right)^{2}} \to \nexists$ puntos críticos. \\
+    La función es creciente en $\left(-\infty, -1\right) \cup \left(-1, 1\right) \cup \left(1, \infty \right)$ 
+\end{solution}
 
-\question[3] Halla el dominio de definición y los extremos relativos de $f(x)=x+\sqrt{1-x}$
+\question[3] Halla el dominio de definición y los extremos relativos (puntos de la gráfica) de $f(x)=x+\sqrt{1-x}$
+\begin{solution}
+    Dominio: $\left\{x| 1-x >0\right\}\to \left(-\infty, 1\right)$ \\
+    $f'(x)=1 - \frac{1}{2 \sqrt{1 - x}} \to  f'(x)=0 \to x=\frac{3}{4} \to \left(\frac{3}{4}, \frac{5}{4}\right)$
+    
+\end{solution}
 
 % \question[1] Un heladero ha comprobado que, a un precio de 50 céntimos de euro la unidad, vende una media de 200
 % helados diarios. Por cada céntimo que aumenta el precio, vende dos helados menos al día. Si el coste por
@@ -131,22 +157,33 @@ x^2+2x-1 &  si & x\leq 1 \\
        
 % \end{parts}
 
-\question[4] Un granjero desea vallar un terreno rectangular de pasto adyacente a un río. El pastizal debe tener 180.000
+\question[4] Un granjero desea vallar un terreno rectangular de pasto adyacente a un río. El terreno debe tener 180.000
 $m^2$
-para producir suficiente forraje para su ganado. ¿Qué dimensiones tendrá el terreno rectangular de
-forma que utilice la mínima cantidad de valla, si el lado que da al río no necesita ser vallado
+para producir suficiente pasto. ¿Qué dimensiones tendrá el terreno de
+forma que utilice la mínima cantidad de valla, si el lado que da al río no necesita ser vallado?
 \begin{solution}
-    $300 x 600 m$
+    Minimizar $f(x)=x +2 \frac{180000}{x}$ \\
+    $f'(x)= 1 - \frac{360000}{x^{2}} \land f''(x)=\frac{720000}{x^{3}} \to $
+    $x=600 m$ e $y=300 m$
 \end{solution}
 
 \question Sea $C(q) = 100 + 140 q + q^2$ el coste total, en euros, de producir $q$ unidades de un
 producto y cada unidad del producto se vende a $(400 - 12 q)$ euros.
 \begin{parts}
-    \part[2] ¿Cuántas unidades deben venderse para que el beneficio (ingresos menos costes) sea máximo?, ¿a cuánto asciende dicho beneficio máximo
+    \part[2] ¿Cuántas unidades deben venderse para que el beneficio (ingresos menos costes) sea máximo?, ¿Cuánto será el beneficio?
     \begin{solution}
-        $B(x)=x^{2} - x \left(400 - 12 x\right) + 140 x + 100 = -13 x^{2} + 260 x - 100 \to B'(x)= - 26 x + 260 \to q=10 (B''(x)=-26)$
+        $B(x)=x^{2} - x \left(400 - 12 x\right) + 140 x + 100 = -13 x^{2} + 260 x - 100 \to B'(x)= - 26 x + 260 \to q=10 \  (B''(x)=-26)$
     \end{solution}
     \part[2] ¿Cuántas unidades hay que producir para minimizar el coste medio $CM(q)=\dfrac{C(q)}{q}$ Obtén dicho valor mínimo.
+    \begin{solution}
+        $cm(x)=x + 140 + \frac{100}{x}$ \\
+        $cm'(x)=1 - \frac{100}{x^{2}}$ \\
+        $cm''(x)=\frac{200}{x^{3}}$\\
+        $cm'(x)=0 \to x=10$
+        
+        
+        
+    \end{solution}
 \end{parts}
 
 
