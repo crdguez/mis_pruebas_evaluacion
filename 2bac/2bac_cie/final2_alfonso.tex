@@ -1,7 +1,7 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
 
-\printanswers
+% \printanswers
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
 \vpword{Puntos:}
@@ -59,7 +59,7 @@
 %\newcommand{\tipo}{A}
 
 
-\newcommand{\timelimit}{75 minutos}
+\newcommand{\timelimit}{90 minutos}
 
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
 
@@ -99,6 +99,59 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 
 \begin{questions}
 
+\question[2] Calcule el valor de $k$ para que: $$\lim_{x \to 0}\dfrac{e^x-e^{-x}+kx}{x-\sen{x}}=2$$
+\begin{solution}
+    L'H $\lim =\frac{2+k}{0}  \to k = -2$
+\end{solution}
+\addpoints
+
+\question Calcula las siguientes integrales:
+\begin{parts}
+\part[2]
+$$\int x \ln{\left(x \right)}\, dx$$
+\begin{solution}
+$\left|\begin{matrix}
+u = \ln x & du=\frac{1}{x} \, dx \\ dv= x \, dx & v=\frac{x^3}{3}
+\end{matrix}\right| \to \frac{x^{2} \log{\left(x \right)}}{2} - \frac{x^{2}}{4}+K$
+\end{solution}
+
+% \part[2]
+% $$\int x^{2} \ln^2{\left(x \right)}\, dx$$
+% \begin{solution}
+% $\left|\begin{matrix}
+% u = \ln^2 x & du=\frac{2}{x}\cdot \ln x \, dx \\ dv= x^2 \, dx & v=\frac{x^3}{3}
+% \end{matrix}\right| \to \frac{x^{3} \ln{\left(x \right)}^{2}}{3} - \frac{2 x^{3} \ln{\left(x \right)}}{9} + \frac{2 x^{3}}{27}+K$
+% \end{solution}
+
+% \part[2]
+% $$\int\limits_{2}^{3} \frac{1}{2 x^{2} - 4 x + 2}\, dx$$
+% \begin{solution}
+% $\frac{1}{4}  \land F(x)= -\frac{1}{2 x - 2}$
+% \end{solution}
+
+\end{parts}
+
+
+\question[2] Calcular el área encerrada por las gráficas de las funciones $f(x)=2-x$ y $g(x)=\dfrac{2}{x-1}$
+\begin{solution}
+    Cortes: $x=0$ y $x=1$ \\
+    $A=\frac{3}{2}-2\ln{2} u^2$
+\end{solution}
+
+% % problema 23.2.2 p523
+% \question[2] Determine el área de la región limitada inferiormente por la parábola $y=9x-x^2$ y superiormente por las rectas tangentes a la parábola en los puntos de corte de ella con el eje $OX$
+
+\question[3] Calcule las dimensiones de tres campos cuadrados que no tienen ningún lado común y que
+satisfacen que el perímetro de uno de ellos es triple que el de otro y, además, se necesitan 1248 metros de
+valla para vallar completamente los tres campos, de manera que la suma de las áreas es la mínima posible.
+\begin{solution}
+    Lados= $x$, $3x$ e $y$ \\
+    $4x+4(3x)+4y=1248 \to 4(x+3x+y)=1248 \to 4x+y=312 \to y=312-4x$ \\
+    maximizar $f(x)=x^2+(3x)^2+(312-4x)^2=26 x^{2} - 2496 x + 97344= x^{2} - 96 x + 3744$ \\
+    $f'(x)=0 \to 2x-96=0 \to x=48 \land f''(48)=2>0 \to$ en $x=48$ hay un mínimo.
+    Solución: 48, 144, 120 m  
+    
+\end{solution}
 
 \question Dos urnas A y B contienen bolas de colores con la siguiente composición: La urna
 A contiene 6 bolas verdes y 4 bolas negras, y la urna B contiene 2 bolas verdes, 4
@@ -114,9 +167,6 @@ sabiendo que la bola que se sacó de la urna A era verde.
 
 \question La altura de los individuos de una población sigue una distribución normal de media
 175 cm y desviación típica 4 cm.
-\begin{solution}
-$(0.894350226333145, 0.888140561007369, 176.759652662693)$
-\end{solution}
 \begin{parts}
     \part[1] Calcule la probabilidad de que un individuo elegido al azar mida más
 de 170 cm.
@@ -134,30 +184,30 @@ determine:
     \part[1] El tipo de distribución que sigue la variable aleatoria que cuenta el número
 de días que Luis llega tarde a clase en los próximos 9 días. ¿Cuáles son sus
 parámetros?
+    \part[1] ¿Cuál es la media y la desviación típica de esta distribución?
     \part[1] ¿Cuál es la probabilidad de que Luis consiga la ansiada subida de 1
 punto en la nota final?
-    \part[1] ¿Cuál es la media y la desviación típica de esta distribución?
 \end{parts}
 
 
-\question[1] La probabilidad de que un determinado equipo de fútbol gane cuando juega en casa
-es 2/3, y la probabilidad de que gane cuando juega fuera es 2/5. (NOTA: El equipo juega, sucesivamente, una semana en casa y la siguiente fuera) 
-\begin{parts}
-    \part[1] Sin saber dónde jugará el próximo partido, calcule la probabilidad de que
-gane.
-    \part[1] Si ganó el último partido del campeonato, ¿cuál es la probabilidad de
-que jugara en casa?
-\end{parts}
+% \question[1] La probabilidad de que un determinado equipo de fútbol gane cuando juega en casa
+% es 2/3, y la probabilidad de que gane cuando juega fuera es 2/5.
+% \begin{parts}
+%     \part[1] Sin saber dónde jugará el próximo partido, calcule la probabilidad de que
+% gane.
+%     \part[1] Si ganó el último partido del campeonato, ¿cuál es la probabilidad de
+% que jugara en casa?
+% \end{parts}
 
-\question En una clase hay 40 estudiantes, de los cuales 25 son chicas y el resto
-son chicos. Además, 30 estudiantes han aprobado las matemáticas, de los cuales 10
-son chicos.
-\begin{parts}
-    \part[1] Elegido un estudiante al azar, ¿Cuál es la probabilidad de que no haya aprobado las matemáticas?
-    \part[1] ¿Y de que sea chica y haya aprobado las matemáticas?
-    \part[1] Si se elige un estudiante que ha aprobado las matemáticas, ¿cuál es la
-probabilidad de que sea una chica?
-\end{parts}
+% \question En una clase hay 40 estudiantes, de los cuales 25 son chicas y el resto
+% son chicos. Además, 30 estudiantes han aprobado las matemáticas, de los cuales 10
+% son chicos.
+% \begin{parts}
+%     \part[1] Elegido un estudiante al azar, ¿Cuál es la probabilidad de que no haya aprobado las matemáticas?
+%     \part[1] ¿Y de que sea chica y haya aprobado las matemáticas?
+%     \part[1] Si se elige un estudiante que ha aprobado las matemáticas, ¿cuál es la
+% probabilidad de que sea una chica?
+% \end{parts}
 
 
 % \question \textbf{PUNTO EXTRA (hasta un 10\%):} El cociente intelectual (CI) de los estudiantes universitarios sigue una distribución
