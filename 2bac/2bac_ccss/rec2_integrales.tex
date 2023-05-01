@@ -1,0 +1,166 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+%\printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Integrales}
+\newcommand{\tipo}{C}
+
+
+\newcommand{\timelimit}{50 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+
+% \question[3] Dada la función $f(x) = \dfrac{-2x^2 -6x - 4}{x^2 - 4} 
+% $
+% hallar su dominio, los puntos de corte con los ejes y
+% la pendiente de la recta tangente a la gráfica de la función en x = 1.
+
+
+
+
+% \question La función correspondiente a los beneficios de una empresa  donde $t$  representa los años y $B(t)$ el beneficio expresado en miles de euros es:
+% $$B(t)=\frac{20t-80}{t+2}$$
+% \begin{parts}
+%     \part[1] Determinar si $B(t)$ tiene máximos, mínimos relativos y puntos de inflexión en su dominio de definición.
+%     \part[1] Determinar cuándo la empresa tiene ganancias y cuándo pérdidas.
+%     \part[1]  ¿Están los beneficios limitados?. Razonar la respuesta. Si lo están, ¿cuál es su límite?.
+% \end{parts}
+
+% \question[2] Calcular el área del recinto limitado por la parábola de ecuación $y = -x^2 - 4x + 5$, el eje $OX$, y las rectas $x=-2$ y $x=3$ 
+% \begin{solution}$\frac{98}{3} ud^2$ \end{solution}
+
+% \question[2] Calcular el área del recinto limitado por la parábola de ecuación $y = x^2 - 3x + 2$, el eje $OX$, y las rectas $x=0$ y $x=2$ 
+% \begin{solution}$1 ud^2$ \end{solution}
+    
+
+% \question Dado  $f(x)=x^2+8x$:
+% \begin{parts}
+%     \part[1] Calcular las coordenadas de los puntos donde la recta tangente a $f$ es paralela al eje $OX$
+%     \part[1] Determina las ecuaciones de dichas rectas tangentes
+%     \part[1] Calcular el área del recinto acotado por $f$ y la recta $g(x)=x+8$
+% \end{parts}
+
+
+% \question Dado  $f(x)=x^2+6x-7$:
+% \begin{parts}
+%     \part[1] Calcular las coordenadas de los puntos donde la recta tangente a $f$ es paralela al eje $OX$
+%     \part[1] Determina las ecuaciones de dichas rectas tangentes
+%     \part[1] Calcular el área del recinto acotado por $f$ y la recta $g(x)=x+7$
+% \end{parts}
+
+% \question Halla (reduciendo la expresión todo lo que puedas) las derivada de las siguientes funciones:
+% \begin{parts}
+% \part[1] $f(x)=\dfrac{2x^3+x^2}{x-1}$
+% \begin{solution}$ \frac{x \left(4 x^{2} - 5 x - 2\right)}{x^{2} - 2 x + 1}$ \end{solution}
+% \part[1] $f(x)=\left(1-x\right)^2e^x$
+% \begin{solution}$\left(x^{2} - 1\right) e^{x} $ \end{solution}
+% \part[2] $f(x)=\ln\left[\left(\dfrac{1-x^2}{2+x}\right)^2\right]$
+% \begin{solution}$ $ \end{solution}
+
+% \part[1] $f(x)=\dfrac{x^3+2x^2}{1-x}$
+% \part[1] $f(x)=\left(x-1\right)^2e^{-x}$
+% \part[2] $f(x)=\ln\sqrt{\dfrac{1-x^2}{2+x}}$
+% \begin{solution}$ $\end{solution}
+% \end{parts}
+
+% %  evau aragon septiembre 96
+% \question  Los beneficios de una empresa vienen dados por la función \\ $B(t)=\dfrac{30t-60}{t+1}$ donde $t$  representa los años y $B(t)$ el beneficio expresado en miles de euros:
+% \begin{parts}
+%     \part[1] Determinar cuándo la empresa tiene ganancias y cuándo pérdidas.
+%     \part[1] Determinar si $B(t)$ tiene máximos, mínimos relativos y puntos de inflexión en su dominio de definición.
+%     \part[1]  ¿Están los beneficios limitados?. Razonar la respuesta. Si lo están, ¿cuál es su límite?.
+% \end{parts}
+
+
+% Parte de solo integrales
+% --------------------------
+\question Calcula las siguientes integrales:
+\begin{parts}
+    \part[1] $\int\left(x^5-7+\frac{2}{x}+\frac{4}{x^2}\right)dx$
+    \part[1] $\int x^2\cdot\sqrt{x} \ dx$
+    \part[1] $\int x\cdot  e^{x^2+1} \ dx$
+    \part[1] $\int\left(\sqrt{x}-\sqrt{2}\right)^2dx$
+    \part[1] $\int \dfrac{2x}{5x^2+9}\ dx$
+\end{parts}
+
+\question[2]   Calcular el área del recinto limitado por la función $f(x)=x^3-9x$ y el eje $OX$
+\begin{solution}
+    $\frac{81}{2}ud^2$
+\end{solution}   
+
+\addpoints
+
+
+
+\end{questions}
+
+\end{document}
+\grid

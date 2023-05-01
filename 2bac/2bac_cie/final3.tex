@@ -1,0 +1,245 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CIT}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Final 3ªEv. - Geometría y recuperación de Álgebra}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+
+% % Aragón Septiembre 14
+% \question[3] Resuelve el siguiente sistema matricial: $$\left\{ \begin{matrix}A+3B=\left(\begin{matrix}-4 & -2\\3 & -4\end{matrix}\right) \\ 2A-B= \left(\begin{matrix}-1 & 3\\-1 & -1\end{matrix}\right) \\ \end{matrix}\right.$$
+% \begin{solution}
+%     Sea $M=\left(\begin{matrix}-4 & -2\\3 & -4\end{matrix}\right)$ y $N=\left(\begin{matrix}-1 & 3\\-1 & -1\end{matrix}\right)$ \\
+
+%     $A=\frac{1}{7}(M+3N)=\left(\begin{matrix}-1.0 & 1.0\\0 & -1.0\end{matrix}\right)$\\
+%         $B=\frac{1}{7}(2M-N)=\left(\begin{matrix}-1.0 & -1.0\\1.0 & -1.0\end{matrix}\right)$ \\
+% \end{solution}
+
+% % Murcia Junio 21
+% \question Dado el sistema de ecuaciones en función del parámetro $a$:$$\left\{ \begin{matrix}a x + y + z = 4 \\  x- a y + z = 1 \\ x + y + z = a + 2 \\ \end{matrix}\right.$$
+% \begin{parts}
+% \part[1] Determine para qué valores de a el sistema tiene solución única
+% \part[2] Determine para qué valor de a el sistema tiene infinitas soluciones y resuélvalo en ese caso
+% \part[1] Determine para qué valor de a el sistema no tiene solución
+% \end{parts}
+% \begin{solution}
+% $\left\{ \begin{matrix}a x + y + z = 4 \\ - a y + x + z = 1 \\ x + y + z = a + 2 \\ \end{matrix}\right.$\\$|A|=\left|\begin{matrix}a & 1 & 1\\1 & - a & 1\\1 & 1 & 1\end{matrix}\right|=- \left(a - 1\right) \left(a + 1\right)$\\* Si $a \neq -1, 1\to |A| \neq 0 \to \exists A^{-1}$.\\Como $rg(A)=rg(A^*)=3$ --> S.C. (El sistema tiene solución) \\ Como además $rg(A)=3$ coincide con el número de incógnitas --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer \\ \textbf{Resolución por Gauss} \\ $A^*=\left(\begin{matrix}a & 1 & 1 & 4\\1 & - a & 1 & 1\\1 & 1 & 1 & a + 2\end{matrix}\right)\sim\left(\begin{matrix}1 & - a & 1 & 1\\0 & a^{2} + 1 & 1 - a & 4 - a\\0 & 0 & \frac{a^{2} - 1}{a^{2} + 1} & \frac{\left(a + 1\right) \left(a^{2} + a - 3\right)}{a^{2} + 1}\end{matrix}\right)\to x=\frac{2 - a}{a - 1}, y=1, z=\frac{a^{2} + a - 3}{a - 1}$ \\ \textbf{Método de la matríz inversa} \\ $A^{-1}=\left(\begin{matrix}\frac{1}{a - 1} & 0 & - \frac{1}{a - 1}\\0 & - \frac{1}{a + 1} & \frac{1}{a + 1}\\- \frac{1}{a - 1} & \frac{1}{a + 1} & \frac{a^{2} + 1}{a^{2} - 1}\end{matrix}\right) \to  X=A^{-1}\cdot b =\left(\begin{matrix}\frac{1}{a - 1} & 0 & - \frac{1}{a - 1}\\0 & - \frac{1}{a + 1} & \frac{1}{a + 1}\\- \frac{1}{a - 1} & \frac{1}{a + 1} & \frac{a^{2} + 1}{a^{2} - 1}\end{matrix}\right)\cdot \left(\begin{matrix}4\\1\\a + 2\end{matrix}\right) =\left(\begin{matrix}\frac{2 - a}{a - 1}\\1\\\frac{a^{2} + a - 3}{a - 1}\end{matrix}\right)$ \\ \textbf{Método de Cramer} \\ $x=\frac{\left|\begin{matrix}4 & 1 & 1\\1 & - a & 1\\a + 2 & 1 & 1\end{matrix}\right|}{1 - a^{2}}=\frac{a^{2} - a - 2}{1 - a^{2}}=\frac{a^{2} - a - 2}{1 - a^{2}}$ \\ $y=\frac{\left|\begin{matrix}a & 4 & 1\\1 & 1 & 1\\1 & a + 2 & 1\end{matrix}\right|}{1 - a^{2}}=\frac{1 - a^{2}}{1 - a^{2}}=1$ \\ $z=\frac{\left|\begin{matrix}a & 1 & 4\\1 & - a & 1\\1 & 1 & a + 2\end{matrix}\right|}{1 - a^{2}}=\frac{- a^{3} - 2 a^{2} + 2 a + 3}{1 - a^{2}}=\frac{- a^{3} - 2 a^{2} + 2 a + 3}{1 - a^{2}}$\\* Si $a=-1\to |A| = 0 \to \nexists A^{-1}$\\Como $rg(A)=rg(A^*)=2$ --> S.C. (El sistema tiene solución) \\ Como además $rg(A)=2$ no coincide con el número de incógnitas--> S.C.I --> Solo se puede resolver por Gauss \\ \textbf{Resolución por Gauss} \\ $A^*=\left(\begin{matrix}-1 & 1 & 1 & 4\\1 & 1 & 1 & 1\\1 & 1 & 1 & 1\end{matrix}\right)\sim\left(\begin{matrix}-1 & 1 & 1 & 4\\0 & 2 & 2 & 5\\0 & 0 & 0 & 0\end{matrix}\right)\to x=- \frac{3}{2}, y=\frac{5}{2} - \lambda, z=\lambda$\\* Si $a=1\to |A| = 0 \to \nexists A^{-1}$\\ \\ Como $rg(A)=2 \land rg(A^*)=3$ --> S.I. . Observa que escalonando la matriz ampliada obtenemos $A^*=\left(\begin{matrix}1 & 1 & 1 & 4\\1 & -1 & 1 & 1\\1 & 1 & 1 & 3\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & 1 & 4\\0 & -2 & 0 & -3\\0 & 0 & 0 & -1\end{matrix}\right)$
+% \end{solution}
+
+
+% % Murcia Julio 20
+% \question Considere las matrices: \\
+% $A=\left(\begin{matrix}2 & 3\\-1 & -2\end{matrix}\right)
+% $ y $B=\left(\begin{matrix}-1 & -3\\1 & 2\end{matrix}\right)$ 
+% \begin{parts}
+%     \part[2] Compruebe que las matrices A y B tienen inversa y calcúlelas
+%     \part[1] Resuelva la ecuación matricial $AXB=A^t-3B$, donde $A^t$ denota la traspuesta de $A$
+% \end{parts}
+% \begin{solution}
+%     $\left|A\right|=-1 \land \left|A\right|=-1$ \\
+%     $A^{-1}=\left(\begin{matrix}2 & 3\\-1 & -2\end{matrix}\right)$ \\
+%     $B^{-1}=\left(\begin{matrix}2 & 3\\-1 & -1\end{matrix}\right)$
+%     $X=A^{-1}\left(A^t+3B\right)B^{-1}=\left(\begin{matrix}28 & 38\\-18 & -23\end{matrix}\right)$
+% \end{solution}
+
+% Murcia Julio 20
+\question Dado el sistema de ecuaciones en función del parámetro $a$:$$\left\{ \begin{matrix}x + y - z = 4 \\ x + a^{2} y - z = 3 - a \\  x - y + a z = 1 \\ \end{matrix}\right.$$
+\begin{parts}
+\part[2] Determine para qué valores de a el sistema tiene solución única. Si es posible, calcule dicha solución para $a = 0$
+\part[1] Determine para qué valor de $a$ el sistema tiene infinitas soluciones y resuélvalo en ese caso
+\part[1] Determine para qué valor de $a$ el sistema no tiene solución
+\end{parts}
+\begin{solution}
+$\left\{ \begin{matrix}x + y - z = 4 \\ a^{2} y + x - z = 3 - a \\ a z + x - y = 1 \\ \end{matrix}\right.$\\$|A|=\left|\begin{matrix}1 & 1 & -1\\1 & a^{2} & -1\\1 & -1 & a\end{matrix}\right|=\left(a - 1\right) \left(a + 1\right)^{2}$\\* Si $a \neq -1, 1\to |A| \neq 0 \to \exists A^{-1}$.\\Como $rg(A)=rg(A^*)=3$ --> S.C. (El sistema tiene solución) \\ Como además $rg(A)=3$ coincide con el número de incógnitas --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer \\ \textbf{Resolución por Gauss} \\ $A^*=\left(\begin{matrix}1 & 1 & -1 & 4\\1 & a^{2} & -1 & 3 - a\\1 & -1 & a & 1\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & -1 & 4\\0 & -2 & a + 1 & -3\\0 & 0 & \frac{\left(a + 1\right) \left(a^{2} - 1\right)}{2} & - \frac{3 a^{2}}{2} - a + \frac{1}{2}\end{matrix}\right)\to x=\frac{4 a + 2}{a + 1}, y=- \frac{1}{a - 1}, z=\frac{1 - 3 a}{a^{2} - 1}$ \\ \textbf{Método de la matríz inversa} \\ $A^{-1}=\left(\begin{matrix}\frac{a^{2} + a + 1}{a^{2} + 2 a + 1} & - \frac{1}{a^{2} + 2 a + 1} & \frac{1}{a + 1}\\- \frac{1}{a^{2} - 1} & \frac{1}{a^{2} - 1} & 0\\\frac{- a^{2} - 1}{a^{3} + a^{2} - a - 1} & - \frac{2}{- a^{3} - a^{2} + a + 1} & \frac{1}{a + 1}\end{matrix}\right) \to  X=A^{-1}\cdot b =\left(\begin{matrix}\frac{a^{2} + a + 1}{a^{2} + 2 a + 1} & - \frac{1}{a^{2} + 2 a + 1} & \frac{1}{a + 1}\\- \frac{1}{a^{2} - 1} & \frac{1}{a^{2} - 1} & 0\\\frac{- a^{2} - 1}{a^{3} + a^{2} - a - 1} & - \frac{2}{- a^{3} - a^{2} + a + 1} & \frac{1}{a + 1}\end{matrix}\right)\cdot \left(\begin{matrix}4\\3 - a\\1\end{matrix}\right) =\left(\begin{matrix}\frac{2 \cdot \left(2 a + 1\right)}{a + 1}\\- \frac{1}{a - 1}\\\frac{1 - 3 a}{a^{2} - 1}\end{matrix}\right)$ \\ \textbf{Método de Cramer} \\ $x=\frac{\left|\begin{matrix}4 & 1 & -1\\3 - a & a^{2} & -1\\1 & -1 & a\end{matrix}\right|}{a^{3} + a^{2} - a - 1}=\frac{4 a^{3} + 2 a^{2} - 4 a - 2}{a^{3} + a^{2} - a - 1}=\frac{4 a^{3} + 2 a^{2} - 4 a - 2}{a^{3} + a^{2} - a - 1}$ \\ $y=\frac{\left|\begin{matrix}1 & 4 & -1\\1 & 3 - a & -1\\1 & 1 & a\end{matrix}\right|}{a^{3} + a^{2} - a - 1}=\frac{- a^{2} - 2 a - 1}{a^{3} + a^{2} - a - 1}=\frac{- a^{2} - 2 a - 1}{a^{3} + a^{2} - a - 1}$ \\ $z=\frac{\left|\begin{matrix}1 & 1 & 4\\1 & a^{2} & 3 - a\\1 & -1 & 1\end{matrix}\right|}{a^{3} + a^{2} - a - 1}=\frac{- 3 a^{2} - 2 a + 1}{a^{3} + a^{2} - a - 1}=\frac{- 3 a^{2} - 2 a + 1}{a^{3} + a^{2} - a - 1}$\\* Si $a=-1\to |A| = 0 \to \nexists A^{-1}$\\ \\ Como $rg(A)=2 \land rg(A^*)=3$ --> S.I. . Observa que escalonando la matriz ampliada obtenemos $A^*=\left(\begin{matrix}1 & 1 & -1 & 4\\1 & -1 & -1 & 4\\1 & -1 & -1 & 1\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & -1 & 4\\0 & -2 & 0 & 0\\0 & 0 & 0 & -3\end{matrix}\right)$\\* Si $a=1\to |A| = 0 \to \nexists A^{-1}$\\ \\ Como $rg(A)=2 \land rg(A^*)=3$ --> S.I. . Observa que escalonando la matriz ampliada obtenemos $A^*=\left(\begin{matrix}1 & 1 & -1 & 4\\1 & 1 & -1 & 2\\1 & -1 & 1 & 1\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & -1 & 4\\0 & -2 & 2 & -3\\0 & 0 & 0 & -2\end{matrix}\right)$
+\\
+Si $a=0$ :
+\\ \textbf{Resolución por Gauss} \\ $A^*=\left(\begin{matrix}1 & 1 & -1 & 4\\1 & 0 & -1 & 3\\1 & -1 & 0 & 1\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & -1 & 4\\0 & -1 & 0 & -1\\0 & 0 & 1 & -1\end{matrix}\right)\to x=2, y=1, z=-1$ \\ \textbf{Método de la matríz inversa} \\ $A^{-1}=\left(\begin{matrix}1 & -1 & 1\\1 & -1 & 0\\1 & -2 & 1\end{matrix}\right) \to  X=A^{-1}\cdot b =\left(\begin{matrix}1 & -1 & 1\\1 & -1 & 0\\1 & -2 & 1\end{matrix}\right)\cdot \left(\begin{matrix}4\\3\\1\end{matrix}\right) =\left(\begin{matrix}2\\1\\-1\end{matrix}\right)$ \\ \textbf{Método de Cramer} \\ $x=\frac{\left|\begin{matrix}4 & 1 & -1\\3 & 0 & -1\\1 & -1 & 0\end{matrix}\right|}{-1}=\frac{-2}{-1}=2$ \\ $y=\frac{\left|\begin{matrix}1 & 4 & -1\\1 & 3 & -1\\1 & 1 & 0\end{matrix}\right|}{-1}=\frac{-1}{-1}=1$ \\ $z=\frac{\left|\begin{matrix}1 & 1 & 4\\1 & 0 & 3\\1 & -1 & 1\end{matrix}\right|}{-1}=\frac{1}{-1}=-1$
+\end{solution}
+
+% Murcia Junio 21
+\question Considere las matrices: \\
+$A=\left(\begin{matrix}1 & 1 & 1\\0 & 1 & 0\\1 & 2 & 2\end{matrix}\right)
+$, $B=\left(\begin{matrix}1 & 0\\0 & -1\\2 & 1\end{matrix}\right)$ y $C=\left(\begin{matrix}-2 & 0 & -1\\1 & -1 & 1\end{matrix}\right)$
+\begin{parts}
+    \part[2] Compruebe que la matriz A es regular (o inversible) y calcule su inversa
+    \part[1] Resuelva la ecuación matricial $AX-B=C^t$, donde $C^t$ denota la traspuesta de $C$
+\end{parts}
+\begin{solution}
+    $\left|A\right|=1$ \\
+    $A^{-1}=\left(\begin{matrix}2 & 0 & -1\\0 & 1 & 0\\-1 & -1 & 1\end{matrix}\right)$ \\
+    $X=A^{-1}\left(C^t+B\right)=\left(\begin{matrix}-3 & 0\\0 & -2\\2 & 3\end{matrix}\right)$
+\end{solution}
+
+\question[3] Si $\left| \begin{matrix}
+   a & b & c  \\
+   d & e & f  \\
+   g & h & i  \\
+\end{matrix} \right|=7$
+ , calcula el valor del siguiente determinante sin desarrollarlo, indicando las propiedades que aplicas:
+ $$\left| \begin{matrix}
+   3a & 3b & 3c  \\
+   a+d & b+e & c+f  \\
+   -g+a & -h+b & -i+c  \\
+\end{matrix} \right|$$
+
+% \question[2] Demuestra que $\left| \begin{matrix}
+%    2 & 3 & 5  \\
+%    4 & 9 & 13  \\
+%    8 & 27 & 35  \\
+% \end{matrix} \right|\text{ }=\text{ 0}$, sin desarrollar, indica las propiedades de los determinantes que aplicas.
+
+% \question	Discutir, en función del parámetro a, el siguiente sistema de ecuaciones y resolverlo para   a= 1 y   a= 5.
+% 			$$\,\left. \begin{matrix}
+%   & x+y-z=1 \\ 
+%  & 3x+ay+az=5 \\ 
+%  & 4x+ay=5 \\ 
+% \end{matrix} \right\}$$
+
+\hline
+
+
+\question Los puntos $A= (0,-1,1)$, $B= (1,1,1)$ son dos vértices de un triángulo. El tercer vértice, $C$, está contenido en la recta $r$ que pasa por el punto $B$ y es perpendicular al plano $\pi \equiv 2x - y + z = 1$. 
+\begin{parts}
+    \part Calcule la ecuación de la recta $r$
+    \part Calcule las coordenadas del vértice C sabiendo que el área del triángulo es $3\sqrt{30}$
+\end{parts}
+
+\question Los puntos $A = (2, 0, 0)$, $B = (-1, 12, 4)$ son dos vértices de un triángulo. El tercer vértice se encuentra en la recta $r\equiv \left\{\begin{matrix}
+    4x+3z= 33 \\
+    y=0
+\end{matrix}\right.$
+\begin{parts}
+    \part Calcule las coordenadas del tercer vértice $C$, sabiendo que la recta $r$ es perpendicular a la recta que pasa por los puntos $A$ y $C$
+    \part Determine el ángulo que forman los vectores $\overrightarrow{AB}$ y $\overrightarrow{AC}$
+    \part Calcule el área del triángulo $ABC$
+    
+\end{parts}
+
+
+\question Problema 19.1.3 (2,5 puntos) Dados los puntos $A(1, 2, −3)$; $B(1, 5, 0)$; $C(5, 6, −1)$ y $D(4, −1, 3)$,
+se pide:
+\begin{parts}
+    \part Calcular el plano $\pi$ que contiene a los puntos $A$,$B$ y $C$
+    \part Calcular el volumen del tetraedro determinado por los cuatro puntos
+    \part Calcular el área del triángulo determinado por $A$,$B$ y $C$ 
+\end{parts}
+
+\question Se consideran las matrices $A=\left( \begin{matrix}
+   1 & 0  \\
+   2 & k  \\
+   0 & 1  \\
+\end{matrix} \right)$. y $B=\left( \begin{matrix}
+   k & 0 & -1  \\
+   1 & 1 & 2  \\
+\end{matrix} \right)$.
+Discutir en función de los valores que pueda tomar k, si la matriz AB tiene inversa.	(5 puntos)
+Discutir, en función de los valores de k, si la matriz BA tiene inversa.	(5 puntos)
+
+\question Considera la matriz $A=\left( \begin{matrix}
+   a & b & c  \\
+   2a & -b & 3c  \\
+   3a & 0 & 4c  \\
+\end{matrix} \right)$ donde a, b y c son no nulos.
+Determina el número de columnas de A que son linealmente independientes.	(5 puntos)
+	Calcula el rango de A y razona si la matriz tiene inversa.	(5 puntos)
+
+
+\question Discutir y resolver el siguiente sistema de acuerdo con los valores del parámetro m.
+	$\left\{ \begin{matrix}
+  & 5x+4y+2z=0 \\ 
+ & 2x+3y+z=0 \\ 
+ & 4x-y+{{m}^{2}}z=m-1 \\ 
+\end{matrix} \right.$	(10 puntos)
+
+
+\addpoints
+
+
+
+\end{questions}
+
+\end{document}
+\grid
