@@ -90,25 +90,40 @@ $AB=\left(\begin{matrix}4 & 1\\-1 & -1\end{matrix}\right)$, $2C=\left(\begin{mat
 
 \end{solution}
 
-% \part[1] Calcule, justificadamente, el rango de la matriz:$\left(\begin{matrix}1 & 0 & 2\\-1 & -1 & 1\\1 & -1 & 5\end{matrix}\right)$
-% \begin{solution}
-% $det(A)=0 \land $ Matriz de adjuntos $\rightarrow\left(\begin{matrix}-4 & 6 & 2\\-2 & 3 & 1\\2 & -3 & -1\end{matrix}\right)$ \\
-% Por tanto, $ran(A)=2$
-% \end{solution}
+\part[1] Calcule, justificadamente, el rango de la matriz:$\left(\begin{matrix}1 & 0 & 2\\-1 & -1 & 1\\1 & -1 & 5\end{matrix}\right)$
+\begin{solution}
+$det(A)=0 \land $ Matriz de adjuntos $\rightarrow\left(\begin{matrix}-4 & 6 & 2\\-2 & 3 & 1\\2 & -3 & -1\end{matrix}\right)$ \\
+Por tanto, $ran(A)=2$
+\end{solution}
 
 \end{parts}
 \addpoints
 
-% \question Resuelve el sistema: $\left(\begin{matrix}1 & 3 & -1\\1 & 2 & 0\\0 & 3 & -1\end{matrix}\right)\cdot \left(\begin{matrix}x\\y\\z\end{matrix}\right)=\left(\begin{matrix}4\\5\\3\end{matrix}\right)$
+\question[1] Sean las matrices $A=\displaystyle \left(\begin{matrix}2 & 1\\3 & 2\end{matrix}\right)$ y $B=\left(\begin{matrix}2 & -1\\-3 & 2\end{matrix}\right)$
+\begin{parts}
+    \part Comprueba que $B$ es la inversa de $A$
+    \begin{solution}
+        $A\cdot B=I$
+    \end{solution}
+    \part Calcula $(A-2I)^2$
+        $A-2I=\left(\begin{matrix}0 & 1\\3 & 0\end{matrix}\right) \to  (A-2I)^2= \left(\begin{matrix}3 & 0\\0 & 3\end{matrix}\right)$
+    \part Calcula la matriz $X$ tal que $AX=B$
+        \begin{solution}
+            $X=B^2=\left(\begin{matrix}7 & -4\\-12 & 7\end{matrix}\right)$
+        \end{solution}
+\end{parts}
 
-% \begin{parts}
-% \part[1] Por el método de Gauss
-% \part[1] Por el método de la matriz inversa
-% \part[1] Por la regla de Cramer
-% \end{parts}
-% \begin{solution}
-% $\left\{\begin{matrix}x + 3 y - z = 4\\x + 2 y = 5\\3 y - z = 3\\\end{matrix}\right.$ \\  Por Gauss: \\ $\left(\begin{matrix}1 & 3 & -1 & 4\\1 & 2 & 0 & 5\\0 & 3 & -1 & 3\end{matrix}\right)\rightarrow\left(\begin{matrix}1 & 3 & -1 & 4\\0 & -1 & 1 & 1\\0 & 0 & 2 & 6\end{matrix}\right)\to$ Sol:$\left\{\left( 1, \  2, \  3\right)\right\}$ \\ Por Matriz inversa: \\ $X=A^{-1}\cdot b=\left(\begin{matrix}1 & 0 & -1\\- \frac{1}{2} & \frac{1}{2} & \frac{1}{2}\\- \frac{3}{2} & \frac{3}{2} & \frac{1}{2}\end{matrix}\right)\cdot\left(\begin{matrix}4\\5\\3\end{matrix}\right)=\left(\begin{matrix}1\\2\\3\end{matrix}\right)$. \ Ya que $\left(\begin{matrix}1 & 3 & -1\\1 & 2 & 0\\0 & 3 & -1\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 1 & 0\\3 & 2 & 3\\-1 & 0 & -1\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-2 & 0 & 2\\1 & -1 & -1\\3 & -3 & -1\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}1 & 0 & -1\\- \frac{1}{2} & \frac{1}{2} & \frac{1}{2}\\- \frac{3}{2} & \frac{3}{2} & \frac{1}{2}\end{matrix}\right)$. \\ Por Cramer: \\ $det(A)=-2$ \ $\Delta_0$, $s_0$: $\left( -2, \  1\right)$ \ $\Delta_1$, $s_1$: $\left( -4, \  2\right)$ \ $\Delta_2$, $s_2$: $\left( -6, \  3\right)$ \
-% \end{solution}
+
+\question Resuelve el sistema: $\left(\begin{matrix}1 & 3 & -1\\1 & 2 & 0\\0 & 3 & -1\end{matrix}\right)\cdot \left(\begin{matrix}x\\y\\z\end{matrix}\right)=\left(\begin{matrix}4\\5\\3\end{matrix}\right)$
+
+\begin{parts}
+\part[1] Por el método de Gauss
+\part[1] Por el método de la matriz inversa
+\part[1] Por la regla de Cramer
+\end{parts}
+\begin{solution}
+$\left\{\begin{matrix}x + 3 y - z = 4\\x + 2 y = 5\\3 y - z = 3\\\end{matrix}\right.$ \\  Por Gauss: \\ $\left(\begin{matrix}1 & 3 & -1 & 4\\1 & 2 & 0 & 5\\0 & 3 & -1 & 3\end{matrix}\right)\rightarrow\left(\begin{matrix}1 & 3 & -1 & 4\\0 & -1 & 1 & 1\\0 & 0 & 2 & 6\end{matrix}\right)\to$ Sol:$\left\{\left( 1, \  2, \  3\right)\right\}$ \\ Por Matriz inversa: \\ $X=A^{-1}\cdot b=\left(\begin{matrix}1 & 0 & -1\\- \frac{1}{2} & \frac{1}{2} & \frac{1}{2}\\- \frac{3}{2} & \frac{3}{2} & \frac{1}{2}\end{matrix}\right)\cdot\left(\begin{matrix}4\\5\\3\end{matrix}\right)=\left(\begin{matrix}1\\2\\3\end{matrix}\right)$. \ Ya que $\left(\begin{matrix}1 & 3 & -1\\1 & 2 & 0\\0 & 3 & -1\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 1 & 0\\3 & 2 & 3\\-1 & 0 & -1\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-2 & 0 & 2\\1 & -1 & -1\\3 & -3 & -1\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}1 & 0 & -1\\- \frac{1}{2} & \frac{1}{2} & \frac{1}{2}\\- \frac{3}{2} & \frac{3}{2} & \frac{1}{2}\end{matrix}\right)$. \\ Por Cramer: \\ $det(A)=-2$ \ $\Delta_0$, $s_0$: $\left( -2, \  1\right)$ \ $\Delta_1$, $s_1$: $\left( -4, \  2\right)$ \ $\Delta_2$, $s_2$: $\left( -6, \  3\right)$ \
+\end{solution}
 
 \question En una librería hubo la semana pasada una promoción de tres libros: una novela, un libro de
 poesía y un cuento. Se vendieron 200 ejemplares de la novela, 100 de poesía y 150 cuentos. La librería ingresó por dicha promoción 8600 euros, que el precio de un ejemplar de novela es el doble que el de un cuento y que el triple de la diferencia entre el precio del ejemplar de poesía y del cuento es igual al
@@ -122,23 +137,23 @@ precio de una novela.
 \end{solution}
 \end{parts}
 
-% \question Un padre decide repartir su fortuna de 480 monedas de oro entre sus tres hijas: Ana,
-% Carla y Pilar. La cantidad que recibe Ana
-% es el doble de la suma de las cantidades que reciben Carla y Pilar. Además, la suma de
-% las cantidades que reciben Ana y Pilar es igual al triple de la cantidad que recibe Carla.
-% \begin{parts}
-% \part[2] Plantea un sistema de ecuaciones que refleje el enunciado
-% \part[1] Resuelva el problema por cualquiera de los métodos vistos en clase
-% \end{parts}
-% \begin{solution}
-% $\left\{\begin{matrix}x + y + z = 480\\x = 2 y + 2 z\\x + z = 3 y\\\end{matrix}\right.$ \\  Por Gauss: \\ $\left(\begin{matrix}1 & 1 & 1 & 480\\1 & -2 & -2 & 0\\1 & -3 & 1 & 0\end{matrix}\right)\rightarrow\left(\begin{matrix}1 & 1 & 1 & 480\\0 & -3 & -3 & -480\\0 & 0 & 4 & 160\end{matrix}\right)\to$ Sol:$\left\{\left( 320, \  120, \  40\right)\right\}$ \\ Por Matriz inversa: \\ $X=A^{-1}\cdot b=\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)\cdot\left(\begin{matrix}480\\0\\0\end{matrix}\right)=\left(\begin{matrix}320\\120\\40\end{matrix}\right)$. \ Ya que $\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -2\\1 & -3 & 1\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -3\\1 & -2 & 1\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-8 & -4 & 0\\-3 & 0 & 3\\-1 & 4 & -3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)$. \\ Por Cramer: \\ $det(A)=-12$ \ $\Delta_0$, $s_0$: $\left( -3840, \  320\right)$ \ $\Delta_1$, $s_1$: $\left( -1440, \  120\right)$ \ $\Delta_2$, $s_2$: $\left( -480, \  40\right)$ \ \end{solution}
+\question Un padre decide repartir su fortuna de 480 monedas de oro entre sus tres hijas: Ana,
+Carla y Pilar. La cantidad que recibe Ana
+es el doble de la suma de las cantidades que reciben Carla y Pilar. Además, la suma de
+las cantidades que reciben Ana y Pilar es igual al triple de la cantidad que recibe Carla.
+\begin{parts}
+\part[2] Plantea un sistema de ecuaciones que refleje el enunciado
+\part[1] Resuelva el problema por cualquiera de los métodos vistos en clase
+\end{parts}
+\begin{solution}
+$\left\{\begin{matrix}x + y + z = 480\\x = 2 y + 2 z\\x + z = 3 y\\\end{matrix}\right.$ \\  Por Gauss: \\ $\left(\begin{matrix}1 & 1 & 1 & 480\\1 & -2 & -2 & 0\\1 & -3 & 1 & 0\end{matrix}\right)\rightarrow\left(\begin{matrix}1 & 1 & 1 & 480\\0 & -3 & -3 & -480\\0 & 0 & 4 & 160\end{matrix}\right)\to$ Sol:$\left\{\left( 320, \  120, \  40\right)\right\}$ \\ Por Matriz inversa: \\ $X=A^{-1}\cdot b=\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)\cdot\left(\begin{matrix}480\\0\\0\end{matrix}\right)=\left(\begin{matrix}320\\120\\40\end{matrix}\right)$. \ Ya que $\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -2\\1 & -3 & 1\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -3\\1 & -2 & 1\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-8 & -4 & 0\\-3 & 0 & 3\\-1 & 4 & -3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)$. \\ Por Cramer: \\ $det(A)=-12$ \ $\Delta_0$, $s_0$: $\left( -3840, \  320\right)$ \ $\Delta_1$, $s_1$: $\left( -1440, \  120\right)$ \ $\Delta_2$, $s_2$: $\left( -480, \  40\right)$ \ \end{solution}
 
 \question Dado el sistema: $$\left\{\begin{matrix}x + y + z = a - 1\\a z + 2 x + y = a\\a y + x + z = 1\\\end{matrix}\right.$$
 %\noaddpoints % to omit double points count
 \begin{parts}
 \part[2] Discutir la solución del mismo según el valor de $a$ 
 
-% \part[1] Resolver el sistema para $a=2$
+\part[1] Resolver el sistema para $a=2$
 
 \part[3] Resolver el sistema según el valor de $a$
 
@@ -224,32 +239,61 @@ La función se optimiza para x=5, y=4.0 y el valor óptimo es 62000
 
 
 
+\question[3] Una empresa de transportes valora la apertura de sucursales rurales y/o urbanas. Las
+sucursales rurales emplean a tres personas, requieren de una inversión de 100.000 euros para su apertura y
+generan unos ingresos de 15000 euros al mes. Las sucursales urbanas emplean a 6 personas, requieren de
+150.000 euros de inversión y generan un ingreso de 18.000 euros al mes. La empresa de transportes tiene
+hasta tres millones de euros disponibles para abrir nuevas sucursales, han decidido limitar el número de
+nuevas sucursales a 25 y se han comprometido a crear como mínimo 60 empleos.
+\begin{parts}
+    \part Calcule el ingreso mensual máximo que se obtendría
+    \part En la solución óptima, ¿cuántos empleos generará?, ¿se gasta todo el dinero disponible?
+\end{parts}
+\begin{solution}
+    max $z=15000 x + 18000 y$ \\
+    s.a: \\
+    $\left\{ \begin{matrix}x+y \leq 25  \\ 3x+6y \geq 60 \\ 100000x+150000y \leq 3000000 \\ x \geq 0 \\ y \geq 0 \\ \end{matrix}\right.$ \\
+    Región factible: \\
+    \includegraphics[scale=0.30]{pl2022.png} \\
+    Vértices y valor de la función: \\
+
+    (15,10)→18000⋅10+15000⋅15=405000 \\
+    (25,0)→18000⋅0+15000⋅25=375000 \\
+    (0,10)→15000⋅0+18000⋅10=180000 \\
+    (20,0)→18000⋅0+15000⋅20=300000 \\
+    (0,20)→15000⋅0+18000⋅20=360000 \\
+    
+    Solución: \\
+    La función se optimiza para $x=15$, $y=10$ y el valor óptimo es 405000. Se gasta todo el dinero ya que $100000*15+150000*10 = 3000000$
+
+    
+
+\end{solution}
 
 
-
-% \question[3] Un camionero transporta dos tipos de mercancías, X e Y, ganando 60 y 50 euros por
-% tonelada respectivamente. Al menos debe transportar 8 toneladas de X y como mucho el doble de cantidad
-% que de Y. ¿A cuánto asciende su ganancia total máxima si dispone de un camión que puede transportar
-% hasta 30 toneladas? 
+\question[3] Un camionero transporta dos tipos de mercancías, X e Y, ganando 60 y 50 euros por
+tonelada respectivamente. Al menos debe transportar 8 toneladas de X y como mucho el doble de cantidad
+que de Y. ¿A cuánto asciende su ganancia total máxima si dispone de un camión que puede transportar
+hasta 30 toneladas? 
 
 
   
-% \begin{solution}
-% Maximizar $f(x,y)=60x+50y$ s.a: $\left\{ \begin{matrix}
-% x \geqslant 8 \\
-% x \leqslant 2y \\
-% x+y \leqslant 30 \\
-%  \end{matrix} \right.$ 
+\begin{solution}
+Maximizar $f(x,y)=60x+50y$ s.a: $\left\{ \begin{matrix}
+x \geqslant 8 \\
+x \leqslant 2y \\
+x+y \leqslant 30 \\
+ \end{matrix} \right.$ 
  
-% \includegraphics[scale=0.2]{sep2007}
+\includegraphics[scale=0.2]{sep2007}
 
 
-% Vértices:\\
-% $A(8 , 4) \to f(8,4)=680$\\
-% $B(8 , 22) \to f(8,22)=1580$\\
-% $C(20 , 10) \to f(20,10)=1700$\\
+Vértices:\\
+$A(8 , 4) \to f(8,4)=680$\\
+$B(8 , 22) \to f(8,22)=1580$\\
+$C(20 , 10) \to f(20,10)=1700$\\
 
-% 1700 \euro (debe transportar 20 toneladas de X y 10 toneladas de Y). \end{solution}
+1700 \euro (debe transportar 20 toneladas de X y 10 toneladas de Y). \end{solution}
 
 
 
