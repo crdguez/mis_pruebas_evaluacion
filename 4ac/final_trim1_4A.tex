@@ -1,0 +1,247 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{4º Académicas}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Examen final de trimestre 1}
+\newcommand{\tipo}{B}
+
+
+\newcommand{\timelimit}{50 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+
+% \question[1] 
+% \begin{solution} \end{solution}
+% \addpoints
+
+\question Calcula: 
+\begin{parts}
+% \part[1] Racionaliza y simplifica:  $\dfrac{3\sqrt{5}-4}{\sqrt{5}-2}$ 
+% \begin{solution} $7+2\sqrt{5}$ \end{solution}
+% \part[1] Racionaliza y simplifica:  $\dfrac{2\sqrt{8}-3\sqrt{2}}{2\sqrt{8}+3\sqrt{2}}$ 
+% \begin{solution} $\frac{1}{7}$ \end{solution}
+% \part[1] Racionaliza y simplifica:  $\dfrac{\sqrt{3}}{2\sqrt{3}-\sqrt{2}}$ 
+% \begin{solution} $=\dfrac{\sqrt{3}\cdot\left(2\sqrt{3}+\sqrt{2}\right)}{\left(2\sqrt{3}-\sqrt{2}\right)\left(2\sqrt{3}+\sqrt{2}\right)}=\dfrac{6\sqrt{6}}{12-2}=\dfrac{6\sqrt{6}}{10}$ \end{solution}
+\part[1] Racionaliza y simplifica:  $\dfrac{\sqrt{5}}{2\sqrt{5}+\sqrt{2}}$
+\begin{solution} $\frac{10 - \sqrt{10}}{18}$ \end{solution}
+% \part[1] Racionaliza y simplifica:  $\dfrac{\sqrt{5}}{3\sqrt{5}+\sqrt{3}}$
+% \begin{solution} $\frac{15 - \sqrt{15}}{42}$ \end{solution}
+% \part[1] Aplica la definición de logaritmo para calcular: $\log_4 \sqrt{0,25}$
+% \begin{solution} $\to 4^x=\sqrt{\frac{1}{4}}\to4^x=4^{-1/2}\to\log_4 \sqrt{0,25}=-\frac{1}{2}$ \end{solution}
+\part[1] Aplica la definición de logaritmo para calcular: $\log_{4}{\sqrt{0,125}}$
+\begin{solution} $- \frac{3}{4}$ \end{solution}
+\part[1] Aplica la definición de logaritmo para calcular: $\log_5 \sqrt[3]{25}$
+\begin{solution} $\to 5^x=\sqrt[3]{5^2}\to5^x=5^{2/3}\to\log_5 \sqrt[3]{25}=\frac{2}{3}$ \end{solution}
+% \part[1] Aplica la definición de logaritmo para calcular: $\log_4 \sqrt[3]{16}$
+% \begin{solution} $\frac{2}{3}$ \end{solution}
+% \part[2] Sabiendo que $\log x=1$ y $\log y=-2$, calcula: $\log (\dfrac{100\cdot x^2}{\sqrt{x\cdot y}})$
+% \begin{solution}
+% $\log (\frac{100\cdot x^2}{\sqrt{x\cdot y}})=\frac{3 \log{\left (x \right )}}{2} - \frac{\log{\left (y \right )}}{2} + 2=2 - \frac{-2}{2} + \frac{3 \cdot 1}{2}=\frac{9}{2}$      
+% \end{solution}
+% \part[2] Sabiendo que $\log x=2$ y $\log y=-1$, calcula: $\log (\dfrac{\sqrt{x\cdot y}}{100\cdot x^2})$
+% \begin{solution}
+% $\log (\frac{\sqrt{x\cdot y}}{100\cdot x^2})=\frac{3 \log{\left (x \right )}}{2} - \frac{\log{\left (y \right )}}{2} + 2=2 - \frac{-1}{2} + \frac{3 \cdot 2}{2}=\frac{11}{2}$      
+% \end{solution}
+\end{parts}
+
+\addpoints
+
+% \question[1] Halla el valor de $k$ para que la división $\left( 5x^3-2kx+k \right): \left(x - 2\right)$  tenga resto 1
+% \begin{solution} $- 3 k + 40=1 \to k = 13 $ \end{solution}
+
+% \question[1] Halla el valor de $k$ para que la división $\left( 5x^3-2kx+k \right): \left(x - 3\right)$  tenga resto 5
+% \begin{solution} $- 5 k + 135=5 \to k = 26 $ \end{solution}
+
+% \addpoints
+
+
+% \question[1] Utilizando el teorema del resto para el polinomio $P(x)=-2x^3 + x^2 - 3x - 6$, resuelve: 
+% \begin{parts}
+% \part Valor numérico para $x=-1$ 
+% \begin{solution} $0$ \end{solution}
+% \part ¿Es divisible $P(x)$ por $x+1$? Justifica tu respuesta 
+% \begin{solution} Sí. Por el teorema del resto \end{solution}
+% \end{parts}
+
+\addpoints
+
+
+% \question[1] Halla el valor de \emph{k} para que la siguiente división sea exacta: $$(3x^2+kx-2):(x+2)$$
+% \begin{solution} $\to 10-2k=0 \to k=5 $ \end{solution}
+
+\question[1] Halla el valor de \emph{k} para que la siguiente división sea exacta: $$(2x^4-6x^3+kx^2-11):(x+1)$$
+\begin{solution} $\to -3+k=0 \to k=3 $ \end{solution}
+
+% \question[1] Halla el valor de \emph{k} para que $3x^2+kx-2$ sea divisible por $x+2$
+% \begin{solution} $\to 10-2k=0 \to k=5 $ \end{solution}
+
+\addpoints
+
+% \question[1] Simplifica la fracción algebraica: $$\dfrac{2x^3-5x^2+3x}{2x^2+x-6} $$
+% \begin{solution}$=\dfrac{2x\left(x-1\right)\left(x-\dfrac{3}{2}\right)}{2\left(x+2\right)\left(x-\dfrac{3}{2}\right)}=\dfrac{x(x-1)}{x+2}$  \end{solution}
+
+\question[2] Simplifica la fracción algebraica: $$\frac{2 x^{3} + 2 x^{2} - 4 x}{3 x^{4} + 3 x^{3} - 6 x^{2}}$$
+\begin{solution} $\frac{2 x^{3} + 2 x^{2} - 4 x}{3 x^{4} + 3 x^{3} - 6 x^{2}}=\frac{2 x \left(x - 1\right) \left(x + 2\right)}{3 x^{2} \left(x - 1\right) \left(x + 2\right)}=\frac{2}{3 x}$  \end{solution}
+
+% \question[1] Simplifica la fracción algebraica: $$\frac{3 x^{4} - 3 x^{3} - 6 x^{2}}{2 x^{3} - 2 x^{2} - 4 x}$$
+% \begin{solution} $\frac{3 x^{4} - 3 x^{3} - 6 x^{2}}{2 x^{3} - 2 x^{2} - 4 x}=\frac{3 x^{2} \left(x - 2\right) \left(x + 1\right)}{2 x \left(x - 2\right) \left(x + 1\right)}=\frac{3 x}{2}$  \end{solution}
+
+% \addpoints
+
+% \question[1] Simplifica la fracción algebraica: $$\dfrac{2x^4-6x^3+6x^2-2x}{6x^3-12x^2+6x} $$
+% \begin{solution}$=\dfrac{2x\left(x-1\right)^3}{6x\left(x-1\right)^2}=\dfrac{x-1}{3}$ \end{solution}
+
+% \addpoints
+
+\question Resuelve las siguientes ecuaciones: 
+\begin{parts}
+\part[2] $$\dfrac{2x}{x+1}-\dfrac{1}{x}=\dfrac{5}{6}$$
+\begin{solution}$\to \dfrac{12x^2}{6x\left(x+1\right)}-\dfrac{6\left(x+1\right)}{5x\left(x+1\right)\left(x+1\right)}=\dfrac{5}{6x\left(x+1\right)}\to 12x^2-6x-6=5x^2+5x\to 7x^2-11x-6=0\to x=2 \ x=-\frac{3}{7}$ \end{solution}
+% \part[2] $$\dfrac{6x+1}{x^2-4}-\dfrac{x}{x-2}=\dfrac{x+1}{x+2}$$
+% \begin{solution}$\to \dfrac{6x+1}{\left(x+2\right)\left(x-2\right)}-\dfrac{x\left(x+2\right)}{\left(x+2\right)\left(x-2\right)}=\dfrac{\left(x+1\right)\left(x-2\right)}{\left(x+2\right)\left(x-2\right)} \to 6x+1-x^2-2x=x^2-2x+x-2\to 0=2x^2-5x-3 \to x=\frac{5 \pm \sqrt{25+24}}{4}=\frac{5 \pm 7}{4}=\left\lbrace \begin{gathered}
+% 	  x=-\frac{1}{2}  \hfill\\
+% 	  x=3  
+% 	\end{gathered} \right.$ \end{solution}
+% \part[2] $$\frac{6x+1}{x^2-4}+\frac{x}{2-x}=\frac{x+1}{x+2}$$
+% \begin{solution}$\frac{6x+1}{x^2-4}+\frac{x}{2-x}=\frac{x+1}{x+2} \to x=- \frac{1}{2}, x=3$ \end{solution}
+
+% \part[2] $$\frac{x+1}{3x-6}-\frac{x+1}{2x+4}=\frac{10-x^2}{6x^2-24}$$
+% \begin{solution}$\frac{x+1}{3x-6}-\frac{x+1}{2x+4}=\frac{10-x^2}{6x^2-24} \to x=0$ \end{solution}
+
+
+\part[2] $$2x^4-6x^3+6x^2-2x=0$$
+\begin{solution}$P(x)2x^4-6x^3+6x^2-2x=2x\left(x-1\right)^3$. Soluciones: $x=0$ y $x=1$ triple\end{solution}
+% \part[2] $$6x^3-12x^2+6x=0$$
+% \begin{solution}$P(x)=6x^3-12x^2+6x=6x\left(x-1\right)^2$. Soluciones: $x=0$ y $x=1$ doble \end{solution}
+
+% \part[2] $$x^5-10x^4+31x^3-30x^2$$
+% \begin{solution}$x^5-10x^4+31x^3-30x^2 \to x=0, x=2, x=3, x=5$ \end{solution}
+% \part[2] $$-2x^5+10x^4-12x^3-8x^2+16x=0$$
+% \begin{solution}$$-2x^5+10x^4-12x^3-8x^2+16x=0 \to x=-1, x=0, x=2$$ \end{solution}
+
+
+
+\part[2] $$\sqrt{x+1}+5=x$$
+\begin{solution}$\to x+1=\left(x-5\right)^2\to x+1=x^2+25-10x\to 0=x^2-11x+24$ Soluciones: $x=8$ válida y $x=3$ no válida \end{solution}
+% \part[2] $$\sqrt{3x-2}+\sqrt{x-1}=3$$
+% \begin{solution}$\to\sqrt{3x-2}=3-\sqrt{x-1}\to 3x-2=9+x-1-6\sqrt{x-1}\to6\sqrt{x-1}=9+x-1-3x+32\to6\sqrt{x-1}=10-2x\to3\sqrt{x-1}=5-x\to x-1=25+x^2-10x\to x^2-19x+34=0$. Soluciones: $x=2$ (Sí) y $x=17$ No  \end{solution}
+
+% \part[2] $$2x+1=2\sqrt{1+x}+x$$
+% \begin{solution}$2x+1=2\sqrt{1+x}+x \to x=-1, x=3$ \end{solution}
+
+% \part[2] $$2x-3=\sqrt{3x-3}-2+x$$
+% \begin{solution}$2x-3=\sqrt{3x-3}-2+x \to x=1, x=4$ \end{solution}
+
+% \part[2] $$2+\sqrt{2x+3}=2x-1$$
+% \begin{solution}$2+\sqrt{2x+3}=2x-1 \to x=3$ \end{solution}
+
+% \part[2] $$2+\sqrt{2x+3}=2x-1$$
+% \begin{solution}$2+\sqrt{2x+3}=2x-1 \to x=3$ \end{solution}
+
+
+% \part[2] $$\sqrt{3x-2}+\sqrt{x-1}=3$$
+% \begin{solution}$\sqrt{3x-2}+\sqrt{x-1}=3 \to x=2$ \end{solution}
+
+\part[2] $$\sqrt{x+3}+\sqrt{x-2}=5$$
+\begin{solution}$\sqrt{x+3}+\sqrt{x-2}=5 \to x=6$ \end{solution}
+
+% \part[1] $$5^{3x-3}=625$$
+% \begin{solution}$5^{3x-3}=5^4 \to x=\frac{7}{3}$ \end{solution}
+
+% \part[2] $$2^{x^2-4x+1}=\frac{1}{4}$$
+% \begin{solution}$2^{x^2-4x+1}=\frac{1}{4} \to x=1, x=3$ \end{solution}
+
+% \part[2] $$3^{x-1}+3^{x}+3^{x+1}=117$$
+% \begin{solution}$3^{x-1}+3^{x}+3^{x+1}=117 \to x=3$ \end{solution}	
+
+% \part[2] $$\log {\left(x-1\right)}+ \log{2}=\log{\left(x^2+3\right)} - \log x$$ \\
+
+% \begin{solution} $\to 2\left(x-1\right)=\frac{x^2+3}{x}\to 2x^2 -2x=x^2+3\to x^2-2x-3=0 \to x=\frac{2\pm\sqrt{4+12}}{2}=\left\lbrace \begin{gathered}
+% 	  x=3  \to \textup{es solución} \hfill\\
+% 	  x=-1  \to \textup{no es solución, no existen los logaritmos de negativos}
+% 	\end{gathered} \right. $  \end{solution}
+% \part[2] $$\left(x^2-5x+5\right)\log 5 + \log{20}=\log 4$$
+
+% \begin{solution} $\to 5^{\left(x^2-5x+5\right)}\cdot20=4 \to 5^{\left(x^2-5x+5\right)}=\frac{1}{5} \to 5^{\left(x^2-5x+5\right)}=5^{-1}\to x^2-5x+5 = -1 \to x^2-5x+6=0 \to x=\frac{5 \pm \sqrt{25-24}}{2}=\left\lbrace \begin{gathered}
+% 	  x=3  \to \textup{es solución} \hfill\\
+% 	  x=2  \to \textup{es solución}
+% 	\end{gathered} \right. $  \end{solution}
+
+% \part[2] $$2\log x - \log (3x-5) = \log(5x)-1 $$
+% \begin{solution}$2\log x - \log (3x-5) = \log(5x)-1  \to x=5$ \end{solution}	
+
+% \part[2] $$\log(x-1)+\log 2 = \log (x^2+3) -\log x$$
+% \begin{solution}$\log(x-1)+\log 2 = \log (x^2+3) -\log x \to x=3$ \end{solution}
+	
+	
+
+\end{parts}
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
