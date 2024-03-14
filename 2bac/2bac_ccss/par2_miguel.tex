@@ -1,0 +1,190 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 2ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{50 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[2] Halla el límite de la función $f(x)=\dfrac{x^{2} - 2 x}{2 x^{2} - 8}$ en $x=2$, $x=-2$, $x=\infty$ y $x=-\infty$  
+
+%\noaddpoints % to omit double points count
+
+\begin{solution}
+$f(x)=\frac{x^{2} - 2 x}{2 x^{2} - 8}=\frac{x}{2 \left(x + 2\right)}$ . \\  \\ $\lim_{x \to 2^+}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{4}$ \\ $\lim_{x \to 2^-}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{4}$ \\ $\lim_{x \to -2^+}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=-\infty$ \\ $\lim_{x \to -2^-}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\infty$ \\ $\lim_{x \to \infty}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{2}$ \\ $\lim_{x \to \infty}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{2}$ \\ $\lim_{x \to -\infty}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{2}$ \\ $\lim_{x \to -\infty}\left(\frac{x^{2} - 2 x}{2 x^{2} - 8}\right)=\frac{1}{2}$
+
+\end{solution}
+
+
+\addpoints
+
+\question Calcula y simplifica las siguientes derivadas: 
+
+\begin{parts}
+
+
+\part[1] $y=\ln(\frac{x}{3}+1)$ 
+\begin{solution} $\frac{1}{3 \left(\frac{x}{3} + 1\right)}$ \end{solution}
+\part[1]  $y=e^{2x+1}$ 
+\begin{solution} $ 2 e^{2 x + 1}$\end{solution}
+\part[2]   $y=\left(\dfrac{1-x}{1+x}\right)^2$
+\begin{solution} $- \frac{2 \left(1 - x\right)^{2}}{\left(x + 1\right)^{3}} + \frac{2 x - 2}{\left(x + 1\right)^{2}}=\frac{4 \left(x - 1\right)}{\left(x + 1\right)^{3}}$ \end{solution}
+\end{parts}
+
+
+\question Dada la función $$f(x)=x+\sqrt{1-x}$$:
+\begin{parts}
+\part[1] Determine el dominio de $f$
+\part[2] Determine las asíntotas de $f$
+% \part[2] Obtenga los intervalos de crecimiento y decrecimiento de $f(x)$ y determine los extremos relativos indicando si corresponden a máximos o mínimos 	
+\end{parts}
+
+
+\question Dada la función:
+$$f(x)=\begin{cases} x^{2} + 2 x - 1 & si \ x \leq 1 \\\dfrac{4}{x + 1} & si \ x > 1\end{cases}$$ 
+
+\begin{parts}
+
+\part[1] Estudia la continuidad
+
+% \part[1] Estudia la derivabilidad
+
+\part[1]   ¿Existe algún punto donde $f'(x)=0$?
+
+\end{parts}\begin{solution} Las funciones parciales son continuas y derivables en todo su dominio por ser polinómicas y de proporcionalidad inversa. \\
+$dom(x^{2} + 2 x - 1)=\mathbb{R} \to$ continua y derivable en $\left(- \infty , 1 \right]$ \\
+$ dom(\dfrac{4}{x + 1})= \mathbb{R}-\{ -1 \} \to $ continua y derivable en $\left(1 , \infty \right)$\\
+Continuidad en $x=1$: \\
+$\lim_{x \to 1^-} f =1^2+2\cdot 1-1=2 \land \lim_{x \to 1^+} f =\frac{4}{1+1}=2 \to$ es continua
+$f'(x)=\begin{cases} 2x + 2 & si \ x \leq 1 \\\dfrac{-4}{(x + 1)^2} & si \ x > 1\end{cases}$ \\
+Derivabilidad en $x=1$: \\
+$\lim_{x \to 1^-}f'=2\cdot 1+2=3 \land \lim_{x \to 1^+}f'=\frac{-4}{(1+1)^2}=-1 \to$ no es derivable
+
+
+ 
+
+ \end{solution}
+
+
+\addpoints
+
+
+% \question Sea la función  $$\frac{x^{2} - 3 x + 3}{x - 1}$$.
+% %\noaddpoints % to omit double points count
+% \begin{parts}
+% \part[2] Determinar los intervalos de crecimiento y decrecimiento
+
+% \part[1] Determinar los extremos relativos  
+
+% \part[2] Determinar los intervalos de concavidad y convexidad
+
+% \part[1] Determinar los puntos de inflexión  
+
+% \part[2] Determina sus asíntotas  
+
+% \end{parts}
+
+% \begin{solution}
+% \includegraphics[scale=0.3]{pa2_1}
+
+% $f(x)=\frac{x^{2} - 3 x + 3}{x - 1}=\frac{x^{2} - 3 x + 3}{x - 1}$ . \\ Dominio de continuidad: $\left(-\infty, 1\right) \cup \left(1, \infty\right)$ . \\ $f'(x)=\frac{2 x - 3}{x - 1} - \frac{x^{2} - 3 x + 3}{\left(x - 1\right)^{2}}=\frac{x \left(x - 2\right)}{x^{2} - 2 x + 1}$ . \\ $f''(x)=\frac{2}{x - 1} - \frac{2 \left(2 x - 3\right)}{\left(x - 1\right)^{2}} + \frac{2 \left(x^{2} - 3 x + 3\right)}{\left(x - 1\right)^{3}}=\frac{2}{x^{3} - 3 x^{2} + 3 x - 1}$ . \\ $f'''(x)=- \frac{6}{\left(x - 1\right)^{2}} + \frac{6 \left(2 x - 3\right)}{\left(x - 1\right)^{3}} - \frac{6 \left(x^{2} - 3 x + 3\right)}{\left(x - 1\right)^{4}}=- \frac{6}{x^{4} - 4 x^{3} + 6 x^{2} - 4 x + 1}$ . \\ Asíntotas:\\A.V. $x=1$\\A.O. $y=x - 2$ \\A.O. $y=x - 2$ \\ \\ Crecimiento: $\left(-\infty, 0\right) \cup \left(2, \infty\right)$ \\ Decrecimiento: $\left(0, 1\right) \cup \left(1, 2\right) $\\ Extremos relativos: $\left[ \left[ 0, \  max\right], \  \left[ 2, \  min\right]\right]$ \\ Concavidad: $\left(1, \infty\right)$ \\ Convexidad: $\left(-\infty, 1\right) $\\ Puntos de inflexión: $\left[ \right]$ \\
+
+
+
+% \end{solution}
+
+\addpoints
+
+
+
+% \question[4] Tenemos que hacer dos chapas cuadradas de dos  materiales distintos de 2 y 3 \euro /$cm^2$ respectivamente. ¿Cómo hemos de elegir los lados de los cuadrados si queremos que el coste total sea mínimo y que la suma de los perímetros de los dos cuadrados sea de un metro?
+
+% \begin{solution}
+% $x \to$ lado del cuadrado de 2\euro /$cm^2$ \\
+% $y \to$ lado del cuadrado de 3\euro /$cm^2$ \\
+% De la condición del perímetro$4x+4y=100 \to y=25-x$ \\
+% La función a optimizar es: $$f(x)=2x^2+3(25-x)^2$$
+% Extremos relativos: \\
+% $f'(x)=4x+6(x-25)=10x-150 \to f'(x)=0 \iff x=15$
+% , como $f''(x)=10>0 \to f''(15)=10>0$ y por tanto en $x=15$ hay un mínimo relativo.\\
+
+
+% Luego son cuadrados de lado 10 y 15 cm
+% \end{solution}
+
+\addpoints
+
+
+\addpoints
+
+
+
+
+\end{questions}
+
+\end{document}
+\grid

@@ -88,7 +88,11 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %\end{parts}
 %\addpoints
 
-\question[2] Halla el límite de la función $f(x)=\dfrac{x^2-2x}{2x^2-8}$ cuando $x\to 2$, $x\to -2$, $x\to \infty$, $x\to -\infty$.
+
+
+
+
+\question[2] Halla el límite de la función $f(x)=\dfrac{2x^2-4x}{4x^2-16}$ cuando $x\to 2$, $x\to -2$, $x\to \infty$, $x\to -\infty$.
 \begin{solution}
     $\left[ \frac{1}{4}, \  -\infty, \  \frac{1}{2}, \  \frac{1}{2}\right]$
 \end{solution}
@@ -111,16 +115,29 @@ x^{2} - 4 x + 5 &  si & x\leq 1 \\
     \end{solution}
 \end{parts}
 
-\question Halla las derivadas de las siguientes funciones:
-\begin{solution}
-    $\displaystyle \left[ \frac{2 - x}{\left(x + 2\right)^{3}}, \  \frac{4 \left(x - 1\right)}{\left(x + 1\right)^{3}}, \  \frac{1}{x + 3}, \  2 e^{2 x + 1}\right]$
-\end{solution}
+% \question Halla las derivadas de las siguientes funciones:
+% \begin{solution}
+%     $\displaystyle \left[ \frac{2 - x}{\left(x + 2\right)^{3}}, \  \frac{4 \left(x - 1\right)}{\left(x + 1\right)^{3}}, \  \frac{1}{x + 3}, \  2 e^{2 x + 1}\right]$
+% \end{solution}
+% \begin{parts}
+%     \part[1] $f(x)=\dfrac{x}{\left(x+2\right)^2}$
+%     \part[1] $f(x)=\left(\dfrac{1-x}{1+x}\right)^2$
+%     \part[1] $f(x)=\ln\left(\dfrac{x}{3}+1\right)$
+%     \part[1] $f(x)=e^{2x+1}$
+% \end{parts} 
+
+\question Calcula las derivadas de las siguientes funciones: 
 \begin{parts}
-    \part[1] $f(x)=\dfrac{x}{\left(x+2\right)^2}$
-    \part[1] $f(x)=\left(\dfrac{1-x}{1+x}\right)^2$
-    \part[1] $f(x)=\ln\left(\dfrac{x}{3}+1\right)$
-    \part[1] $f(x)=e^{2x+1}$
-\end{parts} 
+\part[1] $f(x)=\frac{1}{x}+2\ln x - \frac{\ln x}{x}$
+\begin{solution}
+$\frac{2}{x} + \frac{1}{x^{2}} \ln{\left (x \right )} - \frac{2}{x^{2}}=\frac{1}{x^{2}} \left(2 x + \ln{\left (x \right )} - 2\right)$
+\end{solution}
+\part[1] $g(x)=\dfrac{e^x}{(x-1)^2}$
+\begin{solution}
+$\frac{\left(- 2 x + 2\right) e^{x}}{\left(x - 1\right)^{4}} + \frac{e^{x}}{\left(x - 1\right)^{2}}=\frac{e^{x}}{\left(x - 1\right)^{4}} \left(- 2 x + \left(x - 1\right)^{2} + 2\right)$
+
+\end{solution}
+\end{parts}
  
 % \question[2] Halla la ecuación de la recta tangente a $f(x)=x^2\sqrt{1-3x}$ en el punto de abscisa $x=-1$
 
@@ -131,6 +148,14 @@ x^{2} - 4 x + 5 &  si & x\leq 1 \\
     $f'(x)=\frac{2 \left(x^{2} + 1\right)}{\left(x^{2} - 1\right)^{2}} \to \nexists$ puntos críticos. \\
     La función es creciente en $\left(-\infty, -1\right) \cup \left(-1, 1\right) \cup \left(1, \infty \right)$ 
 \end{solution}
+
+% \question[2] Calcula os intervalos de crecimiento y decrecimiento de  $f(x)=\dfrac{2x}{1-x^2}$
+% \begin{solution}
+%     A.V: $x=-1$ y $x=1$ \\
+%     A.H: $y=0$ \\
+%     $f'(x)=\frac{2 \left(x^{2} + 1\right)}{\left(x^{2} - 1\right)^{2}} \to \nexists$ puntos críticos. \\
+%     La función es creciente en $\left(-\infty, -1\right) \cup \left(-1, 1\right) \cup \left(1, \infty \right)$ 
+% \end{solution}
 
 \question[3] Halla el dominio de definición y los extremos relativos (puntos de la gráfica) de $f(x)=x+\sqrt{1-x}$
 \begin{solution}
@@ -167,25 +192,43 @@ forma que utilice la mínima cantidad de valla, si el lado que da al río no nec
     $x=600 m$ e $y=300 m$
 \end{solution}
 
-\question Sea $C(q) = 100 + 140 q + q^2$ el coste total, en euros, de producir $q$ unidades de un
-producto y cada unidad del producto se vende a $(400 - 12 q)$ euros.
-\begin{parts}
-    \part[2] ¿Cuántas unidades deben venderse para que el beneficio (ingresos menos costes) sea máximo?, ¿Cuánto será el beneficio?
-    \begin{solution}
-        $B(x)=x^{2} - x \left(400 - 12 x\right) + 140 x + 100 = -13 x^{2} + 260 x - 100 \to B'(x)= - 26 x + 260 \to q=10 \  (B''(x)=-26)$
-    \end{solution}
-    \part[2] ¿Cuántas unidades hay que producir para minimizar el coste medio $CM(q)=\dfrac{C(q)}{q}$ Obtén dicho valor mínimo.
-    \begin{solution}
-        $cm(x)=x + 140 + \frac{100}{x}$ \\
-        $cm'(x)=1 - \frac{100}{x^{2}}$ \\
-        $cm''(x)=\frac{200}{x^{3}}$\\
-        $cm'(x)=0 \to x=10$
+% \question Sea $C(q) = 100 + 140 q + q^2$ el coste total, en euros, de producir $q$ unidades de un
+% producto y cada unidad del producto se vende a $(400 - 12 q)$ euros.
+% \begin{parts}
+%     \part[2] ¿Cuántas unidades deben venderse para que el beneficio (ingresos menos costes) sea máximo?, ¿Cuánto será el beneficio?
+%     \begin{solution}
+%         $B(x)=x^{2} - x \left(400 - 12 x\right) + 140 x + 100 = -13 x^{2} + 260 x - 100 \to B'(x)= - 26 x + 260 \to q=10 \  (B''(x)=-26)$
+%     \end{solution}
+%     \part[2] ¿Cuántas unidades hay que producir para minimizar el coste medio $CM(q)=\dfrac{C(q)}{q}$ Obtén dicho valor mínimo.
+%     \begin{solution}
+%         $cm(x)=x + 140 + \frac{100}{x}$ \\
+%         $cm'(x)=1 - \frac{100}{x^{2}}$ \\
+%         $cm''(x)=\frac{200}{x^{3}}$\\
+%         $cm'(x)=0 \to x=10$
         
         
         
-    \end{solution}
-\end{parts}
+%     \end{solution}
+% \end{parts}
 
+\question La función de costes de una empresa es 
+$C(q)=q^3+3q+10$, donde $q$ representa las unidades producidas.  Sabiendo que el precio de venta, en euros, de cada unidad
+producida es $p = 30$, se desea conocer:
+\begin{parts}
+    \part[1] La función de beneficio de esta empresa.
+    \begin{solution}
+        $f(x)=- x^{3} + 27 x - 10$
+    \end{solution}
+    \part[2] El número de unidades producidas que maximiza el beneficio de la empresa. 
+    \begin{solution}
+        $f'(x)=27 - 3 x^{2} \land f''(x)=-6x \to f'(3)=0 \land f''(3) = -18 \to x=3$
+    \end{solution}
+    \part[1] El beneficio máximo que puede lograr la empresa.
+    \begin{solution}
+    $f(3)=44$    
+    \end{solution}
+    
+\end{parts}
 
 % \question Calcula:
 
@@ -252,35 +295,35 @@ producto y cada unidad del producto se vende a $(400 - 12 q)$ euros.
 % % \addpoints
 
 
-% % \question Dada la función $f(x)=ax+\frac{b}{x}$:
-% % \begin{parts}
-% % \part[2] Determine los valores de los parámetros 
-% % $a$, $b \in \mathbb{R}$  para que pase por el punto $(2,4)$ y tenga un extremo relativo en ese punto.
-% % \begin{solution}
-% % $ 
-% % \left\{
-% % \begin{matrix}
-% % f(2)=4 \\
-% % f'(2)=0
-% % \end{matrix}
-% % \right.
-% % \to f'(x)=a-\frac{b}{x^2}
-% % \to
-% % \left\{
-% % \begin{matrix}
-% % 2 a + \frac{b}{2}
-% % =4 \\
-% % a - \frac{b}{4}
-% % =0
-% % \end{matrix}
-% % \right.
-% % \to a=1 \land b=4$
-% % \end{solution}
-% % \part[2] Justifica qué tipo de extremo relativo es (máximo relativo o mínimo relativo)
-% % \begin{solution}
-% % $f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN REL$ 
-% % \end{solution}
-% % \end{parts}
+% \question Dada la función $f(x)=ax+\frac{b}{x}$:
+% \begin{parts}
+% \part[2] Determine los valores de los parámetros 
+% $a$, $b \in \mathbb{R}$  para que pase por el punto $(2,4)$ y tenga un extremo relativo en ese punto.
+% \begin{solution}
+% $ 
+% \left\{
+% \begin{matrix}
+% f(2)=4 \\
+% f'(2)=0
+% \end{matrix}
+% \right.
+% \to f'(x)=a-\frac{b}{x^2}
+% \to
+% \left\{
+% \begin{matrix}
+% 2 a + \frac{b}{2}
+% =4 \\
+% a - \frac{b}{4}
+% =0
+% \end{matrix}
+% \right.
+% \to a=1 \land b=4$
+% \end{solution}
+% \part[2] Justifica qué tipo de extremo relativo es (máximo relativo o mínimo relativo)
+% \begin{solution}
+% $f''(x)=\frac{2b}{x^3} \to f''(2)=\frac{b}{4} \to f''(2)=\frac{4}{4}=1>0 \to MIN REL$ 
+% \end{solution}
+% \end{parts}
 
 
 
