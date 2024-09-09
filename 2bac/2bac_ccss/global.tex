@@ -77,6 +77,46 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 
 \begin{questions}
 
+\question[4] Una empresa ha invertido 12 millones de euros en tres fondos
+A, B y C. Entre los fondos A y B ha invertido el triple que en el fondo C. Si
+hubiese invertido un millón menos en el fondo A y otro millón menos en el
+fondo B (invirtiendo en ese caso dos millones más en el fondo C), entonces
+habría invertido entre el fondo B y el C lo mismo que en el fondo A. Plantear y
+resolver un sistema de ecuaciones para determinar cuánto dinero ha invertido
+la empresa en cada fondo.
+\begin{solution}
+    $\left\{
+    \begin{matrix}
+        x+y+z=12 \\
+        x+y=3z \\
+        x-1=y-1+z+2
+    \end{matrix}
+    \right. \to x=7, y=2, z=3$
+\end{solution}
+
+\question[4] Dadas las matrices $A=\left(\begin{matrix}x & y\\2 & x\end{matrix}\right)$ y 
+% A, B = Matrix(2,2,[x,y,2,x]), Matrix(2,2,[-1, 5/2, 2, -1])
+$B=\left(\begin{matrix}-1 & \frac{5}{2}\\2 & -1\end{matrix}\right)
+$:
+\begin{parts}
+    \part Encontrar, si existen, $x$ e $y$ de forma que se cumpla $$AB = A + B$$
+    \part Encontrar, si existe, la matriz inversa de B
+\end{parts}
+\begin{solution}
+    $$\left[\begin{matrix}- 2 x + 2 y + 1 & 2.5 x - 2 y - 2.5\\2 x - 6 & 6.0 - 2 x\end{matrix}\right]\to x=3, y=\frac{5}{2}
+$$
+$$\left[\begin{matrix}0.25 & \frac{5}{8}\\0.5 & 0.25\end{matrix}\right]
+$$
+\end{solution}
+
+% \question[4] Dada la función $$f(x)=\dfrac{2x^2}{9-x^2}$$
+% \begin{parts}
+%     \part El dominio de la función y los puntos de corte con los ejes
+%     \part Asíntotas verticales y horizontales
+%     \part Intervalos de crecimiento y decrecimiento
+%     \part Máximos y mínimos locales
+% \end{parts}
+
 \question[4] Dada la función $$f(x)=\dfrac{1}{x+1}-\dfrac{8}{2x+7}$$
 \begin{parts}
     \part Calcular $$\lim_{x\to + \infty} f(x)$$
@@ -88,24 +128,37 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     $0$, $\frac{- 6 x - 1}{\left(x + 1\right) \left(2 x + 7\right)}$, $f(4)=-\frac{1}{3}$, $\log{\left(x + 1 \right)} - 4 \log{\left(x + \frac{7}{2} \right)} \to - 4 \log{\left(\frac{15}{2} \right)} + \log{\left(5 \right)} + 4 \log{\left(\frac{7}{2} \right)}= \log{\left(\frac{2401}{10125} \right)}$
 \end{solution}
 
-\question[4] Sea $C(x) = 100 + 140 x + x^2$
-el coste total, en euros, de producir $x$ unidades de un
-producto y cada unidad del producto se vende a $(400 - 12x)$ euros.
+% \question[4] Sea $C(x) = 100 + 140 x + x^2$
+% el coste total, en euros, de producir $x$ unidades de un
+% producto y cada unidad del producto se vende a $(400 - 12x)$ euros.
+% \begin{parts}
+%     \part ¿Cuántas unidades deben venderse para que el beneficio sea
+% máximo?, ¿a cuánto asciende dicho beneficio máximo?
+% \begin{solution}
+% % C= 100+140*x+x**2
+% % B=x*(400-12*x)
+%     $- 13 x^{2} + 260 x - 100 \to x=10$, $260 - 26 x$
+% \end{solution}
+%     \part  ¿Cuántas unidades hay que producir para minimizar el coste medio $CM(x)=\dfrac{C(x)}{x}$? Obtén dicho valor mínimo.
+%     \begin{solution}
+%         $ \frac{x^{2} + 140 x + 100}{x} \to  \frac{x^{2} + 140 x + 100}{x} \to \frac{200}{x^3} \to x=10$
+%     \end{solution}
+
+% \end{parts}
+
+\question Las existencias en el almacén de una empresa (en miles de kilogramos), durante un turno de 8 horas de cierto día, vienen dadas por la función:
+$E(x)=\left\{\begin{matrix}
+     -2x^2+16x+10 & si \ 0\leq x \leq 3 \\
+    -4x+52 & si \ 3<x\leq 8   
+\end{matrix} \right.$
 \begin{parts}
-    \part ¿Cuántas unidades deben venderse para que el beneficio sea
-máximo?, ¿a cuánto asciende dicho beneficio máximo?
-\begin{solution}
-% C= 100+140*x+x**2
-% B=x*(400-12*x)
-    $- 13 x^{2} + 260 x - 100 \to x=10$, $260 - 26 x$
-\end{solution}
-    \part  ¿Cuántas unidades hay que producir para minimizar el coste medio $CM(x)=\dfrac{C(x)}{x}$? Obtén dicho valor mínimo.
-    \begin{solution}
-        $ \frac{x^{2} + 140 x + 100}{x} \to  \frac{x^{2} + 140 x + 100}{x} \to \frac{200}{x^3} \to x=10$
-    \end{solution}
-
+    \part[1] Justifique si la función $E(x)$ es continua a lo largo de la jornada laboral.
+    \part[1] Justifique si a partir de la tercera hora de trabajo, cada hora que pasa, las existencias
+aumentan o disminuyen y en qué cantidad (por hora).
+    \part[1] Calcule los kilogramos de mercancía en el almacén en el momento de máxima existencia y
+en qué momento de la jornada se alcanzan.
+    \part[1] ¿En qué intervalo de la jornada laboral las existencias son mayores a 24.000 kilogramos?
 \end{parts}
-
 
 % \question[4] El ayuntamiento de una ciudad realiza una encuesta para estimar
 % la proporción de ciudadanos que están a favor de la apertura de un nuevo
@@ -123,47 +176,33 @@ máximo?, ¿a cuánto asciende dicho beneficio máximo?
 
 
 
-\question[4] Responde a las siguientes cuestiones:
+% \question[4] Responde a las siguientes cuestiones:
+% \begin{parts}
+%     \part Lanzamos dos dados. ¿Cuál es la probabilidad de que la suma de sus puntuaciones sea mayor que 9?
+% \begin{solution}  \end{solution}
+    
+%     \part Una empresa de telefonıía móvil quiere conocer la proporción de
+% clientes que están satisfechos con su servicio de atención al cliente. Para
+% ello toma una muestra de 200 clientes y les pregunta su opinión: 120 están
+% satisfechos y los 80 restantes no. Calcular un intervalo de confianza del 98\%
+% para la proporción de clientes de la empresa satisfechos con el servicio de
+% atención.
+% \begin{solution}
+    
+% \end{solution}
+% \end{parts}
+
+\question Cierta asociación quiere trasladar a las autoridades información sobre el peso de las chicas
+menores de 18 años de su ciudad. Saben que el peso de las chicas menores de 18 años se distribuye
+según una normal de desviación típica 8,96 kg. Se pide:
 \begin{parts}
-    \part Lanzamos dos dados. ¿Cuál es la probabilidad de que la suma de
-sus puntuaciones sea mayor que 9?
-\begin{solution}
-    
-\end{solution}
-    \part Una empresa de telefonı́a móvil quiere conocer la proporción de
-clientes que están satisfechos con su servicio de atención al cliente. Para
-ello toma una muestra de 200 clientes y les pregunta su opinión: 120 están
-satisfechos y los 80 restantes no. Calcular un intervalo de confianza del 98\%
-para la proporción de clientes de la empresa satisfechos con el servicio de
-atención.
-\begin{solution}
-    
-\end{solution}
+    \part[2] Calcule el tamaño mínimo que debe tener la muestra para que, con un nivel de confianza del
+97\%, el error de estimación del peso medio no supere los 2 kg.
+    \part[2] El peso, en kilogramos, correspondiente a una muestra de 9 chicas menores de 18 años es: 52, 53, 50, 45, 66, 42, 69, 55, 52. Calcule un intervalo de confianza al 97\% para la media poblacional.
 \end{parts}
 
 
-\question[4] Una empresa ha invertido 12 millones de euros en tres fondos
-A, B y C. Entre los fondos A y B ha invertido el triple que en el fondo C. Si
-hubiese invertido un millón menos en el fondo A y otro millón menos en el
-fondo B (invirtiendo en ese caso dos millones más en el fondo C), entonces
-habrı́a invertido entre el fondo B y el C lo mismo que en el fondo A. Plantear y
-resolver un sistema de ecuaciones para determinar cuánto dinero ha invertido
-la empresa en cada fondo.
 
-\question[4] Dadas las matrices $A=\left(\begin{matrix}x & y\\2 & x\end{matrix}\right)$ y 
-% A, B = Matrix(2,2,[x,y,2,x]), Matrix(2,2,[-1, 5/2, 2, -1])
-$B=\left(\begin{matrix}-1 & \frac{5}{2}\\2 & -1\end{matrix}\right)
-$:
-\begin{parts}
-    \part Encontrar, si existen, $x$ e $y$ de forma que se cumpla $$AB = A + B$$
-    \part Encontrar, si existe, la matriz inversa de B
-\end{parts}
-\begin{solution}
-    $$\left[\begin{matrix}- 2 x + 2 y + 1 & 2.5 x - 2 y - 2.5\\2 x - 6 & 6.0 - 2 x\end{matrix}\right]
-$$
-$$\left[\begin{matrix}0.25 & \frac{5}{8}\\0.5 & 0.25\end{matrix}\right]
-$$
-\end{solution}
 
 % \question[4] Se lanzan tres dados a la vez. Determinar:
 % \begin{parts}
