@@ -1,0 +1,108 @@
+\documentclass{exam}
+\usepackage{amsmath, amsthm, amssymb, yhmath} 
+\printanswers
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes} % Para los ángulos
+
+\begin{document}
+
+\begin{center}
+\bfseries Prueba inicial
+\end{center}
+\textbf{Nombre:} \\
+\textbf{Fecha:} \\
+\textbf{Curso:} \\
+\hline
+
+\begin{questions}
+
+\question Dadas las matrices:
+\[
+A = \begin{pmatrix} 
+1 & 2 & 3 \\ 
+0 & 1 & 4 \\ 
+5 & 6 & 0 
+\end{pmatrix}, \quad
+B = \begin{pmatrix} 
+7 & 8 & 9 \\ 
+0 & 1 & 2 \\ 
+3 & 4 & 5 
+\end{pmatrix}
+\]
+Calcula el producto \( A \times B \) y verifica si el producto es conmutativo, es decir, ¿es cierto que \( A \times B = B \times A \)?
+\begin{solution}
+    $A\cdot B = \left[\begin{matrix}16 & 22 & 28\\12 & 17 & 22\\35 & 46 & 57\end{matrix}\right]$ y $B \cdot A= \left[\begin{matrix}52 & 76 & 53\\10 & 13 & 4\\28 & 40 & 25\end{matrix}\right]$
+\end{solution}
+
+\vspace{250pt}
+
+\question Sea la matriz
+$
+A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+$. Encuentra una fórmula general para \( A^n \), donde \( n \) es un número entero positivo. Calcula \( A^2 \), \( A^3 \) y \( A^4 \) como ejemplos.
+
+\begin{solution}
+
+Sea la matriz \( A \):
+
+\[
+A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\]
+
+Calculamos las primeras potencias de \( A \) para detectar patrones:
+
+\[
+A^2 = A \times A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \times \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I
+\]
+
+\[
+A^3 = A^2 \times A = I \times A = A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\]
+
+\[
+A^4 = A^3 \times A = A \times A = I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+\]
+
+Notamos que las potencias de \( A \) alternan entre \( A \) y la matriz identidad \( I \). Esto nos lleva a la siguiente fórmula general:
+
+\[
+A^n = \begin{cases} 
+I, & \text{si } n \text{ es par} \\
+A, & \text{si } n \text{ es impar} 
+\end{cases}
+\]
+
+Por lo tanto, la potencia de la matriz \( A \) sigue un ciclo de longitud 2:
+- Si \( n \) es par, \( A^n = I \).
+- Si \( n \) es impar, \( A^n = A \).
+
+\end{solution}
+
+\newpage
+
+
+\question Calcula la inversa de la siguiente matriz \(D\):
+
+\[
+D = \begin{pmatrix}
+1 & 2 & 1 \\
+2 & 3 & 1 \\
+1 & 1 & 1
+\end{pmatrix}
+\]
+
+\begin{solution}
+    \[
+D^{-1} = \begin{pmatrix}
+-2 & 1 & 1 \\
+1 & 0 & -1 \\
+1 & -1 & 1
+\end{pmatrix}
+\]
+\end{solution}
+
+
+\end{questions}
+
+\end{document}

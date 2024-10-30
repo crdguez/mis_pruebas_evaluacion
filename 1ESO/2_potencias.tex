@@ -1,0 +1,191 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Potencias}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\textbf{Para recuperar el primer examen se tendrán en cuenta las preguntas 1 a 3}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+
+% evaluación continua
+
+\question[0\half] Escribe con cifras:
+\begin{parts}
+\part Seis millones doscientos mil
+\vspace{20pt}
+\part Ciento cincuenta mil
+\vspace{20pt}
+\end{parts}
+
+\question[0\half] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+\begin{multicols}{2}
+\begin{parts}
+    \part 582 749
+    \part 1 234 567
+\end{parts} 
+\end{multicols}
+
+\question[1\half] Calcula las siguientes operaciones combinadas:
+\begin{parts}
+    \part 
+    $    3 + 4 \cdot (2 + 5) - 6 = $
+    \vspace{40pt}
+    \part 
+    
+    $5 \cdot \left[3 + 2 \cdot (4 - 1)\right] + 7 =$
+    \vspace{40pt}
+    \part
+    $6 + 3 \cdot \left[2 \cdot (5 + 3) - 4\right] - 2 \cdot (3 + 7) = $
+    \vspace{30pt}
+\end{parts}
+
+
+
+
+\question[1\half]  Escribe la descomposición polinómica de los siguientes números:
+
+\begin{parts}
+\part 85 603
+\vspace{20pt}
+\part 300 004 002
+\vspace{20pt}
+
+\end{parts}
+
+\question[1\half] Expresa como una única potencia:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\left(6^3\right)^4=$
+    \vspace{10pt}
+    \part $5^2\cdot 5^3=$
+    \vspace{10pt}
+    \part $n^4 : n^2=$
+    \vspace{10pt}
+\end{parts}
+\end{multicols}
+
+
+
+\question[2] Aplica las propiedades para expresar como una única potencia y después calcula su valor:
+\begin{multicols}{2}
+\begin{parts}
+    \part $3^2\cdot 3^3 : 3^5=$\vspace{20pt}
+    % \part $\left(2^2\right)^3\cdot\left(5^2\right)^3=$\vspace{20pt}
+    \part $20^{6} :10^6=$\vspace{20pt}
+    \part $18^4:\left(2^4\cdot3^4\right)=$\vspace{20pt}
+    % \part $24^5:\left(2^5\cdot6^5\right)=$\vspace{20pt}
+    \part $\left[\left(12^3:4^3\right)^2:\left(15^2:5^2\right)^3\right]^8=$\vspace{20pt}
+\end{parts}
+\end{multicols}
+
+% Pregunta 4
+\question[1\half] Calcula:
+
+\begin{parts}
+    \part $2^3+\sqrt{3^2+5\cdot8}=$
+    \vspace{30pt}
+    % \part $3^4:\sqrt{1+\left(20+6\cdot10\right)}=$
+    % \vspace{30pt}
+    \part $20-2^2\cdot3+4\cdot\sqrt{36}=$
+    \vspace{30pt}
+    \part $6+\sqrt{5+4\cdot 5}-3+4\cdot\left(5-2\right)^2=$
+    \vspace{30pt}
+\end{parts}
+
+% Pregunta 5
+\question[2] Tenemos 144 fichas cuadradas y queremos colocarlas de forma ordenada para formar un cuadrado lo más grande posible. ¿Cuántas fichas hay que colocar en cada lado del cuadrado? Calcula el número de fichas necesarias para formar otro cuadrado que tenga dos fichas más en cada lado.\vspace{20pt}\vspace{20pt}
+
+
+
+\end{questions}
+
+\end{document}
+\grid

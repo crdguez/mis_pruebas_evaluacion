@@ -1,0 +1,132 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Divisibilidad}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+    \question[1] ¿Cuál o cuáles de estos números son múltiplos de 12? Explica por qué:
+    \begin{parts}
+        \part 96 \vspace{20pt}
+        \part 54 \vspace{20pt}
+        \part 84 \vspace{20pt}
+        \part 144 \vspace{20pt}
+    \end{parts}
+
+    \question[0\half] Calcula todos los divisores de los siguientes números:
+    \begin{parts}
+        \part 48
+        \part 36
+    \end{parts}
+
+    \question[1] Observa estos números y completa:
+
+    12 ‒ 14 ‒ 21 ‒ 25 ‒ 36 ‒ 40 ‒ 42 ‒ 45 ‒ 70 ‒ 75
+
+    \begin{parts}
+        \part Múltiplos de 2: \vspace{20pt}
+        \part Múltiplos de 3: \vspace{20pt}
+        \part Múltiplos de 5: \vspace{20pt}
+        \part Múltiplos de 10: \vspace{20pt}
+    \end{parts}
+
+    \question[1] Descompón en factores primos:
+    \begin{parts}
+        \part 80 \vspace{20pt}\vspace{20pt}\vspace{20pt}
+        \part 450 \vspace{20pt}\vspace{20pt}\vspace{20pt}
+    \end{parts}
+
+    \question[1\half] Calcula descomponiendo en factores primos:
+    \begin{parts}
+        \part m.c.m. (12, 24, 36) \vspace{20pt}\vspace{20pt}
+        \part m.c.d. (28, 36) \vspace{20pt}\vspace{20pt}
+    \end{parts}
+
+    \question[1\half] ¿De cuántas formas podemos empaquetar 45 libros si debe haber el mismo número de libros en cada paquete?\vspace{20pt}\vspace{20pt}\vspace{20pt}
+
+    \question[2] Un carpintero dispone de tres listones de madera de 40, 60 y 90 cm de longitud, respectivamente. Desea dividirlos en trozos iguales y de la mayor medida posible, sin que sobre madera. ¿Qué longitud deben tener esos trozos? ¿Cuántos trozos iguales de cada listón se obtienen?\vspace{20pt}\vspace{20pt}\vspace{20pt}
+
+    \question[1\half] Calcula los múltiplos de 18 comprendidos entre 315 y 420.
+
+\end{questions}
+
+
+
+\end{document}
+\grid

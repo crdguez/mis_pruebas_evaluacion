@@ -1,0 +1,281 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Números naturales}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1\half] Escribe con cifras:
+\begin{parts}
+\part Cinco millones y medio
+\vspace{20pt}
+\part Novecientos noventa y nueve millones
+\vspace{20pt}
+\part Dos millones dos mil dos
+\vspace{20pt}
+\end{parts}
+
+\question[1\half] Escribe como se leen las siguientes cifras:
+\begin{parts}
+    \part 7 700 000 000
+    \vspace{30pt}
+    \part 6 000 000 006 000 000     \vspace{30pt}
+    \part 9 675 000 850 000     \vspace{30pt}
+\end{parts}
+\addpoints
+
+\question[1] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+\begin{parts}
+    \part 679 563
+    \part 2 462 768
+    \part 5 678 300
+    \part  54 343 795
+\end{parts}
+
+\question[2] Calcula:
+\begin{parts}
+    \part \textbf{3 · 9 + 7 + 6 - 5 · 3=}\vspace{20pt}\vspace{20pt}\vspace{20pt}
+    \part \textbf{5 · (2 + 6) + 7 - 4 · 3=}\vspace{20pt}\vspace{20pt}\vspace{20pt}
+    \part \textbf{3 + 2 · {[}3 · (2 · 5 - 7 + 3){]} - 2 · 3=} \vspace{80pt}
+    \part \textbf{5 · {[}3 + 1 + 2 · (19 - 4 · 3 + 2){]} + 2=}\vspace{80pt}
+\end{parts}
+
+\question[2] En un supermercado compramos tres productos para
+  un restaurante: 6 kg de carne de cerdo a 4 \euro/kg, 4 kg de merluza a 4
+  \euro/kg y 3 kg de carne de pollo al mismo precio que la carne y la
+  merluza. Si pago con un billete de 100 \euro, ¿cuánto me devuelven si el
+  encargado del supermercado me hace una rebaja de 5 \euro \ por cada producto
+  comprado? Halla la solución mediante una expresión de operaciones
+  combinadas. \vspace{100pt}
+
+\question[2] En una granja se recogen los huevos dos días a la
+  semana. El primer día se llenaron 12 cajas de 16 bandejas de huevos;
+  el segundo día se completaron 22 cajas de 15 bandejas cada una. Si en
+  cada bandeja entran dos docenas y media de huevos, ¿cuántos huevos se
+  han recogido durante esta semana? Halla la solución mediante una
+  expresión de operaciones combinadas
+
+
+%%%
+%%% OTRO EXAMEN
+%%%
+% \newpage
+% \question[1\half] Escribe con cifras:
+% \begin{parts}
+% \part Seis millones setecientos cincuenta mil
+% \vspace{20pt}
+% \begin{solution}
+% 6.750.000
+% \end{solution}
+
+% \part Doscientos cuarenta y cinco millones ochocientos doce mil
+% \vspace{20pt}
+% \begin{solution}
+% 245.812.000
+% \end{solution}
+
+% \part Tres mil quinientos dieciséis
+% \vspace{20pt}
+% \begin{solution}
+% 3.516
+% \end{solution}
+% \end{parts}
+
+% \question[1\half] Escribe como se leen las siguientes cifras:
+% \begin{parts}
+%     \part 8 500 000 000
+%     \vspace{30pt}
+%     \begin{solution}
+%     Ocho mil quinientos millones
+%     \end{solution}
+    
+%     \part 5 600 000 010 000 000
+%     \vspace{30pt}
+%     \begin{solution}
+%     Cinco billones seiscientos mil millones diez mil
+%     \end{solution}
+    
+%     \part 7 385 000 765 000
+%     \vspace{30pt}
+%     \begin{solution}
+%     Siete billones trescientos ochenta y cinco mil millones setecientos sesenta y cinco mil
+%     \end{solution}
+% \end{parts}
+
+% \question[1] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+% \begin{parts}
+%     \part 728 345
+%     \begin{solution}
+%     730.000
+%     \end{solution}
+    
+%     \part 1 902 678
+%     \begin{solution}
+%     1.900.000
+%     \end{solution}
+    
+%     \part 8 543 210
+%     \begin{solution}
+%     8.540.000
+%     \end{solution}
+    
+%     \part  32 567 890
+%     \begin{solution}
+%     32.570.000
+%     \end{solution}
+% \end{parts}
+
+% \question[2] Calcula:
+% \begin{parts}
+%     \part \textbf{4 · 7 + 8 - 5 · 4 =}
+%     \vspace{20pt}
+%     \begin{solution}
+%     4 · 7 + 8 - 5 · 4 = 28 + 8 - 20 = 16
+%     \end{solution}
+
+%     \part \textbf{6 · (3 + 4) - 8 + 7 · 2 =}
+%     \vspace{20pt}
+%     \begin{solution}
+%     6 · (3 + 4) - 8 + 7 · 2 = 6 · 7 - 8 + 14 = 42 - 8 + 14 = 48
+%     \end{solution}
+
+%     \part \textbf{4 + 3 · {[}2 · (6 - 3 + 4){]} - 4 · 2 =} 
+%     \vspace{80pt}
+%     \begin{solution}
+%     4 + 3 · {[}2 · (6 - 3 + 4){]} - 4 · 2 = 4 + 3 · (2 · 7) - 8 = 4 + 3 · 14 - 8 = 4 + 42 - 8 = 38
+%     \end{solution}
+
+%     \part \textbf{6 · {[}4 + 2 + 3 · (18 - 5 · 2 + 1){]} + 3 =}
+%     \vspace{80pt}
+%     \begin{solution}
+%     6 · {[}4 + 2 + 3 · (18 - 10 + 1){]} + 3 = 6 · {[}4 + 2 + 3 · 9{]} + 3 = 6 · (4 + 2 + 27) + 3 = 6 · 33 + 3 = 198 + 3 = 201
+%     \end{solution}
+% \end{parts}
+
+% \question[2] En una tienda de comestibles compramos tres productos: 5 kg de arroz a 2 \euro/kg, 3 kg de lentejas a 3 \euro/kg, y 4 kg de garbanzos al mismo precio que el arroz y las lentejas. Si pagamos con un billete de 50 \euro, ¿cuánto nos devuelven si el encargado de la tienda nos hace una rebaja de 3 \euro por cada producto comprado? Halla la solución mediante una expresión de operaciones combinadas. 
+% \vspace{100pt}
+% \begin{solution}
+% El precio total sin rebajas sería:
+
+% \[ 5 \text{kg} \cdot 2 \euro/\text{kg} + 3 \text{kg} \cdot 3 \euro/\text{kg} + 4 \text{kg} \cdot 3 \euro/\text{kg} = 10 \euro + 9 \euro + 12 \euro = 31 \euro \]
+
+% Con la rebaja de 3 \euro por cada producto comprado (3 productos):
+
+% \[ 31 \euro - (3 \euro \times 3) = 31 \euro - 9 \euro = 22 \euro \]
+
+% Pagamos con 50 \euro, así que nos devuelven:
+
+% \[ 50 \euro - 22 \euro = 28 \euro \]
+% \end{solution}
+
+% \question[2] En una finca se recogen manzanas tres días a la semana. El primer día se llenaron 10 cestas con 12 kilos de manzanas; el segundo día se completaron 15 cestas con 14 kilos cada una, y el tercer día se recogieron 8 cestas con 16 kilos cada una. ¿Cuántos kilos de manzanas se han recogido durante la semana? Halla la solución mediante una expresión de operaciones combinadas.
+% \vspace{100pt}
+% \begin{solution}
+% Calculamos los kilos totales recogidos cada día y sumamos:
+
+% Primer día: 
+% \[ 10 \text{cestas} \cdot 12 \text{kg} = 120 \text{kg} \]
+
+% Segundo día: 
+% \[ 15 \text{cestas} \cdot 14 \text{kg} = 210 \text{kg} \]
+
+% Tercer día: 
+% \[ 8 \text{cestas} \cdot 16 \text{kg} = 128 \text{kg} \]
+
+% El total de kilos recogidos durante la semana es:
+% \[ 120 \text{kg} + 210 \text{kg} + 128 \text{kg} = 458 \text{kg} \]
+% \end{solution}
+
+
+
+\end{questions}
+
+\end{document}
+\grid
