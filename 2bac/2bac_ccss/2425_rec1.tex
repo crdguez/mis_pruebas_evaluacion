@@ -1,0 +1,132 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Recuperación de Álgebra}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question Dadas las matrices:
+\[
+A = \begin{pmatrix}
+2 & -1  \\
+0 & 0  \\
+-1 & 0 
+\end{pmatrix}, \quad
+B = \begin{pmatrix}
+1 & 2 & 0 \\
+-2 & -4 & 1
+\end{pmatrix}, \quad
+C = \begin{pmatrix}
+1 & 2 \\
+-1 & 2 \\
+1 & -3
+\end{pmatrix}.
+\]
+
+\begin{parts}
+    \part[1] Calcular \(B' + 2C\).
+    \part[2] Hallar la matriz \(X = \begin{pmatrix}
+    a & b \\
+    c & d
+    \end{pmatrix}\) que cumple \(AX = B' + 2C\).
+\end{parts}
+
+\question Dado el sistema: 
+\[
+\begin{cases}
+x + ay + z = 1 \\
+2y + az = 2 \\
+x + y + z = 1
+\end{cases}
+\]
+\begin{parts}
+    \part[2] Discutir el sistema lineal de ecuaciones en función de los valores del parámetro \(a\)
+    \part[1] Resolverlo para \(a = 3\).
+\end{parts} 
+
+\question[2] La repoblación forestal de un bosque quemado en un gran incendio se va a llevar a cabo por dos empresas diferentes de jardinería. Hay que repoblar con pinos, eucaliptos y chopos. La primera empresa es capaz de plantar, en una semana, 30 pinos, 20 eucaliptos y 20 chopos. La segunda empresa planta 20 pinos, 30 eucaliptos y 20 chopos. El coste semanal se estima en 33.000\euro \  para la primera empresa de jardinería y de 35.000\euro \  para la segunda. Se necesita plantar un mínimo de 60 pinos, 120 eucaliptos y 100 chopos. ¿Cuántas semanas deberá trabajar cada grupo para finalizar el proyecto con el mínimo coste?
+
+
+\end{questions}
+
+\end{document}
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid

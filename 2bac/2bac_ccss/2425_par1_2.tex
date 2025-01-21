@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-% \printanswers
+\printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -164,6 +164,7 @@ $P^{-1}=\left(\begin{matrix}2 & \frac{3}{2} & - \frac{3}{2}\\-2 & -2 & 1\\1 & \f
 \end{parts}
 
 % \question[3] En la bodega de Antonio hay botellas de vino blanco, de vino tinto y de vino rosado. Si sumamos las botellas de vino blanco con las de tinto obtenemos el triple de las botellas de rosado. La suma de las botellas de tinto con las de rosado supera en 40 unidades a las botellas de blanco. Además. sabemos que Antonio tiene en su bodega 280 botellas. Plantea y resuelve un sistema de ecuaciones que nos permita averiguar cuántas botellas hay de cada tipo de vino.
+% begin{solution} $\left\{ \begin{matrix}x + y = 3 z \\ y + z = x + 40 \\ x + y + z = 280 \\ \end{matrix}\right.$ \\Como $rg(A)=rg(A^*)=3$ --> S.C. (El sistema tiene solución) \\ Como además $rg(A)=3$ coincide con el número de incógnitas --> S.C.D -- > Se puede resolver por Gauss, Matriz inversa o Cramer \\ \textbf{Resolución por Gauss} \\ $A^*=\left(\begin{matrix}1 & 1 & -3 & 0\\-1 & 1 & 1 & 40\\1 & 1 & 1 & 280\end{matrix}\right)\sim\left(\begin{matrix}1 & 1 & -3 & 0\\0 & 2 & -2 & 40\\0 & 0 & 4 & 280\end{matrix}\right)\to x=120, y=90, z=70$ \\ \textbf{Método de la matríz inversa} \\ $A^{-1}=\left(\begin{matrix}0 & - \frac{1}{2} & \frac{1}{2}\\\frac{1}{4} & \frac{1}{2} & \frac{1}{4}\\- \frac{1}{4} & 0 & \frac{1}{4}\end{matrix}\right) \to  X=A^{-1}\cdot b =\left(\begin{matrix}0 & - \frac{1}{2} & \frac{1}{2}\\\frac{1}{4} & \frac{1}{2} & \frac{1}{4}\\- \frac{1}{4} & 0 & \frac{1}{4}\end{matrix}\right)\cdot \left(\begin{matrix}0\\40\\280\end{matrix}\right) =\left(\begin{matrix}120\\90\\70\end{matrix}\right)$ \\ \textbf{Método de Cramer} \\ $x=\frac{\left|\begin{matrix}0 & 1 & -3\\40 & 1 & 1\\280 & 1 & 1\end{matrix}\right|}{8}=\frac{960}{8}=120$ \\ $y=\frac{\left|\begin{matrix}1 & 0 & -3\\-1 & 40 & 1\\1 & 280 & 1\end{matrix}\right|}{8}=\frac{720}{8}=90$ \\ $z=\frac{\left|\begin{matrix}1 & 1 & 0\\-1 & 1 & 40\\1 & 1 & 280\end{matrix}\right|}{8}=\frac{560}{8}=70$ \\ Las cantidades de botellas son: \begin{itemize} \item Botellas de vino blanco (\( x \)): \( \textbf{120} \) \item Botellas de vino tinto (\( y \)): \( \textbf{90} \) \item Botellas de vino rosado (\( z \)): \( \textbf{70} \) \end{itemize} \end{solution}
 
 
 

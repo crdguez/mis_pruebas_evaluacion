@@ -1,0 +1,203 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 2ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+% Pregunta 1
+\question Sea la función \( f(x) = \dfrac{-x^2+1}{x^2+5x-6} \). Se pide:
+
+\begin{parts}
+    \part[1] Especificar su dominio de definición.
+    \part[2] Estudiar su continuidad (dónde es continua y dónde no indicando los tipos de discontinuidad).
+\end{parts}
+
+% \vspace{0.5cm}
+
+% Pregunta 2
+% \question[2] Se considera la función real de variable real:
+% \[
+% f(x) =
+% \begin{cases}
+%     \dfrac{x + 7}{x^2 - 9} & \text{si } x < 2 \\
+%     \dfrac{x - 11}{7} & \text{si } 2 < x \leq 5 \\
+%     2x+3 & \text{si } x > 5.
+% \end{cases}
+% \]
+% Estudiar la continuidad de la función.
+
+% \vspace{0.5cm}
+
+% Pregunta 3
+\question[2] Determina \( a \) y \( b \) para que \( f(x) \) sea continua en todo \( \mathbb{R} \):
+\[
+f(x) =
+\begin{cases}
+    x + a & \text{si } x \leq 2 \\
+    3x - 2 & \text{si } 2 < x < 5 \\
+    ax + b & \text{si } x \geq 5
+\end{cases}
+\]
+
+% \vspace{0.5cm}
+
+% Pregunta 4
+\question Calcula los siguientes límites:
+
+\begin{parts}
+    \part[0\half] \[ \lim_{x \to \infty} \frac{6x^2 - 3x + 5}{2x^2 + 4} \]
+    \part[1] \[ \lim_{x \to 3} \frac{x^2 - 2x - 3}{x^2 - 9} \]
+    \part[0\half] \[ \lim_{x \to 1} \frac{x + 5}{x - 1} \]
+    \part[1\half] \[ \lim_{x \to \infty} \left( \sqrt{x^2 - 4x} - \sqrt{x^2 + 1} \right) \]
+\end{parts}
+
+% \vspace{0.5cm}
+
+\question[1\half] Calcula los límites de la siguiente función:
+
+\begin{tikzpicture}[scale=0.7]
+    % Configuración de ejes
+    \draw[->] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
+    \draw[->] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
+
+    % Cuadrícula
+    \draw[help lines, color=gray!20] (-8, -2) grid (8, 8);
+
+    % Etiquetas de cuadrícula
+    \foreach \x in {-8, -6, -4, -2, 2, 4, 6, 8}
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+    \foreach \y in {-2, 2, 4, 6, 8}
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+
+    % Primer trozo: Parábola que termina en (-4, 4)
+    \draw[thick, red, domain=-8:-4, samples=50] plot (\x, {4+(0.25*(\x+4)*(\x+4))}) node[above] {};
+    \filldraw[red] (-4, 4) circle (2pt); % Punto final en (-4, 4)
+
+    % Segundo trozo: Recta de (-4, 1) a (-2, 3)
+    \draw[thick, red] (-4, 1) -- (-2, 3);
+    \filldraw[fill=white, draw=red] (-4, 1) circle (2pt); % Punto inicial
+    % \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+
+    % Tercer trozo: Recta de (-2, 3) a (1, 0)
+    \draw[thick, red] (-2, 3) -- (1, 0);
+    % \draw[red] (1, 0) circle (2pt); % Punto final en (1, 0)
+
+    \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+    \filldraw[red] (-2, 1) circle (2pt); % Punto final
+
+    % Cuarto trozo: Proporcionalidad inversa creciente con mayor excentricidad
+    \draw[thick, red, domain=1:2.883, samples=50] plot (\x, {-1*(\x-1)/(2*(\x-3))}) node[above] {};
+    \draw[dashed] (3, 0) -- (3, 8); % Asíntota vertical en x = 3
+    % \filldraw[red] (1, 0) circle (2pt); % Punto inicial en (1, 0)
+
+    % Quinto trozo: Exponencial que pasa por (3, 5) y tiene asíntota horizontal y = 3
+    \draw[thick, red, domain=3:8, samples=50] plot (\x, {3 + 2*exp(-0.5*(\x-3))});
+    \draw[dashed] (0, 3) -- (8, 3); % Asíntota horizontal en y = 3
+    \filldraw[fill=white, draw=red] (3, 5) circle (2pt); % Punto en (3, 5)
+
+\end{tikzpicture}
+\begin{multicols}{3}
+\begin{parts}
+    \part $\lim_{x \to -\infty} f(x)$
+    \part $\lim_{x \to -4^-} f(x)$
+    \part $\lim_{x \to -4^+} f(x)$
+    \part $\lim_{x \to -4} f(x)$
+    \part $\lim_{x \to -2} f(x)$
+    \part $\lim_{x \to 1} f(x)$
+    \part $\lim_{x \to -3^-} f(x)$
+    \part $\lim_{x \to -3^+} f(x)$
+    \part $\lim_{x \to +\infty} f(x)$
+\end{parts}
+    
+\end{multicols}
+
+% Pregunta 5 (Extra)
+\question Pregunta extra \textbf{(hasta un 10\% de la nota adicional)}. Calcula el siguiente límite:
+\[
+\lim_{x \to \infty} \left(\dfrac{ 2x - 3 }{2x + 5}\right)^{6x-3}
+\]
+
+\end{questions}
+
+\end{document}
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
