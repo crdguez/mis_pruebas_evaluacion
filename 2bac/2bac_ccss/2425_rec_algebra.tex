@@ -1,0 +1,162 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Recuperación de Álgebra}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+% % ##################### si queremos decimales distintos de 0.5 pero ojo, nos cargamos la tabla. Solo funciona  \gradetable 
+% \usepackage{fp}
+% \usepackage{numprint}
+% \npdecimalsign{.}
+% \nprounddigits{2}
+% \usepackage{etoolbox}
+% \makeatletter
+% % points printed at each question
+% \patchcmd{\point@block}{\@points}{\FPdiv\pointdiv{\@points}{100}\numprint{\pointdiv}}{}{}
+% % points printed for each question in grade table
+% \patchcmd{\do@oneline@v}{\pointsof@index{pq@index}}{\FPdiv\pointsdiv{\pointsof@index{pq@index}}{100}\numprint{\pointsdiv}}{}{}
+% % total number of points in grade table
+% \patchcmd{\prt@tablepoints}{\prt@hlfcntr{tbl@points}}{\FPdiv\pointsdiv{\prt@hlfcntr{tbl@points}}{100}\numprint{\pointsdiv}}{}{}
+% % patching needed in many other places
+% \makeatother
+% % ##################### fin de si queremos decimales
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ % \gradetable[h][questions]
+ % \gradetable[h]
+	% \pointtable[h][questions]
+    \pointtable[h]
+    
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+\question Se considera el siguiente sistema lineal de ecuaciones, dependiente del par\'ametro real $k$:
+\begin{equation*}
+\begin{cases}
+    x + y + kz = 4 \\
+    2x - y + 2z = 5 \\
+    -x + 3y - z = 0
+\end{cases}
+\end{equation*}
+
+\begin{parts}
+    \part[2] Disc\'utase el sistema para los distintos valores del par\'ametro $k$. 
+    % \part[1] Resu\'elvase el sistema para el caso en que tenga infinitas soluciones. 
+    \part[1] Resu\'elvase el sistema para $k = 0$. \hfill
+\end{parts}
+\begin{solution}
+Considere el siguiente sistema de ecuaciones, dónde k  es un parámetro real: $$\left\{ \begin{matrix}k z + x + y = 4 \\ 2 x - y + 2 z = 5 \\ - x + 3 y - z = 0 \\ \end{matrix}\right.$$ Determine los valores del parámetro real k, para los que este sistema es compatible determinado,  compatible indeterminado o incompatible. \\ Resuelva el sistema cuando\begin{itemize}\item k=1\item k=0\end{itemize}\textbf{Discusión y resolución por Gauss:} Escalonando la matriz ampliada tenemos\\$A^*= \left(\begin{matrix}1 & 1 & k & 4\\2 & -1 & 2 & 5\\-1 & 3 & -1 & 0\end{matrix}\right) \thicksim \left(\begin{matrix}1 & 1 & k & 4\\0 & -3 & 2 - 2 k & -3\\0 & 0 & \frac{5}{3} - \frac{5 k}{3} & 0\end{matrix}\right)$. \\  De los valores de la última fila podemos concluir:\begin{itemize}\item Si $k = 1 \to$ $$\left(\begin{matrix}1 & 1 & 1 & 4\\0 & -3 & 0 & -3\\0 & 0 & 0 & 0\end{matrix}\right)$$ La última fila es $0z=0 \to $ S.C.I\item si $k\neq [1]  \to $ S.C.D.\end{itemize}  \textbf{Por rangos y determinantes:} \\$\left|A\right|=\left|\begin{matrix}1 & 1 & k\\2 & -1 & 2\\-1 & 3 & -1\end{matrix}\right|=5 k - 5 \to \left|A\right|=0 \quad si \quad k = \left[ 1\right]$\begin{itemize}\item Si $k=1 \to rg(A)=2 \land rg(A^*)=2 \to $ S.C.I. $\to$ solo se puede resolver por Gauss, (ver más arriba)\item Si $k \neq[1] \to rg(A)=3 \land rg(A^*)=3 \to $ S.C.D.  \\ \end{itemize}\textbf{Para k = 1 :}  \\ \textbf{Discusión y resolución por Gauss:} Escalonando la matriz ampliada tenemos\\$A^*= \left(\begin{matrix}1 & 1 & 1 & 4\\2 & -1 & 2 & 5\\-1 & 3 & -1 & 0\end{matrix}\right) \thicksim \left(\begin{matrix}1 & 1 & 1 & 4\\0 & -3 & 0 & -3\\0 & 0 & 0 & 0\end{matrix}\right)$. \\  De los valores de la última fila podemos concluir:\begin{itemize}\item S.C.D.\begin{itemize}\item $\left(\begin{matrix}0 & 0 & 0 & 0\end{matrix}\right) \to z = z$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}0 & -3 & 0 & -3\end{matrix}\right) \to y = 1$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}1 & 1 & 1 & 4\end{matrix}\right) \to x = 3 - z$\end{itemize}\end{itemize}  \textbf{Por rangos y determinantes:} \\$\left|A\right|=\left|\begin{matrix}1 & 1 & 1\\2 & -1 & 2\\-1 & 3 & -1\end{matrix}\right|=0  \neq 0 $\begin{itemize} \item $rg(A)=2 \land rg(A^*)=2 \to $ S.C.D.   \\ \\ Por Cramer: \begin{itemize}\item $x=\frac{\left|\begin{matrix}4 & 1 & 1\\5 & -1 & 2\\0 & 3 & -1\end{matrix}\right|}{0}=\frac{0}{0}=\text{NaN}$\item $y=\frac{\left|\begin{matrix}1 & 4 & 1\\2 & 5 & 2\\-1 & 0 & -1\end{matrix}\right|}{0}=\frac{0}{0}=\text{NaN}$\item $z=\frac{\left|\begin{matrix}1 & 1 & 4\\2 & -1 & 5\\-1 & 3 & 0\end{matrix}\right|}{0}=\frac{0}{0}=\text{NaN}$\end{itemize}\end{itemize}\textbf{Para k = 0 :}  \\ \textbf{Discusión y resolución por Gauss:} Escalonando la matriz ampliada tenemos\\$A^*= \left(\begin{matrix}1 & 1 & 0 & 4\\2 & -1 & 2 & 5\\-1 & 3 & -1 & 0\end{matrix}\right) \thicksim \left(\begin{matrix}1 & 1 & 0 & 4\\0 & -3 & 2 & -3\\0 & 0 & \frac{5}{3} & 0\end{matrix}\right)$. \\  De los valores de la última fila podemos concluir:\begin{itemize}\item S.C.D.\begin{itemize}\item $\left(\begin{matrix}0 & 0 & \frac{5}{3} & 0\end{matrix}\right) \to z = 0$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}0 & -3 & 2 & -3\end{matrix}\right) \to y = 1$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}1 & 1 & 0 & 4\end{matrix}\right) \to x = 3$\end{itemize}\end{itemize}  \textbf{Por rangos y determinantes:} \\$\left|A\right|=\left|\begin{matrix}1 & 1 & 0\\2 & -1 & 2\\-1 & 3 & -1\end{matrix}\right|=-5  \neq 0 $\begin{itemize} \item $rg(A)=3 \land rg(A^*)=3 \to $ S.C.D.   \\ \\ Por Cramer: \begin{itemize}\item $x=\frac{\left|\begin{matrix}4 & 1 & 0\\5 & -1 & 2\\0 & 3 & -1\end{matrix}\right|}{-5}=\frac{-15}{-5}=3$\item $y=\frac{\left|\begin{matrix}1 & 4 & 0\\2 & 5 & 2\\-1 & 0 & -1\end{matrix}\right|}{-5}=\frac{-5}{-5}=1$\item $z=\frac{\left|\begin{matrix}1 & 1 & 4\\2 & -1 & 5\\-1 & 3 & 0\end{matrix}\right|}{-5}=\frac{0}{-5}=0$\end{itemize}\end{itemize}
+\end{solution}
+
+\question[3] Un centro dedicado a la ense\~nanza personalizada de idiomas tiene dos cursos, uno b\'asico y otro avanzado, para los que dedica distintos recursos. Esta planificaci\'on hace que pueda atender entre 20 y 65 estudiantes del curso b\'asico y entre 20 y 40 estudiantes del curso avanzado. El n\'umero m\'aximo de estudiantes que en total puede atender es 100. 
+Los beneficios que obtiene por cada estudiante en el curso b\'asico se estiman en 145 euros y en 150 euros por cada estudiante del curso avanzado. Hallar qu\'e n\'umero de estudiantes de cada curso proporcionan el m\'aximo beneficio. \hfill 
+\begin{solution} 
+    max $ z=145 x + 150 y$ s.a:
+    $\left\{ \begin{matrix}x+y \leq 100  \\ x \leq 65 \\ x \geq 20 \\ y \leq 40 \\ y \geq 20 \\ \end{matrix}\right.$
+    \\
+    Vértices y valor de la función:
+$$\left( 65, \  35\right)\to150 \cdot 35 + 145 \cdot 65=14675$$
+$$\left( 60, \  40\right)\to150 \cdot 40 + 145 \cdot 60=14700$$
+$$\left( 65, \  20\right)\to150 \cdot 20 + 145 \cdot 65=12425$$
+$$\left( 20, \  40\right)\to145 \cdot 20 + 150 \cdot 40=8900$$
+$$\left( 20, \  20\right)\to145 \cdot 20 + 150 \cdot 20=5900$$
+Solución: 60 del básico y 40 del avanzado
+\end{solution}
+
+\question Se consideran las siguientes matrices:
+\begin{equation*}
+A = \begin{pmatrix} 2 & 2 & 0 \\ 0 & 2 & 0 \\ 2 & 0 & 4 \end{pmatrix}, \quad
+B = \begin{pmatrix} -3 & 4 & -6 \\ -2 & 1 & -2 \\ -11 & 3 & -8 \end{pmatrix}
+\end{equation*}
+
+\begin{parts}
+    \part[1\half] Calc\'ulese $A^{-1} A^T$.
+    \begin{solution}$A^{-1}=\left(\begin{matrix}\frac{1}{2} & - \frac{1}{2} & 0\\0 & \frac{1}{2} & 0\\- \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\end{matrix}\right) \to A^{-1}\cdot A^T=\left(\begin{matrix}0 & -1 & 1\\1 & 1 & 0\\0 & \frac{1}{2} & \frac{1}{2}\end{matrix}\right)$
+    \end{solution}
+    
+    \textit{Nota: La notaci\'on $A^T$ representa a la matriz transpuesta de $A$.}
+    
+    % \part[1\half] Resu\'elvase la ecuaci\'on matricial: \begin{equation*}
+%     \frac{1}{4} A^2 - AX = B
+%     \end{equation*}
+%     \begin{solution}
+%         $A^2=\left(\begin{matrix}4 & 8 & 0\\0 & 4 & 0\\12 & 4 & 16\end{matrix}\right)$
+%         $\frac{1}{4} A^2-B=\left(\begin{matrix}4 & -2 & 6\\2 & 0 & 2\\14 & -2 & 12\end{matrix}\right)$
+%         $X=\left(\begin{matrix}1 & -1 & 2\\1 & 0 & 1\\3 & 0 & 2\end{matrix}\right)
+% $
+%     \end{solution}
+\end{parts}
+
+
+\end{questions}
+% \gradetable \\
+% \gradetable[h] \\
+% \pointtable
+\end{document}
+\grid

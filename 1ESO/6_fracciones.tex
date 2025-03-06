@@ -1,0 +1,275 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Enteros, decimales y fracciones}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+% \textbf{Para recuperar el examen anterior se tendrán en cuenta las preguntas 1 a 3}\\
+
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+   
+\end{center}
+\textbf{Nota:} Se tendrán en cuenta los ejercicios 1 y 2 para recuperar contenidos previos
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+
+
+
+    % \question[1] Calcula descomponiendo en factores primos:
+    % \begin{multicols}{2}
+    % \begin{parts}
+    %     \part m.c.m. (10, 12) \vspace{20pt}\vspace{70pt}
+    %     \part m.c.d. (20, 12) \vspace{20pt}\vspace{70pt}
+    % \end{parts}
+    
+    % \end{multicols}
+
+\question[2] Calcula:
+\begin{multicols}{2}
+\begin{parts}
+    % \part $(-5) + 7=$
+    % \vspace{0pt}
+    \part $11 - (-3)=$
+    \vspace{0pt}
+    \part $(-8) - (-3)=$
+    \vspace{0pt}
+    \part $(-4) + (-7)=$
+    \vspace{0pt}
+    \part $(-4) \cdot 3=$
+    \vspace{0pt}
+    \part $18 : (-3)=$
+    \vspace{10pt}
+    \part $(-8) \cdot (-7)=$
+    \vspace{0pt}
+    % \part $(-42) : 6=$
+    % \vspace{0pt}
+\end{parts}
+\end{multicols}
+
+
+% \question[2] Realiza las siguientes operaciones con enteros:
+% \begin{multicols}{2}
+% \begin{parts}
+%     \part $(-4) \cdot 3=$
+%     \vspace{0pt}
+%     \part $18 : (-3)=$
+%     \vspace{10pt}
+%     \part $(-8) \cdot (-7)=$
+%     \vspace{0pt}
+%     \part $(-42) : 6=$
+%     \vspace{0pt}
+% \end{parts}
+% \end{multicols}
+
+
+\question Calcula:
+
+\begin{parts}
+    \part[1] $(-5) \cdot (3 - 8) + 3=$
+    \vspace{20pt}
+    % \part $15 - (-6) \cdot 2 + 4 : (-2)=$
+    % \vspace{20pt}
+    % \part $\left[(-3) + 7\right] \cdot (-2) - 5=$
+    % \vspace{20pt}
+    % \part $(-18 : 3) + 4 \cdot (-2) - (-10)=$
+    % \vspace{30pt}
+    % \part $(-7) \cdot (2 + 5) - 3 \cdot (4 - 9) + \left[ 6 : (3 - 5) \right] =$ \vspace{40pt} 
+    % \part $\left[ 3 + (8 : 4) \right] \cdot (2 - 3) + 5 \cdot (-4 + 6) =$ \vspace{50pt} 
+    \part[1] $20,54 + 13,6 - 3,12 =$ \vspace{60pt}
+    % \part $8,32 \cdot 7,5 =$ \vspace{70pt}
+    \part[1] $1,29 : 5 =$ \vspace{50pt}
+    % \part $865,5 : 15 =$ \vspace{40pt} \vspace{40pt}
+\end{parts}
+
+
+% \question[1] Aproxima a las décimas:
+% \begin{multicols}
+%     {2}
+% \begin{parts}
+%     \part 5,37 $\approx$
+%     \part 4,21 $\approx$
+%     \part 6,393 $\approx$
+%     \part 0,824 $\approx$
+% \end{parts}
+% \end{multicols}
+
+
+
+% \question[2] ¿Cuánto costará pintar las puertas y ventanas de un piso si tiene 9 ventanas y 8 puertas y el pintor cobra 10,5 euros por pintar una puerta y 7,35 euros por pintar una ventana?
+% \vspace{40pt}\vspace{90pt}
+
+
+% \question[2] Un depósito contiene 46,22 litros de agua que vamos a traspasar a botellas de litro y medio. Halla cuántas botellas
+% llenaremos e indica la cantidad de agua sobrante.
+% \question[1\half] Fernando compra un pollo de 2 kg 200 g y un conejo de 0,760 kg. ¿Cuánto pesa la compra de Fernando?
+% \vspace{40pt}
+
+% \question[1\half] Una finca de 20,32 hm² tiene 15,67 ha de secano plantadas de cereal y 11,300 m² de huerta en regadío. El resto es terreno en barbecho. ¿Cuál es la superficie en barbecho?
+
+% \question Clasifica las siguientes dfracciones y represéntalas en una recta:  
+% \( \dfrac{2}{3}, \dfrac{7}{4}, -\dfrac{4}{5} \).
+
+% \question Ordena de menor a mayor las siguientes dfracciones:  
+% \[
+% \dfrac{7}{8}, \dfrac{11}{15}, \dfrac{6}{7}, \dfrac{3}{5}, \dfrac{2}{3}
+% \]
+
+\question[3] Simplifica las siguientes dfracciones y obtén la dfracción irreducible correspondiente:  
+\[
+\dfrac{18}{66}, \quad \dfrac{45}{100}, \quad  \dfrac{30}{24}
+\]
+\vspace{40pt}
+
+\question Opera y simplifica:  
+\begin{parts}
+    \part[1] $\dfrac{1}{3} - \dfrac{1}{6}=$
+    \vspace{20pt}
+    \part[1] \( 7 - 4\left(\dfrac{1}{3} - \dfrac{1}{6}\right)= \) 
+    \begin{solution}
+        \(\dfrac{19}{3}\)
+    \end{solution}\vspace{40pt}
+    
+    % \part \( \left(\dfrac{-2}{3} - \dfrac{3}{4}\right) \div \left(-1\right) \) 
+    % \begin{solution}
+    %     \(\dfrac{17}{12}\)
+    % \end{solution}
+    
+    \part[1] \( \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) =\)
+    \begin{solution}
+        \(\dfrac{23}{20}\)
+    \end{solution}
+    \vspace{40pt}
+    % \part \( \dfrac{5}{4} - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) \)
+    % \begin{solution}
+    %     \(\dfrac{59}{60}\)
+    % \end{solution}
+\end{parts}
+
+% \question Opera y simplifica:  
+% \[
+% \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+% \question Opera y simplifica:  
+% \[
+% \dfrac{2}{5} - \left(\dfrac{1}{3} - \dfrac{1}{8}\right) + \dfrac{3}{7}, \quad \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+\question[1] Esta lista expresa en forma de fracción los resultados que un grupo de un examen. ¿Qué fracción de alumnado ha superado el examen?  
+
+% \renewcommand{\arraystretch}{3} % Aumenta el espacio entre filas
+% \begin{center}
+%     \begin{tabular}{|c|c|c|c|c|}
+%         \hline
+%         \textbf{Calificación} & \textbf{Sobresaliente} & \textbf{Notable} & \textbf{Bien} & \textbf{Suficiente} \\
+%         \hline
+%         \textbf{dfracción} & $\dfrac{1}{6}$ & $\dfrac{1}{4}$ & $\dfrac{1}{3}$ & $\dfrac{1}{4}$ \\
+%         \hline
+%     \end{tabular}
+% \end{center}
+
+\begin{center}
+\scalebox{0.8}{
+    \begin{tabular}{ccccc}
+        \toprule
+        \textbf{Calificación} & \textbf{Sobresaliente} & \textbf{Notable} & \textbf{Bien} & \textbf{Suficiente} \\
+        \midrule
+        \textbf{fracción} & $\dfrac{1}{6}$ & $\dfrac{1}{4}$ & $\dfrac{1}{3}$ & $\dfrac{1}{4}$ \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{center}
+\vspace{40pt}
+
+\question Resuelve:
+\begin{parts}
+    \part[1] Roberto recorre \( \dfrac{2}{5} \) partes de un camino de 10 km. ¿Cuántos km le falta por llegar al final? \vspace{60pt}
+    \part[1] Los 3/8 de una población son 6000 habitantes. ¿Cuántos habitantes tiene en total?\vspace{60pt}
+    % \part[1] La tercera parte de la capacidad de un depósito son 150 $m^3$. Hallar la capacidad del depósito.\vspace{40pt}
+\end{parts}
+
+
+\question[2] Compramos 100 litros de refresco a 2 euros el litro. Los envasamos en botes de \( \dfrac{1}{3} \) de litro y los vendemos a 1 euro. ¿Cuánto dinero ganaremos?
+
+\end{questions}
+
+
+
+\end{document}
+\grid

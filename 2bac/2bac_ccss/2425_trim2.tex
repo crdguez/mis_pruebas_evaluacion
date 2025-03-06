@@ -1,0 +1,218 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Examen Final 2ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{90 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+% % ##################### si queremos decimales distintos de 0.5 pero ojo, nos cargamos la tabla. Solo funciona  \gradetable 
+% \usepackage{fp}
+% \usepackage{numprint}
+% \npdecimalsign{.}
+% \nprounddigits{2}
+% \usepackage{etoolbox}
+% \makeatletter
+% % points printed at each question
+% \patchcmd{\point@block}{\@points}{\FPdiv\pointdiv{\@points}{100}\numprint{\pointdiv}}{}{}
+% % points printed for each question in grade table
+% \patchcmd{\do@oneline@v}{\pointsof@index{pq@index}}{\FPdiv\pointsdiv{\pointsof@index{pq@index}}{100}\numprint{\pointsdiv}}{}{}
+% % total number of points in grade table
+% \patchcmd{\prt@tablepoints}{\prt@hlfcntr{tbl@points}}{\FPdiv\pointsdiv{\prt@hlfcntr{tbl@points}}{100}\numprint{\pointsdiv}}{}{}
+% % patching needed in many other places
+% \makeatother
+% % ##################### fin de si queremos decimales
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+% \rule[2ex]{\textwidth}{2pt}
+% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+% La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+% \begin{center}
+
+
+% \addpoints
+%  % \gradetable[h][questions]
+%  % \gradetable[h]
+% 	% \pointtable[h][questions]
+%     \pointtable[h]
+    
+% \end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1] Calcule los valores de \( a \) y \( b \) para que la siguiente función  sea continua en $\mathbb{R}$
+
+
+\[
+f(x) = \left\{
+\begin{matrix}
+2x^2 - a & \text{si} & x \leq -1 \\ 
+-3x^2 + b & \text{si} & -1 < x < 1 \\ 
+\ln x + a  & \text{si} & x \geq 1 
+\end{matrix} \right.
+\]
+\begin{solution}
+    $\left\{\begin{matrix}
+        2-a=-3b\\
+        -3+b=a
+    \end{matrix}\right. \to a=1 \land b=4$
+\end{solution}
+
+
+\question[2] La función $B(x) = \dfrac{-x^2 + 9x - 16}{x}$ representa, en miles de euros, el beneficio neto de un proceso de venta, siendo \( x \) el número de artículos vendidos. Calcule el número de artículos que deben venderse para obtener el beneficio máximo y determine dicho beneficio máximo.
+\begin{solution}
+    $B'(x)=-1 + \frac{16}{x^{2}} \to x=4 \to B(4)=1 \to 1000 \euro$
+\end{solution}
+
+\question Se considera la función real:
+\[
+f(x) = x^3 + ax^2 + bx \quad a, b \in \mathbb{R}
+\]
+
+\begin{parts}
+\part[1] ¿Qué valores deben tomar \( a \) y \( b \) para que \( f(x) \) tenga un máximo relativo en el punto \( P(1,4) \)?
+\begin{solution}
+    $f'(x)=2 a x + b + 3 x^{2} \to \left\{\begin{matrix}
+        f'(1)=0\\
+        f(1)=4
+    \end{matrix}\right. \to \left\{\begin{matrix}
+        2 a + b + 3\\
+        a + b - 3 = 0
+    \end{matrix}\right. \to \left\{ a : -6, \  b : 9\right\}
+$
+\end{solution}
+
+\part[1] Para \( a = -2, b = -8 \), determine los puntos de corte de la gráfica de \( f(x) \) con los ejes de coordenadas y determine los puntos de inflexión de dicha gráfica.
+\end{parts}
+\begin{solution}
+    $f(x)=x^{3} - 2 x^{2} - 8 \to \left(x - 4\right) \left(x + 2\right)
+ \to (-2,0),(0,0),(-4,0)$ \\
+ $f''(x)=0 \to 6x-4=0 \to x=\frac{2}{3} \land f'''(x)=6\neq 0 \land f(\frac{2}{3})=- \frac{160}{27} \to (\frac{2}{3},- \frac{160}{27})$
+    
+    
+\end{solution}
+
+\question Se considera la función real de variable real definida por  
+\[
+f(x) = \frac{x^2}{x - 1}
+\]
+
+\begin{parts}
+\part[1\half] Determine sus asíntotas y sitúe la función respecto a ellas.
+\begin{solution}
+    A.H: $\lim_{x \to \pm\infty}\left(\frac{x^{2}}{x - 1}\right)=\pm\infty \to \nexists$
+    \\
+    A.V:
+    $ \lim_{x \to 1^+}\left(\frac{x^{2}}{x - 1}\right)
+ \infty  \land \lim_{x \to 1^-}\left(\frac{x^{2}}{x - 1}\right)
+=-\infty \to x=1$
+    \\
+    A.O: $\lim_{x \to \infty}\left(\frac{x}{x - 1}\right)=1 \to m=1$ \\
+    $\lim_{x \to \infty}\left(\frac{x^{2}}{x - 1} - x\right)=1 \to n=1 \to y=x+1$\\
+\end{solution}
+
+\part[1\half] Calcule sus máximos y mínimos locales y estudie el crecimiento y el decrecimiento de la función.
+\begin{solution}\\
+    $x=1 \notin Dom(f)$ 
+
+    
+    $f'(x)=\frac{x \left(x - 2\right)}{x^{2} - 2 x + 1} \to f'(x)=0 \iff x=0 \land x=2$
+
+        \begin{tabular}{c|c|c|c|c}
+            & $(-\infty,0)$ & $(0,1)$ & $(1,2)$ & $(2,\infty)$ \\
+            \hline
+           $x$ & - & + & + & + \\
+           $x-2$ & - & - & - & + \\
+           \hline
+           $\frac{x \left(x - 2\right)}{x^{2} - 2 x + 1}$ & + & - & - & + \\
+        \end{tabular}\\ \\
+    $x=0 \to$ Máximo $(0,0)$ \\
+    $x=2 \to$ Mínimo $(2,4)$\\
+\end{solution}
+\end{parts}
+
+\question[2] Derive y simplifique al máximo la siguiente función  
+\[
+f(x) = \ln \left( \frac{x^2 + 1}{x^2 - 1} \right)
+\]
+\begin{solution}
+    $f(x)=\ln(x^2+1) - \ln(x^2-1)$\\
+    $f'(x)=\dfrac{2x}{x^2+1}-\dfrac{2x}{x^2-1}=- \dfrac{4 x}{x^{4} - 1}$
+\end{solution}
+
+\addpoints
+
+\end{questions}
+% \gradetable \\
+% \gradetable[h] \\
+% \pointtable
+\end{document}
+\grid

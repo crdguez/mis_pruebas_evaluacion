@@ -1,0 +1,184 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Fracciones, proporcionalidad y porcentajes}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+% \textbf{Para recuperar el examen anterior se tendrán en cuenta las preguntas 1 a 3}\\
+
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+   
+\end{center}
+\textbf{Nota:} Se tendrán en cuenta los ejercicios 1 y 2 para recuperar contenidos previos.
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+
+
+\question[1] Simplifica las siguientes fracciones y obtén la fracción irreducible correspondiente:  
+\[
+\dfrac{18}{66}, \quad \dfrac{45}{100}, \quad  \dfrac{30}{24}
+\]
+\vspace{30pt}
+
+\question Opera y simplifica:  
+\begin{parts}
+    \part[1] $\dfrac{1}{3} - \dfrac{1}{6}=$
+    \vspace{20pt}
+    % \part[1] \( 7 - 4\left(\dfrac{1}{3} - \dfrac{1}{6}\right)= \) 
+    % \begin{solution}
+    %     \(\dfrac{19}{3}\)
+    % \end{solution}\vspace{40pt}
+    
+    \part[2] \( \left(\dfrac{-2}{3} - \dfrac{3}{4}\right) : \left(-1\right)= \) 
+    \begin{solution}
+        \(\dfrac{17}{12}\)
+    \end{solution}
+    \vspace{40pt}
+    
+    % \part[1] \( \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) =\)
+    % \begin{solution}
+    %     \(\dfrac{23}{20}\)
+    % \end{solution}
+    % \vspace{40pt}
+    \part[1] \( \dfrac{5}{4} - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)= \)
+    \begin{solution}
+        \(\dfrac{59}{60}\)
+    \end{solution}
+      \vspace{40pt}
+\end{parts}
+
+% \question Opera y simplifica:  
+% \[
+% \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+% \question Opera y simplifica:  
+% \[
+% \dfrac{2}{5} - \left(\dfrac{1}{3} - \dfrac{1}{8}\right) + \dfrac{3}{7}, \quad \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+
+\question[1] Calcula el término que falta en cada par para que sean dos fracciones equivalentes:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\dfrac{5}{8} = \dfrac{15}{ }$
+    
+    \part $\dfrac{7}{9} = \dfrac{}{27}$
+    
+    \part $\dfrac{}{4} = \dfrac{24}{32}$
+\end{parts}
+\end{multicols}
+\vspace{40pt}
+
+\question[1\half] Una fuente da 208 litros de agua en 8 minutos. ¿Cuántos litros de agua dará en un cuarto de hora?
+
+\vspace{3cm}
+
+\question[1] Para descargar un camión de sacos de cemento, 4 obreros han empleado 9 horas. ¿Cuánto tiempo emplearán 6 obreros?
+
+\vspace{3cm}
+
+\question[1\half] Completa la siguiente tabla escribiendo el porcentaje, la fracción y el número decimal que corresponde en cada caso:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        PORCENTAJE & 18\% & & & \\ \hline
+        FRACCIÓN & & & $\frac{35}{100}$ & \\ \hline
+        NÚMERO DECIMAL & & $0.24$ & & $0.08$ \\ \hline
+    \end{tabular}
+\end{center}
+
+\question[1\half] Un barco pesquero ha capturado cuatro toneladas de pescado, de las que el 45\% es sardina, el 15\% es boquerón y el resto es jurel. ¿Cuántos kilos de cada tipo de pescado lleva el barco?
+
+\vspace{3cm}
+
+\question[1] De 40 lanzamientos de penalti que ha realizado David, ha metido 18. ¿Qué porcentaje de aciertos tiene David?
+
+\vspace{3cm}
+
+\question[1\half] El precio de un televisor ha subido un 25\% con relación al del año pasado. ¿Cuál es su precio actual si el año pasado era de 510,8 euros?
+
+\vspace{3cm}
+
+\end{questions}
+
+
+
+\end{document}
+\grid

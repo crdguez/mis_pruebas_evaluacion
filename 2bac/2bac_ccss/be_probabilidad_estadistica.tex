@@ -1,0 +1,1988 @@
+
+% \documentclass[11pt]{beamer}
+\documentclass[11pt,handout]{beamer}
+\usetheme{Boadilla}
+%\usetheme{metropolis}
+
+\usecolortheme{crane}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\graphicspath{{../../img/}}
+
+\usepackage{pgf,tikz}
+
+\usetikzlibrary{shapes, calc, shapes, arrows, math, babel, positioning}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{math}
+\usetikzlibrary{arrows}
+
+
+
+%\author{}
+\title{Estadística y Probabilidad}
+
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\logo{} 
+%\institute{} 
+\date{} 
+\author{Dep. de Matemáticas}
+%\subject{} 
+\titlegraphic{\includegraphics[width=0.2\columnwidth]{header_right}}
+\begin{document}
+
+
+
+
+%\AtBeginSection[]{
+%    \begin{frame}
+%        \frametitle{Tabla de Contenidos}
+%        \tableofcontents[currentsection]
+%    \end{frame}
+%}
+
+
+\AtBeginSubsection[]{
+    \begin{frame}
+%        \frametitle{Tabla de Contenidos}
+        \tableofcontents[currentsubsection]
+    \end{frame}
+}
+
+%\pgfmathdeclarefunction{gauss}{2}{
+%  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}	
+%}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\section{Probabilidad}
+\subsection{Probabilidad Simple}
+
+\begin{frame}{Experimentos aleatorios}
+\begin{block}{}
+Un experimento es \textbf{aleatorio} cuando depende de muchos factores y cualquier pequeña modificación de alguno implica obtener un resultado diferente.
+\end{block}
+\pause
+\textbf{Ejemplos:}
+\begin{itemize}[<+->]
+ \item \textbf{Aleatorio}: Lanzar un dado y ver el resultado
+ \item \textbf{Determinista}: Calcular el tiempo que tarda en caer un objeto al suelo desde una distancia determinada
+ \end{itemize} 
+
+\end{frame}
+
+
+
+\begin{frame}{Espacio muestral y sucesos}
+\begin{itemize}[<+->]
+\item \textbf{Espacio muestral}: Conjunto de los posibles resultados del experimento. Se denota: $E$
+\item \textbf{Sucesos simples o elementales}: Cualquiera de los elementos del espacio muestral
+\item \textbf{Sucesos compuestos}: Sucesos formados por varios simples. 
+\item \textbf{Suceso seguro}: Suceso compuesto por los elementos del Espacio muestral. Se cumple siempre
+\item \textbf{Suceso imposible}: Cualquier suceso que no se cumpla nunca. Se denota con el símbolo: $\varnothing$
+\item \textbf{Suceso contrario}: Si $A$ es un suceso, $\overline{A}$ es el suceso contrario. Es aquel que se cumple cuando no se cumple $A$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Ejemplo}
+Lanzamos \textbf{un dado} y comprobamos la cara que sale:
+\begin{itemize}[<+->]
+\item \textbf{Espacio muestral}: $E=\lbrace 1,2,3,4,5,6 \rbrace $
+\item \textbf{Sucesos simples o elementales}: $1$, $2$, $3$, $4$, $5$ ó $6$
+\item \textbf{Sucesos compuestos}: $A=\lbrace que\ salga\ par\rbrace=\lbrace2,4,6\rbrace$
+\item \textbf{Suceso seguro}: $E=\lbrace 1,2,3,4,5,6 \rbrace $
+\item \textbf{Suceso imposible}: $\varnothing=\lbrace que\ salga \ mayor \ que \ 6\rbrace$
+\item \textbf{Suceso contrario}: Si $A=\lbrace que\ salga\ par\rbrace=\lbrace2,4,6\rbrace$, $\overline{A}=\lbrace que\ salga\ impar\rbrace=\lbrace1,3,5\rbrace$ 
+\end{itemize}
+\end{frame}
+\begin{frame}
+{Operaciones con sucesos y relaciones}
+\begin{columns}
+\begin{column}{0.7\textwidth}
+\begin{block}{}
+Suceso \textbf{contrario o complementario} de $A$ es otro suceso, $\overline{A}$ que contiene todos los sucesos elementales que no están en $A$.
+\end{block}
+
+\end{column}
+\begin{column}{0.3\textwidth}
+%\scalebox{.7}{%\input{img_tikz/tikz_complementario}}
+\begin{tikzpicture}[scale=0.6]
+	\draw[draw=blue!50, fill=blue!20,thick] (-2,-2) rectangle (4,2) node[above] {$E$};
+    \begin{scope}
+        \clip (0,0) circle (1.5cm);
+        %\fill[fill=blue!20, draw=blue!50, thick] (0:2cm) circle (1.5cm);
+    \end{scope}
+    \draw[draw=blue!50,fill=white,  thick] (0,0) circle (1.5cm) node {$A$};
+%    \draw[draw=blue!50, thick] (0:2cm) circle (1.5cm) node {$B$};
+    %\node[anchor=south] at (current bounding box.north) {$A \cap B$};
+    \node[anchor=south] at (1,1.3) {$\overline{A}$};
+\end{tikzpicture}
+
+
+\end{column}
+\end{columns}
+
+
+
+
+
+\end{frame}
+
+\begin{frame}
+{Operaciones con sucesos y relaciones}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{block}{}
+la \textbf{unión} de los sucesos $A$ y $B$ es aquel suceso que contiene a todos los elementos de $A$ y a  los de $B$. Por tanto los sucesos que están en $A$ \textbf{o} en $B$ o en los dos a la vez. Se denota: $A\cup B$ 
+\end{block}
+\begin{block}{}
+la \textbf{intersección} de los sucesos $A$ y $B$ es aquel suceso que contiene a todos los elementos que están tanto en $A$ como en $B$. Están en $A$ \textbf{y} en $B$. Se denota: $A\cap B$ 
+\end{block}
+
+
+\end{column}
+\begin{column}{0.4\textwidth}
+%%\input{img_tikz/tikz_union}
+\begin{tikzpicture}[scale=0.8]
+\draw[draw=blue!50, thick] (-2,-2) rectangle (4,2) node[above] {$E$};
+    \draw[fill=blue!20, draw=blue!50, thick] 
+    	(0,0) circle (1.5cm) node {$A$}
+        (0:2cm) circle (1.5cm) node {$B$};
+    \node[anchor=south] at (1,1.3) {$A \cup B$};
+\end{tikzpicture}
+
+
+%%\input{img_tikz/tikz_interseccion}
+\begin{tikzpicture}[scale=0.8]
+	\draw[draw=blue!50, thick] (-2,-2) rectangle (4,2) node[above] {$E$};
+    \begin{scope}
+        \clip (0,0) circle (1.5cm);
+        \fill[fill=blue!20, draw=blue!50, thick] (0:2cm) circle (1.5cm);
+    \end{scope}
+    \draw[draw=blue!50, thick] (0,0) circle (1.5cm) node {$A$};
+    \draw[draw=blue!50, thick] (0:2cm) circle (1.5cm) node {$B$};
+    %\node[anchor=south] at (current bounding box.north) {$A \cap B$};
+    \node[anchor=south] at (1,1.3) {$A \cap B$};
+\end{tikzpicture}
+
+\end{column}
+\end{columns}
+
+
+
+\end{frame}
+
+\begin{frame}
+{Ejemplo}
+
+ Tomamos como experimento el resultado de \textbf{lanzar un dado}, y los sucesos: \\
+\begin{tabular}{l}
+$A=\lbrace que\ salga\ par\rbrace=\lbrace2,4,6\rbrace$ \\
+$B=\lbrace que\ sea\ mayor\ que\ 3\rbrace=\lbrace4,5,6\rbrace$ \\
+$C=\lbrace que\ salga\ impar\rbrace=\lbrace1,3,5\rbrace$
+\end{tabular}
+
+\begin{itemize}	[<+->]
+	\item $A\cup B=\lbrace2,4,5,6\rbrace$ \\
+	%%\input{img_tikz/tikz_ej_union}
+	\item $A\cap B=\lbrace4,6\rbrace$\\
+	%%\input{img_tikz/tikz_ej_interseccion}
+
+	\item $A\cup C=\lbrace1,2,3,4,5,6\rbrace=E$
+	\item $A\cap C=\varnothing$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Compatibilidad de sucesos}
+\begin{block}{}
+Se dice que dos sucesos son \textbf{incompatibles} cuando su intersección es el conjunto vacío. En caso contrario se dice que son \textbf{compatibles}.
+\end{block}
+\pause
+\textbf{Ejemplo:} Tomamos como experimento el resultado de \textbf{lanzar un dado}, y los sucesos: \\
+\begin{tabular}{l}
+$A=\lbrace que\ salga\ par\rbrace=\lbrace2,4,6\rbrace$ \\
+$B=\lbrace que\ sea\ mayor\ que\ 3\rbrace=\lbrace4,5,6\rbrace$ \\
+$C=\lbrace que\ salga\ impar\rbrace=\lbrace1,3,5\rbrace$
+\end{tabular}
+\newline
+$A$ y $B$ son \textbf{compatibles} y $A$ y $C$ \textbf{incompatibles}.
+
+\end{frame}
+
+\begin{frame}{Regla de Laplace}
+\begin{block}{}
+ La probabilidad de un suceso de un experimento regular viene determinada por la \textbf{Regla de Laplace}:
+$$P(A)=\dfrac{Casos\ favorables}{Casos\ posibles} $$
+\end{block}
+
+\pause
+
+\textbf{Ejemplo:} Al \textbf{lanzar un dado}, los casos posibles son 6 ($\lbrace1,2,3,4,5,6\rbrace$):\\
+\begin{tabular}{l}
+La probabilidad de sacar un 3: $\lbrace3\rbrace\to \dfrac{1}{6}$\\
+La probabilidad de sacar par: $\lbrace2,4,6\rbrace\to\dfrac{3}{6}$ \\
+La probabilidad de sacar más de 4: $\lbrace5,6\rbrace\to\dfrac{2}{6}$
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{Propiedades de la probabilidad} La probabilidad de un experimento regular cumple las siguientes propiedades:
+\begin{block}{}
+    \begin{itemize}[<+->]
+        \item $0 \leq P(A) \leq 1$ 
+        \item $P(E) = 1$ y $P(\varnothing) = 0$
+        \item $P(A) + P(\overline A) = 1$
+        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$. Si $A$ y $B$ son incompatibles: $P(A \cup B) = P(A) + P(B)$
+    \end{itemize}
+
+\end{block}
+
+Para los sucesos contrarios se cumplen las siguientes propiedades:
+
+\begin{itemize}
+\item $P(\overline{A})=1-P(A)$
+\item $P(\overline{A \cap B})=P(\overline{A})\cup P(\overline{B})$
+\item $P(\overline{A \cup B})=P(\overline{A})\cap P(\overline{B})$
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Probabilidad Compuesta}
+\begin{frame}{Probabilidad condicionada}
+\begin{block}{}
+$$P(A|B)=\dfrac{P(A\cap B)}{P(B)}$$
+\end{block}
+
+\pause
+Despejando:
+$$P(A\cap B) = P(A|B)\cdot P(B)$$
+
+\pause
+
+Se dice que dos sucesos son \textbf{independientes} cuando la probabilidad de cada uno no depende del resultado del otro. 
+
+
+
+
+\begin{itemize}[<+->]
+
+\item $A\ y \ B\ son \ independientes \Longleftrightarrow P(A|B)=P(A)$
+
+\item $A\ y \ B\ son \ independientes \Rightarrow P(A \cap B)=P(A) \cdot P(B)$
+
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Ejemplo sin remplazamiento}
+En una urna hay tres bolas blancas y dos negras. Se extraen dos bolas \textbf{sin} reemplazamiento:
+%%\input{img_tikz/tikz_arbol_1}
+
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+\tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
+
+\begin{tikzpicture}[grow=right, sloped, scale=0.7]
+\node[bag] {$3_B, 2_N$}
+    child {
+        node[bag] {$3_B, 1_N$}        
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap N_2)=\frac{2}{5}\cdot\frac{1}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$1/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap B_2)=\frac{2}{5}\cdot\frac{3}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below] {$3/4$}
+            }
+            edge from parent 
+            node[above] {$N$}
+            node[below]  {$2/5$}
+    }
+    child {
+        node[bag] {$2_B, 2_N$}        
+        child {
+                node[end, label=right:
+                    {$P(B_1\cap N_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$2/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(B_1\cap B_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below]  {$2/4$}
+            }
+        edge from parent         
+            node[above] {$B$}
+            node[below]  {$3/5$}
+    };
+\end{tikzpicture}
+
+\pause
+
+\begin{itemize}[<+->]
+\item Probabilidad de que sean del mismo color: \\
+\pause
+$P((B_1\cap B_2)\cup (N_1\cap N_2))=\frac{3}{10}+\frac{1}{10}=\frac{2}{5}$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Ejemplo con remplazamiento}
+En una urna hay tres bolas blancas y dos negras. Se extraen dos bolas \textbf{con} reemplazamiento:
+%%\input{img_tikz/tikz_arbol_2}
+
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+\tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
+
+\begin{tikzpicture}[grow=right, sloped, scale=0.7]
+\node[bag] {$3_B, 2_N$}
+    child {
+        node[bag] {$3_B, 2_N$}        
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap N_2)=\frac{2}{5}\cdot\frac{2}{5}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$2/5$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap B_2)=\frac{2}{5}\cdot\frac{3}{5}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below] {$3/5$}
+            }
+            edge from parent 
+            node[above] {$N$}
+            node[below]  {$2/5$}
+    }
+    child {
+        node[bag] {$3_B, 2_N$}        
+        child {
+                node[end, label=right:
+                    {$P(B_1\cap N_2)=\frac{3}{5}\cdot\frac{2}{5}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$2/5$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(B_1\cap B_2)=\frac{3}{5}\cdot\frac{3}{5}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below]  {$3/5$}
+            }
+        edge from parent         
+            node[above] {$B$}
+            node[below]  {$3/5$}
+    };
+\end{tikzpicture}
+
+\pause
+\begin{itemize}
+\item Probabilidad de que sean del mismo color: \\
+\pause
+$P((B_1\cap B_2)\cup (N_1\cap N_2))=\frac{9}{25}+\frac{4}{25}=\frac{13}{25}$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Tablas de Contingencia}
+\begin{block}{}
+Si tenemos \textbf{dos particiones del espacio muestral}, generalmente por dos características diferentes de la población, resulta útil el uso de \textbf{tablas de contingencia} para el cálculo de probabilidades.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo de tabla de contingencia}
+
+\begin{block}{}
+En una cadena de televisión se hizo una encuesta a 2500 personas para saber la audiencia de un \textbf{debate} y de una \textbf{película} que se emitieron en horas distintas: 2100 vieron la película, 1500 vieron el debate y 350 no
+vieron ninguno de los dos programas.
+\end{block}
+
+Si llamamos $D$ al suceso 'haber visto el debate'  y $P$ a 'haber visto la película', podemos organizar la información en una tabla y completarla: 
+\newline
+
+\pause
+
+\begin{columns}
+\begin{column}{0.41\textwidth}  
+     \begin{tabular}{|c | c | c | c |} 
+     \hline
+       &  $D$ & $\overline{D}$ & Total \\ [0.5ex] 
+     \hline
+     $P$ &  &  & 2100 \\ 
+     \hline
+     $\overline{P}$ &  & 350 &  \\
+     \hline
+     Total & 1500 &  &  2500 \\
+     \hline
+    \end{tabular}
+\end{column}
+\begin{column}{0.05\textwidth}
+  $$\to$$  
+\end{column}
+\begin{column}{0.41\textwidth}
+\pause
+     \begin{tabular}{|c | c | c | c |} 
+     \hline
+      &  $D$ & $\overline{D}$ & Total \\ [0.5ex] 
+     \hline
+     $P$ & \color{red}1450 & \color{red}650 & 2100 \\ 
+     \hline
+     $\overline{P}$ & \color{red}50  & 350 & \color{red}400 \\
+     \hline
+     Total & 1500 & \color{red}1000 &  2500 \\
+     \hline
+    \end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Ejemplo de tabla de contingencia}
+Ejemplos de cálculo de probabilidades a través de Laplace y condicionales:
+\begin{columns}
+\begin{column}{0.41\textwidth}
+     \begin{tabular}{|c | c | c | c |} 
+     \hline
+      &  $D$ & $\overline{D}$ & Total \\ [0.5ex] 
+     \hline
+     $P$ & \color{red}1450 & \color{red}650 & 2100 \\ 
+     \hline
+     $\overline{P}$ & \color{red}50  & 350 & \color{red}400 \\
+     \hline
+     Total & 1500 & \color{red}1000 &  2500 \\
+     \hline
+    \end{tabular}
+\end{column}
+\begin{column}{0.65\textwidth}  
+\begin{itemize}[<+->]
+    \item $P(P \cap D)= \frac{1450}{2500}=\frac{29}{50}$, o bien $P(P \cap D)= P(P)\cdot P(D|P)=\frac{2100}{2500}\cdot \frac{1450}{2100}=\frac{29}{50}$
+    \item $P(P|D)=\frac{1450}{1500}=\frac{29}{30}$, o bien $P(P|D)=\frac{P(P \cap D)}{P(D)} =\frac{\frac{1450}{2500}}{\frac{1500}{2500}}=\frac{29}{30}$
+    \item $P(D|P)=\frac{1450}{2100}=\frac{29}{42}$, o bien $P(D|P)= \frac{P(D \cap P)}{P(P)} =\frac{\frac{1450}{2500}}{\frac{2100}{2500}}=\frac{29}{42}$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Teorema de la probabilidad total}
+Si $A_1$, $A_2$, ..., $A_n$   son sucesos incompatibles dos a dos y cuya unión es todo el espacio muestral, entonces la probabilidad de cualquier otro suceso $B$ es:
+\begin{block}{}
+$$P(B)=\sum_{i=1}^n P(A_i)\cdot  P(B|A_i) $$
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Ejemplo de probabilidad total}
+En una urna en la que hay tres bolas blancas y dos negras. Si se extraen dos bolas \textbf{sin} reemplazamiento:
+%%\input{img_tikz/tikz_arbol_3}
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+\tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
+\begin{tikzpicture}[grow=right, sloped, scale=0.7]
+\node[bag] {$3_B, 2_N$}
+    child {
+        node[bag] {$3_B, 1_N$}        
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap N_2)=\frac{2}{5}\cdot\frac{1}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$1/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap B_2)=\frac{2}{5}\cdot\frac{3}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below] {$3/4$}
+            }
+            edge from parent 
+            node[above] {$N$}
+            node[below]  {$2/5$}
+    }
+    child {
+        node[bag] {$2_B, 2_N$}        
+        child {
+                node[end, label=right:
+                    {$P(B_1\cap N_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$2/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(B_1\cap B_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below]  {$2/4$}
+            }
+        edge from parent         
+            node[above] {$B$}
+            node[below]  {$3/5$}
+    };
+\end{tikzpicture}
+\pause
+$$P(B_2)=P(B_1)\cdot P(B_2|B_1) + P(N_1)\cdot P(B_2|N_1)
+= \frac{3}{5}\cdot\frac{2}{4} + \frac{2}{5}\cdot\frac{3}{4}$$
+\end{frame}
+
+
+\begin{frame}{Teorema de Bayes}
+Si $A_1$, $A_2$, ..., $A_n$   son sucesos incompatibles dos a dos y cuya unión es todo el espacio muestral, y $B$ otro suceso cualquiera:
+\begin{block}{}
+$$P(A_i|B)=\dfrac{P(A_i \cap B)}{\sum_{i=1}^n P(A_i)\cdot  P(B|A_i)} $$
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo de Bayes}
+En una urna en la que hay tres bolas blancas y dos negras. Si se extraen dos bolas \textbf{sin} reemplazamiento:
+%%\input{img_tikz/tikz_arbol_3}
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+\tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
+\begin{tikzpicture}[grow=right, sloped, scale=0.7]
+\node[bag] {$3_B, 2_N$}
+    child {
+        node[bag] {$3_B, 1_N$}        
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap N_2)=\frac{2}{5}\cdot\frac{1}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$1/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(N_1\cap B_2)=\frac{2}{5}\cdot\frac{3}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below] {$3/4$}
+            }
+            edge from parent 
+            node[above] {$N$}
+            node[below]  {$2/5$}
+    }
+    child {
+        node[bag] {$2_B, 2_N$}        
+        child {
+                node[end, label=right:
+                    {$P(B_1\cap N_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$N$}
+                node[below]  {$2/4$}
+            }
+            child {
+                node[end, label=right:
+                    {$P(B_1\cap B_2)=\frac{3}{5}\cdot\frac{2}{4}$}] {}
+                edge from parent
+                node[above] {$B$}
+                node[below]  {$2/4$}
+            }
+        edge from parent         
+            node[above] {$B$}
+            node[below]  {$3/5$}
+    };
+\end{tikzpicture}
+\pause 
+$P(B_1|B_2)=\dfrac{P(B_1 \cap B_2)}{P(B_1)\cdot  P(B_2|B_1)+P(N_1)\cdot  P(B_2|N_1)}=\dfrac{\dfrac{3}{5}\cdot\dfrac{2}{4}}{\dfrac{3}{5}\cdot\dfrac{2}{4} + \dfrac{2}{5}\cdot\dfrac{3}{4}}$
+\end{frame}
+
+
+
+
+
+\section{Distribuciones de Probabilidad}
+\subsection{Variables y distribuciones}
+
+\begin{frame}{Variables aleatorias y distribuciones de probabilidad}
+\begin{block}{Finalidad:} \textbf{Abstraer matemáticamente} un tipo de \textbf{experimento aleatorio}. Y, con ello, poder estimar de manera teórica lo que sucedería de manera experimental mediante una estadística.
+\end{block}
+
+\pause
+
+\begin{block}{¿Cómo?:} Mediante \textbf{variables aleatorias} y \textbf{distribuciones de probabilidad} asociadas a esas variables
+
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}{Variables aleatorias}
+\begin{block}{}
+Una \textbf{variable aleatoria} es una función que a cada suceso
+elemental de un espacio muestral le asigna un número. \\ Para hacer referencia a las variables se usan las letras: $X$, $Y$, ...
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo}
+\begin{block}{}
+Sea el \textbf{experimento aleatorio “lanzar un dado”} 
+\end{block}
+\pause
+El espacio muestral lo componen las 6 caras del dado.\\
+Podemos asignar la variable $X$ que a cada cara le asocia el número que represente su cara.
+\begin{center}
+\begin{tabular}{ccc}
+ & $X$ &  \\
+Suceso &  &  $x_i$\\ \hline 
+Cara 1 & $\rightarrow$ & 1 \\ 
+Cara 2 & $\rightarrow$ & 2 \\ 
+Cara 3 & $\rightarrow$ & 3 \\ 
+Cara 4 & $\rightarrow$ & 4 \\ 
+Cara 5 & $\rightarrow$ & 5 \\ 
+Cara 6 & $\rightarrow$ & 6 \\ 
+\end{tabular} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Ejemplo}
+\begin{block}{}
+Sea el \textbf{experimento compuesto "lanzar dos monedas"} 
+\end{block}
+\pause
+Podemos asignar la variable aleatoria:
+\begin{center}
+\emph{Y = \{Número de caras\}} \\
+\begin{tabular}{ccc}
+ & $Y$ &  \\
+Suceso &  &  $y_i$\\ \hline 
+C,C & $\rightarrow$ & 2 \\ 
+C,X & $\rightarrow$ & 1 \\ 
+X,C & $\rightarrow$ & 1 \\ 
+X,X & $\rightarrow$ & 0 \\ 
+\end{tabular} 
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Tipos de variables aleatorias}
+\begin{itemize}[<+->] 
+
+    \item{Discretas:} Toman un \textbf{número finito o numerable} de valores. \textbf{Ejemplo:} Sea la \emph{X =“El número de caras al lanzar dos dados”}. Los valores posibles son 0, 1 o 2 (que es un conjunto finito de datos, en concreto 3 datos)
+\item{Continuas:} Toman valores en un \textbf{rango continuo}. \textbf{Ejemplo:} \emph{X = “Distancia al centro de la diana medida desde la posición en que cae un dardo lanzado por un tirador experto” }. En este caso la variable puede tomar cualquier valor en el rango entre 0 y el radio de la diana 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Distribuciones de probabilidad}
+\begin{block}{}
+Llamaremos \textbf{distribución de probabilidad} a la relación entre los valores de la variable y sus probabilidades.
+\end{block}
+
+\begin{itemize}[<+->]
+    \item Estas relaciones se pueden indicar mediante el uso de funciones
+    \item El tipo de función y su tratamiento es diferente según las variables sean discretas o continuas
+    
+\end{itemize}
+
+
+Veamos algunas distribuciones ...
+\end{frame}
+
+
+\begin{frame}
+{Distribución uniforme discreta}
+\begin{block}{Ejemplo}
+Sea la variable \emph{X = “Número obtenido al lanzar una dado”}
+\end{block}
+\pause
+\begin{columns}
+\begin{column}{0.5 \textwidth}
+A cada valor de la variable podemos asignarle su probabilidad:
+\begin{center}
+\begin{tabular}{ccc}
+ & $P(X)$ &  \\
+$x_i$ &  &  $P(x_i)$\\ \hline 
+1 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+2 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+3 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+4 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+5 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+6 & $\rightarrow$ & $\tfrac{1}{6}$ \\ 
+\end{tabular} 
+\end{center}
+\end{column}
+\pause
+\begin{column}{0.5 \textwidth}
+ Podemos representar la relación anterior mediante una función:
+
+$$P\colon \begin{array}{ll} 
+          X \rightarrow \mathbb{R} \\ 
+          x_i\mapsto P(X=x_i)=\frac{1}{n} 
+         \end{array}$$
+\end{column}
+\end{columns}
+
+\pause
+A este tipo de distribución se le llama \textbf{uniforme discreta}.
+\end{frame}
+
+\subsection{Binomial y Normal}
+
+\begin{frame}
+{Distribución Binomial. Introducción}
+\begin{block}{Ejemplo} Queremos calcular las probabilidades de que al lanzar 5 monedas, obtengamos tres caras.
+\end{block}
+Un suceso que cumple el enunciado es:
+$$S_1=\left\lbrace C,C,C,X,X \right\rbrace$$
+Teniendo en cuenta que lanzar cada moneda son experimentos independientes, la probabilidad de ese suceso será:
+$$P\left(S_1\right)=P\left(C_1\right)\cdot P\left(C_2 C_1 \right)$$
+\begin{eqnarray*}
+P\left(S_1\right) & = &P\left(C_1\right)\cdot P\left(C_2 | C_1 \right)\cdot ... \cdot P\left(X_5 | C_1 \cap C_2  \cap C_3  \cap X_4   \right)= \\ &  = & P\left(C_1\right)\cdot  P\left(C_2\right) \cdot P\left(C_3\right) \cdot P\left(X_4\right) \cdot P\left(X_5\right)= \\
+& = & P\left(C\right)^3\cdot  P\left(X\right)^2
+\end{eqnarray*}
+
+
+\end{frame}
+
+\begin{frame}{}
+Como la probabilidad de que una moneda sea cara es $\frac{1}{2}$ y la de que sea cruz también:
+
+$$P\left(S_1\right)=\left(\frac{1}{2}\right)^3\cdot  \left(\frac{1}{2}\right)^2$$
+Ahora bien, habrá tantos sucesos que cumplan el enunciado como combinaciones de 5 elementos tomados de 3 en 3. Por tanto la probabilidad de que salgan 3 caras será:
+
+$$P\left(Salgan \ 3 \ caras\right)=\binom{5}{3}\left(\frac{1}{2}\right)^3\cdot  \left(\frac{1}{2}\right)^2$$
+
+\end{frame}
+
+\begin{frame}{}
+
+Podemos determinar la probabilidad mediante la siguiente función.
+
+$$P\colon \begin{array}{l} 
+          X \rightarrow \mathbb{R} \\ 
+          k\mapsto P(X=k)=\binom{5}{k}\left(\frac{1}{2}\right)^k\cdot  \left(\frac{1}{2}\right)^{5-k} 
+         \end{array}$$
+
+\end{frame}
+
+
+\begin{frame}{}
+Realizando los cálculos para $k = 1,...,5 $, la distribución de probabilidad de $X$ que resulta es:
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{center}
+\begin{tabular}{ccc}
+ & $P(X)$ &  \\
+$x_i$ &  &  $P(x_i)$\\ \hline 
+0 & $\rightarrow$ & $0.03125$ \\ 
+1 & $\rightarrow$ & $0.15625$ \\ 
+2 & $\rightarrow$ & $0.3125$ \\ 
+3 & $\rightarrow$ & $0.3125$ \\ 
+4 & $\rightarrow$ & $0.15625$ \\ 
+5 & $\rightarrow$ & $0.03125$ \\ 
+\end{tabular} 
+\end{center}
+\end{column}
+\begin{column}{0.7\textwidth}
+\begin{center}
+% %\input{img_tikz/tikz_binomial_0}
+\begin{tikzpicture}[
+    declare function={binom(\k,\n,\p)=\n!/(\k!*(\n-\k)!)*\p^\k*(1-\p)^(\n-\k);}
+]
+\begin{axis}[
+    samples at={0,...,5},
+    yticklabel style={
+        /pgf/number format/fixed,
+        /pgf/number format/fixed zerofill,
+        /pgf/number format/precision=1
+    },
+    ybar=0pt, bar width=1
+]
+\addplot [fill=cyan, fill opacity=0.5] {binom(x,5,0.5)}; \addlegendentry{$p=0.5$}
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{column}
+
+\end{columns}
+\pause
+Esto es un ejemplo de \textbf{distribución binomial} de tamaño $5$ y probabilidad $0.5$ .
+\end{frame}
+
+
+
+\begin{frame}{Distribución Binomial}
+Hablaremos de una \textbf{distribución binomial} cuando:
+\begin{itemize}[<+->]
+\item Se parte de un \textbf{experimento compuesto} de varios simples independientes
+\item Los experimentos simples son \textbf{dicotómicos}. Es decir, solo puede haber dos sucesos elementales: uno al que llamaremos acierto y otro al que llamaremos fracaso
+\item Asociado al experimento compuesto tenemos la variable \textbf{número de aciertos} cuando realizamos el experimento simple un número determinado de veces
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribución Binomial}
+En la situación anterior, la distribución binomial vendrá determinada por dos parámetros:
+\begin{itemize}[<+->]
+\item Parámetro $n$: Número de veces que se realiza el experimento simple 
+\item Parámetro $p$: La probabilidad de que ocurra el suceso acierto
+\end{itemize}
+\pause
+
+A este tipo de variable y su distribución de probabilidades se le llama \textbf{binomial} y se denota $$X \sim \mathcal{B}(n,\,p)$$.
+\end{frame}
+
+\begin{frame}{Ejemplo}
+\begin{block}{Lanzamineto de 5 monedas} El experimento se compone de \textbf{5 lanzamientos de moneda}. Si sale cara es acierto y si no fracaso. La variable aleatoria asociada al experimento será el número de caras que salen al lanzar 5 monedas. Esta variable sigue una distribución binomial $X \sim \mathcal{B}(5,\,0.5)$.
+\end{block}
+
+
+
+\end{frame}
+
+\begin{frame}{Probabilidad de la binomial}
+\textbf{En general tendremos una binomial de tamaño $n$ y probabilidad $p$}, cuando el experimento simple se haga $n$ veces y la probabilidad de acierto sea $p$.
+
+La función de probabilidad en este caso nos queda:
+
+\begin{block}{}
+ $$P\colon \begin{array}{l} 
+          X \rightarrow \mathbb{R} \\ 
+          k\mapsto P(X=k)=\binom{n}{k}\left(p\right)^k\cdot  \left(1-p\right)^{n-k} 
+         \end{array}$$
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Parámetros estadísticos de la binomial}
+\textbf{La media y la desviación típica} de la distribución binomial $X \sim \mathcal{B}(n,\,p)$:
+
+\begin{block}{}
+\begin{itemize}
+    \item La media de la Binomial es:  $$\overline{x}=n\cdot p$$
+    \item La desviación típica de la Binomial es:  $$\sigma=\sqrt{n\cdot p\cdot q}$$
+\end{itemize}
+\end{block}
+
+\textbf{Ejemplo:} Si $X \sim \mathcal{B}(10000,\,0.002)$
+\begin{itemize}
+    \item La media:  $$\overline{x}=10000\cdot 0.002= 200$$
+    \item La desviación típica:  $$\sigma=\sqrt{10000\cdot 0.002\cdot (1-0.002)}=\sqrt{196}=14$$
+\end{itemize}
+
+    
+\end{frame}
+
+
+\begin{frame}{Distribución Binomial}
+Ejemplos de representación gráfica de la distribución de probabilidad de algunas binomiales:    
+         
+%%\input{img_tikz/tikz_binomial}
+\begin{tikzpicture}[
+    declare function={binom(\k,\n,\p)=\n!/(\k!*(\n-\k)!)*\p^\k*(1-\p)^(\n-\k);}
+]
+\begin{axis}[
+    samples at={0,...,40},
+    yticklabel style={
+        /pgf/number format/fixed,
+        /pgf/number format/fixed zerofill,
+        /pgf/number format/precision=1
+    }
+]
+\addplot [only marks, cyan] {binom(x,40,0.2)}; \addlegendentry{$p=0.2 \, n=40$}
+\addplot [only marks, orange] {binom(x,40,0.5)}; \addlegendentry{$p=0.5 \, n=40 $}
+\end{axis}
+\end{tikzpicture}
+    
+\end{frame}
+
+
+\begin{frame}{Distribución de probabilidades en una variable continua}
+
+Observa que la probabilidad total tiene que ser 1 y la variable $X$, al ser continua, puede tomar $\infty$ valores.
+\begin{block}{}
+Si queremos repartir la probabilidad entre infinitos valores, \textbf{la probabilidad de un valor concreto será 0} ($\lim_{x \to \infty}\frac{1}{x}=0$). 
+\end{block}
+   
+
+Para calcular las probabilidades no se utilizarán funciones de probabilidad como hemos visto hasta ahora sino \textbf{funciones de densidad}:
+\end{frame}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+\begin{frame}{Función de densidad}
+En variables continuas solo tiene sentido calcular la probabilidad en intervalos.
+Se llama \textbf{función de densidad} ($f(x)$) a aquella que: 
+\begin{block}{}
+$$P\left(a\leq X \leq b \right) = \int_{a}^{b} f(x) dx$$
+\end{block}    
+
+
+La interpretación gráfica de lo anterior nos dice que la probabilidad de un intervalo corresponde con el área de la función de densidad en ese intervalo.
+\begin{center}
+% %\input{img_tikz/tikz_densidad_1}
+
+\begin{tikzpicture}[scale=0.7]
+
+\tikzmath{
+			\conf = 0.96; \crit= 2.05; \a=(1-\conf)/2;
+          }
+
+%\begin{axis}[
+%   no markers, domain=0:10, samples=100,
+%   axis lines*=left, xlabel=$x$, ylabel=$y$,
+%   every axis y label/.style={at=(current axis.above origin),anchor=south},
+%   every axis x label/.style={at=(current axis.right of origin),anchor=west},
+%   height=5cm, width=12cm,
+%   xtick={4,6.5}, ytick=\empty,
+%   enlargelimits=false, clip=false, axis on top,
+%   %grid = major
+%   ]
+%   \addplot [fill=cyan!20, draw=none, domain=0:5.96] {gauss(6.5,1)} \closedcycle;
+%   \addplot [very thick,cyan!50!black] {gauss(4,1)};
+%   \addplot [very thick,cyan!50!black] {gauss(6.5,1)};
+
+
+% %\draw [yshift=-0.6cm, latex-latex](axis cs:4,0) -- node [fill=white] {$1.96\sigma$} (axis cs:5.96,0);
+% \end{axis}
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  xlabel=$ $, ylabel=$ $,
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-1,\crit}, ytick=\empty,
+  xticklabels = {$a$, $b$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-1:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+  %\addplot [very thick,cyan!50!black] {gauss(6.5,1)};
+  
+%\draw [yshift=-0.6cm, latex-latex](axis cs:4,0) -- node [fill=white] {$1.96\sigma$} (axis cs:5.96,0);
+\end{axis}
+\node[] at (5.5,1.5) {$P\left(a\leq X \leq b \right) $};	
+
+\end{tikzpicture}
+
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+{Distribución Normal}
+
+Se trata de una distribución asociada a a un variable continua . Resulta de aproximar una binomial para valores muy grandes de $n$. 
+\begin{block}{} Y se denota: $
+X \sim \mathcal{N}(\mu,\,\sigma)\,.
+    $ 
+\end{block}
+\pause
+Tiene dos parámetros:
+\begin{itemize} [<+->]
+    \item $\mu :$ Media de la distribución
+    \item $\sigma :$ Desviación típica
+\end{itemize}
+
+\pause    
+Esta distribución aparece asociada a muchos fenómenos naturales. 
+\end{frame}
+
+
+\begin{frame}{Función de densidad de una distribución normal}  
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{block}{}
+Si $
+X \sim \mathcal{N}(\mu,\,\sigma)
+    $, la función de densidad es:
+    $$f(x)=\frac{1}{{\sigma \sqrt {2\pi } }}e^{{{ - \left( {x - \mu } \right)^2 } \mathord{\left/ {\vphantom {{ - \left( {x - \mu } \right)^2 } {2\sigma ^2 }}} \right. \kern-\nulldelimiterspace} {2\sigma ^2 }}}$$
+\end{block}
+\end{column}
+\begin{column}{0.6\textwidth} Ejemplos de gráficas:
+% %\input{img_tikz/tikz_normal}
+\begin{tikzpicture}
+\begin{axis}[every axis plot post/.append style={
+  mark=none,domain=-2:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+  axis x line*=bottom, % no box around the plot, only x and y axis
+  axis y line*=left, % the * suppresses the arrow tips
+  enlargelimits=upper] % extend the axes a bit to the right and top
+  \addplot {gauss(0,0.5)};
+  \addlegendentry{$\mu=0 \land \sigma^{2}=0.5$}
+  \addplot {gauss(1,0.75)};
+  \addlegendentry{$\mu=1 \land \sigma^{2}=0.75$}
+  \addplot {gauss(0,1)};
+  \addlegendentry{$\mu=0 \land \sigma^{2}=1$}
+\end{axis}
+\end{tikzpicture}
+\end{column}
+\end{columns}{}
+
+\end{frame}
+
+\begin{frame}{Cálculo práctico de la probabilidad de la Normal:}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{block}{}
+En realidad, para calcular la probabilidad no se hace la integral, sino que \textbf{se utiliza una tabla} que ya tiene calculadas probabilidades de la  $Z \sim \mathcal{N}(0,\,1)
+    $ ...
+\end{block}
+
+\end{column}
+\begin{column}{0.6\textwidth}
+% \includegraphics[page=1,width=1\textwidth]{probabilidad/distribucion_normal}
+
+\resizebox{0.99\textwidth}{!}{
+\begin{tabular}{l|llllllllll}
+
+z   & 0       & 0,01    & 0,02    & 0,03    & 0,04    & 0,05    & 0,06    & 0,07    & 0,08    & 0,09    \\
+\hline
+0   & 0,5     & 0,50399 & 0,50798 & 0,51197 & 0,51595 & 0,51994 & 0,52392 & 0,5279  & 0,53188 & 0,53586 \\
+0,1 & 0,53983 & 0,5438  & 0,54776 & 0,55172 & 0,55567 & 0,55962 & 0,56356 & 0,56749 & 0,57142 & 0,57535 \\
+0,2 & 0,57926 & 0,58317 & 0,58706 & 0,59095 & 0,59483 & 0,59871 & 0,60257 & 0,60642 & 0,61026 & 0,61409 \\
+0,3 & 0,61791 & 0,62172 & 0,62552 & 0,6293  & 0,63307 & 0,63683 & 0,64058 & 0,64431 & 0,64803 & 0,65173 \\
+0,4 & 0,65542 & 0,6591  & 0,66276 & 0,6664  & 0,67003 & 0,67364 & 0,67724 & 0,68082 & 0,68439 & 0,68793 \\
+0,5 & 0,69146 & 0,69497 & 0,69847 & 0,70194 & 0,7054  & 0,70884 & 0,71226 & 0,71566 & 0,71904 & 0,7224  \\
+0,6 & 0,72575 & 0,72907 & 0,73237 & 0,73565 & 0,73891 & 0,74215 & 0,74537 & 0,74857 & 0,75175 & 0,7549  \\
+0,7 & 0,75804 & 0,76115 & 0,76424 & 0,7673  & 0,77035 & 0,77337 & 0,77637 & 0,77935 & 0,7823  & 0,78524 \\
+0,8 & 0,78814 & 0,79103 & 0,79389 & 0,79673 & 0,79955 & 0,80234 & 0,80511 & 0,80785 & 0,81057 & 0,81327 \\
+0,9 & 0,81594 & 0,81859 & 0,82121 & 0,82381 & 0,82639 & 0,82894 & 0,83147 & 0,83398 & 0,83646 & 0,83891 \\
+1   & 0,84134 & 0,84375 & 0,84614 & 0,84849 & 0,85083 & 0,85314 & 0,85543 & 0,85769 & 0,85993 & 0,86214 \\
+1,1 & 0,86433 & 0,8665  & 0,86864 & 0,87076 & 0,87286 & 0,87493 & 0,87698 & 0,879   & 0,881   & 0,88298 \\
+1,2 & 0,88493 & 0,88686 & 0,88877 & 0,89065 & 0,89251 & 0,89435 & 0,89617 & 0,89796 & 0,89973 & 0,90147 \\
+1,3 & 0,9032  & 0,9049  & 0,90658 & 0,90824 & 0,90988 & 0,91149 & 0,91309 & 0,91466 & 0,91621 & 0,91774 \\
+1,4 & 0,91924 & 0,92073 & 0,9222  & 0,92364 & 0,92507 & 0,92647 & 0,92785 & 0,92922 & 0,93056 & 0,93189 \\
+1,5 & 0,93319 & 0,93448 & 0,93574 & 0,93699 & 0,93822 & 0,93943 & 0,94062 & 0,94179 & 0,94295 & 0,94408 \\
+1,6 & 0,9452  & 0,9463  & 0,94738 & 0,94845 & 0,9495  & 0,95053 & 0,95154 & 0,95254 & 0,95352 & 0,95449 \\
+1,7 & 0,95543 & 0,95637 & 0,95728 & 0,95818 & 0,95907 & 0,95994 & 0,9608  & 0,96164 & 0,96246 & 0,96327 \\
+1,8 & 0,96407 & 0,96485 & 0,96562 & 0,96638 & 0,96712 & 0,96784 & 0,96856 & 0,96926 & 0,96995 & 0,97062 \\
+1,9 & 0,97128 & 0,97193 & 0,97257 & 0,9732  & 0,97381 & 0,97441 & 0,975   & 0,97558 & 0,97615 & 0,9767  \\
+2   & 0,97725 & 0,97778 & 0,97831 & 0,97882 & 0,97932 & 0,97982 & 0,9803  & 0,98077 & 0,98124 & 0,98169 \\
+2,1 & 0,98214 & 0,98257 & 0,983   & 0,98341 & 0,98382 & 0,98422 & 0,98461 & 0,985   & 0,98537 & 0,98574 \\
+2,2 & 0,9861  & 0,98645 & 0,98679 & 0,98713 & 0,98745 & 0,98778 & 0,98809 & 0,9884  & 0,9887  & 0,98899 \\
+2,3 & 0,98928 & 0,98956 & 0,98983 & 0,9901  & 0,99036 & 0,99061 & 0,99086 & 0,99111 & 0,99134 & 0,99158 \\
+2,4 & 0,9918  & 0,99202 & 0,99224 & 0,99245 & 0,99266 & 0,99286 & 0,99305 & 0,99324 & 0,99343 & 0,99361 \\
+2,5 & 0,99379 & 0,99396 & 0,99413 & 0,9943  & 0,99446 & 0,99461 & 0,99477 & 0,99492 & 0,99506 & 0,9952  \\
+2,6 & 0,99534 & 0,99547 & 0,9956  & 0,99573 & 0,99585 & 0,99598 & 0,99609 & 0,99621 & 0,99632 & 0,99643 \\
+2,7 & 0,99653 & 0,99664 & 0,99674 & 0,99683 & 0,99693 & 0,99702 & 0,99711 & 0,9972  & 0,99728 & 0,99736 \\
+2,8 & 0,99744 & 0,99752 & 0,9976  & 0,99767 & 0,99774 & 0,99781 & 0,99788 & 0,99795 & 0,99801 & 0,99807 \\
+2,9 & 0,99813 & 0,99819 & 0,99825 & 0,99831 & 0,99836 & 0,99841 & 0,99846 & 0,99851 & 0,99856 & 0,99861 \\
+3   & 0,99865 & 0,99869 & 0,99874 & 0,99878 & 0,99882 & 0,99886 & 0,99889 & 0,99893 & 0,99896 & 0,999   \\
+3,1 & 0,99903 & 0,99906 & 0,9991  & 0,99913 & 0,99916 & 0,99918 & 0,99921 & 0,99924 & 0,99926 & 0,99929 \\
+3,2 & 0,99931 & 0,99934 & 0,99936 & 0,99938 & 0,9994  & 0,99942 & 0,99944 & 0,99946 & 0,99948 & 0,9995  \\
+3,3 & 0,99952 & 0,99953 & 0,99955 & 0,99957 & 0,99958 & 0,9996  & 0,99961 & 0,99962 & 0,99964 & 0,99965 \\
+3,4 & 0,99966 & 0,99968 & 0,99969 & 0,9997  & 0,99971 & 0,99972 & 0,99973 & 0,99974 & 0,99975 & 0,99976 \\
+3,5 & 0,99977 & 0,99978 & 0,99978 & 0,99979 & 0,9998  & 0,99981 & 0,99981 & 0,99982 & 0,99983 & 0,99983 \\
+3,6 & 0,99984 & 0,99985 & 0,99985 & 0,99986 & 0,99986 & 0,99987 & 0,99987 & 0,99988 & 0,99988 & 0,99989 \\
+3,7 & 0,99989 & 0,9999  & 0,9999  & 0,9999  & 0,99991 & 0,99991 & 0,99992 & 0,99992 & 0,99992 & 0,99992 \\
+3,8 & 0,99993 & 0,99993 & 0,99993 & 0,99994 & 0,99994 & 0,99994 & 0,99994 & 0,99995 & 0,99995 & 0,99995 \\
+3,9 & 0,99995 & 0,99995 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99997 & 0,99997 \\
+4   & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99998 & 0,99998 & 0,99998 & 0,99998
+\end{tabular}
+
+}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}{Cálculo práctico de la probabilidad de la Normal:}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{block}{}
+... y que refleja:
+
+$$P\left(Z\leq k \right), \ \  k \in \left[ 0 , 4.09 \right]$$
+\begin{center}
+    % %\input{img_tikz/tikz_normal_z}
+
+\begin{tikzpicture}[scale=0.6]
+
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5,1.5) {$P\left(Z \leq k \right) $};	
+\end{tikzpicture}
+    
+\end{center}
+\end{block}
+\end{column}
+\begin{column}{0.4\textwidth}
+% \includegraphics[page=1,width=1\textwidth]{probabilidad/distribucion_normal}
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{l|llllllllll}
+
+z   & 0       & 0,01    & 0,02    & 0,03    & 0,04    & 0,05    & 0,06    & 0,07    & 0,08    & 0,09    \\
+\hline
+0   & 0,5     & 0,50399 & 0,50798 & 0,51197 & 0,51595 & 0,51994 & 0,52392 & 0,5279  & 0,53188 & 0,53586 \\
+0,1 & 0,53983 & 0,5438  & 0,54776 & 0,55172 & 0,55567 & 0,55962 & 0,56356 & 0,56749 & 0,57142 & 0,57535 \\
+0,2 & 0,57926 & 0,58317 & 0,58706 & 0,59095 & 0,59483 & 0,59871 & 0,60257 & 0,60642 & 0,61026 & 0,61409 \\
+0,3 & 0,61791 & 0,62172 & 0,62552 & 0,6293  & 0,63307 & 0,63683 & 0,64058 & 0,64431 & 0,64803 & 0,65173 \\
+0,4 & 0,65542 & 0,6591  & 0,66276 & 0,6664  & 0,67003 & 0,67364 & 0,67724 & 0,68082 & 0,68439 & 0,68793 \\
+0,5 & 0,69146 & 0,69497 & 0,69847 & 0,70194 & 0,7054  & 0,70884 & 0,71226 & 0,71566 & 0,71904 & 0,7224  \\
+0,6 & 0,72575 & 0,72907 & 0,73237 & 0,73565 & 0,73891 & 0,74215 & 0,74537 & 0,74857 & 0,75175 & 0,7549  \\
+0,7 & 0,75804 & 0,76115 & 0,76424 & 0,7673  & 0,77035 & 0,77337 & 0,77637 & 0,77935 & 0,7823  & 0,78524 \\
+0,8 & 0,78814 & 0,79103 & 0,79389 & 0,79673 & 0,79955 & 0,80234 & 0,80511 & 0,80785 & 0,81057 & 0,81327 \\
+0,9 & 0,81594 & 0,81859 & 0,82121 & 0,82381 & 0,82639 & 0,82894 & 0,83147 & 0,83398 & 0,83646 & 0,83891 \\
+1   & 0,84134 & 0,84375 & 0,84614 & 0,84849 & 0,85083 & 0,85314 & 0,85543 & 0,85769 & 0,85993 & 0,86214 \\
+1,1 & 0,86433 & 0,8665  & 0,86864 & 0,87076 & 0,87286 & 0,87493 & 0,87698 & 0,879   & 0,881   & 0,88298 \\
+1,2 & 0,88493 & 0,88686 & 0,88877 & 0,89065 & 0,89251 & 0,89435 & 0,89617 & 0,89796 & 0,89973 & 0,90147 \\
+1,3 & 0,9032  & 0,9049  & 0,90658 & 0,90824 & 0,90988 & 0,91149 & 0,91309 & 0,91466 & 0,91621 & 0,91774 \\
+1,4 & 0,91924 & 0,92073 & 0,9222  & 0,92364 & 0,92507 & 0,92647 & 0,92785 & 0,92922 & 0,93056 & 0,93189 \\
+1,5 & 0,93319 & 0,93448 & 0,93574 & 0,93699 & 0,93822 & 0,93943 & 0,94062 & 0,94179 & 0,94295 & 0,94408 \\
+1,6 & 0,9452  & 0,9463  & 0,94738 & 0,94845 & 0,9495  & 0,95053 & 0,95154 & 0,95254 & 0,95352 & 0,95449 \\
+1,7 & 0,95543 & 0,95637 & 0,95728 & 0,95818 & 0,95907 & 0,95994 & 0,9608  & 0,96164 & 0,96246 & 0,96327 \\
+1,8 & 0,96407 & 0,96485 & 0,96562 & 0,96638 & 0,96712 & 0,96784 & 0,96856 & 0,96926 & 0,96995 & 0,97062 \\
+1,9 & 0,97128 & 0,97193 & 0,97257 & 0,9732  & 0,97381 & 0,97441 & 0,975   & 0,97558 & 0,97615 & 0,9767  \\
+2   & 0,97725 & 0,97778 & 0,97831 & 0,97882 & 0,97932 & 0,97982 & 0,9803  & 0,98077 & 0,98124 & 0,98169 \\
+2,1 & 0,98214 & 0,98257 & 0,983   & 0,98341 & 0,98382 & 0,98422 & 0,98461 & 0,985   & 0,98537 & 0,98574 \\
+2,2 & 0,9861  & 0,98645 & 0,98679 & 0,98713 & 0,98745 & 0,98778 & 0,98809 & 0,9884  & 0,9887  & 0,98899 \\
+2,3 & 0,98928 & 0,98956 & 0,98983 & 0,9901  & 0,99036 & 0,99061 & 0,99086 & 0,99111 & 0,99134 & 0,99158 \\
+2,4 & 0,9918  & 0,99202 & 0,99224 & 0,99245 & 0,99266 & 0,99286 & 0,99305 & 0,99324 & 0,99343 & 0,99361 \\
+2,5 & 0,99379 & 0,99396 & 0,99413 & 0,9943  & 0,99446 & 0,99461 & 0,99477 & 0,99492 & 0,99506 & 0,9952  \\
+2,6 & 0,99534 & 0,99547 & 0,9956  & 0,99573 & 0,99585 & 0,99598 & 0,99609 & 0,99621 & 0,99632 & 0,99643 \\
+2,7 & 0,99653 & 0,99664 & 0,99674 & 0,99683 & 0,99693 & 0,99702 & 0,99711 & 0,9972  & 0,99728 & 0,99736 \\
+2,8 & 0,99744 & 0,99752 & 0,9976  & 0,99767 & 0,99774 & 0,99781 & 0,99788 & 0,99795 & 0,99801 & 0,99807 \\
+2,9 & 0,99813 & 0,99819 & 0,99825 & 0,99831 & 0,99836 & 0,99841 & 0,99846 & 0,99851 & 0,99856 & 0,99861 \\
+3   & 0,99865 & 0,99869 & 0,99874 & 0,99878 & 0,99882 & 0,99886 & 0,99889 & 0,99893 & 0,99896 & 0,999   \\
+3,1 & 0,99903 & 0,99906 & 0,9991  & 0,99913 & 0,99916 & 0,99918 & 0,99921 & 0,99924 & 0,99926 & 0,99929 \\
+3,2 & 0,99931 & 0,99934 & 0,99936 & 0,99938 & 0,9994  & 0,99942 & 0,99944 & 0,99946 & 0,99948 & 0,9995  \\
+3,3 & 0,99952 & 0,99953 & 0,99955 & 0,99957 & 0,99958 & 0,9996  & 0,99961 & 0,99962 & 0,99964 & 0,99965 \\
+3,4 & 0,99966 & 0,99968 & 0,99969 & 0,9997  & 0,99971 & 0,99972 & 0,99973 & 0,99974 & 0,99975 & 0,99976 \\
+3,5 & 0,99977 & 0,99978 & 0,99978 & 0,99979 & 0,9998  & 0,99981 & 0,99981 & 0,99982 & 0,99983 & 0,99983 \\
+3,6 & 0,99984 & 0,99985 & 0,99985 & 0,99986 & 0,99986 & 0,99987 & 0,99987 & 0,99988 & 0,99988 & 0,99989 \\
+3,7 & 0,99989 & 0,9999  & 0,9999  & 0,9999  & 0,99991 & 0,99991 & 0,99992 & 0,99992 & 0,99992 & 0,99992 \\
+3,8 & 0,99993 & 0,99993 & 0,99993 & 0,99994 & 0,99994 & 0,99994 & 0,99994 & 0,99995 & 0,99995 & 0,99995 \\
+3,9 & 0,99995 & 0,99995 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99997 & 0,99997 \\
+4   & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99998 & 0,99998 & 0,99998 & 0,99998
+\end{tabular}
+
+}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar}
+% \includegraphics[page=1,width=0.8\textwidth]{probabilidad/calculonormal.png}
+\resizebox{0.7\textwidth}{!}{
+\begin{tabular}{l|llllllllll}
+
+z   & 0       & 0,01    & 0,02    & 0,03    & 0,04    & 0,05    & 0,06    & 0,07    & 0,08    & 0,09    \\
+\hline
+0   & \textbf{0,5 }    & 0,50399 & 0,50798 & 0,51197 & 0,51595 & 0,51994 & 0,52392 & 0,5279  & 0,53188 & 0,53586 \\
+0,1 & 0,53983 & 0,5438  & 0,54776 & 0,55172 & 0,55567 & 0,55962 & 0,56356 & 0,56749 & 0,57142 & 0,57535 \\
+0,2 & 0,57926 & 0,58317 & 0,58706 & 0,59095 & 0,59483 & 0,59871 & 0,60257 & 0,60642 & 0,61026 & 0,61409 \\
+0,3 & 0,61791 & 0,62172 & 0,62552 & 0,6293  & 0,63307 & 0,63683 & 0,64058 & 0,64431 & 0,64803 & 0,65173 \\
+0,4 & 0,65542 & 0,6591  & 0,66276 & 0,6664  & 0,67003 & 0,67364 & 0,67724 & 0,68082 & 0,68439 & 0,68793 \\
+0,5 & 0,69146 & 0,69497 & 0,69847 & 0,70194 & 0,7054  & 0,70884 & 0,71226 & 0,71566 & 0,71904 & 0,7224  \\
+0,6 & 0,72575 & 0,72907 & 0,73237 & 0,73565 & 0,73891 & 0,74215 & 0,74537 & 0,74857 & 0,75175 & 0,7549  \\
+0,7 & 0,75804 & 0,76115 & 0,76424 & 0,7673  & 0,77035 & 0,77337 & 0,77637 & 0,77935 & 0,7823  & 0,78524 \\
+0,8 & 0,78814 & 0,79103 & 0,79389 & 0,79673 & 0,79955 & 0,80234 & 0,80511 & 0,80785 & 0,81057 & 0,81327 \\
+0,9 & 0,81594 & 0,81859 & 0,82121 & 0,82381 & 0,82639 & 0,82894 & 0,83147 & 0,83398 & 0,83646 & 0,83891 \\
+1   & 0,84134 & 0,84375 & 0,84614 & 0,84849 & 0,85083 & 0,85314 & 0,85543 & 0,85769 & 0,85993 & 0,86214 \\
+1,1 & 0,86433 & 0,8665  & 0,86864 & 0,87076 & 0,87286 & 0,87493 & 0,87698 & 0,879   & 0,881   & 0,88298 \\
+1,2 & 0,88493 & 0,88686 & 0,88877 & \textbf{0,89065} & 0,89251 & 0,89435 & 0,89617 & 0,89796 & 0,89973 & 0,90147 \\
+1,3 & 0,9032  & 0,9049  & 0,90658 & 0,90824 & 0,90988 & 0,91149 & 0,91309 & 0,91466 & 0,91621 & 0,91774 \\
+
+\end{tabular}
+
+}
+
+\begin{itemize} [<+->]
+    \item $P\left(Z\leq 0 \right)=0.5 $. Ya que en este caso $k=0=0.00$ la suma del valor de la fila 0 con el valor de la columna 0 me da el valor de $k$, y la probabilidad asociada es $0.5$
+    \item $P\left(Z\leq 1.23 \right)= 0.89065$. En este caso la probabilidad asociada a 1.23 se busca en la fila 1.2 y la columna 0.03 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar} 
+\begin{block}{}
+    Las probabilidades en conjuntos de valores de la distribución que no se puedan obtener directamente de la tabla se transformarán en operaciones con probabilidades que sí estén en la tabla:
+\end{block}
+Veamos algunos ejemplos:
+\end{frame}
+
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar}
+\begin{block}{Ejemplo}
+$P\left(Z\geq 1.23 \right)= 1 - P\left(Z\leq 1.23 \right) = 1 - 0.89065= 0.10935$.
+\end{block}
+Basta fijarse en la relación que hay entre las áreas:
+\begin{center}
+   %%\input{img_tikz/tikz_normal_z21} 
+\begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=\crit:5] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (7,0.5) {$P\left(Z \geq k \right) $};	
+\end{tikzpicture}
+\end{center}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+ %\input{img_tikz/tikz_normal_z22}
+\begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:5] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5.25,1.5) {$1$};	
+\end{tikzpicture}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+ %\input{img_tikz/tikz_normal_z23}
+\begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5,1.5) {$P\left(Z \leq k \right) $};	
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar}
+\begin{block}{Ejemplo}
+$P\left(Z\leq -2.15 \right)=P\left(Z\geq 2.15 \right)=1-P\left(Z\leq 2.15 \right)=1-0.98422=0.01578$.
+\end{block}
+Basta fijarse en la relación que hay entre las áreas:
+\begin{center}
+   %\input{img_tikz/tikz_normal_z31}
+\begin{tikzpicture}[scale=0.5]
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-\crit, 0,\crit}, ytick=\empty,
+  xticklabels = {$-k$,$0$, $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:-\crit] {gauss(0,1)} \closedcycle;
+  \addplot [fill=cyan!20, draw=none, domain=\crit:5] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (8,0.5) {$P\left(Z \geq k \right) $};
+\node[] at (2.5,0.5) {$P\left(Z \leq -k \right) $};	
+\end{tikzpicture}
+ 
+\end{center}
+\end{frame}
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar}
+\begin{block}{Ejemplo}
+$P\left( -1.3 < Z < 3.1\right)=P\left( Z < 3.1\right)-P\left(  Z < -1.3\right)=
+    P\left( Z < 3.1\right) - \left[ 1 - P\left(  Z < 1.3\right) \right]= 0.99903 - 1 + 0.9032 = 0.90223$.
+\end{block}
+Basta fijarse en la relación que hay entre las áreas:
+\begin{center}
+   %\input{img_tikz/tikz_normal_z41} 
+\begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0.96; \crit= 2.05; \a=round(1-\conf)/2,2);
+          }
+
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-1,0,\crit}, ytick=\empty,
+  xticklabels = {$a$, $0$, $b$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-1:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+\end{axis}
+\node[] at (5.5,1.5) {$P\left(a < Z < b \right) $};	
+\end{tikzpicture}
+\end{center}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+ %\input{img_tikz/tikz_normal_z42}
+ \begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0.96; \crit= 2.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-1,0,\crit}, ytick=\empty,
+  xticklabels = {$a$, $0$, $b$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5.5,1.5) {$P\left(Z < b \right) $};	
+\end{tikzpicture}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+ %\input{img_tikz/tikz_normal_z43}
+\begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0.96; \crit= 2.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={-1,0,\crit}, ytick=\empty,
+  xticklabels = {$a$, $0$, $b$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:-1] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+\end{axis}
+\node[] at (3,1.5) {$P\left(Z < a \right) $};	
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Cálculo en la $Z \sim \mathcal{N}(0,\,1)$ o normal estándar}
+\begin{block}{Cálculo del valor de la variable a partir de la probabilidad}
+El uso de la tabla normal nos permite realizar el proceso inverso. Es decir, fijada una probabilidad $Pr$, encontrar el valor de la variable $k$ que cumpla:
+$$P(Z<=k)=Pr$$
+    \begin{center}
+        %\input{img_tikz/tikz_normal_z5}
+ \begin{tikzpicture}[scale=0.7]
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5,1.5) {$Pr$};	
+\end{tikzpicture}
+    \end{center}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Ejemplo}
+
+Dada $Z \sim \mathcal{N}(0,\,1)$, calcula el valor de la variable sabiendo que la probabilidad de que tome un valor menor que ese es de un 85\%. 
+
+$$P(Z<=k)=0.85$$
+    \begin{center}
+        %\input{img_tikz/tikz_normal_z6}
+        \begin{tikzpicture}[scale=0.5]
+\tikzmath{
+			\conf = 0; \crit= 1.05; \a=round(1-\conf)/2,2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  xlabel=$ $, ylabel=$ $,
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={\crit}, ytick=\empty,
+  xticklabels = { $k$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-5:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+\end{axis}
+\node[] at (5,1.5) {$0.85$};	
+\end{tikzpicture}
+    \end{center}
+
+Vamos a la tabla y buscamos los dos valores seguidos de la tabla entre los que se quede el $0.85$ y encontramos:
+$$0.84849 < 0.85 < 0.85083 $$
+Como queda más cerca del $0.85083$, me quedo con la celda correspondiente a la fila $1$ y columna $0.04$  $\Rightarrow k=1.04$.
+\end{frame}
+
+\begin{frame}{Cálculo en $X \sim \mathcal{N}(\mu,\,\sigma)$ - Tipificación}
+Para manejar $X \sim \mathcal{N}(\mu,\,\sigma)$ reduciremos los cálculos a cálculos en la $Z \sim \mathcal{N}(0,\,1)$ a partir de la siguiente propiedad:
+
+\begin{block}{}
+$$ Si \  X \sim \mathcal{N}(\mu,\,\sigma) \Rightarrow X^{'}=\frac{X - \mu}{\sigma} \sim \mathcal{N}(0,\,1) $$
+\end{block}
+
+\pause
+
+Al proceso de transformar la variable anterior a una $Z\sim \mathcal{N}(0,\,1)$ se denomina \textbf{tipificarla}.
+
+
+\end{frame}
+
+
+
+\begin{frame}{Ejemplos}
+
+\begin{itemize}[<+->]
+    \item $X \sim \mathcal{N}(1,\,2) \to P(X<=2.32)=P(X'<=\frac{2.32-1}{2})=P(Z<=0.66)=0.74537$
+    \item $X \sim \mathcal{N}(5,\,3) \to P(X<=3.59)=P(X'<=\frac{3.59-5}{3})=P(Z<=-0.47)=1-P(Z<=0.47)=1-0.68082=0.31918$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Aproximación de la Binomial a partir de la Normal}
+
+\begin{block}
+
+\begin{columns}
+\begin{column}{0.3\textwidth}
+Observa que si: 
+\begin{itemize}
+\item $X \sim \mathcal{B}(n,\,p)$ \textbf{(Binomial)}
+\item $n\cdot p \geq 5 \land n\cdot q \geq 5$
+\end{itemize} 
+\end{column}
+\begin{column}{0.6\textwidth}
+\begin{tikzpicture}[scale=0.6]
+
+
+  \begin{axis}[ 
+  	axis lines=left,
+    width=12cm, height=8cm, 
+    xlabel={$ $}, ylabel={$ $}, 
+    %title={Distribución Normal $N(np, \sqrt{npq})$ y Binomial $B(n, p)$},
+    ymin=0, ymax=0.3,
+    xtick=\empty, % Quitar números del eje x
+    ytick=\empty, % Quitar números del eje y
+    axis line style= - , % Eliminar líneas de los ejes
+    extra x ticks={6}, % Agregar el valor k en x=6
+    extra x tick labels={k}, % Etiqueta k en x=6
+    extra tick style={grid=major}, % Establecer el estilo de las marcas extra
+  ]
+  \addplot[red, thick, domain=0:0] coordinates {(0,0)};
+      \addlegendentry{$X \sim \mathcal{B}(n,\,p)$}
+
+  
+     Graficar la distribución normal N(5, sqrt(2.5))
+    \addplot[
+      domain=-1:11, 
+      samples=100, 
+      thick, 
+      blue, 
+      unbounded coords=jump,
+      opacity=0.7
+    ]
+    {1/(sqrt(2*pi*2.5))*exp(-((x-5)^2)/(2*2.5))};
+    \addlegendentry{$X' \sim \mathcal{N}(np,\,\sqrt{npq})$}  
+
+     %Sombrear la normal entre 5.5 y 6.5
+    \addplot [fill=cyan!20, draw=none, domain=5.5:6.6] {gauss(5,sqrt(2.5))}\closedcycle;    
+    
+    % Graficar la distribución binomial Binomial(10, 0.5)
+    \addplot[
+      ycomb,
+      ybar,
+      red,
+      fill opacity=0.5,
+      %nodes near coords,
+    ]
+    plot coordinates {
+      (0, 0.000977)
+      (1, 0.009766)
+      (2, 0.043945)
+      (3, 0.117188)
+      (4, 0.205078)
+      (5, 0.246094)
+      (6, 0.205078)
+      (7, 0.117188)
+      (8, 0.043945)
+      (9, 0.009766)
+      (10, 0.000977)
+    };
+   
+  \end{axis}
+\end{tikzpicture}
+\end{column}
+\end{columns}
+La gráfica de $X$ \emph{se parece a} $X' \sim \mathcal{N}(np,\,\sqrt{npq})$ \textbf{(Normal)}
+\end{block}
+
+Por tanto podemos aproximar la probabilidad de la \textbf{Binomial ($X$)} a partir de la \textbf{Normal ($X'$)} siguiendo el siguiente criterio:
+
+
+$$\boxed{P(X=k)\approx P(k-0.5<X'<k+0.5)}$$
+
+\end{frame}
+
+\begin{frame}{Ejemplo de aproximación de la binomial}
+\begin{block}{Problema}
+Se lanza una moneda 200 veces. Calcula:
+\begin{itemize}
+\item la probabilidad de que salgan exactamente 110 caras
+\item la probabilidad de que salgan a lo sumo 110 caras
+\end{itemize} 
+\end{block}
+El experimento sigue una distribución $X \sim B(200;\  0,5)$.
+
+Además, $n\cdot p=200\cdot 0.5 =100 > 5$ y $n\cdot q=200\cdot 0.5 =100 > 5$. Por tanto $X \approx X'\sim N(100, \sqrt{200\cdot 0,5 \cdot 0,5}=N(100, 5t\sqrt{2})$.
+
+\begin{itemize}
+\item $P(X=110)=\begin{pmatrix} 200 \\ 110 \end{pmatrix}\cdot 0.5^{110} \cdot 0,5^{90}\approx 0.0207986943323103$
+\item $P(109.5<X'<110.5)\approx 0.0207726494084092$
+\end{itemize} 
+
+Por lo que prácticamente es la misma cantidad, y por tanto una buena aproximación la que se realiza a través de la normal correspondiente.
+
+\end{frame}
+
+\begin{frame}{Ejemplo de aproximación de la binomial}
+\begin{block}{Problema}
+Se lanza una moneda 200 veces. Calcula:
+\begin{itemize}
+\item la probabilidad de que salgan exactamente 110 caras
+\item la probabilidad de que salgan a lo sumo 110 caras
+\end{itemize} 
+
+\end{block}
+
+La distribución es la misma que en el ejercicio anterior: $X \sim B(200;\  0,5)$
+
+Si quisieramos calcular $P(X \leq 110)$ tendríamos que calcular 111 probabilidades y sumarlas, lo que nos llevaría un tiempo. En este caso podemos hacer la siguiente aproximación:
+
+$$\boxed{P(X\leq 110) \approx P(X' < 110.5)\approx 0.931218053045048}$$
+
+
+\textbf{Nota:} El añadir y/o quitar 0.5 al pasar a la normal, se conoce como corrección por continuidad o de Yates.
+
+\end{frame}
+
+\section{Inferencia Estadística}
+\subsection{Estimación puntual}
+\begin{frame}{Inferencia Estadística}
+\begin{block}{Finalidad:} Obtener conclusiones válidas para toda la población a partir del estudio de una muestra.
+\end{block}
+
+\textbf{Ejemplo:} He preguntado la nota de matemáticas a 3 alumnos y la media de las notas es $6.4$. ¿Podemos extraer alguna conclusión sobre la nota media de la clase?¿Con qué grado de confianza?
+
+\pause
+
+\begin{block}{¿Cómo?:} Mediante los m\textbf{étodos de estimación puntual} y de \textbf{intervalos de confianza}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Estimación Puntual de la media y la varianza}
+Dada una población de media $\mu$ y desviación típica $\sigma$
+\begin{block}{Estimación de la media}
+ Un buen estimador de $\mu$ es la \textbf{media muestral} $\overline{x}$:
+$$\overline{x}= \frac{x_1 + x_2 + ....+x_n} {n}=\frac{{\sum_{i=1}^n x_i }}{n}$$
+\end{block}
+\pause
+\begin{block}{Estimación de la varianza}
+Un buen estimador de $\sigma^2$ es la cuasivarianza muestral:
+$$\widehat{\sigma}^2=\frac{n}{n-1}s^2$$
+siendo $s^2$ la varianza muestral:
+$$s^2=\frac{\sum_{i=1}^n x_i^2 }{n} - \bar x^2$$
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo}
+   
+    \begin{block}{Parámetros de una muestra} Se ha extraído una muestra de 10 alumnos de los alumnos de 2º Bachillerato del instituto. Se les ha preguntado por las notas de matemáticas y estas han sido:  5,7,6,5,10,10,6,8,7,3.
+    
+    Determina la media y la varianza de los datos muestrales
+    
+    \end{block}
+\begin{itemize}
+\item $\overline{x}=\dfrac{\sum x_i}{n}=\dfrac{5+7+6+5+10+10+6+8+7+3}{10}=\dfrac{67}{10}=6.7$
+\item $var=\dfrac{\sum (x_i - \overline{x})^2}{n}=\dfrac{\sum x_i^2}{n}-\overline{x}^2=\dfrac{493}{10}-6.7^2\approx4.41$
+\end{itemize}    
+    
+\end{frame}
+
+\begin{frame}{Ejemplo}
+\begin{block}{}
+Una muestra aleatoria de 36 personas, empleadas en una gran industria, da el número medio de días al año que faltan al trabajo es $\overline{x} = 12$ con $s^2 = 4$
+\end{block}
+
+\begin{itemize}[<+->]
+    \item Dar una estimación puntual de $\mu$ (media poblacional)
+    \pause 
+    \\ Un estimador es la media muestral que en este caso vale 12
+    \item Dar una estimación puntual de $\sigma^2$ (varianza poblacional)
+    \pause 
+    \\ Un estimador es la cuasivarianza muestral:
+    $$\widehat{\sigma}^2=\frac{n}{n-1}s^2=\frac{36}{35}\cdot 4\approx 4.1$$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Ejemplo}
+\begin{itemize}[<+->]
+    \item  Se ha seleccionado una muestra al azar de 50 mujeres de una población de mayores
+de 18 años. En la muestra se ha observado que la media de las 50 tallas es 1,60 m. Si se sabe que
+la desviación típica en la población es de 3,3 cm, determina la probabilidad de que la
+media de la población no difiere en más de 1 cm de la de la muestra. 
+    % \item Como $\overline{X} \approx N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)$, tipificando $\frac{\overline{X} -\mu}{\frac{\sigma}{\sqrt{n}}} \rightarrow Z(0,1)$ y por tanto: $P(\mu-1 < \overline{X} < \mu +1)=P(\frac{-1}{\frac{\sigma}{\sqrt{n}}} < Z < \frac{1}{\frac{\sigma}{\sqrt{n}}})\approx 0.967866646858422$
+    \item $\left( \overline{x} - z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} ,  \overline{x} + z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} \right)$ es un intervalo para $\mu$ con un grado de confianza de $1-\alpha \to E=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}$ es el error máximo cometido $\to 1=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} \to z_{\alpha / 2}=\frac{\sqrt{n}}{\sigma}=\frac{\sqrt{50}}{3,3} \to  \alpha / 2=P(Z>\frac{\sqrt{50}}{3,3}) \to$ el grado de confianza es  $1-2\cdot P(Z>\frac{\sqrt{50}}{3,3})\approx 0.967866646858422$
+    
+\end{itemize}
+\end{frame}
+
+
+
+\subsection{Estimación por intervalos de confianza}
+
+\begin{frame}
+{Estimación de la media por intervalo de confianza}
+A partir de una muestra de tamaño n y un grado de confianza $1-\alpha$: 
+\begin{block}{Intervalo de confianza para la media}
+$$ \left( \overline{x} - z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} ,  \overline{x} + z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}
+\right)$$
+siendo: \begin{itemize}
+\item $\overline{x}$: La media de los datos de la muestra
+\item $z_{\alpha / 2}$ o valor crítico: El valor de la distribución normal  $Z\leadsto N\left((0,1\right)$ tal que $P(Z>z_{\alpha / 2})=\frac{\alpha}{2}$ ($\alpha$ es el nivel de significación y $1-\alpha$ el grado de confianza)
+\item $\sigma$: La desviación típica de la distribución de la población (o si no se conoce de un estimador sesgado de la misma)
+\item $n$: El tamaño de la muestra
+\end{itemize}
+\end{block}
+\pause
+
+\end{frame}
+
+\begin{frame}
+{Ejemplo}
+\begin{block}{Problema} La duración de las bombillas de un fabricante es una variable aleatoria con distribución
+normal de desviación típica 75 horas. Decidimos tomar un tamaño de la muestra igual a 150, comprobamos la duración de cada
+bombilla y calculamos su promedio, que resulta ser 1053 horas. Calcular el intervalo de confianza al 98\%
+para la media de la duración de las bombillas del fabricante.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo: Solución}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+    \textbf{Datos:} $\overline{x}=1053$, Confianza=$98$\%, $\sigma=75$ y n=150 \\
+    $\alpha=1-0.98=0.02 \to \frac{\alpha}{2}=\frac{0.02}{2}=0.01$
+    . \\ Por tanto, el valor crítico será: \\
+    $P\left(Z \leqslant z_{\alpha / 2} \right)= 0.98 + 0.01 = 0.99 \to z_{\alpha / 2} = 2.33$ \\
+    A partir de la definición de intervalo de confianza de la media:
+    $$ \left( \overline{x} - z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} ,  \overline{x} + z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}
+    \right)$$
+
+\end{column}
+\begin{column}{0.5\textwidth}
+    % \input{img_tikz/tikz_intervalo_2}
+    \begin{tikzpicture}[scale=0.5]
+
+\tikzmath{
+			\conf = 0.98; \crit= 2.33; \a=(1-\conf)/2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  height=5cm, width=12cm,
+  xtick={0,\crit}, ytick=\empty,
+  xticklabels = {$0$, $z_{\frac{\alpha}{2}}=\crit$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-\crit:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+\end{axis}
+\node[] at (5.2,1.5) {$\conf$};	
+\draw[->]   (\crit+6.5,1)node[right]{$\a$}  --  (\crit+5.6,0.1) ;
+\end{tikzpicture}
+\end{column}
+\end{columns}
+    
+    Operando nos queda:
+    $$ \left( 1053 - 2.33 \cdot \frac{75}{\sqrt{150}} ,  1053 + 2.33 \cdot \frac{75}{\sqrt{150}}
+    \right)=\left(1038.73 ,  1067.27\right)
+    $$
+\end{frame}
+
+
+\begin{frame}{Error máximo del intervalo de la media}
+\begin{center}
+        \begin{tikzpicture}[scale=0.4]
+        
+        \tikzmath{
+        			\a = -10; \b = 10; \aa = \a -1; \bb = \b + 1 ;
+        			\dist = \b - \a; \med = (\a + \b)/2;
+                  }
+        
+        \draw[very thick] (\a,0) -- (\b,0);
+        \path [draw=black, fill=white] (\b,0) circle (2pt);
+        \path [draw=black, fill=white] (\a,0.0) circle (2pt);
+        \draw[latex-latex] (\a - 1.5,0) -- (\b + 1.5,0) ;
+        
+        % \foreach \x in  {\a,...,\b}
+        % \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+        % \foreach \x in  {\aa,...,\bb}
+        % \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] % {$\pgfmathprintnumber{\x}$};
+        \draw[shift={(\a,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+        \draw[shift={(\a,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] {$\overline{x} - z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}$};
+        \draw[shift={(\med,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+        \draw[shift={(\med,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] {$\overline{x}$};
+        \draw[shift={(\b,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+        \draw[shift={(\b,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] {$\overline{x} + z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}$};
+        
+          \draw[decorate,decoration={brace}, thick]
+            (\med,0.2)--(\b,0.2) node[above, midway] 
+        {$E=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}$}; 
+        \end{tikzpicture}
+\end{center}
+
+\begin{block}{} $$E=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}}$$
+Es el radio del entorno dado por el intervalo de confianza.
+\end{block}
+
+\textbf{NOTA:} Disminuye al aumentar el tamaño de la muestra y por tanto si se quiere garantizar un error determinado para un nivel de confianza habrá que tomar muestras de al menos un \textbf{tamaño determinado de la muestra}:.
+
+\begin{block}{} $$E=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} \Rightarrow n =\frac{\sigma^2 \cdot z_{\alpha / 2}^2}{E^2}$$
+
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}{Ejemplo}
+
+
+\begin{block}{}
+Se desea realizar una investigación para estimar el peso medio de los recién nacidos de madres fumadoras. Se admite un error máximo de 50 gramos, con una confianza del 95\%. Si por estudios anteriores se sabe que la desviación típica del peso medio de tales recién nacidos es de 400 gramos, ¿qué tamaño mínimo de muestra se necesita en la investigación?
+\end{block}
+    
+\end{frame}{}
+
+
+\begin{frame}{Ejemplo: Solución}
+
+    \textbf{Datos:} $E=50$, Confianza=$95$ y $\sigma=400$ \\
+$\alpha=1-0.95=0.05 \to \frac{\alpha}{2}=\frac{0.05}{2}=0.025$
+. \\ Por tanto, el valor crítico será: \\
+$P\left(Z \leqslant z_{\alpha / 2} \right)= 0.95 + 0.025 = 0.975 \to z_{\alpha / 2} = 1.96$\\ A partir de la definición de error máximo admitido:
+$$E=z_{\alpha / 2}\cdot \frac{\sigma}{\sqrt{n}} \to 
+n = \left( \frac{z_{\alpha / 2} \cdot \sigma}{E} \right) ^ 2$$
+Luego: \\
+$$n = \left( \frac{1.96 \cdot 400}{50} \right) ^ 2\approx 245.8534 \to n=246
+$$
+\end{frame}
+
+\begin{frame}{Estimación de la proporción por intervalo de confianza}
+A partir de una muestra de tamaño n y un grado de confianza $1-\alpha$: 
+\begin{block}{Intervalo de confianza para la proporción}
+$$ \left( \widehat{p} - z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\overline{p} \right)}{n}} ,  \widehat{p} + z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\right)$$
+siendo: \begin{itemize}
+\item $\widehat{p}$: La proporción muestral
+\item $z_{\alpha / 2}$ o valor crítico:  $P(Z>z_{\alpha / 2})=\frac{\alpha}{2}$ 
+\item $\sigma$: La desviación típica de la distribución de la población \item $n$: El tamaño de la muestra
+\end{itemize}
+\end{block}
+Llamaremos error máximo a:
+\begin{block}{}
+$$E=z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}$$
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+{Ejemplo}
+\begin{block}{Problema} Para estimar la proporción de personas con sobrepeso en una población se ha tomado una
+muestra aleatoria simple de tamaño 100 personas, de las cuales 21 tienen sobrepeso. Calcular el intervalo
+de confianza al 96\% para la proporción de personas con sobrepeso en la población.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo: Solución}
+\begin{columns}
+\begin{column}{0.55\textwidth}
+    \textbf{Datos:} $\widehat{p}=0.21$, Confianza=$96$ \\
+$\alpha=1-0.96=0.04 \to \frac{\alpha}{2}=\frac{0.04}{2}=0.02$
+. \\ Por tanto, el valor crítico será: \\
+
+$P\left(Z \leqslant z_{\alpha / 2} \right)= 0.96 + 0.02 = 0.98 \to z_{\alpha / 2} \approx 2.05$ \\ 
+A partir de la definición de error máximo admitido:
+$$E=z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\approx 2.05 \cdot \sqrt{\frac{0.21\cdot 0.79}{100}}\approx 0.08$$
+
+\end{column}
+\begin{column}{0.45\textwidth}
+    % \input{img_tikz/tikz_intervalo_1}
+
+    \begin{tikzpicture}[scale=0.45]
+
+\tikzmath{
+			\conf = 0.96; \crit= 2.05; \a=round((1-\conf)/2),2);
+          }
+
+\begin{axis}[
+  no markers, domain=-5:5, samples=100,
+  axis lines=left, 
+  %xlabel=$xa$, ylabel=$ya$,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  %every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=5cm, width=12cm,
+  xtick={0,\crit}, ytick=\empty,
+  xticklabels = {$0$, $z_{\frac{\alpha}{2}}=\crit$},
+  enlargelimits=false, clip=false, axis on top,
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=-\crit:\crit] {gauss(0,1)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(0,1)};
+
+\end{axis}
+\node[] at (5.2,1.5) {$\conf$};	
+\draw[->]   (\crit+6.5,1)node[right]{$\a$}  --  (\crit+5.6,0.1) ;
+
+
+
+\end{tikzpicture}
+\end{column}
+\end{columns}
+Luego el intervalo es: $$\left( 0.21 - 0.08 , 0.21 + 0,08 \right) = \left(0.13, 0.29 \right)$$ 
+\end{frame}
+
+
+
+\end{document}
