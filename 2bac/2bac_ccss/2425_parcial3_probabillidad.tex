@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
- \printanswers
+%\printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -87,7 +87,6 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     \end{solution}
   \part[1] ¿Qué porcentaje sabe alemán?
   \begin{solution}$P(I|A)=0.4 \to \dfrac{P(I\cap A)}{P(A)}=0.4\to P(A)=\dfrac{0.1}{0.4}=\dfrac{1}{4}=0.25=25$\% sabe alemán \\
-
      $ \begin{matrix} 
            & I & \overline{I} &  \\
           A &10 & 15& 25\\
@@ -111,7 +110,61 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
   \to P(A\cap B)=P(A)+P(B)-P(A\cup B)=0.5+0.3-0.6=0.2\neq 0.15=0.5 \cdot 0.3=P(A) \cdot P(B)$ \\
   Por tanto no son independientes  
   \end{solution}
-  
+
+\question La probabilidad de que un autobús llegue con retraso a una parada es $0.2$.  Si pasa cuatro veces a lo largo del día por la parada, calcular la probabilidad de que:  
+\begin{parts}
+  \part[0\half]  No llegue con retraso ninguna de las veces.
+    \begin{solution}
+        \[
+        P(X = 0) = (0.8)^4 = \mathbf{0.4096}
+        \]
+    \end{solution}
+
+    \part[0\half] Llegue con retraso al menos una vez.
+    \begin{solution}
+        \[
+        P(X \geq 1) = 1 - P(X = 0) = \mathbf{0.5904}
+        \]
+    \end{solution}
+
+    \part[0\half] Al menos tres veces llegue con retraso.
+    \begin{solution}
+        \[
+        P(X \geq 3) = P(X = 3) + P(X = 4) = \mathbf{0.0272}
+        \]
+    \end{solution}
+
+    \part[0\half] Llegue con retraso exactamente dos veces consecutivas.
+    \begin{solution}
+        \[
+        P(\text{exactamente 2 retrasos consecutivos}) = \mathbf{0.0768}
+        \]
+    \end{solution}
+\end{parts}
+
+\question Para efectuar cierto diagnóstico, un hospital dispone de dos escáneres, A y B.
+el 65\% de las pruebas se realizan con el escáner A y el resto con B.
+Se sabe que el escáner A tiene un 5\% de diagnósticos erróneos, mientras que el escáner B tiene un 8\% de diagnósticos erróneos.
+
+Calcular la probabilidad de que:
+
+\begin{parts}
+  \part[1] El diagnóstico efectuado a un paciente en ese hospital sea erróneo.
+    \begin{solution}
+        \[
+        P(E) = (0.05 \times 0.65) + (0.08 \times 0.35) = 0.0325 + 0.028 = \mathbf{0.0605}
+        \]
+    \end{solution}
+
+    \part[1] El diagnóstico se haya efectuado usando el escáner A, sabiendo que ha resultado erróneo.
+    \begin{solution}
+        \[
+        P(A | E) = \frac{0.05 \times 0.65}{0.0605} = \frac{0.0325}{0.0605} \approx \mathbf{0.5376}
+        \]
+    \end{solution}
+\end{parts}
+
+
 \end{questions}
 \end{document}
 
