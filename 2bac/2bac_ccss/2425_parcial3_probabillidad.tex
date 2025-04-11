@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -71,6 +71,25 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 \rule[2ex]{\textwidth}{2pt}
 
 \begin{questions}
+
+\question[3] De los 39 alumnos de una clase,
+16 escogieron francés, como idioma y 27 inglés.
+9 eligieron ambos idiomas y el resto no optó por ninguno de ellos. elegido un alumno al azar, calcula las probabilidades de que escogiera:
+\begin{multicols}{2}
+\begin{parts}
+    \part Francés
+    \part Inglés
+    \part Ambos
+    \part Francés o Inglés
+    \part Francés, pero no inglés
+    \part Inglés, pero no francés
+\end{parts}
+\end{multicols}
+\begin{solution}
+    16/39, 9/13 , 3/13 , 34/39, 7/39, 6/13
+\end{solution}
+
+
 \question En un grupo de estudiantes, un 10\% sabe inglés y alemán, un 50\% sabe inglés pero no alemán y, entre los que saben alemán, un 40\% sabe inglés.
 \begin{parts}
   \part[1] ¿Qué porcentaje de estudiantes sabe inglés?
@@ -85,7 +104,7 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
       $50+10=60$\% de los estudiantes sabe inglés.
 
     \end{solution}
-  \part[1] ¿Qué porcentaje sabe alemán?
+  \part[2] ¿Qué porcentaje sabe alemán?
   \begin{solution}$P(I|A)=0.4 \to \dfrac{P(I\cap A)}{P(A)}=0.4\to P(A)=\dfrac{0.1}{0.4}=\dfrac{1}{4}=0.25=25$\% sabe alemán \\
      $ \begin{matrix} 
            & I & \overline{I} &  \\
@@ -142,77 +161,160 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 %     \end{solution}
 % \end{parts}
 
-\question Para efectuar cierto diagnóstico, un hospital dispone de dos escáneres, A y B.
-el 65\% de las pruebas se realizan con el escáner A y el resto con B.
-Se sabe que el escáner A tiene un 5\% de diagnósticos erróneos, mientras que el escáner B tiene un 8\% de diagnósticos erróneos.
+% \question Para efectuar cierto diagnóstico, un hospital dispone de dos escáneres, A y B.
+% el 65\% de las pruebas se realizan con el escáner A y el resto con B.
+% Se sabe que el escáner A tiene un 5\% de diagnósticos erróneos, mientras que el escáner B tiene un 8\% de diagnósticos erróneos.
 
-Calcular la probabilidad de que:
+% Calcular la probabilidad de que:
+
+% \begin{parts}
+%   \part[1] El diagnóstico efectuado a un paciente en ese hospital sea erróneo.
+%     \begin{solution}
+%         \[
+%         P(E) = (0.05 \times 0.65) + (0.08 \times 0.35) = 0.0325 + 0.028 = \mathbf{0.0605}
+%         \]
+%     \end{solution}
+
+%     \part[2] El diagnóstico se haya efectuado usando el escáner A, sabiendo que ha resultado erróneo.
+%     \begin{solution}
+%         \[
+%         P(A | E) = \frac{0.05 \times 0.65}{0.0605} = \frac{0.0325}{0.0605} \approx \mathbf{0.5376}
+%         \]
+%     \end{solution}
+% \end{parts}
+
+% \question Los escolares de un cierto colegio de Zaragoza fueron encuestados acerca de su alimentación y ejercicio físico.  
+% Una proporción de $\frac{2}{5}$ hacían ejercicio regularmente y $\frac{2}{3}$ siempre desayunaban.  
+% Además, entre los que siempre desayunan, una proporción de $\frac{9}{25}$ hacían ejercicio regularmente.  
+% Se elige al azar un escolar de ese colegio.  
+
+% \begin{parts}
+%     \part[1] ¿Es independiente que siempre desayune y que haga ejercicio regularmente?
+%     \begin{solution}
+%         \[
+%         \begin{array}{c|cc|c}
+%              & D & \neg D & \text{Total} \\
+%             \hline
+%             E & \frac{6}{25} & 4/25 & \frac{2}{5} \\
+%             \neg E & 32/75 & 13/75 & 3/5 \\
+%             \hline
+%             \text{Total} & \frac{2}{3} & 1/3 & 1
+%         \end{array}
+%         \]
+%         Definimos los eventos:  
+%         - \( D \): Siempre desayuna.  
+%         - \( E \): Hace ejercicio regularmente.  
+
+%         Probabilidades dadas:  
+%         \[
+%         P(E) = \frac{2}{5}, \quad P(D) = \frac{2}{3}, \quad P(E | D) = \frac{9}{25}
+%         \]
+%         Calculamos \( P(E) \cdot P(D) \):
+%         \[
+%         P(E) \cdot P(D) = \left(\frac{2}{5} \right) \left(\frac{2}{3} \right) = \frac{4}{15}
+%         \]
+%         Calculamos \( P(E \cap D) \):
+%         \[
+%         P(E \cap D) = P(E | D) P(D) = \left(\frac{9}{25} \right) \left(\frac{2}{3} \right) = \frac{18}{75} = \frac{6}{25}
+%         \]
+
+%         Como \( P(E \cap D) \neq P(E) \cdot P(D) \), los eventos **no son independientes**.  
+%         \[
+%         \mathbf{No\ son\ independientes.}
+%         \]
+%     \end{solution}
+
+%     \part[2] Calcular la probabilidad de que no siempre desayune y no haga ejercicio regularmente.
+%     \begin{solution}
+%         Probabilidad de que no siempre desayune ni haga ejercicio:
+%         \[
+%         P(\neg D \cap \neg E) = \dfrac{13}{75}
+%         \]
+
+%     \end{solution}
+% \end{parts}
+
+
+
+\question Una empresa fabrica dos modelos de ordenadores portátiles, siendo la producción del modelo
+B la tercera parte de todos los que se fabrican. Se sabe que la probabilidad de que un ordenador portátil del
+modelo A salga defectuoso es de 0,02, mientras que esa probabilidad en el modelo B es de 0,06.
 
 \begin{parts}
-  \part[1] El diagnóstico efectuado a un paciente en ese hospital sea erróneo.
+    \part[1] Calcula la probabilidad de que un ordenador fabricado por dicha empresa elegido al azar no salga defectuoso.
     \begin{solution}
+        Sabemos que:
+        - La probabilidad de que un ordenador del **modelo A** salga defectuoso es \( P(D|A) = 0.02 \),
+        - La probabilidad de que un ordenador del **modelo B** salga defectuoso es \( P(D|B) = 0.06 \).
+
+        Además, se nos dice que la producción del **modelo B** es la tercera parte de todos los ordenadores fabricados, es decir:
+        - La probabilidad de que un ordenador sea del **modelo A** es \( P(A) = \frac{2}{3} \),
+        - La probabilidad de que un ordenador sea del **modelo B** es \( P(B) = \frac{1}{3} \).
+
+        La probabilidad de que un ordenador **no sea defectuoso** es:
         \[
-        P(E) = (0.05 \times 0.65) + (0.08 \times 0.35) = 0.0325 + 0.028 = \mathbf{0.0605}
+        P(\text{no defectuoso}) = P(\text{no defectuoso} | A) \cdot P(A) + P(\text{no defectuoso} | B) \cdot P(B)
         \]
+        Sabemos que:
+        - \( P(\text{no defectuoso} | A) = 1 - P(D|A) = 0.98 \),
+        - \( P(\text{no defectuoso} | B) = 1 - P(D|B) = 0.94 \).
+
+        Sustituyendo:
+        \[
+        P(\text{no defectuoso}) = 0.98 \cdot \frac{2}{3} + 0.94 \cdot \frac{1}{3} 
+        \]
+        \[
+        P(\text{no defectuoso}) = 0.6533 + 0.3133 = 0.9666
+        \]
+
+        Por lo tanto, la probabilidad de que un ordenador fabricado por la empresa elegido al azar no salga defectuoso es aproximadamente **0.967**.
     \end{solution}
 
-    \part[1] El diagnóstico se haya efectuado usando el escáner A, sabiendo que ha resultado erróneo.
+    \part[2] Sea del modelo A, si se sabe que ha salido defectuoso.
     \begin{solution}
-        \[
-        P(A | E) = \frac{0.05 \times 0.65}{0.0605} = \frac{0.0325}{0.0605} \approx \mathbf{0.5376}
-        \]
-    \end{solution}
-\end{parts}
+        Utilizamos el teorema de Bayes para calcular la probabilidad de que un ordenador sea del modelo A, dado que ha salido defectuoso:
 
-\question Los escolares de un cierto colegio de Zaragoza fueron encuestados acerca de su alimentación y ejercicio físico.  
-Una proporción de $\frac{2}{5}$ hacían ejercicio regularmente y $\frac{2}{3}$ siempre desayunaban.  
-Además, entre los que siempre desayunan, una proporción de $\frac{9}{25}$ hacían ejercicio regularmente.  
-Se elige al azar un escolar de ese colegio.  
-
-\begin{parts}
-    \part ¿Es independiente que siempre desayune y que haga ejercicio regularmente?
-    \begin{solution}
         \[
-        \begin{array}{c|cc|c}
-             & D & \neg D & \text{Total} \\
-            \hline
-            E & \frac{6}{25} & 4/25 & \frac{2}{5} \\
-            \neg E & 32/75 & 13/75 & 3/5 \\
-            \hline
-            \text{Total} & \frac{2}{3} & 1/3 & 1
-        \end{array}
-        \]
-        Definimos los eventos:  
-        - \( D \): Siempre desayuna.  
-        - \( E \): Hace ejercicio regularmente.  
-
-        Probabilidades dadas:  
-        \[
-        P(E) = \frac{2}{5}, \quad P(D) = \frac{2}{3}, \quad P(E | D) = \frac{9}{25}
-        \]
-        Calculamos \( P(E) \cdot P(D) \):
-        \[
-        P(E) \cdot P(D) = \left(\frac{2}{5} \right) \left(\frac{2}{3} \right) = \frac{4}{15}
-        \]
-        Calculamos \( P(E \cap D) \):
-        \[
-        P(E \cap D) = P(E | D) P(D) = \left(\frac{9}{25} \right) \left(\frac{2}{3} \right) = \frac{18}{75} = \frac{6}{25}
+        P(A | D) = \frac{P(D | A) \cdot P(A)}{P(D)}
         \]
 
-        Como \( P(E \cap D) \neq P(E) \cdot P(D) \), los eventos **no son independientes**.  
+        Sabemos que:
+        - \( P(D | A) = 0.02 \),
+        - \( P(A) = \frac{2}{3} \),
+        - \( P(D | B) = 0.06 \),
+        - \( P(B) = \frac{1}{3} \).
+
+        Ya hemos calculado \( P(D) \), la probabilidad total de que un ordenador salga defectuoso:
         \[
-        \mathbf{No\ son\ independientes.}
+        P(D) = P(D | A) \cdot P(A) + P(D | B) \cdot P(B)
         \]
+        \[
+        P(D) = 0.02 \cdot \frac{2}{3} + 0.06 \cdot \frac{1}{3}
+        \]
+        \[
+        P(D) = 0.0133 + 0.02 = 0.0333
+        \]
+
+        Ahora, aplicamos el teorema de Bayes:
+        \[
+        P(A | D) = \frac{0.02 \cdot \frac{2}{3}}{0.0333} = \frac{0.0133}{0.0333} = 0.4
+        \]
+
+        Por lo tanto, la probabilidad de que el ordenador sea del modelo A, dado que ha salido defectuoso, es **0.4** o **40%**.
     \end{solution}
 
-    \part Calcular la probabilidad de que no siempre desayune y no haga ejercicio regularmente.
+    \part[1] Aproximadamente, cuántos defectuosos habrá en un pedido de 1500 ordenadores.
     \begin{solution}
-        Probabilidad de que no siempre desayune ni haga ejercicio:
+        Sabemos que la probabilidad de que un ordenador salga defectuoso es \( P(D) = 0.0333 \).
+
+        El número esperado de defectuosos en un pedido de 1500 ordenadores es:
         \[
-        P(\neg D \cap \neg E) = \dfrac{13}{75}
+        \text{Defectuosos} = 1500 \times P(D) = 1500 \times 0.0333 = 50
         \]
 
+        Por lo tanto, en un pedido de 1500 ordenadores, se espera que haya aproximadamente **50 defectuosos**.
     \end{solution}
+
 \end{parts}
 
 

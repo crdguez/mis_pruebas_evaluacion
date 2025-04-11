@@ -1,0 +1,211 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Álgebra}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Justifica todos los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+% \textbf{Para recuperar el examen anterior se tendrán en cuenta las preguntas 1 a 3}\\
+
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+   
+\end{center}
+% \textbf{Nota:} Se tendrán en cuenta los ejercicios 1 y 2 para recuperar contenidos previos.
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+% \question
+% Expresa de forma algebraica los siguientes enunciados matemáticos:
+% \begin{parts}
+% \part[1] La suma de un número, \( a \), y su mitad.
+% \vspace{30pt}
+% \part[1] El triple de la mitad de un número, \( n \).
+% \vspace{30pt}
+% \part[1] El área de un cuadrado de lado \( a \).
+% \vspace{30pt}
+% \end{parts}
+
+% \question[1]
+% Rodea con un círculo aquellas expresiones algebraicas que sean monomios:
+% \[
+% 6x^3 + 3y^4 \quad\quad 6ab \quad\quad 5xyz \quad\quad 7y^5 + 4x^3 \quad\quad 2y^3
+% \]
+% \vspace{30pt}
+
+\question[2]
+Completa la tabla indicando el coeficiente, la parte literal y el grado de cada monomio:
+\vspace{10pt}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Monomio} & \textbf{Coeficiente} & \textbf{Parte literal} & \textbf{Grado} \\
+\hline
+3 & & & \\
+\hline
+$9x^2$ & & & \\
+\hline
+$\frac{2}{3}bc$ & & & \\
+\hline
+$$-ab^3x$ & & & \\
+\hline
+\end{tabular}
+
+
+\question[1]
+Rodea con un círculo los monomios que sean semejantes:
+\[
+3a^2b^3x \quad\quad 4a^2b^3x \quad\quad -2a^2b^3x \quad\quad 5a^2b^2x^2
+\]
+
+\question[1]
+Realiza las siguientes operaciones con monomios:
+\begin{multicols}{2}
+\begin{parts}
+\part \( 3x^2 + 5x^2 \)
+\vspace{30pt}
+\part \( 7a^3 - 2a^3 \)
+\vspace{30pt}
+\part \( (2x)(-4x^3) \)
+\vspace{30pt}
+\part $\frac{6x^5}{2x^2}$
+\vspace{30pt}
+\end{parts}
+\end{multicols}
+
+\question[1]
+Calcula el valor numérico de la siguiente expresión algebraica sabiendo que \( x = 2 \) y \( y = -3 \):
+\[
+4x^2 - 2xy + y^2
+\]
+\vspace{30pt}
+
+\question
+Rodea, en cada caso, el valor de \( x \) que es solución de la ecuación:
+\begin{parts}
+\part[1] \( 2x + 5 = 25 \quad \Rightarrow \quad x = 5 \quad x = 10 \quad x = 15 \quad x = 20 \)
+\part[1] \( 3x - 4 = 14 \quad \Rightarrow \quad x = 2 \quad x = 4 \quad x = 6 \quad x = 8 \)
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 6 = 15 \)
+\vspace{30pt}
+\part[1] \( x - 4 = 9 \)
+\vspace{30pt}
+\part[1] \( \frac{x}{3} = 2 \)
+\vspace{30pt}
+\part[1] \( \frac{x}{2} = 12 \)
+\vspace{30pt}
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 13 = 2x + 11 \)
+\vspace{30pt}
+\part[1] \( x + 10 = 3x + 4 \)
+\vspace{30pt}
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( (5x - 3) + (7x + 6) = 13 \)
+\vspace{80pt}
+\part[1] \( (2x + 4) + (1 - x) = 14 \)
+\vspace{80pt}
+\end{parts}
+
+% \question[1]
+% La suma de tres números consecutivos es 42. ¿Cuáles son esos números?
+% \vspace{30pt}
+
+% \question[1]
+% Juan tiene 25 euros más que Mario y 30 euros menos que Enrique. ¿Cuánto tiene cada uno sabiendo que entre los tres tienen 140 euros?
+% \vspace{30pt}
+
+
+
+
+
+\end{questions}
+
+
+
+\end{document}
+\grid
