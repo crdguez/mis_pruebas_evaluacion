@@ -13,7 +13,6 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\shorthandoff{:}
 \usepackage{eurosym}
 %\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
 
@@ -78,9 +77,8 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
 
 \begin{tikzpicture}[scale=0.4]
     % Configuración de ejes
-    % \draw[->] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
-    \draw[->] (-8,0) -- (8,0);
-    % \draw[->] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
+    \draw[-] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
+    \draw[-] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
 
     % Cuadrícula
     \draw[help lines, color=gray!20] (-8, -2) grid (8, 8);
