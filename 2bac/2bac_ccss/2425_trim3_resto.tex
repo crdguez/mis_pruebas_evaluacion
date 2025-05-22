@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -56,18 +56,18 @@
  & \\
 \textbf{Tiempo: \timelimit} & Tipo: \tipo 
 \end{tabular*}
-\rule[2ex]{\textwidth}{2pt}
-Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
-La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
+% \rule[2ex]{\textwidth}{2pt}
+% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
+% La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
 
-\begin{center}
+% \begin{center}
 
-\addpoints
- %\gradetable[h][questions]
-\pointtable[h][questions]
-\end{center}
+% \addpoints
+%  %\gradetable[h][questions]
+% \pointtable[h][questions]
+% \end{center}
 
-\noindent
+% \noindent
 \rule[2ex]{\textwidth}{2pt}
 
 \begin{questions}
@@ -217,15 +217,15 @@ $
 % \end{parts}
 
 
-\question[2\half] En cierta población cercana a una estación de esquí se quiere estimar con un nivel de confianza del 95\% la proporción de habitantes que practican el esquí. Se toma una muestra de 400 habitantes de la población de la que 240 afirman que practican este deporte. Determinar el correspondiente intervalo de confianza. Explicar los pasos seguidos para obtener la respuesta.
-\begin{solution}
- El intervalo de confinaza es:
-    $$ \left( \widehat{p} - z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\overline{p} \right)}{n}} ,  \widehat{p} + z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\right)$$ \\
-    $\widehat{p}=\frac{240}{400}=\frac{3}{5}=0.6$ \\
-    $P(Z<z_{\alpha/2}) = 0.975  \to z_{\alpha/2}\approx 1.96$ \\
-    $$\left(0.6 - 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} ; 0.6 + 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} \right)\approx$$$$\approx(0.551990883236447; 0.648009116763553)$$
+% \question[2\half] En cierta población cercana a una estación de esquí se quiere estimar con un nivel de confianza del 95\% la proporción de habitantes que practican el esquí. Se toma una muestra de 400 habitantes de la población de la que 240 afirman que practican este deporte. Determinar el correspondiente intervalo de confianza. Explicar los pasos seguidos para obtener la respuesta.
+% \begin{solution}
+%  El intervalo de confinaza es:
+%     $$ \left( \widehat{p} - z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\overline{p} \right)}{n}} ,  \widehat{p} + z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\right)$$ \\
+%     $\widehat{p}=\frac{240}{400}=\frac{3}{5}=0.6$ \\
+%     $P(Z<z_{\alpha/2}) = 0.975  \to z_{\alpha/2}\approx 1.96$ \\
+%     $$\left(0.6 - 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} ; 0.6 + 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} \right)\approx$$$$\approx(0.551990883236447; 0.648009116763553)$$
     
-\end{solution}
+% \end{solution}
 
 
 

@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -56,18 +56,18 @@
  & \\
 \textbf{Tiempo: \timelimit} & Tipo: \tipo 
 \end{tabular*}
-\rule[2ex]{\textwidth}{2pt}
-Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
-La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
+% \rule[2ex]{\textwidth}{2pt}
+% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
+% La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
 
-\begin{center}
+% \begin{center}
 
-\addpoints
- %\gradetable[h][questions]
-\pointtable[h][questions]
-\end{center}
+% \addpoints
+%  %\gradetable[h][questions]
+% \pointtable[h][questions]
+% \end{center}
 
-\noindent
+% \noindent
 \rule[2ex]{\textwidth}{2pt}
 
 \begin{questions}
@@ -186,24 +186,9 @@ $$
     
 \end{parts}
 
-\question[2\half] La duración de las baterías de un determinado modelo de teléfono móvil tiene una distribución normal de media 34.5 horas y una desviación típica de 6.9 horas. Se toma una muestra aleatoria simple de 36 teléfonos móviles.
-\begin{parts}
-    \part ¿Cuál es la probabilidad de que la duración media de las baterías de la muestra este comprendida entre 32 y 33.5 horas?.
-    \begin{solution}
-        $$\overline{X}\sim N(\mu, \frac{\sigma}{\sqrt{n}}) \to \overline{X}\sim N(34.5; \frac{6.9}{\sqrt{36}}) \to \overline{X}\sim N(34.5; 1.15) $$
-
-        $P(32<\overline{X}<33.5)=0.177413193354335$
-    \end{solution}
-    \part ¿Y de que sea mayor de 38 horas?.
-    \begin{solution}
-        $P(\overline{X}>38)=0.00116930168584491
-$
-    \end{solution}
-\end{parts}
-
-% \question[2\half] La duración de las baterías de un determinado modelo de un fabricante de teléfonos móviles tiene una distribución normal de media 34.5 horas y una desviación típica de 1.15 horas. Si hemos comprado uno de esos móviles:
+% \question[2\half] La duración de las baterías de un determinado modelo de teléfono móvil tiene una distribución normal de media 34.5 horas y una desviación típica de 6.9 horas. Se toma una muestra aleatoria simple de 36 teléfonos móviles.
 % \begin{parts}
-%     \part ¿Cuál es la probabilidad de que la duración de la batería del móvil este comprendida entre 32 y 33.5 horas?.
+%     \part ¿Cuál es la probabilidad de que la duración media de las baterías de la muestra este comprendida entre 32 y 33.5 horas?.
 %     \begin{solution}
 %         $$\overline{X}\sim N(\mu, \frac{\sigma}{\sqrt{n}}) \to \overline{X}\sim N(34.5; \frac{6.9}{\sqrt{36}}) \to \overline{X}\sim N(34.5; 1.15) $$
 
@@ -216,16 +201,31 @@ $
 %     \end{solution}
 % \end{parts}
 
+\question[2\half] La duración de las baterías de un determinado modelo de un fabricante de teléfonos móviles tiene una distribución normal de media 34.5 horas y una desviación típica de 1.15 horas. Si hemos comprado uno de esos móviles:
+\begin{parts}
+    \part ¿Cuál es la probabilidad de que la duración de la batería del móvil este comprendida entre 32 y 33.5 horas?.
+    \begin{solution}
+        $$\overline{X}\sim N(\mu, \frac{\sigma}{\sqrt{n}}) \to \overline{X}\sim N(34.5; \frac{6.9}{\sqrt{36}}) \to \overline{X}\sim N(34.5; 1.15) $$
 
-\question[2\half] En cierta población cercana a una estación de esquí se quiere estimar con un nivel de confianza del 95\% la proporción de habitantes que practican el esquí. Se toma una muestra de 400 habitantes de la población de la que 240 afirman que practican este deporte. Determinar el correspondiente intervalo de confianza. Explicar los pasos seguidos para obtener la respuesta.
-\begin{solution}
- El intervalo de confinaza es:
-    $$ \left( \widehat{p} - z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\overline{p} \right)}{n}} ,  \widehat{p} + z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\right)$$ \\
-    $\widehat{p}=\frac{240}{400}=\frac{3}{5}=0.6$ \\
-    $P(Z<z_{\alpha/2}) = 0.975  \to z_{\alpha/2}\approx 1.96$ \\
-    $$\left(0.6 - 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} ; 0.6 + 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} \right)\approx$$$$\approx(0.551990883236447; 0.648009116763553)$$
+        $P(32<\overline{X}<33.5)=0.177413193354335$
+    \end{solution}
+    \part ¿Y de que sea mayor de 38 horas?.
+    \begin{solution}
+        $P(\overline{X}>38)=0.00116930168584491
+$
+    \end{solution}
+\end{parts}
+
+
+% \question[2\half] En cierta población cercana a una estación de esquí se quiere estimar con un nivel de confianza del 95\% la proporción de habitantes que practican el esquí. Se toma una muestra de 400 habitantes de la población de la que 240 afirman que practican este deporte. Determinar el correspondiente intervalo de confianza. Explicar los pasos seguidos para obtener la respuesta.
+% \begin{solution}
+%  El intervalo de confinaza es:
+%     $$ \left( \widehat{p} - z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\overline{p} \right)}{n}} ,  \widehat{p} + z_{\alpha / 2}\cdot \sqrt{\frac{\widehat{p}\cdot\left(1-\widehat{p} \right)}{n}}\right)$$ \\
+%     $\widehat{p}=\frac{240}{400}=\frac{3}{5}=0.6$ \\
+%     $P(Z<z_{\alpha/2}) = 0.975  \to z_{\alpha/2}\approx 1.96$ \\
+%     $$\left(0.6 - 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} ; 0.6 + 1.96\cdot\sqrt{\dfrac{0.6 \cdot 0.4}{400}} \right)\approx$$$$\approx(0.551990883236447; 0.648009116763553)$$
     
-\end{solution}
+% \end{solution}
 
 
 
