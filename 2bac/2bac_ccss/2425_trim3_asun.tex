@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-\printanswers
+% \printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -56,18 +56,18 @@
  & \\
 \textbf{Tiempo: \timelimit} & Tipo: \tipo 
 \end{tabular*}
-\rule[2ex]{\textwidth}{2pt}
-Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
-La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
+% \rule[2ex]{\textwidth}{2pt}
+% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
+% La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
 
-\begin{center}
+% \begin{center}
 
-\addpoints
- %\gradetable[h][questions]
-\pointtable[h][questions]
-\end{center}
+% \addpoints
+%  %\gradetable[h][questions]
+% \pointtable[h][questions]
+% \end{center}
 
-\noindent
+% \noindent
 \rule[2ex]{\textwidth}{2pt}
 
 \begin{questions}
@@ -88,76 +88,76 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     \end{solution}
 \end{parts}
 
-\question[2\half] En una empresa multinacional el 60\% de las reuniones se realizan a través de videoconferencia. El 40\% de los empleados que asisten a estas videoconferencias son de países de la Unión Europea, mientras que en las reuniones presenciales solo el 20\% son trabajadores que no pertenecen a la Unión Europea. Si elegimos un trabajador al azar:
-\begin{parts}
-    \part Calcule la probabilidad de que pertenezca a la Unión Europea.
-    \begin{solution}
+% \question[2\half] En una empresa multinacional el 60\% de las reuniones se realizan a través de videoconferencia. El 40\% de los empleados que asisten a estas videoconferencias son de países de la Unión Europea, mientras que en las reuniones presenciales solo el 20\% son trabajadores que no pertenecen a la Unión Europea. Si elegimos un trabajador al azar:
+% \begin{parts}
+%     \part Calcule la probabilidad de que pertenezca a la Unión Europea.
+%     \begin{solution}
 
-    % $0.4=P(E|V)=\dfrac{P(E\cap V)}{P(V)} \to $ \\
-    %     $ \begin{matrix} 
-    %        & V & \overline{V} &  \\
-    %       E & & & \\
-    %       \overline{E} & & & \\
-    %                    &60& &100
-    %   \end{matrix} $
+%     % $0.4=P(E|V)=\dfrac{P(E\cap V)}{P(V)} \to $ \\
+%     %     $ \begin{matrix} 
+%     %        & V & \overline{V} &  \\
+%     %       E & & & \\
+%     %       \overline{E} & & & \\
+%     %                    &60& &100
+%     %   \end{matrix} $
 
-    \tikzstyle{bag} = [text width=4em, text centered]
-\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
-\tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
-\tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
-\begin{tikzpicture}[grow=right, sloped, scale=0.7]
-\node[bag] {}
-    child {
-        node[bag] {$\overline{V}$}        
-            child {
-                node[end, label=right:
-                    {$\overline{E} \to P(\overline{V}\cap \overline{E})=0.4 \cdot 0.2 = 0.08$}] {}
-                edge from parent
-                node[above] {$ 0.2$}
-                node[below]  {$ $}
-            }
-            child {
-                node[end, label=right:
-                    {$E \to P(\overline{V}\cap E)=0.4 \cdot 0.8 = 0.32$}] {}
-                edge from parent
-                node[above] {$ 0.8 $}
-                node[below] {$ $}
-            }
-            edge from parent 
-            node[above] {$ $}
-            node[below]  {$0.4$}
-    }
-    child {
-        node[bag] {$V$}        
-        child {
-                node[end, label=right:
-                    {$\overline{E} \to P(V\cap \overline{E})=0.6 \cdot 0.6 = 0.36$}] {}
-                edge from parent
-                node[above] {$0.6$}
-                node[below]  {$ $}
-            }
-            child {
-                node[end, label=right:
-                    {$E \to P(V\cap E)=0.6\cdot 0.4 = 0.24$}] {}
-                edge from parent
-                node[above] {$0.4$}
-                node[below]  {$ $}
-            }
-        edge from parent         
-            node[above] {$ $}
-            node[below]  {$0.6$}
-    };
-\end{tikzpicture}
+%     \tikzstyle{bag} = [text width=4em, text centered]
+% \tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+% \tikzstyle{level 1} = [level distance=3.5cm, sibling distance=3.5cm]
+% \tikzstyle{level 2} = [level distance=3.5cm, sibling distance=2cm]
+% \begin{tikzpicture}[grow=right, sloped, scale=0.7]
+% \node[bag] {}
+%     child {
+%         node[bag] {$\overline{V}$}        
+%             child {
+%                 node[end, label=right:
+%                     {$\overline{E} \to P(\overline{V}\cap \overline{E})=0.4 \cdot 0.2 = 0.08$}] {}
+%                 edge from parent
+%                 node[above] {$ 0.2$}
+%                 node[below]  {$ $}
+%             }
+%             child {
+%                 node[end, label=right:
+%                     {$E \to P(\overline{V}\cap E)=0.4 \cdot 0.8 = 0.32$}] {}
+%                 edge from parent
+%                 node[above] {$ 0.8 $}
+%                 node[below] {$ $}
+%             }
+%             edge from parent 
+%             node[above] {$ $}
+%             node[below]  {$0.4$}
+%     }
+%     child {
+%         node[bag] {$V$}        
+%         child {
+%                 node[end, label=right:
+%                     {$\overline{E} \to P(V\cap \overline{E})=0.6 \cdot 0.6 = 0.36$}] {}
+%                 edge from parent
+%                 node[above] {$0.6$}
+%                 node[below]  {$ $}
+%             }
+%             child {
+%                 node[end, label=right:
+%                     {$E \to P(V\cap E)=0.6\cdot 0.4 = 0.24$}] {}
+%                 edge from parent
+%                 node[above] {$0.4$}
+%                 node[below]  {$ $}
+%             }
+%         edge from parent         
+%             node[above] {$ $}
+%             node[below]  {$0.6$}
+%     };
+% \end{tikzpicture}
 
-Por la probabilidad total:
-$$P(E)=P(V\cap E)+P(\overline{V}\cap E)=0.24+0.32=0.56$$
-    \end{solution}
+% Por la probabilidad total:
+% $$P(E)=P(V\cap E)+P(\overline{V}\cap E)=0.24+0.32=0.56$$
+%     \end{solution}
      
-    \part Sabiendo que el trabajador es de la Unión Europea, ¿Cuál es la probabilidad de que haya asistido a la reunión por videoconferencia?
-    \begin{solution}
-        $$P(V|E)=\dfrac{P(V \cap E)}{P(E)}=\dfrac{0.24}{0.56}=0.4285714285714285$$
-    \end{solution}
-\end{parts}
+%     \part Sabiendo que el trabajador es de la Unión Europea, ¿Cuál es la probabilidad de que haya asistido a la reunión por videoconferencia?
+%     \begin{solution}
+%         $$P(V|E)=\dfrac{P(V \cap E)}{P(E)}=\dfrac{0.24}{0.56}=0.4285714285714285$$
+%     \end{solution}
+% \end{parts}
 
 \question[2\half] Un jugador de baloncesto tiene una probabilidad de 0.8 de encestar un tiro libre. Si en un partido lanza 6 tiros libres, halle la probabilidad de que enceste: 
 \begin{parts}

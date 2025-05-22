@@ -1,0 +1,852 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}}
+
+\newcommand{\class}{2º Bachillerato Sociales}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Global Ordinaria}
+\newcommand{\tipo}{A}
+
+\newcommand{\timelimit}{90 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
+
+\begin{center}
+
+\addpoints
+ %\gradetable[h][questions]
+\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+\section{Álgebra}
+% \question Dadas las matrices:
+% \[ P = \begin{pmatrix}
+% 1 & 2 & 1 \\
+% 3 & 2 & 2 \\
+% 2 & 3 & 0 
+% \end{pmatrix}, \quad J = \begin{pmatrix}
+% -1 & 0 & 0 \\
+% 0 & 2 & 0 \\
+% 0 & 0 & 1
+% \end{pmatrix}
+% \]
+
+% \begin{parts}
+% \part[1\half] Determinar la matriz $P^{-1}$, inversa de la matriz $P$.
+% \part[1\half] Determinar el determinante de la matriz $A^2$, siendo $A = P J P^{-1}$.
+% \end{parts}
+
+\question Dadas las matrices:
+\[
+P = \begin{pmatrix}
+1 & 2 & 1 \\
+3 & 2 & 2 \\
+2 & 3 & 0 
+\end{pmatrix}, \quad J = \begin{pmatrix}
+-1 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\begin{parts}
+\part[1\half] Determinar la matriz $P^{-1}$, inversa de la matriz $P$.
+
+\begin{solution}
+Calculamos la matriz inversa de $P$ usando el método de Gauss-Jordan o una calculadora algebraica. El resultado es:
+\[
+P^{-1} = \begin{pmatrix}
+-3 & 1 & 2 \\
+2 & 0 & -1 \\
+5 & -1 & -3
+\end{pmatrix}
+\]
+\end{solution}
+
+\part[1\half] Determinar el determinante de la matriz $A^2$, siendo $A = P J P^{-1}$.
+
+\begin{solution}
+Dado que $A = PJP^{-1}$, entonces $A$ es semejante a $J$ y por lo tanto:
+\[
+\det(A) = \det(J) = (-1)(2)(1) = -2 \Rightarrow \det(A^2) = (-2)^2 = \boxed{4}
+\]
+\end{solution}
+\end{parts}
+
+% \question Dado el sistema de ecuaciones:
+% \[\left.\begin{aligned}
+% 2x + ay + z &= a \\
+% x - 4y + (a + 1)z &= 1 \\
+% 4y - az &= 0
+% \end{aligned}\right\}\]
+
+% \begin{parts}
+% \part[2] Discutirlo en función de los valores del parámetro real $a$.
+% \part[1] Resolverlo en el caso de $a = 1$.
+% \part[1] Resolverlo en el caso de $a = 2$.
+% \end{parts}
+
+\question Dado el sistema de ecuaciones:
+\[\left.\begin{aligned}
+2x + ay + z &= a \\
+x - 4y + (a + 1)z &= 1 \\
+4y - az &= 0
+\end{aligned}\right\}\]
+
+\begin{parts}
+\part[2] Discutirlo en función de los valores del parámetro real $a$.
+
+\begin{solution}
+Reducimos el sistema usando matrices o sustitución.
+
+De la tercera ecuación:  
+\[
+4y = az \Rightarrow y = \frac{az}{4}
+\]
+
+Sustituimos en la primera y segunda ecuaciones:
+
+1) \( 2x + a\left(\frac{az}{4}\right) + z = a \Rightarrow 2x + \frac{a^2z}{4} + z = a \)
+
+2) \( x - 4\left(\frac{az}{4}\right) + (a + 1)z = 1 \Rightarrow x - az + (a + 1)z = 1 \Rightarrow x + z = 1 \Rightarrow x = 1 - z \)
+
+Sustituimos \( x = 1 - z \) en (1):
+
+\[
+2(1 - z) + \frac{a^2z}{4} + z = a \Rightarrow 2 - 2z + \frac{a^2z}{4} + z = a
+\Rightarrow 2 - z + \frac{a^2z}{4} = a
+\]
+
+Multiplicamos por 4:
+\[
+8 - 4z + a^2z = 4a \Rightarrow z(a^2 - 4) = 4a - 8
+\]
+
+**Casos**:
+
+- Si \( a^2 \ne 4 \Rightarrow a \ne \pm 2 \), hay una única solución.
+- Si \( a = 2 \Rightarrow a^2 - 4 = 0 \) y \( 4a - 8 = 0 \), entonces \( 0 \cdot z = 0 \): hay infinitas soluciones.
+- Si \( a = -2 \Rightarrow a^2 - 4 = 0 \), pero \( 4a - 8 = -8 - 8 = -16 \Rightarrow 0 \cdot z = -16 \): sin solución.
+
+**Conclusión**:
+\[
+\begin{cases}
+\text{Sistema compatible determinado} & \text{si } a \ne \pm 2 \\
+\text{Sistema compatible indeterminado} & \text{si } a = 2 \\
+\text{Sistema incompatible} & \text{si } a = -2
+\end{cases}
+\]
+\end{solution}
+
+\part[1] Resolverlo en el caso de $a = 1$.
+
+\begin{solution}
+Sustituimos \( a = 1 \):
+
+\[
+\begin{aligned}
+2x + y + z &= 1 \\
+x - 4y + 2z &= 1 \\
+4y - z &= 0 \Rightarrow z = 4y
+\end{aligned}
+\]
+
+Sustituimos en las otras:
+
+1) \( 2x + y + 4y = 1 \Rightarrow 2x + 5y = 1 \)
+
+2) \( x - 4y + 2(4y) = 1 \Rightarrow x + 4y = 1 \)
+
+Resolviendo:
+
+De (2): \( x = 1 - 4y \)
+
+Sustituimos en (1):  
+\( 2(1 - 4y) + 5y = 1 \Rightarrow 2 - 8y + 5y = 1 \Rightarrow -3y = -1 \Rightarrow y = \frac{1}{3} \)
+
+Entonces:  
+\( z = 4y = \frac{4}{3},\ x = 1 - 4 \cdot \frac{1}{3} = \frac{-1}{3} \)
+
+\[
+\boxed{
+x = -\frac{1}{3}, \quad y = \frac{1}{3}, \quad z = \frac{4}{3}
+}
+\]
+\end{solution}
+
+\part[1] Resolverlo en el caso de $a = 2$.
+
+\begin{solution}
+Sustituimos \( a = 2 \):
+
+\[
+\begin{aligned}
+2x + 2y + z &= 2 \\
+x - 4y + 3z &= 1 \\
+4y - 2z &= 0 \Rightarrow y = \frac{z}{2}
+\end{aligned}
+\]
+
+Sustituimos en las otras:
+
+1) \( 2x + 2\cdot \frac{z}{2} + z = 2 \Rightarrow 2x + z + z = 2 \Rightarrow 2x + 2z = 2 \Rightarrow x + z = 1 \Rightarrow x = 1 - z \)
+
+2) \( x - 4 \cdot \frac{z}{2} + 3z = 1 \Rightarrow x - 2z + 3z = 1 \Rightarrow x + z = 1 \) (coherente)
+
+\[
+\boxed{
+x = 1 - z,\quad y = \frac{z}{2},\quad z \in \mathbb{R}
+}
+\Rightarrow \text{Infinitas soluciones: compatibles indeterminadas}
+\]
+\end{solution}
+\end{parts}
+
+
+% \question Un vivero elabora dos tipos de sustratos. Para elaborar 1 m$^3$ del tipo A necesita 60 kg de tierra vegetal y 30 horas de trabajo. Para elaborar 1 m$^3$ del tipo B necesita 50 kg de tierra vegetal y 50 horas de trabajo. El vivero dispone como máximo de 21000 kg de tierra vegetal y 15000 horas de trabajo.
+
+% \begin{parts}
+% \part[1\half] Represente la región del plano determinada por las restricciones anteriores y determine las coordenadas de sus vértices.
+% \part[1\half] Determine cuántos metros cúbicos de cada tipo deben elaborarse para, respetando las restricciones anteriores, maximizar el beneficio. Obtenga el valor del beneficio máximo.
+% \end{parts}
+
+\question Un vivero elabora dos tipos de sustratos. Para elaborar 1 m$^3$ del tipo A necesita 60 kg de tierra vegetal y 30 horas de trabajo. Para elaborar 1 m$^3$ del tipo B necesita 50 kg de tierra vegetal y 50 horas de trabajo. El vivero dispone como máximo de 21000 kg de tierra vegetal y 15000 horas de trabajo.
+
+\begin{parts}
+\part[1\half] Represente la región del plano determinada por las restricciones anteriores y determine las coordenadas de sus vértices.
+
+\begin{solution}
+Llamamos:
+- \( x \): m³ del tipo A
+- \( y \): m³ del tipo B
+
+Restricciones:
+\[
+\begin{cases}
+60x + 50y \leq 21000 & \text{(tierra vegetal)} \\
+30x + 50y \leq 15000 & \text{(horas de trabajo)} \\
+x \geq 0,\quad y \geq 0
+\end{cases}
+\]
+
+Simplificamos:
+- Primera: \( 6x + 5y \leq 2100 \)
+- Segunda: \( 3x + 5y \leq 1500 \)
+
+Intersección:
+\[
+\begin{cases}
+6x + 5y = 2100 \\
+3x + 5y = 1500
+\end{cases} \Rightarrow
+\text{Restamos: } (6x - 3x) = 600 \Rightarrow x = 200,\ y = 300
+\]
+
+Cortes con los ejes:
+- \( x = 0 \Rightarrow y = 420 \) y \( y = 0 \Rightarrow x = 350 \) (de la primera)
+- \( x = 0 \Rightarrow y = 300 \) y \( y = 0 \Rightarrow x = 500 \) (de la segunda)
+
+Región factible limitada por los puntos:
+\[
+(0, 0),\ (0, 300),\ (200, 300),\ (350, 0),\ (500, 0)
+\]
+Pero sólo las intersecciones válidas simultáneamente para ambas inecuaciones son:
+\[
+(0, 0),\ (0, 300),\ (200, 300),\ (350, 0)
+\]
+\end{solution}
+
+\part[1\half] Determine cuántos metros cúbicos de cada tipo deben elaborarse para, respetando las restricciones anteriores, maximizar el beneficio. Obtenga el valor del beneficio máximo.
+
+\begin{solution}
+Supongamos que el beneficio por m³ es:
+- Tipo A: \( 40\,\euro \)
+- Tipo B: \( 60\,\euro \)
+
+Función objetivo:  
+\[
+Z = 40x + 60y
+\]
+
+Evaluamos en los vértices:
+
+- \( (0, 0) \Rightarrow Z = 0 \)
+- \( (0, 300) \Rightarrow Z = 60 \cdot 300 = 18000 \)
+- \( (200, 300) \Rightarrow Z = 40 \cdot 200 + 60 \cdot 300 = 8000 + 18000 = 26000 \)
+- \( (350, 0) \Rightarrow Z = 40 \cdot 350 = 14000 \)
+
+\[
+\text{Máximo en } \boxed{(200,\ 300)} \text{ con beneficio } \boxed{26000\,\euro}
+\]
+\end{solution}
+\end{parts}
+
+\section{Análisis}
+
+
+% \question[2\half] Dada la función $f(x) = \dfrac{x^3}{(x+1)^2}$, halla:
+% \begin{parts}
+% \part Calcule su dominio y estudie sus asíntotas, dibujando la posición relativa de las mismas respecto de la función.
+% \part Sus intervalos de crecimiento y decrecimiento; y sus extremos relativos, si los tiene.
+% \end{parts}
+
+\question[2\half] Dada la función $f(x) = \dfrac{x^3}{(x+1)^2}$, halla:
+\begin{parts}
+\part Calcule su dominio y estudie sus asíntotas, dibujando la posición relativa de las mismas respecto de la función.
+
+\begin{solution}
+**Dominio**:  
+La función está definida para todos los valores de \( x \) excepto donde el denominador se anula:
+\[
+(x+1)^2 = 0 \Rightarrow x = -1
+\]
+Por tanto, el dominio es \( \boxed{\mathbb{R} \setminus \{-1\}} \)
+
+**Asíntotas**:
+
+- **Vertical**: En \( x = -1 \), ya que el denominador se anula y el numerador no.
+  
+- **Oblicua**: División de polinomios:
+\[
+f(x) = \frac{x^3}{(x+1)^2} \Rightarrow \text{Realizamos división larga: }
+\frac{x^3}{x^2 + 2x + 1} = x - 2 + \frac{3x + 2}{(x+1)^2}
+\]
+Asíntota oblicua: \( y = x - 2 \)
+
+**Posición relativa**:
+
+Estudiamos el signo del resto \( \frac{3x + 2}{(x+1)^2} \). Como el denominador es siempre positivo salvo en \( x = -1 \), el signo de la diferencia respecto de la asíntota viene dado por \( 3x + 2 \):
+
+- Si \( x < -\frac{2}{3} \), \( f(x) < x - 2 \)
+- Si \( x > -\frac{2}{3} \), \( f(x) > x - 2 \)
+
+\end{solution}
+
+\part Sus intervalos de crecimiento y decrecimiento; y sus extremos relativos, si los tiene.
+
+\begin{solution}
+Derivamos usando la regla del cociente:
+\[
+f'(x) = \frac{(3x^2)(x+1)^2 - x^3(2)(x+1)}{(x+1)^4}
+\Rightarrow \frac{3x^2(x+1) - 2x^3}{(x+1)^3} = \frac{x^2(x + 3)}{(x+1)^3}
+\]
+
+**Signo de \( f'(x) \)**:
+
+- \( x^2 \geq 0 \), siempre >= 0
+- Numerador: signo de \( x+3 \)
+- Denominador: signo de \( (x+1)^3 \)
+
+Estudiamos:
+
+- \( x < -3 \Rightarrow f'(x) < 0 \)
+- \( -3 < x < -1 \Rightarrow f'(x) > 0 \)
+- \( -1 < x < -0 \Rightarrow f'(x) < 0 \)
+- \( x > 0 \Rightarrow f'(x) > 0 \)
+
+**Puntos críticos**: \( x = -3 \) y \( x = 0 \)
+
+Estudio de extremos relativos:
+
+- En \( x = -3 \): cambia de decreciente a creciente → **mínimo relativo**
+- En \( x = 0 \): cambia de decreciente a creciente → **mínimo relativo**
+
+Evaluamos:
+\[
+f(-3) = \frac{(-3)^3}{(-3+1)^2} = \frac{-27}{4},\quad f(0) = 0
+\]
+
+\textbf{Crecimiento/Decrecimiento}:
+
+- Decrece en \( (-\infty,\ -3) \) y \( (-1,\ 0) \)
+- Crece en \( (-3,\ -1) \) y \( (0,\ \infty) \)
+
+\textbf{Extremos relativos}:
+\[
+\boxed{
+\text{Mínimo relativo en } x = -3,\ f(-3) = -\frac{27}{4};\quad
+\text{mínimo relativo en } x = 0,\ f(0) = 0
+}
+\]
+\end{solution}
+\end{parts}
+
+
+% \question[2\half] Sea la función:
+% \[ f(x) = \begin{cases}
+% x^3 + ax^2 & x < 1 \\
+% {bx} + \dfrac{2}{x} & x \geq 1
+% \end{cases} \]
+% \begin{parts}
+% \part Calcule los valores de $a$ y $b$ para que la función sea continua y derivable en $x = 1$.
+% \part Para $b = 3$, determine la ecuación de la recta tangente a la gráfica de esa función en el punto de abscisa $x = 2$.
+% \end{parts}
+
+\question[2\half] Sea la función:
+\[ f(x) = \begin{cases}
+x^3 + ax^2 & x < 1 \\
+{bx} + \dfrac{2}{x} & x \geq 1
+\end{cases} \]
+\begin{parts}
+\part Calcule los valores de $a$ y $b$ para que la función sea continua y derivable en $x = 1$.
+
+\begin{solution}
+**Continuidad en \( x = 1 \)**:
+
+Límites laterales:
+
+- Por la izquierda: \( \displaystyle \lim_{x \to 1^-} f(x) = 1^3 + a(1)^2 = 1 + a \)
+- Por la derecha: \( \displaystyle \lim_{x \to 1^+} f(x) = b(1) + \frac{2}{1} = b + 2 \)
+
+Igualamos para que sea continua:
+\[
+1 + a = b + 2 \Rightarrow a = b + 1 \quad \text{(1)}
+\]
+
+**Derivabilidad en \( x = 1 \)**:
+
+Derivadas laterales:
+
+- \( f'_1(x) = 3x^2 + 2ax \Rightarrow f'_1(1) = 3 + 2a \)
+- \( f'_2(x) = b - \dfrac{2}{x^2} \Rightarrow f'_2(1) = b - 2 \)
+
+Igualamos derivadas:
+\[
+3 + 2a = b - 2 \quad \text{(2)}
+\]
+
+Sustituimos (1) en (2):  
+\( 3 + 2(b + 1) = b - 2 \Rightarrow 3 + 2b + 2 = b - 2 \Rightarrow 5 + 2b = b - 2 \Rightarrow b = -7 \)
+
+Entonces:
+\[
+a = b + 1 = -6
+\]
+
+\boxed{
+a = -6,\quad b = -7
+}
+\end{solution}
+
+\part Para $b = 3$, determine la ecuación de la recta tangente a la gráfica de esa función en el punto de abscisa $x = 2$.
+
+\begin{solution}
+Usamos la expresión válida para \( x \geq 1 \):  
+\[
+f(x) = bx + \frac{2}{x} = 3x + \frac{2}{x}
+\]
+
+Calculamos:
+- \( f(2) = 3 \cdot 2 + \frac{2}{2} = 6 + 1 = 7 \)
+- Derivada: \( f'(x) = 3 - \frac{2}{x^2} \Rightarrow f'(2) = 3 - \frac{2}{4} = 3 - 0.5 = 2.5 \)
+
+Ecuación de la recta tangente:
+\[
+y - f(2) = f'(2)(x - 2) \Rightarrow y - 7 = 2.5(x - 2)
+\Rightarrow \boxed{y = 2.5x + 2}
+\]
+\end{solution}
+\end{parts}
+
+
+% \question El beneficio de una empresa depende del porcentaje de la producción que dedique a la exportación, y viene dado por la fórmula 
+% \[ B(x) = \frac{2x - 10}{x^2 + 11} \]
+% con $x \in [0, 100]$, donde $B$ es el beneficio en millones de euros y $x$ es el porcentaje dedicado a la exportación.
+% \begin{parts}
+% \part[1] ¿Para qué valores de $x$ el beneficio es positivo?
+% \part[1] ¿Para qué valor de $x$ se alcanza el máximo beneficio? ¿Qué valor toma el máximo beneficio?
+% \part[1\half] Calcule el área finita de la región del plano comprendida entre las parábolas $y = -x^2 + 4x + 1$ e $y = x^2 - 6x + 9$.
+% \part[1\half] Dada la función $f(x) = ax^5 + bx^3 + c$, calcule los parámetros $a$, $b$ y $c$ sabiendo que dos de los puntos de inflexión de esta función son: $(0, 0)$ y $(1, 7)$.
+
+% \end{parts}
+
+\question El beneficio de una empresa depende del porcentaje de la producción que dedique a la exportación, y viene dado por la fórmula 
+\[ B(x) = \frac{2x - 10}{x^2 + 11} \]
+con $x \in [0, 100]$, donde $B$ es el beneficio en millones de euros y $x$ es el porcentaje dedicado a la exportación.
+\begin{parts}
+\part[1] ¿Para qué valores de $x$ el beneficio es positivo?
+
+\begin{solution}
+El beneficio \( B(x) \) será positivo cuando el numerador \( 2x - 10 > 0 \), ya que el denominador \( x^2 + 11 > 0 \) siempre.
+
+\[
+2x - 10 > 0 \Rightarrow x > 5
+\]
+
+Entonces, el beneficio es positivo para:
+\[
+\boxed{x \in (5,\ 100]}
+\]
+\end{solution}
+
+\part[1] ¿Para qué valor de $x$ se alcanza el máximo beneficio? ¿Qué valor toma el máximo beneficio?
+
+\begin{solution}
+Derivamos \( B(x) \) usando la regla del cociente:
+
+\[
+B'(x) = \frac{(2)(x^2 + 11) - (2x - 10)(2x)}{(x^2 + 11)^2}
+= \frac{2x^2 + 22 - 4x^2 + 20x}{(x^2 + 11)^2}
+= \frac{-2x^2 + 20x + 22}{(x^2 + 11)^2}
+\]
+
+Buscamos los extremos resolviendo:
+\[
+-2x^2 + 20x + 22 = 0 \Rightarrow x^2 - 10x - 11 = 0
+\Rightarrow x = \frac{10 \pm \sqrt{100 + 44}}{2} = \frac{10 \pm \sqrt{144}}{2}
+= \frac{10 \pm 12}{2} \Rightarrow x = 11,\ -1
+\]
+
+Solo nos interesa \( x = 11 \) porque \( x \in [0, 100] \)
+
+Evaluamos el valor máximo:
+\[
+B(11) = \frac{2(11) - 10}{11^2 + 11} = \frac{22 - 10}{121 + 11} = \frac{12}{132} = \boxed{\frac{1}{11} \text{ millones de euros}}
+\]
+\end{solution}
+
+\part[1\half] Calcule el área finita de la región del plano comprendida entre las parábolas $y = -x^2 + 4x + 1$ e $y = x^2 - 6x + 9$.
+
+\begin{solution}
+Primero hallamos los puntos de corte resolviendo:
+\[
+ -x^2 + 4x + 1 = x^2 - 6x + 9
+\Rightarrow -2x^2 + 10x - 8 = 0 \Rightarrow x^2 - 5x + 4 = 0 \Rightarrow x = 1,\ 4
+\]
+
+Área entre curvas:
+\[
+A = \int_1^4 \left[(-x^2 + 4x + 1) - (x^2 - 6x + 9)\right] dx
+= \int_1^4 (-2x^2 + 10x - 8) dx
+\]
+
+Calculamos:
+\[
+\int_1^4 (-2x^2 + 10x - 8) dx = \left[-\frac{2}{3}x^3 + 5x^2 - 8x \right]_1^4
+\]
+
+Evaluamos:
+- En \( x = 4 \): \( -\frac{2}{3}(64) + 5(16) - 8(4) = -\frac{128}{3} + 80 - 32 = \frac{80 - 32}{1} - \frac{128}{3} = 48 - \frac{128}{3} = \frac{16}{3} \)
+- En \( x = 1 \): \( -\frac{2}{3}(1) + 5(1) - 8(1) = -\frac{2}{3} + 5 - 8 = -\frac{2}{3} - 3 = -\frac{11}{3} \)
+
+Área total:
+\[
+A = \frac{16}{3} - \left(-\frac{11}{3} \right) = \boxed{\frac{27}{3} = 9}
+\]
+\end{solution}
+
+\part[1\half] Dada la función $f(x) = ax^5 + bx^3 + c$, calcule los parámetros $a$, $b$ y $c$ sabiendo que dos de los puntos de inflexión de esta función son: $(0, 0)$ y $(1, 7)$.
+
+\begin{solution}
+Primero usamos que \( (0,0) \) está en la gráfica:  
+\[
+f(0) = 0 \Rightarrow c = 0
+\]
+
+Punto de inflexión implica que la segunda derivada se anula en ese punto.  
+Derivamos:
+\[
+f'(x) = 5ax^4 + 3bx^2,\quad f''(x) = 20ax^3 + 6bx
+\]
+
+Para que \( x = 0 \) y \( x = 1 \) sean puntos de inflexión:
+\[
+f''(0) = 0 \Rightarrow \text{siempre se cumple}
+
+f''(1) = 20a(1)^3 + 6b(1) = 20a + 6b = 0 \Rightarrow \text{(1)}
+\]
+
+Además, \( f(1) = 7 \Rightarrow a(1)^5 + b(1)^3 + c = a + b = 7 \) \quad (2)
+
+Sustituimos (1) en (2):
+\[
+b = -\frac{10}{3}a \Rightarrow a - \frac{10}{3}a = 7 \Rightarrow -\frac{7}{3}a = 7 \Rightarrow a = -3
+\Rightarrow b = -\frac{10}{3}(-3) = 10,\quad c = 0
+\]
+
+\boxed{a = -3,\quad b = 10,\quad c = 0}
+\end{solution}
+\end{parts}
+
+
+\section{Probabilidad y estadística}
+
+% \question El 40\% de los sábados Marta va al cine, el 30\% va de compras y el 30\% restante juega a videojuegos. Cuando va al cine, el 60\% de las veces lo hace con sus compañeros de baloncesto. Lo mismo le ocurre el 20\% de las veces que va de compras, y el 80\% de las veces que juega a videojuegos. Se pide:
+% \begin{parts}
+% \part[1\half] Hallar la probabilidad de que el próximo sábado Marta no quede con sus compañeros de baloncesto.
+% \part[1\half] Si se sabe que Marta ha quedado con sus compañeros de baloncesto, ¿cuál es la probabilidad de que vayan al cine?
+% \end{parts}
+
+\question El 40\% de los sábados Marta va al cine, el 30\% va de compras y el 30\% restante juega a videojuegos. Cuando va al cine, el 60\% de las veces lo hace con sus compañeros de baloncesto. Lo mismo le ocurre el 20\% de las veces que va de compras, y el 80\% de las veces que juega a videojuegos. Se pide:
+\begin{parts}
+\part[1\half] Hallar la probabilidad de que el próximo sábado Marta no quede con sus compañeros de baloncesto.
+
+\begin{solution}
+Definimos los sucesos:
+
+- \( C \): ir al cine, \( P(C) = 0.4 \)
+- \( D \): ir de compras, \( P(D) = 0.3 \)
+- \( V \): jugar a videojuegos, \( P(V) = 0.3 \)
+- \( B \): quedar con compañeros de baloncesto
+
+Usamos la regla de la probabilidad total para \( P(B) \):
+
+\[
+P(B) = P(B|C)P(C) + P(B|D)P(D) + P(B|V)P(V)
+= 0.6 \cdot 0.4 + 0.2 \cdot 0.3 + 0.8 \cdot 0.3
+= 0.24 + 0.06 + 0.24 = 0.54
+\]
+
+Por tanto, la probabilidad de que **no quede** con sus compañeros es:
+
+\[
+\boxed{P(\bar{B}) = 1 - 0.54 = 0.46}
+\]
+\end{solution}
+
+\part[1\half] Si se sabe que Marta ha quedado con sus compañeros de baloncesto, ¿cuál es la probabilidad de que vayan al cine?
+
+\begin{solution}
+Queremos \( P(C | B) \), usamos la fórmula de Bayes:
+
+\[
+P(C | B) = \frac{P(B | C) \cdot P(C)}{P(B)} = \frac{0.6 \cdot 0.4}{0.54} = \frac{0.24}{0.54} = \boxed{\frac{4}{9}}
+\]
+\end{solution}
+\end{parts}
+
+
+% \question[1\half] De una urna con 2 bolas blancas, 2 negras y 2 amarillas se extraen dos sin devolución (es decir, una vez extraída una bola no se vuelve a poner en la bolsa). Calcular la probabilidad de que las dos sean blancas.
+
+\question[1\half] De una urna con 2 bolas blancas, 2 negras y 2 amarillas se extraen dos sin devolución (es decir, una vez extraída una bola no se vuelve a poner en la bolsa). Calcular la probabilidad de que las dos sean blancas.
+
+\begin{solution}
+Hay un total de \( 2 + 2 + 2 = 6 \) bolas.
+
+Número total de combinaciones posibles al extraer 2 bolas sin reposición:
+\[
+\binom{6}{2} = 15
+\]
+
+Número de formas de elegir 2 bolas blancas (hay solo 2 blancas, por lo tanto, solo una forma de elegir ambas):
+\[
+\binom{2}{2} = 1
+\]
+
+Por tanto, la probabilidad es:
+\[
+P(\text{2 blancas}) = \frac{1}{15}
+\]
+\end{solution}
+
+
+% \question[1\half] Una empresa ha llevado a cabo un proceso de selección de personal. Se sabe que el 40\% del total de aspirantes han sido seleccionados en el proceso. Si entre los aspirantes había un grupo de 8 amigos, calcule la probabilidad de que al menos 2 de ellos hayan sido seleccionados. 
+
+\question[1\half] Una empresa ha llevado a cabo un proceso de selección de personal. Se sabe que el 40\% del total de aspirantes han sido seleccionados en el proceso. Si entre los aspirantes había un grupo de 8 amigos, calcule la probabilidad de que al menos 2 de ellos hayan sido seleccionados.
+
+\begin{solution}
+Sea \( X \) la variable aleatoria que cuenta cuántos de los 8 amigos han sido seleccionados. Entonces:
+\[
+X \sim B(n = 8,\ p = 0.4)
+\]
+
+Queremos \( P(X \geq 2) = 1 - P(X = 0) - P(X = 1) \)
+
+Calculamos:
+\[
+P(X = 0) = \binom{8}{0}(0.4)^0(0.6)^8 = (0.6)^8 \approx 0.0168
+\]
+\[
+P(X = 1) = \binom{8}{1}(0.4)^1(0.6)^7 = 8 \cdot 0.4 \cdot (0.6)^7 \approx 8 \cdot 0.4 \cdot 0.02799 \approx 0.0896
+\]
+
+Entonces:
+\[
+P(X \geq 2) = 1 - (0.0168 + 0.0896) = 1 - 0.1064 = \boxed{0.8936}
+\]
+\end{solution}
+
+
+% \question[1\half] La media de edad de los lectores de una determinada revista es de 17,2 años, y la desviación típica, 2,3 años. Si elegimos muestras de 100 lectores ¿Cuál es la probabilidad de que la media de la edad de la muestra esté comprendida entre 16,7 y 17,5 años? 
+
+\question[1\half] La media de edad de los lectores de una determinada revista es de 17,2 años, y la desviación típica, 2,3 años. Si elegimos muestras de 100 lectores ¿Cuál es la probabilidad de que la media de la edad de la muestra esté comprendida entre 16,7 y 17,5 años?
+
+\begin{solution}
+Se trata de una distribución de la media muestral. Sabemos que:
+
+- Media poblacional: \( \mu = 17.2 \)
+- Desviación típica poblacional: \( \sigma = 2.3 \)
+- Tamaño muestral: \( n = 100 \)
+
+La distribución de la media muestral es normal con:
+
+\[
+\mu_{\bar{x}} = \mu = 17.2,\quad \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{2.3}{\sqrt{100}} = 0.23
+\]
+
+Queremos:
+\[
+P(16.7 < \bar{x} < 17.5)
+\]
+
+Calculamos los valores tipificados (z-scores):
+\[
+z_1 = \frac{16.7 - 17.2}{0.23} \approx -2.17,\quad z_2 = \frac{17.5 - 17.2}{0.23} \approx 1.30
+\]
+
+Usamos tabla de la normal estándar:
+\[
+P(-2.17 < Z < 1.30) = P(Z < 1.30) - P(Z < -2.17)
+\approx 0.9032 - 0.0150 = \boxed{0.8882}
+\]
+\end{solution}
+
+
+% \question[1\half] Los sueldos de los empleados de una empresa se distribuyen según una normal de media 1500 euros y de desviación típica 300 euros. Si consideramos muestras de tamaño 40, halla el intervalo de confianza del 99\% para los sueldos medios de las muestras. 
+
+\question[1\half] Los sueldos de los empleados de una empresa se distribuyen según una normal de media 1500 euros y de desviación típica 300 euros. Si consideramos muestras de tamaño 40, halla el intervalo de confianza del 99\% para los sueldos medios de las muestras.
+
+\begin{solution}
+Datos:
+
+- Media poblacional: \( \mu = 1500 \)
+- Desviación típica: \( \sigma = 300 \)
+- Tamaño muestral: \( n = 40 \)
+- Nivel de confianza: 99%
+
+Como la población es normal y se conoce \( \sigma \), usamos la distribución normal estándar.
+
+Error típico de la media:
+\[
+\sigma_{\bar{x}} = \frac{300}{\sqrt{40}} \approx 47.43
+\]
+
+Para un nivel de confianza del 99%, el valor crítico \( z_{\alpha/2} \approx 2.576 \)
+
+Intervalo de confianza:
+\[
+IC = \mu \pm z_{\alpha/2} \cdot \sigma_{\bar{x}} = 1500 \pm 2.576 \cdot 47.43 \approx 1500 \pm 122.23
+\]
+
+\[
+\boxed{[1377.77,\ 1622.23]}
+\]
+\end{solution}
+
+
+\end{questions}
+
+    \newgeometry{left=1 cm,bottom=2cm}
+% \begin{landscape}
+\begin{table}
+% \Large
+\centering
+
+% \caption{Extracto de tabla de probabilidades de la \textbf{normal estándar $Z(0,1)$}}
+\caption{Tabla de probabilidades de la \textbf{normal estándar $Z(0,1)$}}
+\label{my-label}
+
+\begin{tabular}{l|llllllllll}
+z   & 0       & 0,01    & 0,02    & 0,03    & 0,04    & 0,05    & 0,06    & 0,07    & 0,08    & 0,09    \\
+\hline
+0   & 0,5     & 0,50399 & 0,50798 & 0,51197 & 0,51595 & 0,51994 & 0,52392 & 0,5279  & 0,53188 & 0,53586 \\
+0,1 & 0,53983 & 0,5438  & 0,54776 & 0,55172 & 0,55567 & 0,55962 & 0,56356 & 0,56749 & 0,57142 & 0,57535 \\
+0,2 & 0,57926 & 0,58317 & 0,58706 & 0,59095 & 0,59483 & 0,59871 & 0,60257 & 0,60642 & 0,61026 & 0,61409 \\
+0,3 & 0,61791 & 0,62172 & 0,62552 & 0,6293  & 0,63307 & 0,63683 & 0,64058 & 0,64431 & 0,64803 & 0,65173 \\
+0,4 & 0,65542 & 0,6591  & 0,66276 & 0,6664  & 0,67003 & 0,67364 & 0,67724 & 0,68082 & 0,68439 & 0,68793 \\
+0,5 & 0,69146 & 0,69497 & 0,69847 & 0,70194 & 0,7054  & 0,70884 & 0,71226 & 0,71566 & 0,71904 & 0,7224  \\
+0,6 & 0,72575 & 0,72907 & 0,73237 & 0,73565 & 0,73891 & 0,74215 & 0,74537 & 0,74857 & 0,75175 & 0,7549  \\
+0,7 & 0,75804 & 0,76115 & 0,76424 & 0,7673  & 0,77035 & 0,77337 & 0,77637 & 0,77935 & 0,7823  & 0,78524 \\
+0,8 & 0,78814 & 0,79103 & 0,79389 & 0,79673 & 0,79955 & 0,80234 & 0,80511 & 0,80785 & 0,81057 & 0,81327 \\
+0,9 & 0,81594 & 0,81859 & 0,82121 & 0,82381 & 0,82639 & 0,82894 & 0,83147 & 0,83398 & 0,83646 & 0,83891 \\
+1   & 0,84134 & 0,84375 & 0,84614 & 0,84849 & 0,85083 & 0,85314 & 0,85543 & 0,85769 & 0,85993 & 0,86214 \\
+1,1 & 0,86433 & 0,8665  & 0,86864 & 0,87076 & 0,87286 & 0,87493 & 0,87698 & 0,879   & 0,881   & 0,88298 \\
+1,2 & 0,88493 & 0,88686 & 0,88877 & 0,89065 & 0,89251 & 0,89435 & 0,89617 & 0,89796 & 0,89973 & 0,90147 \\
+1,3 & 0,9032  & 0,9049  & 0,90658 & 0,90824 & 0,90988 & 0,91149 & 0,91309 & 0,91466 & 0,91621 & 0,91774 \\
+1,4 & 0,91924 & 0,92073 & 0,9222  & 0,92364 & 0,92507 & 0,92647 & 0,92785 & 0,92922 & 0,93056 & 0,93189 \\
+1,5 & 0,93319 & 0,93448 & 0,93574 & 0,93699 & 0,93822 & 0,93943 & 0,94062 & 0,94179 & 0,94295 & 0,94408 \\
+1,6 & 0,9452  & 0,9463  & 0,94738 & 0,94845 & 0,9495  & 0,95053 & 0,95154 & 0,95254 & 0,95352 & 0,95449 \\
+1,7 & 0,95543 & 0,95637 & 0,95728 & 0,95818 & 0,95907 & 0,95994 & 0,9608  & 0,96164 & 0,96246 & 0,96327 \\
+1,8 & 0,96407 & 0,96485 & 0,96562 & 0,96638 & 0,96712 & 0,96784 & 0,96856 & 0,96926 & 0,96995 & 0,97062 \\
+1,9 & 0,97128 & 0,97193 & 0,97257 & 0,9732  & 0,97381 & 0,97441 & 0,975   & 0,97558 & 0,97615 & 0,9767  \\
+2   & 0,97725 & 0,97778 & 0,97831 & 0,97882 & 0,97932 & 0,97982 & 0,9803  & 0,98077 & 0,98124 & 0,98169 \\
+2,1 & 0,98214 & 0,98257 & 0,983   & 0,98341 & 0,98382 & 0,98422 & 0,98461 & 0,985   & 0,98537 & 0,98574 \\
+2,2 & 0,9861  & 0,98645 & 0,98679 & 0,98713 & 0,98745 & 0,98778 & 0,98809 & 0,9884  & 0,9887  & 0,98899 \\
+2,3 & 0,98928 & 0,98956 & 0,98983 & 0,9901  & 0,99036 & 0,99061 & 0,99086 & 0,99111 & 0,99134 & 0,99158 \\
+2,4 & 0,9918  & 0,99202 & 0,99224 & 0,99245 & 0,99266 & 0,99286 & 0,99305 & 0,99324 & 0,99343 & 0,99361 \\
+2,5 & 0,99379 & 0,99396 & 0,99413 & 0,9943  & 0,99446 & 0,99461 & 0,99477 & 0,99492 & 0,99506 & 0,9952  \\
+2,6 & 0,99534 & 0,99547 & 0,9956  & 0,99573 & 0,99585 & 0,99598 & 0,99609 & 0,99621 & 0,99632 & 0,99643 \\
+2,7 & 0,99653 & 0,99664 & 0,99674 & 0,99683 & 0,99693 & 0,99702 & 0,99711 & 0,9972  & 0,99728 & 0,99736 \\
+2,8 & 0,99744 & 0,99752 & 0,9976  & 0,99767 & 0,99774 & 0,99781 & 0,99788 & 0,99795 & 0,99801 & 0,99807 \\
+2,9 & 0,99813 & 0,99819 & 0,99825 & 0,99831 & 0,99836 & 0,99841 & 0,99846 & 0,99851 & 0,99856 & 0,99861 \\
+3   & 0,99865 & 0,99869 & 0,99874 & 0,99878 & 0,99882 & 0,99886 & 0,99889 & 0,99893 & 0,99896 & 0,999   \\
+3,1 & 0,99903 & 0,99906 & 0,9991  & 0,99913 & 0,99916 & 0,99918 & 0,99921 & 0,99924 & 0,99926 & 0,99929 \\
+3,2 & 0,99931 & 0,99934 & 0,99936 & 0,99938 & 0,9994  & 0,99942 & 0,99944 & 0,99946 & 0,99948 & 0,9995  \\
+3,3 & 0,99952 & 0,99953 & 0,99955 & 0,99957 & 0,99958 & 0,9996  & 0,99961 & 0,99962 & 0,99964 & 0,99965 \\
+3,4 & 0,99966 & 0,99968 & 0,99969 & 0,9997  & 0,99971 & 0,99972 & 0,99973 & 0,99974 & 0,99975 & 0,99976 \\
+3,5 & 0,99977 & 0,99978 & 0,99978 & 0,99979 & 0,9998  & 0,99981 & 0,99981 & 0,99982 & 0,99983 & 0,99983 \\
+3,6 & 0,99984 & 0,99985 & 0,99985 & 0,99986 & 0,99986 & 0,99987 & 0,99987 & 0,99988 & 0,99988 & 0,99989 \\
+3,7 & 0,99989 & 0,9999  & 0,9999  & 0,9999  & 0,99991 & 0,99991 & 0,99992 & 0,99992 & 0,99992 & 0,99992 \\
+3,8 & 0,99993 & 0,99993 & 0,99993 & 0,99994 & 0,99994 & 0,99994 & 0,99994 & 0,99995 & 0,99995 & 0,99995 \\
+3,9 & 0,99995 & 0,99995 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99996 & 0,99997 & 0,99997 \\
+4   & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99997 & 0,99998 & 0,99998 & 0,99998 & 0,99998
+\end{tabular}
+\end{table}
+% \end{landscape}
+\restoregeometry
+
+\end{document}
+
