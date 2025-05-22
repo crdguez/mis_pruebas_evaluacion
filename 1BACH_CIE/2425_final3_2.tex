@@ -1,0 +1,233 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}}
+
+\newcommand{\class}{1º Bachillerato CIE}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Final 2ªEv.}
+\newcommand{\tipo}{A}
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints.
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima.
+
+\begin{center}
+
+\addpoints
+ %\gradetable[h][questions]
+\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[1\half] Calcula los límites de la siguiente función:
+
+\begin{tikzpicture}[scale=0.4]
+    % Configuración de ejes
+    %\draw[->] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
+  \draw[->] (-8,0) -- (8,0);
+    %\draw[->] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
+
+    % Cuadrícula
+    \draw[help lines, color=gray!20] (-8, -2) grid (8, 8);
+
+    % Etiquetas de cuadrícula
+    \foreach \x in {-8, -6, -4, -2, 2, 4, 6, 8}
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+    \foreach \y in {-2, 2, 4, 6, 8}
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+
+    % Primer trozo: Parábola que termina en (-4, 4)
+    \draw[thick, red, domain=-8:-4, samples=50] plot (\x, {4+(0.25*(\x+4)*(\x+4))}) node[above] {};
+    \filldraw[red] (-4, 4) circle (2pt); % Punto final en (-4, 4)
+
+    % Segundo trozo: Recta de (-4, 1) a (-2, 3)
+    \draw[thick, red] (-4, 1) -- (-2, 3);
+    \filldraw[fill=white, draw=red] (-4, 1) circle (2pt); % Punto inicial
+    % \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+
+    % Tercer trozo: Recta de (-2, 3) a (1, 0)
+    \draw[thick, red] (-2, 3) -- (1, 0);
+    % \draw[red] (1, 0) circle (2pt); % Punto final en (1, 0)
+
+    \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+    \filldraw[red] (-2, 1) circle (2pt); % Punto final
+
+    % Cuarto trozo: Proporcionalidad inversa creciente con mayor excentricidad
+    \draw[thick, red, domain=1:2.883, samples=50] plot (\x, {-1*(\x-1)/(2*(\x-3))}) node[above] {};
+    \draw[dashed] (3, 0) -- (3, 8); % Asíntota vertical en x = 3
+    % \filldraw[red] (1, 0) circle (2pt); % Punto inicial en (1, 0)
+
+    % Quinto trozo: Exponencial que pasa por (3, 5) y tiene asíntota horizontal y = 3
+    \draw[thick, red, domain=3:8, samples=50] plot (\x, {3 + 2*exp(-0.5*(\x-3))});
+    \draw[dashed] (0, 3) -- (8, 3); % Asíntota horizontal en y = 3
+    \filldraw[fill=white, draw=red] (3, 5) circle (2pt); % Punto en (3, 5)
+
+\end{tikzpicture}
+\begin{multicols}{3}
+\begin{parts}
+    \part $\lim_{x \to -\infty} f(x)$
+    \part $\lim_{x \to -4^-} f(x)$
+    \part $\lim_{x \to -4^+} f(x)$
+    \part $\lim_{x \to -4} f(x)$
+    \part $\lim_{x \to -2} f(x)$
+    \part $\lim_{x \to 1} f(x)$
+    \part $\lim_{x \to -3^-} f(x)$
+    \part $\lim_{x \to -3^+} f(x)$
+    \part $\lim_{x \to +\infty} f(x)$
+\end{parts}
+\end{multicols}
+
+\question Calcula los siguientes límites:
+\begin{parts}
+    \part[1] $$\lim_{x \to 2}\dfrac{2 x^{3} - 4 x^{2} - x + 2}{x^2-5x+6}$$
+
+    \begin{solution}
+    Primero factorizamos el denominador:
+    \[
+    x^2 - 5x + 6 = (x - 2)(x - 3)
+    \]
+
+    Ahora intentamos factorizar el numerador:
+    \[
+    2x^3 - 4x^2 - x + 2
+    \]
+    Agrupamos:
+    \[
+    (2x^3 - 4x^2) + (-x + 2) = 2x^2(x - 2) -1(x - 2)
+    \]
+    Sacamos factor común:
+    \[
+    = (x - 2)(2x^2 - 1)
+    \]
+
+    Sustituimos ambas factorizaciones en la fracción:
+    \[
+    \frac{(x - 2)(2x^2 - 1)}{(x - 2)(x - 3)}
+    \]
+
+    Simplificamos el factor común \( (x - 2) \):
+    \[
+    \frac{2x^2 - 1}{x - 3}
+    \]
+
+    Ahora evaluamos el límite:
+    \[
+    \lim_{x \to 2} \frac{2x^2 - 1}{x - 3} = \frac{2(2)^2 - 1}{2 - 3} = \frac{8 - 1}{-1} = \frac{7}{-1} = -7
+    \]
+
+    \textbf{Resultado final:} \fbox{\( \lim_{x \to 2} \frac{2x^3 - 4x^2 - x + 2}{x^2 - 5x + 6} = -7 \)}
+    \end{solution}
+
+    \part[1] {$$\lim_{x \to \infty} \dfrac{2x^3 - 4x^2 - x + 2}{5x^3 - 25x^2 + 30x}$$}
+
+    \begin{solution}
+    Dividimos numerador y denominador entre $x^3$:
+    
+    \[
+    \lim_{x \to \infty} \frac{2x^3 - 4x^2 - x + 2}{5x^3 - 25x^2 + 30x}
+    = \lim_{x \to \infty} \frac{2 - \frac{4}{x} - \frac{1}{x^2} + \frac{2}{x^3}}{5 - \frac{25}{x} + \frac{30}{x^2}}
+    \]
+    
+    Al tomar el límite cuando $x \to \infty$, los términos con $1/x$, $1/x^2$ y $1/x^3$ tienden a cero:
+    
+    \[
+    = \frac{2}{5}
+    \]
+    \end{solution}
+\end{parts}
+
+
+
+  \question  Dada la función: $$\dfrac{x^2}{x-1}$$ 
+\begin{parts}
+    \part[1] Estudia el crecimiento y decrecimiento de la función.
+    
+    \begin{solution}
+    La derivada de la función es:
+    \[
+    f'(x) = \frac{x(x - 2)}{(x - 1)^2}
+    \]
+    El signo de \( f'(x) \) depende del numerador \( x(x - 2) \), ya que el denominador \( (x - 1)^2 \) siempre es positivo.
+
+    - \( f'(x) > 0 \) cuando \( x < 0 \) o \( x > 2 \), lo que indica que la función es **creciente** en los intervalos \( (-\infty, 0) \cup (2, \infty) \).
+    - \( f'(x) < 0 \) cuando \( 0 < x < 2 \), lo que indica que la función es **decreciente** en el intervalo \( (0, 2) \).
+    \end{solution}
+    
+    \part[2] Encuentra los extremos relativos.
+
+    \begin{solution}
+    Los puntos críticos se encuentran donde \( f'(x) = 0 \), es decir, cuando \( x(x - 2) = 0 \). Esto da los puntos \( x = 0 \) y \( x = 2 \).
+    
+    - En \( x = 0 \), \( f'(x) \) cambia de positivo a negativo, por lo que hay un **máximo relativo** en \( (0, 0) \).
+    - En \( x = 2 \), \( f'(x) \) cambia de negativo a positivo, por lo que hay un **mínimo relativo** en \( (2, 4) \).
+    
+    Los valores de la función en estos puntos son:
+    - \( f(0) = 0 \)
+    - \( f(2) = 4 \)
+    \end{solution}
+\end{parts}
+
+\question La obsolescencia tecnológica implica una disminución del valor de un producto con el tiempo. En cierto dispositivo, el valor $V(t)>0$, viene dado por la expresión $V(t)=200-\frac{100t}{10+2t}$ \euro, siendo t los años transcurridos desde la compra del dispositivo.
+\begin{parts}
+    \part[1] Calcule el valor inicial del producto y su valor en un horizonte infinito de tiempo
+    \part[1] Calcule $V'(t)$ y justifique que $V(t )$ es decreciente. Utilice esta conclusión y los resultados del apartado anterior para argumentar que no será posible que el valor de $V(t)$ sea igual a 125\euro.
+    \part[0\half] ¿Cuánto tiempo tiene que pasar para que el dispositivo tenga un valor de 175 \euro?
+\end{parts}
+
+\end{questions}
+\end{document}
+
