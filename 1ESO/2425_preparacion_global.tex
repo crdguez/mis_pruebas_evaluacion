@@ -1,0 +1,1183 @@
+
+\documentclass[spanish, 11pt]{exam}
+
+\usepackage{array,epsfig}
+\usepackage{amsmath, textcomp}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{multicol, xparse}
+\usepackage{verbatim}
+\usepackage{booktabs}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{pgf}
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+%\printanswers
+\nopointsinmargin
+\pointformat{}
+
+\let\multicolmulticols\multicols
+\let\endmulticolmulticols\endmulticols
+\RenewDocumentEnvironment{multicols}{mO{}}
+ {%
+  \ifnum#1=1
+    #2%
+  \else
+    \multicolmulticols{#1}[#2]
+  \fi
+ }
+ {%
+  \ifnum#1=1
+  \else
+    \endmulticolmulticols
+  \fi
+ }
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Sol:}\enspace}
+\newcommand{\samedir}{\mathbin{\!/\mkern-5mu/\!}}
+
+\newcommand{\class}{1º Bachillerato}
+\newcommand{\examdate}{\today}
+\newcommand{\tipo}{A}
+\newcommand{\timelimit}{50 minutos}
+
+\pagestyle{head}
+\firstpageheader{Dep. Matemáticas}{Preparación de prueba global}{IES Goya}
+\runningheader{IES Goya}{Preparación de prueba global}{Página \thepage\ de \numpages}
+\runningheadrule
+
+\begin{document}
+\begin{questions}
+% Preguntas extraídas de: 1_naturales.tex
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1\half] Escribe con cifras:
+\begin{parts}
+\part Cinco millones y medio
+
+\part Novecientos noventa y nueve millones
+
+\part Dos millones dos mil dos
+
+\end{parts}
+
+\question[1\half] Escribe como se leen las siguientes cifras:
+\begin{parts}
+    \part 7 700 000 000
+    
+    \part 6 000 000 006 000 000     
+    \part 9 675 000 850 000     
+\end{parts}
+\addpoints
+
+\question[1] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+\begin{parts}
+    \part 679 563
+    \part 2 462 768
+    \part 5 678 300
+    \part  54 343 795
+\end{parts}
+
+\question[2] Calcula:
+\begin{parts}
+    \part \textbf{3 · 9 + 7 + 6 - 5 · 3=}
+    \part \textbf{5 · (2 + 6) + 7 - 4 · 3=}
+    \part \textbf{3 + 2 · {[}3 · (2 · 5 - 7 + 3){]} - 2 · 3=} 
+    \part \textbf{5 · {[}3 + 1 + 2 · (19 - 4 · 3 + 2){]} + 2=}
+\end{parts}
+
+\question[2] En un supermercado compramos tres productos para
+  un restaurante: 6 kg de carne de cerdo a 4 \euro/kg, 4 kg de merluza a 4
+  \euro/kg y 3 kg de carne de pollo al mismo precio que la carne y la
+  merluza. Si pago con un billete de 100 \euro, ¿cuánto me devuelven si el
+  encargado del supermercado me hace una rebaja de 5 \euro \ por cada producto
+  comprado? Halla la solución mediante una expresión de operaciones
+  combinadas. 
+
+\question[2] En una granja se recogen los huevos dos días a la
+  semana. El primer día se llenaron 12 cajas de 16 bandejas de huevos;
+  el segundo día se completaron 22 cajas de 15 bandejas cada una. Si en
+  cada bandeja entran dos docenas y media de huevos, ¿cuántos huevos se
+  han recogido durante esta semana? Halla la solución mediante una
+  expresión de operaciones combinadas
+
+
+%%%
+%%% OTRO EXAMEN
+%%%
+% % \question[1\half] Escribe con cifras:
+% \begin{parts}
+% \part Seis millones setecientos cincuenta mil
+% 
+% \begin{solution}
+% 6.750.000
+% \end{solution}
+
+% \part Doscientos cuarenta y cinco millones ochocientos doce mil
+% 
+% \begin{solution}
+% 245.812.000
+% \end{solution}
+
+% \part Tres mil quinientos dieciséis
+% 
+% \begin{solution}
+% 3.516
+% \end{solution}
+% \end{parts}
+
+% \question[1\half] Escribe como se leen las siguientes cifras:
+% \begin{parts}
+%     \part 8 500 000 000
+%     
+%     \begin{solution}
+%     Ocho mil quinientos millones
+%     \end{solution}
+    
+%     \part 5 600 000 010 000 000
+%     
+%     \begin{solution}
+%     Cinco billones seiscientos mil millones diez mil
+%     \end{solution}
+    
+%     \part 7 385 000 765 000
+%     
+%     \begin{solution}
+%     Siete billones trescientos ochenta y cinco mil millones setecientos sesenta y cinco mil
+%     \end{solution}
+% \end{parts}
+
+% \question[1] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+% \begin{parts}
+%     \part 728 345
+%     \begin{solution}
+%     730.000
+%     \end{solution}
+    
+%     \part 1 902 678
+%     \begin{solution}
+%     1.900.000
+%     \end{solution}
+    
+%     \part 8 543 210
+%     \begin{solution}
+%     8.540.000
+%     \end{solution}
+    
+%     \part  32 567 890
+%     \begin{solution}
+%     32.570.000
+%     \end{solution}
+% \end{parts}
+
+% \question[2] Calcula:
+% \begin{parts}
+%     \part \textbf{4 · 7 + 8 - 5 · 4 =}
+%     
+%     \begin{solution}
+%     4 · 7 + 8 - 5 · 4 = 28 + 8 - 20 = 16
+%     \end{solution}
+
+%     \part \textbf{6 · (3 + 4) - 8 + 7 · 2 =}
+%     
+%     \begin{solution}
+%     6 · (3 + 4) - 8 + 7 · 2 = 6 · 7 - 8 + 14 = 42 - 8 + 14 = 48
+%     \end{solution}
+
+%     \part \textbf{4 + 3 · {[}2 · (6 - 3 + 4){]} - 4 · 2 =} 
+%     
+%     \begin{solution}
+%     4 + 3 · {[}2 · (6 - 3 + 4){]} - 4 · 2 = 4 + 3 · (2 · 7) - 8 = 4 + 3 · 14 - 8 = 4 + 42 - 8 = 38
+%     \end{solution}
+
+%     \part \textbf{6 · {[}4 + 2 + 3 · (18 - 5 · 2 + 1){]} + 3 =}
+%     
+%     \begin{solution}
+%     6 · {[}4 + 2 + 3 · (18 - 10 + 1){]} + 3 = 6 · {[}4 + 2 + 3 · 9{]} + 3 = 6 · (4 + 2 + 27) + 3 = 6 · 33 + 3 = 198 + 3 = 201
+%     \end{solution}
+% \end{parts}
+
+% \question[2] En una tienda de comestibles compramos tres productos: 5 kg de arroz a 2 \euro/kg, 3 kg de lentejas a 3 \euro/kg, y 4 kg de garbanzos al mismo precio que el arroz y las lentejas. Si pagamos con un billete de 50 \euro, ¿cuánto nos devuelven si el encargado de la tienda nos hace una rebaja de 3 \euro por cada producto comprado? Halla la solución mediante una expresión de operaciones combinadas. 
+% 
+% \begin{solution}
+% El precio total sin rebajas sería:
+
+% \[ 5 \text{kg} \cdot 2 \euro/\text{kg} + 3 \text{kg} \cdot 3 \euro/\text{kg} + 4 \text{kg} \cdot 3 \euro/\text{kg} = 10 \euro + 9 \euro + 12 \euro = 31 \euro \]
+
+% Con la rebaja de 3 \euro por cada producto comprado (3 productos):
+
+% \[ 31 \euro - (3 \euro \times 3) = 31 \euro - 9 \euro = 22 \euro \]
+
+% Pagamos con 50 \euro, así que nos devuelven:
+
+% \[ 50 \euro - 22 \euro = 28 \euro \]
+% \end{solution}
+
+% \question[2] En una finca se recogen manzanas tres días a la semana. El primer día se llenaron 10 cestas con 12 kilos de manzanas; el segundo día se completaron 15 cestas con 14 kilos cada una, y el tercer día se recogieron 8 cestas con 16 kilos cada una. ¿Cuántos kilos de manzanas se han recogido durante la semana? Halla la solución mediante una expresión de operaciones combinadas.
+% 
+% \begin{solution}
+% Calculamos los kilos totales recogidos cada día y sumamos:
+
+% Primer día: 
+% \[ 10 \text{cestas} \cdot 12 \text{kg} = 120 \text{kg} \]
+
+% Segundo día: 
+% \[ 15 \text{cestas} \cdot 14 \text{kg} = 210 \text{kg} \]
+
+% Tercer día: 
+% \[ 8 \text{cestas} \cdot 16 \text{kg} = 128 \text{kg} \]
+
+% El total de kilos recogidos durante la semana es:
+% \[ 120 \text{kg} + 210 \text{kg} + 128 \text{kg} = 458 \text{kg} \]
+% \end{solution}
+
+% Preguntas extraídas de: 2_potencias.tex
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+
+% evaluación continua
+
+\question[0\half] Escribe con cifras:
+\begin{parts}
+\part Seis millones doscientos mil
+
+\part Ciento cincuenta mil
+
+\end{parts}
+
+\question[0\half] Aproxima a las decenas de millar, por redondeo, los siguientes números: 
+\begin{multicols}{2}
+\begin{parts}
+    \part 582 749
+    \part 1 234 567
+\end{parts} 
+\end{multicols}
+
+\question[1\half] Calcula las siguientes operaciones combinadas:
+\begin{parts}
+    \part 
+    $    3 + 4 \cdot (2 + 5) - 6 = $
+    
+    \part 
+    
+    $5 \cdot \left[3 + 2 \cdot (4 - 1)\right] + 7 =$
+    
+    \part
+    $6 + 3 \cdot \left[2 \cdot (5 + 3) - 4\right] - 2 \cdot (3 + 7) = $
+    
+\end{parts}
+
+
+
+
+\question[1\half]  Escribe la descomposición polinómica de los siguientes números:
+
+\begin{parts}
+\part 85 603
+
+\part 300 004 002
+
+
+\end{parts}
+
+\question[1\half] Expresa como una única potencia:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\left(6^3\right)^4=$
+    
+    \part $5^2\cdot 5^3=$
+    
+    \part $n^4 : n^2=$
+    
+\end{parts}
+\end{multicols}
+
+
+
+\question[2] Aplica las propiedades para expresar como una única potencia y después calcula su valor:
+\begin{multicols}{2}
+\begin{parts}
+    \part $3^2\cdot 3^3 : 3^5=$
+    % \part $\left(2^2\right)^3\cdot\left(5^2\right)^3=$
+    \part $20^{6} :10^6=$
+    \part $18^4:\left(2^4\cdot3^4\right)=$
+    % \part $24^5:\left(2^5\cdot6^5\right)=$
+    \part $\left[\left(12^3:4^3\right)^2:\left(15^2:5^2\right)^3\right]^8=$
+\end{parts}
+\end{multicols}
+
+% Pregunta 4
+\question[1\half] Calcula:
+
+\begin{parts}
+    \part $2^3+\sqrt{3^2+5\cdot8}=$
+    
+    % \part $3^4:\sqrt{1+\left(20+6\cdot10\right)}=$
+    % 
+    \part $20-2^2\cdot3+4\cdot\sqrt{36}=$
+    
+    \part $6+\sqrt{5+4\cdot 5}-3+4\cdot\left(5-2\right)^2=$
+    
+\end{parts}
+
+% Pregunta 5
+\question[2] Tenemos 144 fichas cuadradas y queremos colocarlas de forma ordenada para formar un cuadrado lo más grande posible. ¿Cuántas fichas hay que colocar en cada lado del cuadrado? Calcula el número de fichas necesarias para formar otro cuadrado que tenga dos fichas más en cada lado.
+
+% Preguntas extraídas de: 3_divisibilidad.tex
+\question[1\half] Expresa como una única potencia:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\left(4^2\right)^5=$
+    
+    \part $3^4\cdot 3^6=$
+    
+    \part $m^7 : m^3=$
+    
+\end{parts}
+\end{multicols}
+
+\question[2] Aplica las propiedades para expresar como una única potencia y después calcula su valor:
+\begin{multicols}{2}
+\begin{parts}
+    \part $4^3\cdot 4^5 : 4^6=$
+    \part $30^4 : 15^4=$
+    \part $25^5 : (5^3 \cdot 5^2)=$
+    \part $\left[\left(18^2 : 9^2\right)^3 : \left(12^2 : 6^2\right)^2\right]^3=$
+\end{parts}
+\end{multicols}
+
+% Pregunta 4
+\question[1\half] Calcula:
+
+\begin{parts}
+    % \part $3^2 + \sqrt{3^2 + 2 \cdot 2^3}=$
+    % 
+    \part $15 - 2 \cdot 2^2 + 5 \cdot \sqrt{49}=$
+    
+    \part $8 + \sqrt{7 + 3\cdot 6} - 2 + 5\cdot\left(6-3\right)^2=$
+    
+\end{parts}
+
+    % \question[1] De los números 96, 54, 84, 144, ¿Cuál o cuáles de estos números son múltiplos de 12? Explica por qué
+
+
+    % \question[0\half] Calcula todos los divisores de los siguientes números:
+    % \begin{parts}
+    %     \part 48
+    %     \part 36
+    % \end{parts}
+
+% \question[1] Observa estos números y completa:
+% 12 ‒ 14 ‒ 21 ‒ 25 ‒ 36 ‒ 40 ‒ 42 ‒ 45 ‒ 70 ‒ 75
+% \begin{multicols}{2}
+%     \begin{parts}
+%         \part Múltiplos de 2: 
+%         \part Múltiplos de 3: 
+%         \part Múltiplos de 5: 
+%         \part Múltiplos de 10: 
+%     \end{parts}
+% \end{multicols}
+
+    \question[1\half] Descompón en factores primos:
+    \begin{multicols}{2}
+    \begin{parts}
+        \part 80 
+        \part 450 
+    \end{parts}
+    \end{multicols}
+
+    \question[1\half] Calcula descomponiendo en factores primos:
+    \begin{multicols}{2}
+    \begin{parts}
+        \part m.c.m. (12, 24, 36) 
+        \part m.c.d. (28, 36) 
+    \end{parts}
+    
+    \end{multicols}
+
+    \question[1\half] ¿De cuántas formas podemos empaquetar 45 libros si debe haber el mismo número de libros en cada paquete?
+
+    \question[2] Un carpintero dispone de tres listones de madera de 40, 60 y 90 cm de longitud, respectivamente. Desea dividirlos en trozos iguales y de la mayor medida posible, sin que sobre madera. ¿Qué longitud deben tener esos trozos? ¿Cuántos trozos iguales de cada listón se obtienen?
+
+    \question[1\half] Calcula los múltiplos de 18 comprendidos entre 315 y 420.
+
+% Preguntas extraídas de: 4_enteros_1.tex
+\question[1] Expresa como una única potencia:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\left(4^2\right)^5=$
+    
+    \part $7^3\cdot 7^2=$
+    
+    \part $m^5 : m^3=$
+    
+\end{parts}
+\end{multicols}
+
+\question[1\half] Aplica las propiedades para expresar como una única potencia y después calcula su valor:
+\begin{multicols}{2}
+\begin{parts}
+    \part $2^4\cdot 2^2 : 2^3=$
+    \part $30^5 : 15^5=$
+    \part $27^3 : \left(3^3\cdot9^3\right)=$
+    % \part $\left[\left(16^2:8^2\right)^3 : \left(18^3:6^3\right)^2\right]^5=$
+\end{parts}
+\end{multicols}
+
+% Pregunta 4
+\question[1\half] Calcula:
+
+\begin{parts}
+    % \part $3^2+\sqrt{4^2+6\cdot7}=$
+    % 
+        \part 3 · 9 + 7 + 6 - 5 · 3=
+    \part $20-3^2\cdot2+5\cdot\sqrt{49}=$
+    
+    % \part $8+\sqrt{7+3\cdot6}-4+5\cdot\left(4-1\right)^2=$
+    
+\end{parts}
+
+
+
+    \question[1] De los números 96, 54, 84, 144, ¿Cuál o cuáles de estos números son múltiplos de 12? Explica por qué 
+\question[1] Calcula descomponiendo en factores primos:
+    \begin{multicols}{2}
+    \begin{parts}
+        \part m.c.m. (10, 12) 
+        \part m.c.d. (20, 12) 
+    \end{parts}
+    
+    \end{multicols}
+
+\question[2] Realiza las siguientes operaciones con enteros:
+\begin{multicols}{2}
+\begin{parts}
+    \part $(-5) + 8=$
+    
+    \part $12 - (-7)=$
+    
+    \part $(-9) - (-4)=$
+    
+    \part $(-6) + (-11)=$
+    
+\end{parts}
+\end{multicols}
+
+
+\question[2] Realiza las siguientes operaciones con enteros:
+\begin{multicols}{2}
+\begin{parts}
+    \part $(-4) \cdot 6=$
+    
+    \part $15 : (-3)=$
+    
+    \part $(-8) \cdot (-7)=$
+    
+    \part $(-36) : 6=$
+    
+\end{parts}
+\end{multicols}
+
+
+\question[4] Realiza las siguientes operaciones combinadas con enteros:
+
+\begin{parts}
+    \part $(-5) \cdot (3 - 8) + 12=$
+    
+    \part $15 - (-6) \cdot 2 + 4 : (-2)=$
+    
+    % \part $\left[(-3) + 7\right] \cdot (-2) - 5=$
+    % 
+    \part $(-18 : 3) + 4 \cdot (-2) - (-10)=$
+    
+    % \part $(-7) \cdot (2 + 5) - 3 \cdot (4 - 9) + \left[ 6 : (3 - 5) \right] =$  
+    \part $\left[ 3 + (8 : 4) \right] \cdot (2 - 3) + 5 \cdot (-4 + 6) =$  
+\end{parts}
+
+% Preguntas extraídas de: 5_enteros_decimales.tex
+% \question[1] Calcula descomponiendo en factores primos:
+    % \begin{multicols}{2}
+    % \begin{parts}
+    %     \part m.c.m. (10, 12) 
+    %     \part m.c.d. (20, 12) 
+    % \end{parts}
+    
+    % \end{multicols}
+
+\question[2] Realiza las siguientes operaciones con enteros:
+\begin{multicols}{2}
+\begin{parts}
+    \part $(-5) + 7=$
+    
+    \part $11 - (-3)=$
+    
+    \part $(-8) - (-3)=$
+    
+    \part $(-4) + (-7)=$
+    
+\end{parts}
+\end{multicols}
+
+
+\question[2] Realiza las siguientes operaciones con enteros:
+\begin{multicols}{2}
+\begin{parts}
+    \part $(-4) \cdot 3=$
+    
+    \part $18 : (-3)=$
+    
+    \part $(-8) \cdot (-7)=$
+    
+    \part $(-42) : 6=$
+    
+\end{parts}
+\end{multicols}
+
+
+\question[4] Realiza las siguientes operaciones combinadas con enteros:
+
+\begin{parts}
+    \part $(-5) \cdot (3 - 8) + 3=$
+    
+    \part $15 - (-6) \cdot 2 + 4 : (-2)=$
+    
+    % \part $\left[(-3) + 7\right] \cdot (-2) - 5=$
+    % 
+    % \part $(-18 : 3) + 4 \cdot (-2) - (-10)=$
+    % 
+    % \part $(-7) \cdot (2 + 5) - 3 \cdot (4 - 9) + \left[ 6 : (3 - 5) \right] =$  
+    \part $\left[ 3 + (8 : 4) \right] \cdot (2 - 3) + 5 \cdot (-4 + 6) =$  
+\end{parts}
+
+
+\question[1] Aproxima a las décimas:
+\begin{multicols}
+    {2}
+\begin{parts}
+    \part 5,37 $\approx$
+    \part 4,21 $\approx$
+    \part 6,393 $\approx$
+    \part 0,824 $\approx$
+\end{parts}
+\end{multicols}
+
+\question[3] Calcula:
+\begin{parts}
+    \part $20,54 + 13,6 - 3,12 =$ 
+    \part $8,32 \cdot 7,5 =$ 
+    \part $1,29 : 5 =$ 
+    % \part $865,5 : 15 =$  
+\end{parts}
+
+\question[2] ¿Cuánto costará pintar las puertas y ventanas de un piso si tiene 9 ventanas y 8 puertas y el pintor cobra 10,5 euros por pintar una puerta y 7,35 euros por pintar una ventana?
+
+
+
+\question[2] Un depósito contiene 46,22 litros de agua que vamos a traspasar a botellas de litro y medio. Halla cuántas botellas
+llenaremos e indica la cantidad de agua sobrante.
+% \question[1\half] Fernando compra un pollo de 2 kg 200 g y un conejo de 0,760 kg. ¿Cuánto pesa la compra de Fernando?
+% 
+
+% \question[1\half] Una finca de 20,32 hm² tiene 15,67 ha de secano plantadas de cereal y 11,300 m² de huerta en regadío. El resto es terreno en barbecho. ¿Cuál es la superficie en barbecho?
+
+% Preguntas extraídas de: 6_fracciones.tex
+% \question[1] Calcula descomponiendo en factores primos:
+    % \begin{multicols}{2}
+    % \begin{parts}
+    %     \part m.c.m. (10, 12) 
+    %     \part m.c.d. (20, 12) 
+    % \end{parts}
+    
+    % \end{multicols}
+
+\question[2] Calcula:
+\begin{multicols}{2}
+\begin{parts}
+    % \part $(-5) + 7=$
+    % 
+    \part $11 - (-3)=$
+    
+    \part $(-8) - (-3)=$
+    
+    \part $(-4) + (-7)=$
+    
+    \part $(-4) \cdot 3=$
+    
+    \part $18 : (-3)=$
+    
+    \part $(-8) \cdot (-7)=$
+    
+    % \part $(-42) : 6=$
+    % 
+\end{parts}
+\end{multicols}
+
+
+% \question[2] Realiza las siguientes operaciones con enteros:
+% \begin{multicols}{2}
+% \begin{parts}
+%     \part $(-4) \cdot 3=$
+%     
+%     \part $18 : (-3)=$
+%     
+%     \part $(-8) \cdot (-7)=$
+%     
+%     \part $(-42) : 6=$
+%     
+% \end{parts}
+% \end{multicols}
+
+
+\question Calcula:
+
+\begin{parts}
+    \part[1] $(-5) \cdot (3 - 8) + 3=$
+    
+    % \part $15 - (-6) \cdot 2 + 4 : (-2)=$
+    % 
+    % \part $\left[(-3) + 7\right] \cdot (-2) - 5=$
+    % 
+    % \part $(-18 : 3) + 4 \cdot (-2) - (-10)=$
+    % 
+    % \part $(-7) \cdot (2 + 5) - 3 \cdot (4 - 9) + \left[ 6 : (3 - 5) \right] =$  
+    % \part $\left[ 3 + (8 : 4) \right] \cdot (2 - 3) + 5 \cdot (-4 + 6) =$  
+    \part[1] $20,54 + 13,6 - 3,12 =$ 
+    % \part $8,32 \cdot 7,5 =$ 
+    \part[1] $1,29 : 5 =$ 
+    % \part $865,5 : 15 =$  
+\end{parts}
+
+
+% \question[1] Aproxima a las décimas:
+% \begin{multicols}
+%     {2}
+% \begin{parts}
+%     \part 5,37 $\approx$
+%     \part 4,21 $\approx$
+%     \part 6,393 $\approx$
+%     \part 0,824 $\approx$
+% \end{parts}
+% \end{multicols}
+
+
+
+% \question[2] ¿Cuánto costará pintar las puertas y ventanas de un piso si tiene 9 ventanas y 8 puertas y el pintor cobra 10,5 euros por pintar una puerta y 7,35 euros por pintar una ventana?
+% 
+
+
+% \question[2] Un depósito contiene 46,22 litros de agua que vamos a traspasar a botellas de litro y medio. Halla cuántas botellas
+% llenaremos e indica la cantidad de agua sobrante.
+% \question[1\half] Fernando compra un pollo de 2 kg 200 g y un conejo de 0,760 kg. ¿Cuánto pesa la compra de Fernando?
+% 
+
+% \question[1\half] Una finca de 20,32 hm² tiene 15,67 ha de secano plantadas de cereal y 11,300 m² de huerta en regadío. El resto es terreno en barbecho. ¿Cuál es la superficie en barbecho?
+
+% \question Clasifica las siguientes dfracciones y represéntalas en una recta:  
+% \( \dfrac{2}{3}, \dfrac{7}{4}, -\dfrac{4}{5} \).
+
+% \question Ordena de menor a mayor las siguientes dfracciones:  
+% \[
+% \dfrac{7}{8}, \dfrac{11}{15}, \dfrac{6}{7}, \dfrac{3}{5}, \dfrac{2}{3}
+% \]
+
+\question[3] Simplifica las siguientes dfracciones y obtén la dfracción irreducible correspondiente:  
+\[
+\dfrac{18}{66}, \quad \dfrac{45}{100}, \quad  \dfrac{30}{24}
+\]
+
+
+\question Opera y simplifica:  
+\begin{parts}
+    \part[1] $\dfrac{1}{3} - \dfrac{1}{6}=$
+    
+    \part[1] \( 7 - 4\left(\dfrac{1}{3} - \dfrac{1}{6}\right)= \) 
+    \begin{solution}
+        \(\dfrac{19}{3}\)
+    \end{solution}
+    
+    % \part \( \left(\dfrac{-2}{3} - \dfrac{3}{4}\right) \div \left(-1\right) \) 
+    % \begin{solution}
+    %     \(\dfrac{17}{12}\)
+    % \end{solution}
+    
+    \part[1] \( \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) =\)
+    \begin{solution}
+        \(\dfrac{23}{20}\)
+    \end{solution}
+    
+    % \part \( \dfrac{5}{4} - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) \)
+    % \begin{solution}
+    %     \(\dfrac{59}{60}\)
+    % \end{solution}
+\end{parts}
+
+% \question Opera y simplifica:  
+% \[
+% \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+% \question Opera y simplifica:  
+% \[
+% \dfrac{2}{5} - \left(\dfrac{1}{3} - \dfrac{1}{8}\right) + \dfrac{3}{7}, \quad \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+\question[1] Esta lista expresa en forma de fracción los resultados que un grupo de un examen. ¿Qué fracción de alumnado ha superado el examen?  
+
+% \renewcommand{\arraystretch}{3} % Aumenta el espacio entre filas
+% \begin{center}
+%     \begin{tabular}{|c|c|c|c|c|}
+%         \hline
+%         \textbf{Calificación} & \textbf{Sobresaliente} & \textbf{Notable} & \textbf{Bien} & \textbf{Suficiente} \\
+%         \hline
+%         \textbf{dfracción} & $\dfrac{1}{6}$ & $\dfrac{1}{4}$ & $\dfrac{1}{3}$ & $\dfrac{1}{4}$ \\
+%         \hline
+%     \end{tabular}
+% \end{center}
+
+\begin{center}
+\scalebox{0.8}{
+    \begin{tabular}{ccccc}
+        \toprule
+        \textbf{Calificación} & \textbf{Sobresaliente} & \textbf{Notable} & \textbf{Bien} & \textbf{Suficiente} \\
+        \midrule
+        \textbf{fracción} & $\dfrac{1}{6}$ & $\dfrac{1}{4}$ & $\dfrac{1}{3}$ & $\dfrac{1}{4}$ \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{center}
+
+
+\question Resuelve:
+\begin{parts}
+    \part[1] Roberto recorre \( \dfrac{2}{5} \) partes de un camino de 10 km. ¿Cuántos km le falta por llegar al final? 
+    \part[1] Los 3/8 de una población son 6000 habitantes. ¿Cuántos habitantes tiene en total?
+    % \part[1] La tercera parte de la capacidad de un depósito son 150 $m^3$. Hallar la capacidad del depósito.
+\end{parts}
+
+
+\question[2] Compramos 100 litros de refresco a 2 euros el litro. Los envasamos en botes de \( \dfrac{1}{3} \) de litro y los vendemos a 1 euro. ¿Cuánto dinero ganaremos?
+
+% Preguntas extraídas de: 7_proporcionalidad.tex
+\question[1] Simplifica las siguientes fracciones y obtén la fracción irreducible correspondiente:  
+\[
+\dfrac{18}{66}, \quad \dfrac{45}{100}, \quad  \dfrac{30}{24}
+\]
+
+
+\question Opera y simplifica:  
+\begin{parts}
+    \part[1] $\dfrac{1}{3} - \dfrac{1}{6}=$
+    
+    % \part[1] \( 7 - 4\left(\dfrac{1}{3} - \dfrac{1}{6}\right)= \) 
+    % \begin{solution}
+    %     \(\dfrac{19}{3}\)
+    % \end{solution}
+    
+    \part[2] \( \left(\dfrac{-2}{3} - \dfrac{3}{4}\right) : \left(-1\right)= \) 
+    \begin{solution}
+        \(\dfrac{17}{12}\)
+    \end{solution}
+    
+    
+    % \part[1] \( \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right) =\)
+    % \begin{solution}
+    %     \(\dfrac{23}{20}\)
+    % \end{solution}
+    % 
+    \part[1] \( \dfrac{5}{4} - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)= \)
+    \begin{solution}
+        \(\dfrac{59}{60}\)
+    \end{solution}
+      
+\end{parts}
+
+% \question Opera y simplifica:  
+% \[
+% \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+% \question Opera y simplifica:  
+% \[
+% \dfrac{2}{5} - \left(\dfrac{1}{3} - \dfrac{1}{8}\right) + \dfrac{3}{7}, \quad \left(\dfrac{5}{3} - \dfrac{1}{4}\right) - \left(\dfrac{3}{5} - \dfrac{1}{3}\right)
+% \]
+
+
+\question[1] Calcula el término que falta en cada par para que sean dos fracciones equivalentes:
+\begin{multicols}{3}
+\begin{parts}
+    \part $\dfrac{5}{8} = \dfrac{15}{ }$
+    
+    \part $\dfrac{7}{9} = \dfrac{}{27}$
+    
+    \part $\dfrac{}{4} = \dfrac{24}{32}$
+\end{parts}
+\end{multicols}
+
+
+\question[1\half] Una fuente da 208 litros de agua en 8 minutos. ¿Cuántos litros de agua dará en un cuarto de hora?
+
+
+
+\question[1] Para descargar un camión de sacos de cemento, 4 obreros han empleado 9 horas. ¿Cuánto tiempo emplearán 6 obreros?
+
+
+
+\question[1\half] Completa la siguiente tabla escribiendo el porcentaje, la fracción y el número decimal que corresponde en cada caso:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        PORCENTAJE & 18\% & & & \\ \hline
+        FRACCIÓN & & & $\frac{35}{100}$ & \\ \hline
+        NÚMERO DECIMAL & & $0.24$ & & $0.08$ \\ \hline
+    \end{tabular}
+\end{center}
+
+\question[1\half] Un barco pesquero ha capturado cuatro toneladas de pescado, de las que el 45\% es sardina, el 15\% es boquerón y el resto es jurel. ¿Cuántos kilos de cada tipo de pescado lleva el barco?
+
+
+
+\question[1] De 40 lanzamientos de penalti que ha realizado David, ha metido 18. ¿Qué porcentaje de aciertos tiene David?
+
+
+
+\question[1\half] El precio de un televisor ha subido un 25\% con relación al del año pasado. ¿Cuál es su precio actual si el año pasado era de 510,8 euros?
+
+% Preguntas extraídas de: 8_algebra.tex
+% \question
+% Expresa de forma algebraica los siguientes enunciados matemáticos:
+% \begin{parts}
+% \part[1] La suma de un número, \( a \), y su mitad.
+% 
+% \part[1] El triple de la mitad de un número, \( n \).
+% 
+% \part[1] El área de un cuadrado de lado \( a \).
+% 
+% \end{parts}
+
+% \question[1]
+% Rodea con un círculo aquellas expresiones algebraicas que sean monomios:
+% \[
+% 6x^3 + 3y^4 \quad\quad 6ab \quad\quad 5xyz \quad\quad 7y^5 + 4x^3 \quad\quad 2y^3
+% \]
+% 
+
+\question[2]
+Completa la tabla indicando el coeficiente, la parte literal y el grado de cada monomio:
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Monomio} & \textbf{Coeficiente} & \textbf{Parte literal} & \textbf{Grado} \\
+\hline
+3 & & & \\
+\hline
+$9x^2$ & & & \\
+\hline
+$\frac{2}{3}bc$ & & & \\
+\hline
+$-ab^3x$ & & & \\
+\hline
+\end{tabular}
+
+
+\question[1]
+Rodea con un círculo los monomios que sean semejantes:
+\[
+3a^2b^3x \quad\quad 4a^2b^3x \quad\quad -2a^2b^3x \quad\quad 5a^2b^2x^2
+\]
+
+\question[1]
+Realiza las siguientes operaciones con monomios:
+\begin{multicols}{2}
+\begin{parts}
+\part \( 3x^2 + 5x^2 \)
+
+\part \( 7a^3 - 2a^3 \)
+
+\part \( (2x)(-4x^3) \)
+
+\part $\frac{6x^5}{2x^2}$
+
+\end{parts}
+\end{multicols}
+
+\question[1]
+Calcula el valor numérico de la siguiente expresión algebraica sabiendo que \( x = 2 \) y \( y = -3 \):
+\[
+4x^2 - 2xy + y^2
+\]
+
+
+\question
+Rodea, en cada caso, el valor de \( x \) que es solución de la ecuación:
+\begin{parts}
+\part[1] \( 2x + 5 = 25 \quad \Rightarrow \quad x = 5 \quad x = 10 \quad x = 15 \quad x = 20 \)
+\part[1] \( 3x - 4 = 14 \quad \Rightarrow \quad x = 2 \quad x = 4 \quad x = 6 \quad x = 8 \)
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 6 = 15 \)
+
+\part[1] \( x - 4 = 9 \)
+
+\part[1] \( \frac{x}{3} = 2 \)
+
+\part[1] \( \frac{x}{2} = 12 \)
+
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 13 = 2x + 11 \)
+
+\part[1] \( x + 10 = 3x + 4 \)
+
+\end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( (5x - 3) + (7x + 6) = 13 \)
+
+\part[1] \( (2x + 4) + (1 - x) = 14 \)
+
+\end{parts}
+
+% \question[1]
+% La suma de tres números consecutivos es 42. ¿Cuáles son esos números?
+% 
+
+% \question[1]
+% Juan tiene 25 euros más que Mario y 30 euros menos que Enrique. ¿Cuánto tiene cada uno sabiendo que entre los tres tienen 140 euros?
+%
+
+% Preguntas extraídas de: 9_geometria.tex
+% \question
+% Expresa de forma algebraica los siguientes enunciados matemáticos:
+% \begin{parts}
+% \part[1] La suma de un número, \( a \), y su mitad.
+% 
+% \part[1] El triple de la mitad de un número, \( n \).
+% 
+% \part[1] El área de un cuadrado de lado \( a \).
+% 
+% \end{parts}
+
+% \question[1]
+% Rodea con un círculo aquellas expresiones algebraicas que sean monomios:
+% \[
+% 6x^3 + 3y^4 \quad\quad 6ab \quad\quad 5xyz \quad\quad 7y^5 + 4x^3 \quad\quad 2y^3
+% \]
+% 
+
+\question[1]
+Completa la tabla indicando el coeficiente, la parte literal y el grado de cada monomio:
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Monomio} & \textbf{Coeficiente} & \textbf{Parte literal} & \textbf{Grado} \\
+\hline
+2 & & & \\
+\hline
+$5x^2$ & & & \\
+\hline
+$\frac{2}{3}ab$ & & & \\
+\hline
+$-x^3y$ & & & \\
+\hline
+% $-ab^3x$ & & & \\
+% \hline
+\end{tabular}
+
+
+% \question[1]
+% Rodea con un círculo los monomios que sean semejantes:
+% \[
+% 3a^2b^3x \quad\quad 4a^2b^3x \quad\quad -2a^2b^3x \quad\quad 5a^2b^2x^2
+% \]
+
+\question[1]
+Realiza las siguientes operaciones con monomios:
+\begin{multicols}{2}
+\begin{parts}
+\part \( 3x^2 + 5x^2 \)
+% 
+% \part \( 7a^3 - 2a^3 \)
+% 
+\part \( (2x)(-4x^3) \)
+% 
+% \part $\frac{6x^5}{2x^2}$
+% 
+\end{parts}
+\end{multicols}
+
+% \question[1]
+% Calcula el valor numérico de la siguiente expresión algebraica sabiendo que \( x = 2 \) y \( y = -3 \):
+% \[
+% 4x^2 - 2xy + y^2
+% \]
+% 
+
+% \question
+% Rodea, en cada caso, el valor de \( x \) que es solución de la ecuación:
+% \begin{parts}
+% \part[1] \( 2x + 5 = 25 \quad \Rightarrow \quad x = 5 \quad x = 10 \quad x = 15 \quad x = 20 \)
+% \part[1] \( 3x - 4 = 14 \quad \Rightarrow \quad x = 2 \quad x = 4 \quad x = 6 \quad x = 8 \)
+% \end{parts}
+
+% \question
+% Resuelve las siguientes ecuaciones:
+% \begin{parts}
+% \part[1] \( x + 6 = 15 \)
+% 
+% \part[1] \( x - 4 = 9 \)
+% 
+% \part[1] \( \frac{x}{3} = 2 \)
+% 
+% \part[1] \( \frac{x}{2} = 12 \)
+% 
+% \end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 13 = 2x + 11 \)
+
+\part[1] \( x + 10 = 3x + 4 \)
+
+\end{parts}
+
+% \question
+% Resuelve las siguientes ecuaciones:
+% \begin{parts}
+% \part[1] \( (5x - 3) + (7x + 6) = 13 \)
+% 
+% \part[1] \( (2x + 4) + (1 - x) = 14 \)
+% 
+% \end{parts}
+
+\question[2]
+La suma de tres números consecutivos es 42. ¿Cuáles son esos números?
+
+
+% \question[2]
+% Juan tiene 25 euros más que Mario y 30 euros menos que Enrique. ¿Cuánto tiene cada uno sabiendo que entre los tres tienen 140 euros?
+% 
+
+\question[2] Suma los siguientes ángulos:
+ \begin{multicols}{2}
+\begin{parts}
+   
+         \part $35^\circ 48' + 27^\circ 35'$
+  \begin{solution}
+    $35^\circ 48' + 27^\circ 35' = 63^\circ 83' = 64^\circ 23'$
+  \end{solution}
+  
+  \part $15^\circ 47' 30'' + 28^\circ 32' 50''$
+  \begin{solution}
+    Suma de segundos: $30'' + 50'' = 80'' = 1' 20''$  
+    Suma de minutos: $47' + 32' + 1' = 80' = 1^\circ 20'$  
+    Suma de grados: $15^\circ + 28^\circ + 1^\circ = 44^\circ$  
+    Resultado final: $44^\circ 20' 20''$
+  \end{solution}
+  
+    \end{parts}
+    \end{multicols}
+
+
+\question[2] Resta los siguientes ángulos:
+\begin{multicols}{2}
+\begin{parts}
+  \part $63^\circ 25' - 27^\circ 49'$
+  \begin{solution}
+    Como $25' < 49'$, tomamos prestado 1 grado:  
+    $62^\circ 85' - 27^\circ 49' = 35^\circ 36'$
+  \end{solution}
+  
+  
+  \part $52^\circ 40' 25'' - 18^\circ 52' 50''$
+  \begin{solution}
+    Convertimos para poder restar:  
+    Tomamos 1' prestado: $52^\circ 39' 85''$  
+    Luego, tomamos 1° prestado: $51^\circ 99' 85''$  
+    Resta: $51^\circ 99' 85'' - 18^\circ 52' 50'' = 33^\circ 47' 35''$
+  \end{solution}
+  
+\end{parts}
+\end{multicols}
+
+
+
+\question[2] El lado mayor de un triángulo rectángulo mide 15 cm y uno de los dos lados menores mide 9 cm. ¿Cuánto mide el tercer lado? (se recomienda hacer el dibujo)
+
+
+
+
+
+\question[2] Si los lados de un rectángulo miden, respectivamente, 16 cm y 30 cm, ¿cuánto mide su diagonal? (se recomienda hacer el dibujo)
+
+
+
+% \question[1] El perímetro de un rombo es de 40 cm y una de sus diagonales mide 16 cm. ¿Cuánto mide la otra diagonal?
+% 
+
+\question[2]  Si en la figura siguiente $a=10$cm , calcula b \\
+\begin{tikzpicture}[scale=1.2]
+  % Coordenadas clave
+  \coordinate (A) at (0,0);        % Esquina inferior izquierda
+  \coordinate (B) at (0,2);        % Esquina superior izquierda
+  \coordinate (C) at (2,2);        % Punto de unión cuadrado-triángulo arriba
+  \coordinate (D) at (4,0);        % Esquina inferior derecha
+  \coordinate (E) at (2,0);        % Punto de unión cuadrado-triángulo abajo
+
+  % Cuadrado y triángulo
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[dashed] (C) -- (E);
+
+  % Etiquetas
+  \draw[-] (0,1) -- +(0,0) node[left] {\(a\)};
+  \draw[-] (1,2) -- +(0,0) node[above] {\(a\)};
+  \draw[-] (3,0) -- +(0,0) node[below] {\(a\)};
+  \draw[-] (3.1,1.1) -- +(0,0) node[right] {\(b\)};
+  \draw[-] (0,-0.4) -- (4,-0.4) node[midway,below] {\(2a\)};
+  
+\end{tikzpicture}
+
+\end{questions}
+\end{document}

@@ -192,7 +192,7 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     
 \end{multicols}
 
-\question[2] Calcula las siguientes derivadas de manera simplificada:
+\question[2] Calcula las derivadas de las siguientes funciones dando el resultado simplificado:
 \begin{multicols}{2}
 \begin{parts}
     \part $f(x)=(x^2 +x)(x^2 -x ) $
@@ -213,6 +213,9 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
   \question  Dada la función: $$f(x)=\dfrac{x^2}{x-1}$$ 
 \begin{parts}
     \part[1] Estudia la continuidad de la función
+    \begin{solution}
+        f es continua en todo su dominio. $Dom(f)=\mathrm{R}-\{1\}$
+    \end{solution}
     \part[1] Estudia el crecimiento y decrecimiento de la función.
     
     \begin{solution}
@@ -226,7 +229,8 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     - \( f'(x) < 0 \) cuando \( 0 < x < 2 \), lo que indica que la función es **decreciente** en el intervalo \( (0, 2) \).
     \end{solution}
     
-    \part[2] Encuentra los extremos relativos.
+    \part[1] Encuentra los extremos relativos.
+
 
     \begin{solution}
     Los puntos críticos se encuentran donde \( f'(x) = 0 \), es decir, cuando \( x(x - 2) = 0 \). Esto da los puntos \( x = 0 \) y \( x = 2 \).
@@ -238,13 +242,27 @@ La nota final de la prueba será la parte proporcional de la puntuación obtenid
     - \( f(0) = 0 \)
     - \( f(2) = 4 \)
     \end{solution}
+        \part[1] Encuentra los extremos absolutos.
+        \begin{solution}
+            $-\infty$, $+\infty$
+        \end{solution}
 \end{parts}
 
 \question La obsolescencia tecnológica implica una disminución del valor de un producto con el tiempo. En cierto dispositivo, el valor $V(t)>0$, viene dado por la expresión $V(t)=200-\dfrac{100t}{10+2t}$ \euro, siendo t los años transcurridos desde la compra del dispositivo.
 \begin{parts}
     \part[1] Calcule el valor inicial del producto y su valor en un horizonte infinito de tiempo
+    \begin{solution}
+        $V(0)=100$ y $\lim_{x \to \infty}V=200-\frac{100}{2}=150$
+    \end{solution}
     \part[1] Calcule $V'(t)$ y justifique que $V(t )$ es decreciente. Utilice esta conclusión y los resultados del apartado anterior para argumentar que no será posible que el valor de $V(t)$ sea igual a 125\euro.
+    \begin{solution}
+        $V'(t)=- \frac{250}{\left(x + 5\right)^{2}}$ luego $V'(t)<0 \ 
+\forall t \to$ V es decreciente
+    \end{solution}
     \part[0\half] ¿Cuánto tiempo tiene que pasar para que el dispositivo tenga un valor de 175 \euro?
+    \begin{solution}
+        $175=200-\dfrac{100t}{10+2t} \to t=5$. 5 años
+    \end{solution}
 \end{parts}
 
 \end{questions}
