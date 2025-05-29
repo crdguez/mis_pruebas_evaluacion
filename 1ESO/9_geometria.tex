@@ -1,0 +1,293 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Geometría y álgebra}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Justifica todos los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+\textbf{Para recuperar el examen anterior se tendrán en cuenta las preguntas 1 a 4}\\
+Está permitido el uso de calculadora y los ejercicios han de resolverse utilizando la notación algebraica adecuada
+
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+   
+\end{center}
+% \textbf{Nota:} Se tendrán en cuenta los ejercicios 1 y 2 para recuperar contenidos previos.
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+% \question
+% Expresa de forma algebraica los siguientes enunciados matemáticos:
+% \begin{parts}
+% \part[1] La suma de un número, \( a \), y su mitad.
+% \vspace{30pt}
+% \part[1] El triple de la mitad de un número, \( n \).
+% \vspace{30pt}
+% \part[1] El área de un cuadrado de lado \( a \).
+% \vspace{30pt}
+% \end{parts}
+
+% \question[1]
+% Rodea con un círculo aquellas expresiones algebraicas que sean monomios:
+% \[
+% 6x^3 + 3y^4 \quad\quad 6ab \quad\quad 5xyz \quad\quad 7y^5 + 4x^3 \quad\quad 2y^3
+% \]
+% \vspace{30pt}
+
+\question[1]
+Completa la tabla indicando el coeficiente, la parte literal y el grado de cada monomio:
+\vspace{10pt}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Monomio} & \textbf{Coeficiente} & \textbf{Parte literal} & \textbf{Grado} \\
+\hline
+2 & & & \\
+\hline
+$5x^2$ & & & \\
+\hline
+$\frac{2}{3}ab$ & & & \\
+\hline
+$-x^3y$ & & & \\
+\hline
+% $-ab^3x$ & & & \\
+% \hline
+\end{tabular}
+
+
+% \question[1]
+% Rodea con un círculo los monomios que sean semejantes:
+% \[
+% 3a^2b^3x \quad\quad 4a^2b^3x \quad\quad -2a^2b^3x \quad\quad 5a^2b^2x^2
+% \]
+
+\question[1]
+Realiza las siguientes operaciones con monomios:
+\begin{multicols}{2}
+\begin{parts}
+\part \( 3x^2 + 5x^2 \)
+% \vspace{30pt}
+% \part \( 7a^3 - 2a^3 \)
+% \vspace{30pt}
+\part \( (2x)(-4x^3) \)
+% \vspace{30pt}
+% \part $\frac{6x^5}{2x^2}$
+% \vspace{30pt}
+\end{parts}
+\end{multicols}
+
+% \question[1]
+% Calcula el valor numérico de la siguiente expresión algebraica sabiendo que \( x = 2 \) y \( y = -3 \):
+% \[
+% 4x^2 - 2xy + y^2
+% \]
+% \vspace{30pt}
+
+% \question
+% Rodea, en cada caso, el valor de \( x \) que es solución de la ecuación:
+% \begin{parts}
+% \part[1] \( 2x + 5 = 25 \quad \Rightarrow \quad x = 5 \quad x = 10 \quad x = 15 \quad x = 20 \)
+% \part[1] \( 3x - 4 = 14 \quad \Rightarrow \quad x = 2 \quad x = 4 \quad x = 6 \quad x = 8 \)
+% \end{parts}
+
+% \question
+% Resuelve las siguientes ecuaciones:
+% \begin{parts}
+% \part[1] \( x + 6 = 15 \)
+% \vspace{30pt}
+% \part[1] \( x - 4 = 9 \)
+% \vspace{30pt}
+% \part[1] \( \frac{x}{3} = 2 \)
+% \vspace{30pt}
+% \part[1] \( \frac{x}{2} = 12 \)
+% \vspace{30pt}
+% \end{parts}
+
+\question
+Resuelve las siguientes ecuaciones:
+\begin{parts}
+\part[1] \( x + 13 = 2x + 11 \)
+\vspace{40pt}
+\part[1] \( x + 10 = 3x + 4 \)
+\vspace{40pt}
+\end{parts}
+
+% \question
+% Resuelve las siguientes ecuaciones:
+% \begin{parts}
+% \part[1] \( (5x - 3) + (7x + 6) = 13 \)
+% \vspace{80pt}
+% \part[1] \( (2x + 4) + (1 - x) = 14 \)
+% \vspace{80pt}
+% \end{parts}
+
+\question[2]
+La suma de tres números consecutivos es 42. ¿Cuáles son esos números?
+\vspace{50pt}
+
+% \question[2]
+% Juan tiene 25 euros más que Mario y 30 euros menos que Enrique. ¿Cuánto tiene cada uno sabiendo que entre los tres tienen 140 euros?
+% \vspace{40pt}
+
+\question[2] Suma los siguientes ángulos:
+ \begin{multicols}{2}
+\begin{parts}
+   
+         \part $35^\circ 48' + 27^\circ 35'$
+  \begin{solution}
+    $35^\circ 48' + 27^\circ 35' = 63^\circ 83' = 64^\circ 23'$
+  \end{solution}
+  \vspace{30pt}
+  \part $15^\circ 47' 30'' + 28^\circ 32' 50''$
+  \begin{solution}
+    Suma de segundos: $30'' + 50'' = 80'' = 1' 20''$  
+    Suma de minutos: $47' + 32' + 1' = 80' = 1^\circ 20'$  
+    Suma de grados: $15^\circ + 28^\circ + 1^\circ = 44^\circ$  
+    Resultado final: $44^\circ 20' 20''$
+  \end{solution}
+  \vspace{30pt}
+    \end{parts}
+    \end{multicols}
+
+
+\question[2] Resta los siguientes ángulos:
+\begin{multicols}{2}
+\begin{parts}
+  \part $63^\circ 25' - 27^\circ 49'$
+  \begin{solution}
+    Como $25' < 49'$, tomamos prestado 1 grado:  
+    $62^\circ 85' - 27^\circ 49' = 35^\circ 36'$
+  \end{solution}
+  \vspace{30pt}
+  
+  \part $52^\circ 40' 25'' - 18^\circ 52' 50''$
+  \begin{solution}
+    Convertimos para poder restar:  
+    Tomamos 1' prestado: $52^\circ 39' 85''$  
+    Luego, tomamos 1° prestado: $51^\circ 99' 85''$  
+    Resta: $51^\circ 99' 85'' - 18^\circ 52' 50'' = 33^\circ 47' 35''$
+  \end{solution}
+  \vspace{30pt}
+\end{parts}
+\end{multicols}
+
+
+
+\question[2] El lado mayor de un triángulo rectángulo mide 15 cm y uno de los dos lados menores mide 9 cm. ¿Cuánto mide el tercer lado? (se recomienda hacer el dibujo)
+\vspace{60pt}
+
+
+
+
+\question[2] Si los lados de un rectángulo miden, respectivamente, 16 cm y 30 cm, ¿cuánto mide su diagonal? (se recomienda hacer el dibujo)
+\vspace{60pt}
+
+
+% \question[1] El perímetro de un rombo es de 40 cm y una de sus diagonales mide 16 cm. ¿Cuánto mide la otra diagonal?
+% \vspace{30pt}
+
+\question[2]  Si en la figura siguiente $a=10$cm , calcula b \\
+\begin{tikzpicture}[scale=1.2]
+  % Coordenadas clave
+  \coordinate (A) at (0,0);        % Esquina inferior izquierda
+  \coordinate (B) at (0,2);        % Esquina superior izquierda
+  \coordinate (C) at (2,2);        % Punto de unión cuadrado-triángulo arriba
+  \coordinate (D) at (4,0);        % Esquina inferior derecha
+  \coordinate (E) at (2,0);        % Punto de unión cuadrado-triángulo abajo
+
+  % Cuadrado y triángulo
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[dashed] (C) -- (E);
+
+  % Etiquetas
+  \draw[-] (0,1) -- +(0,0) node[left] {\(a\)};
+  \draw[-] (1,2) -- +(0,0) node[above] {\(a\)};
+  \draw[-] (3,0) -- +(0,0) node[below] {\(a\)};
+  \draw[-] (3.1,1.1) -- +(0,0) node[right] {\(b\)};
+  \draw[-] (0,-0.4) -- (4,-0.4) node[midway,below] {\(2a\)};
+  
+\end{tikzpicture}
+
+
+
+
+
+\end{questions}
+
+
+
+\end{document}
+\grid
