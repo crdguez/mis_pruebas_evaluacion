@@ -32,7 +32,7 @@
 
 \newcommand{\class}{1º Bachillerato CIE}
 \newcommand{\examdate}{\today}
-\newcommand{\examnum}{Parcial 3ªEv.}
+\newcommand{\examnum}{Global}
 \newcommand{\tipo}{A}
 
 
@@ -114,54 +114,117 @@ p &= 10 \quad \text{(pantalón)}
 \]
 
 \end{solution}
+
+% \part Un padre decide repartir su fortuna de 480 monedas de oro entre sus tres hijas: Ana,
+% Carla y Pilar. La cantidad que recibe Ana
+% es el doble de la suma de las cantidades que reciben Carla y Pilar. Además, la suma de
+% las cantidades que reciben Ana y Pilar es igual al triple de la cantidad que recibe Carla.
+
+% \begin{solution}
+% $\left\{\begin{matrix}x + y + z = 480\\x = 2 y + 2 z\\x + z = 3 y\\\end{matrix}\right.$ \\  Por Gauss: \\ $\left(\begin{matrix}1 & 1 & 1 & 480\\1 & -2 & -2 & 0\\1 & -3 & 1 & 0\end{matrix}\right)\rightarrow\left(\begin{matrix}1 & 1 & 1 & 480\\0 & -3 & -3 & -480\\0 & 0 & 4 & 160\end{matrix}\right)\to$ Sol:$\left\{\left( 320, \  120, \  40\right)\right\}$ \\ Por Matriz inversa: \\ $X=A^{-1}\cdot b=\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)\cdot\left(\begin{matrix}480\\0\\0\end{matrix}\right)=\left(\begin{matrix}320\\120\\40\end{matrix}\right)$. \ Ya que $\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -2\\1 & -3 & 1\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 1 & 1\\1 & -2 & -3\\1 & -2 & 1\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-8 & -4 & 0\\-3 & 0 & 3\\-1 & 4 & -3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{2}{3} & \frac{1}{3} & 0\\\frac{1}{4} & 0 & - \frac{1}{4}\\\frac{1}{12} & - \frac{1}{3} & \frac{1}{4}\end{matrix}\right)$. \\ Por Cramer: \\ $det(A)=-12$ \ $\Delta_0$, $s_0$: $\left( -3840, \  320\right)$ \ $\Delta_1$, $s_1$: $\left( -1440, \  120\right)$ \ $\Delta_2$, $s_2$: $\left( -480, \  40\right)$ \ \end{solution}
 \end{parts}
 
 \question Resuelve las siguientes inecuaciones:
 \begin{parts}
             \part[1]  $ \dfrac{{{x^3} - 5{x^2} + 2x + 8}}{1-x^2} \leq 0 $  \begin{solution}  $  \left(1, 2\right] \cup \left[4, \infty\right) $  \end{solution}
-        \part[1] $1-\dfrac{{x + 3}}{{x + 6}} \geq 0 $ \begin{solution} $\rightarrow \left(-6, \infty\right)$\end{solution}
+        % \part[1] $1-\dfrac{{x + 3}}{{x + 6}} \geq 0 $ \begin{solution} $\rightarrow \left(-6, \infty\right)$\end{solution}
 \end{parts}
 
-\question[1] Responde a las siguientes cuestiones:
+\question Responde a las siguientes cuestiones:
 \begin{parts}
-    \part Resuelve la ecuación $\cos{x} = \sen^2{x}-1$
+    \part[1] Resuelve la ecuación $\cos{x} = \sen^2{x}-1$
     \begin{solution}
         $[-90, 90, 180]$
     \end{solution}
-    \part Resuelve la ecuación $\sen{x} = \cos^2{x}-1$
-    \begin{solution}
-        $[0, 180, 270]$
-    \end{solution}
-    \part  Resuelve la ecuación $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
-    \part Resuelve la ecuación  $ \cos{2x}-3\cos{x}+1=0 $  \begin{solution}  $ \left [ -90, \quad 90\right ] $  \end{solution}
-    \part Desde un punto del suelo se ve la copa de un pino bajo un ángulo de 42°. Si nos alejamos 2,5 m hacia otro punto del suelo, alineado con el anterior y con el pie del pino, vemos la copa bajo un ángulo de 24°. Calcula la altura del pino. \begin{solution}
-        $2,2 m$
+    % \part Resuelve la ecuación $\sen{x} = \cos^2{x}-1$
+    % \begin{solution}
+    %     $[0, 180, 270]$
+    % \end{solution}
+    % \part  Resuelve la ecuación $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
+    % \part Resuelve la ecuación  $ \cos{2x}-3\cos{x}+1=0 $  \begin{solution}  $ \left [ -90, \quad 90\right ] $  \end{solution}
+    \part[1] Desde un punto del suelo se ve la copa de un pino bajo un ángulo de 42°. Si nos alejamos 2,5 m hacia otro punto del suelo, alineado con el anterior y con el pie del pino, vemos la copa bajo un ángulo de 24°. Calcula la altura del pino. \begin{solution}
+        Aplicamos el teorema del seno para saber la hipotenusa del triángulo pequeño. Después calculamos la altura con el seno
+        $$h=2.5\frac{\sin{24\sin{42}}}{\sin{18}}\approx2,2 m$$
         \end{solution}
 \end{parts}
 
-\question Resolver las siguientes ecuaciones:
-\begin{parts} \part[1]  $ \cos{2x}-3\cos{x}+1=0 $  \begin{solution}  $ \left [ -90, \quad 90\right ] $  \end{solution} \part[1]  $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
+% \question Resolver las siguientes ecuaciones:
+% \begin{parts} \part[1]  $ \cos{2x}-3\cos{x}+1=0 $  \begin{solution}  $ \left [ -90, \quad 90\right ] $  \end{solution} \part[1]  $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
+% \end{parts}
+
+\question Responde a las siguientes cuestiones relacionadas con complejos:
+\begin{parts} \part[1]  Calcula $ \dfrac{(1+2i)i^7}{(3-2i)-(2+i)} $  \begin{solution}  $ \frac{1}{2} + \frac{i}{2} $  \end{solution}
+\part[1] Escribe los siguientes números complejos en forma polar con el argumento en radianes:  $ -4 $ , $2i$, $ 2 - 2\sqrt {3}i $
 \end{parts}
 
-\question Calcula:
-\begin{parts} \part[1]  $ \frac{(1+2i)i^7}{(3-2i)-(2+i)} $  \begin{solution}  $ \frac{1}{2} + \frac{i}{2} $  \end{solution}
-\end{parts}
-
-\question Escribe los siguientes números complejos en forma polar con el argumento en radianes:
-\begin{parts} \part[1]  $ -4 $  \begin{solution}  $ 4_{\pi} $  \end{solution} \part[1]  $ 2i $  \begin{solution}  $ 2_{\frac{\pi}{2}} $  \end{solution} \part[1]  $ 2 - 2\sqrt {3}i $  \begin{solution}  $ 4_{- \frac{\pi}{3}} $  \end{solution}
-\end{parts}
+% \question[1] Escribe los siguientes números complejos en forma polar con el argumento en radianes:
+% \begin{parts} \part  $ -4 $  \begin{solution}  $ 4_{\pi} $  \end{solution} \part  $ 2i $  \begin{solution}  $ 2_{\frac{\pi}{2}} $  \end{solution} \part  $ 2 - 2\sqrt {3}i $  \begin{solution}  $ 4_{- \frac{\pi}{3}} $  \end{solution}
+% \end{parts}
 
 \question[1] Resuelve las siguientes cuestiones:
         \begin{parts} \part  Determina el ángulo formado por las rectas: $ r\equiv2x-y-2=0\  y \ s\equiv3x+2y-4=0 $  \begin{solution}  $ 119.74488129694222 $  \end{solution}
-        \part Determina la ecuación de la recta perpendicular a la recta \( 3x - 4y = 12 \), que pase por el punto \( P(2, 3) \)
+        \part Determina la ecuación general o implícita de la recta perpendicular a la recta \( 3x - 4y = 12 \) y  que pasa por el punto \( P(2, 3) \)
         \begin{solution}
             $4x+3y=17$
         \end{solution}
-                \part Determina la ecuación de la recta que pase por el punto \( P(2, 3) \) y que sea perpendicular a la recta que pasa por los puntos $Q(0,3)$ y $R(4,0)$  
-        \begin{solution}
-            $4x+3y=17$
-        \end{solution}
+        %         \part Determina la ecuación de la recta que pase por el punto \( P(2, 3) \) y que sea perpendicular a la recta que pasa por los puntos $Q(0,3)$ y $R(4,0)$  
+        % \begin{solution}
+        %     $4x+3y=17$
+        % \end{solution}
         \end{parts}
+
+% \question[2] Determina \( a \) y \( b \) para que \( f(x) \) sea continua en todo \( \mathbb{R} \):
+% \[
+% f(x) =
+% \begin{cases}
+%     x + a & \text{si } x \leq 2 \\
+%     3x - 2 & \text{si } 2 < x < 5 \\
+%     ax + b & \text{si } x \geq 5
+% \end{cases}
+% \]
+
+\question[2] La función $B(x) = \dfrac{-x^2 + 9x - 16}{x}$ representa, en miles de euros, el beneficio neto de un proceso de venta, siendo \( x \) el número de artículos vendidos. Calcule el número de artículos que deben venderse para obtener el beneficio máximo y determine dicho beneficio máximo.
+\begin{solution}
+    $B'(x)=-1 + \frac{16}{x^{2}} \to x=4 \to B(4)=1 \to 1000 \euro$
+\end{solution}
+
+% \question La función de costes de una empresa es 
+% $C(q)=q^3+3q+10$, donde $q$ representa las unidades producidas.  Sabiendo que el precio de venta, en euros, de cada unidad
+% producida es $p = 30$, se desea conocer:
+% \begin{parts}
+%     \part[1] La función de beneficio de esta empresa.
+%     \begin{solution}
+%         $f(x)=- x^{3} + 27 x - 10$
+%     \end{solution}
+%     \part[2] El número de unidades producidas que maximiza el beneficio de la empresa. 
+%     \begin{solution}
+%         $f'(x)=27 - 3 x^{2} \land f''(x)=-6x \to f'(3)=0 \land f''(3) = -18 \to x=3$
+%     \end{solution}
+%     \part[1] El beneficio máximo que puede lograr la empresa.
+%     \begin{solution}
+%     $f(3)=44$    
+%     \end{solution}
+    
+% \end{parts}
+
+% \question Se considera la función real:
+% \[
+% f(x) = x^3 + ax^2 + bx \quad a, b \in \mathbb{R}
+% \]
+
+% \begin{parts}
+% \part[1] ¿Qué valores deben tomar \( a \) y \( b \) para que \( f(x) \) tenga un máximo relativo en el punto \( P(1,4) \)?
+% \begin{solution}
+%     $f'(x)=2 a x + b + 3 x^{2} \to \left\{\begin{matrix}
+%         f'(1)=0\\
+%         f(1)=4
+%     \end{matrix}\right. \to \left\{\begin{matrix}
+%         2 a + b + 3\\
+%         a + b - 3 = 0
+%     \end{matrix}\right. \to \left\{ a : -6, \  b : 9\right\}
+% $
+% \end{solution}
+% \end{parts}
 
 \addpoints
 \end{questions}
