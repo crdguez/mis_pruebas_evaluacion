@@ -1,0 +1,1318 @@
+
+\documentclass[spanish, 11pt]{exam}
+
+\usepackage{array,epsfig}
+\usepackage{amsmath, textcomp}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{multicol, xparse}
+\usepackage{verbatim}
+\usepackage{booktabs}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{pgf}
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+%\printanswers
+\nopointsinmargin
+\pointformat{}
+
+\let\multicolmulticols\multicols
+\let\endmulticolmulticols\endmulticols
+\RenewDocumentEnvironment{multicols}{mO{}}
+ {%
+  \ifnum#1=1
+    #2%
+  \else
+    \multicolmulticols{#1}[#2]
+  \fi
+ }
+ {%
+  \ifnum#1=1
+  \else
+    \endmulticolmulticols
+  \fi
+ }
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Sol:}\enspace}
+\newcommand{\samedir}{\mathbin{\!/\mkern-5mu/\!}}
+
+\newcommand{\class}{1º Bachillerato}
+\newcommand{\examdate}{\today}
+\newcommand{\tipo}{A}
+\newcommand{\timelimit}{50 minutos}
+
+\pagestyle{head}
+\firstpageheader{Dep. Matemáticas}{Ejercicios de repaso 1 Bac. Ciencias}{IES Goya}
+\runningheader{IES Goya}{Ejercicios de repaso}{Página \thepage\ de \numpages}
+\runningheadrule
+
+\begin{document}
+\begin{questions}
+% Preguntas extraídas de: 01_2425_par1.tex
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1] Indica a cuáles de los conjuntos
+$\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ pertenecen cada uno de los siguientes números:
+\begin{center}
+\begin{tabular}{|c |c |c |c |c|}\hline
+&$\mathbb{N}$& $\mathbb{Z}$& $\mathbb{Q}$&$\mathbb{R}$\\ 
+\hline
+$\frac{8}{16}$&&&&\\
+\hline
+$\sqrt[3]{-27}$&&&&\\
+\hline
+$3.0\wideparen{1}$&&&&\\
+\hline
+$-\frac{12}{4}$&&&&\\
+\hline
+$-\sqrt{25}$&&&&\\
+\hline
+$\sqrt{8}$&&&&\\
+\hline
+$4$&&&&\\
+\hline
+$\pi$&&&&\\
+\hline
+$\sqrt{-4}$&&&&\\
+\hline
+$\frac{39}{13}$&&&&\\
+\hline
+\end{tabular}
+
+\end{center}
+
+        \question Sean los siguientes conjuntos $ A=\left\{ x \in \mathbb{R}| -2 \leq x  \leq 5 \right\}$, $  B=\left(-\infty, -1\right) \cup \left(1, \infty\right)$  y  $C=\left\{ x \in \mathbb{R}| \left|{x - 2}\right|\leq3 \right\}$:  
+        \begin{parts} 
+        \part[0\half] Represéntalos en la recta real
+        \part[1\half] Calcula $A \cup  B$ , $A \cap B$ y $A \cap B \cap C$, 
+expresando los resultados en forma de Intervalos. 
+        \end{parts}
+
+          \begin{solution}  $ A \cup  B = \left(-\infty, \infty\right)  \\  A \cap B= \left[-2, -1\right) \cup \left(1, 5\right]   \\  A \cap B  \cap C= \left(1, 5\right] $  \end{solution}
+        
+\question[1\half] Halla el término general de las siguientes sucesiones. Indica cuáles de ellas son progresiones aritméticas y cuáles progresiones geométricas:
+\begin{parts}
+    \part \( 4, 9, 14, 19, 24, 29, \ldots \)
+    \part \( 2, -6, 18, -54, 162, \ldots \)
+\end{parts}
+\begin{solution}
+\text{PA: 1. } a_n = 5n - 1; \, \text{SG: -3. } a_n = (-3)^{n-1}\cdot2
+\end{solution}
+
+
+\question Resuelve las siguientes ecuaciones:
+
+\begin{parts}
+%     \part[2]$2 \sqrt{x + 4} - \sqrt{x - 1} = 4$
+%     \begin{solution}
+% 1. Aislamos uno de los radicales:
+%    \[
+%    2 \sqrt{x + 4} = \sqrt{x - 1} + 4
+%    \]
+% 2. Elevamos ambos lados al cuadrado:
+%    \[
+%    4(x + 4) = (\sqrt{x - 1} + 4)^2
+%    \]
+%    \[
+%    4x + 16 = x - 1 + 8 \sqrt{x - 1} + 16
+%    \]
+% 3. Simplificamos y resolvemos la ecuación resultante.
+% $3x+1=8 \sqrt{x - 1} \to x=13/9, x=5
+%  $
+
+% \end{solution}
+    \part[1\half] $\sqrt{2x+3}-\sqrt{x+2}=2$
+    \begin{solution}
+    $2x+3=4+4\sqrt{x+2}+x+2 \to x-3=4\sqrt{x+2} \to x^2-6x+9=16x+32\to x^2-22x-23=0$\\
+    $x=23$ sí, $x=-1$ No
+\end{solution}
+    \part[1\half] $\sqrt[3]{x + 6} = x$
+    \begin{solution}
+1. Elevamos ambos lados al cubo:
+   \[
+   x + 6 = x^3
+   \]
+2. Reorganizamos la ecuación:
+   \[
+   x^3 - x - 6 = 0
+   \]
+3. Intentamos con divisores de 6 para encontrar posibles raíces.
+$$x^3 - x - 6=\left(x - 2\right) \left(x^{2} + 2 x + 3\right)\to x=2$$
+\end{solution}
+    \part[1\half] $9^x - 6 \cdot {3^{x + 1}} + 81 = 0 $
+\begin{solution}
+    $\rightarrow \left [ 2\right ]$
+\end{solution}
+
+
+
+\end{parts}
+
+
+% \question Resolver la ecuación
+% \[
+% 4x^3 - 6x^2 - x = -\frac{3}{2},
+% \]
+% sabiendo que una de sus raíces es \( \frac{1}{2} \).
+
+% \begin{solution}
+% 1. Llevamos todos los términos a un lado:
+%    \[
+%    4x^3 - 6x^2 - x + \frac{3}{2} = 0
+%    \]
+% 2. Multiplicamos por 2 para eliminar fracciones:
+%    \[
+%    8x^3 - 12x^2 - 2x + 3 = 0
+%    \]
+% 3. Factorizando el polinomio 
+% $\frac{\left(2 x - 3\right) \left(2 x - 1\right) \left(2 x + 1\right)}{2} \to \left[ - \frac{1}{2}, \  \frac{1}{2}, \  \frac{3}{2}\right]
+% $
+% \end{solution}
+
+% \question[1] Resolver la ecuación
+% \[
+% 2x^3 - 3x^2 = -\frac{1}{2},
+% \]
+% sabiendo que una de sus raíces es \( \frac{1}{2} \).
+
+% \begin{solution}
+% 1. Llevamos todos los términos a un lado:
+%    \[
+%    2x^3 - 3x^2 + \frac{1}{2} = 0
+%    \]
+% 2. Multiplicamos por 2 para eliminar fracciones:
+%    \[
+%    4x^3 - 6x^2 + 1 = 0
+%    \]
+% 3. $$\left(2 x - 1\right) \left(2 x^{2} - 2 x - 1\right) \to \left[ \frac{1}{2}, \  \frac{1}{2} - \frac{\sqrt{3}}{2}, \  \frac{1}{2} + \frac{\sqrt{3}}{2}\right]$$
+% \end{solution}
+
+% \question Resuelve la siguiente ecuación:
+% $9^x - 6 \cdot {3^{x + 1}} + 81 = 0 $
+% \begin{solution}
+%     $\rightarrow \left [ 2\right ]$
+% \end{solution}
+
+
+\question Resuelve los siguientes sistemas:
+\begin{parts}
+    \part[1\half] $\left\{\begin{matrix}{2^x} + {2^y} = 24\\ \\{2^{x + y}} = 128\end{matrix}\right. $
+
+\begin{solution}
+    $\rightarrow \left [ \left \{ x : 3, \quad y : 4\right \}, \quad \left \{ x : 4, \quad y : 3\right \}\right ]$
+\end{solution}
+
+    \part[1\half] $\left\{\begin{matrix}\log_{2}(x) + \log_{2}(x + y) = 4\\ \\x + y = 2 \end{matrix}\right. $
+\begin{solution}
+    $\rightarrow \left [ \left \{ x : 8, \quad y : -6\right \}\right ]$
+\end{solution}
+
+\end{parts}
+
+
+% \question Resuelve:
+% $$\left\{\begin{matrix}3\log x - 2\log y = 10\\\log x + 3\log y = 7\end{matrix}\right. $$
+
+% \begin{solution}
+%     $\rightarrow \left [ \left \{ x : 10000, \quad y : 10\right \}\right ]$
+% \end{solution}
+
+% \question[2] Resuelve el siguiente sistema de ecuaciones:
+% \[
+% \begin{cases}
+% \dfrac{1}{x} + y = 3 \\ \\
+% \dfrac{1}{x} - \dfrac{1}{y} = \dfrac{1}{2}
+% \end{cases}
+% \]
+
+\begin{solution}
+1. Llamamos \(u = \frac{1}{x}\) y \(v = y\), para obtener el sistema:
+   \[
+   u + v = 3
+   \]
+   \[
+   u - \frac{1}{v} = \frac{1}{2}
+   \]
+2. Resolvemos este sistema para \(u\) y \(v\), y luego encontramos \(x\) y \(y\) a partir de \(u\) y \(v\).
+\end{solution}
+
+\question[2] Resuelve por Gauss el siguiente sistema de ecuaciones:
+\[
+\begin{cases}
+3x + 2y - 2z = 4 \\
+4x + y - z = 7 \\
+x + 4y - 4z = 0
+\end{cases}
+\]
+
+\begin{solution}
+$\left[\begin{matrix}3 & 2 & -2 & 4\\0 & - \frac{5}{3} & \frac{5}{3} & \frac{5}{3}\\0 & 0 & 0 & 2\end{matrix}\right]$ Luego S.I.
+\end{solution}
+
+\question[1] Resuelve la siguiente inecuación: $$1-\frac{{x + 3}}{{x + 6}} \geq 0 $$ \begin{solution} $\rightarrow \left(-6, \infty\right)$\end{solution}
+
+
+
+        
+        % \question Usando la definición y las propiedades de los números combinatorios, resolver las ecuaciones:
+        % \begin{multicols}{1} 
+        % \begin{parts} \part[1]  $ {\binom{x}{2}} = 28 $  \begin{solution}  $ \left\{8\right\} $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+        % \question Calcula, sin hacer todo el desarrollo, el coeficiente del término asociado a:
+        % \begin{multicols}{1} 
+        % \begin{parts} \part[2]  $ P(x)=\left(2 x - \frac{3}{x}\right)^{8} \  \ y \ parte \ literal \ \frac{1}{x^{2}} $  \begin{solution}  $ -108864 $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+        % \question Efectúa:
+        % \begin{multicols}{1} 
+        % \begin{parts} \part[1]  $ 3\sqrt [3] {16} - 2\sqrt [3] {250} + 5\sqrt [3] {250} - 4\sqrt [3] { 2}  $  \begin{solution}  $ 17 \sqrt[3]{2}\to17 \sqrt[3]{2} $  \end{solution} \part[1]  $ \frac{{2 - \sqrt {3} }}{{1 - \sqrt {3} }}-\frac{1}{2\sqrt {3}}+ \frac{3}{2-\sqrt{3} } $  \begin{solution}  $ \frac{14 \sqrt{3} + 39}{6}\to\frac{7 \sqrt{3}}{3} + \frac{13}{2} $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+        % \question Calcula el valor de $k$ para que:
+        % \begin{multicols}{1} 
+        % \begin{parts} \part[1]  $ El \ resto \ de \ dividir \ P(x)=x^{25}-kx+3k-4 \ entre\  x+1 \ sea \ 11  $  \begin{solution}  $ 4 $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+        % \question Halla el m.c.d. y el m.c.m. de los polinomios: 
+        % \begin{multicols}{1} 
+        % \begin{parts} \part[3]  $  A(x)= x^{5} - 6 x^{3} + 2 x^{2} + 9 x - 6\  y \\  B(x)= x^{5} + 3 x^{4} - 3 x^{3} - 13 x^{2} + 12 \\  $  \begin{solution}  $ Descomposici \acute on:(\left(x - 1\right)^{2} \left(x + 2\right) \left(x^{2} - 3\right) \ y  \ \left(x - 1\right) \left(x + 2\right)^{2} \left(x^{2} - 3\right))\\x^{4} + x^{3} - 5 x^{2} - 3 x + 6= \left(x - 1\right) \left(x + 2\right) \left(x^{2} - 3\right) \ MCD\ y \\ x^{6} + 2 x^{5} - 6 x^{4} - 10 x^{3} + 13 x^{2} + 12 x - 12= \left(x - 1\right)^{2} \left(x + 2\right)^{2} \left(x^{2} - 3\right) \ MCM $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+
+
+
+
+
+
+\addpoints
+
+% Preguntas extraídas de: 02_2425_final1.tex
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+% \question[1] Indica a cuáles de los conjuntos
+% $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ pertenecen cada uno de los siguientes números:
+% \begin{center}
+% \begin{tabular}{|c |c |c |c |c|}\hline
+% &$\mathbb{N}$& $\mathbb{Z}$& $\mathbb{Q}$&$\mathbb{R}$\\ 
+% \hline
+% $\frac{8}{16}$&&&&\\
+% \hline
+% $\sqrt[3]{-27}$&&&&\\
+% \hline
+% $3.0\wideparen{1}$&&&&\\
+% \hline
+% $-\frac{12}{4}$&&&&\\
+% \hline
+% $-\sqrt{25}$&&&&\\
+% \hline
+% $\sqrt{8}$&&&&\\
+% \hline
+% $4$&&&&\\
+% \hline
+% $\pi$&&&&\\
+% \hline
+% $\sqrt{-4}$&&&&\\
+% \hline
+% $\frac{39}{13}$&&&&\\
+% \hline
+% \end{tabular}
+
+% \end{center}
+
+%         \question[2]  Dados los conjuntos:\\
+%          $ A=\left\{ x \in \mathbb{R}| 6 \leq x  < 8 \right\}, \\ B=\left(-\infty, -3\right) \cup \left(3, \infty\right)  \\  C=\left\{ x \in \mathbb{R}| \left|{x - 3}\right|\leq12 \right\}  $
+         
+%          \begin{parts}
+%           % \part Indica razonadamente, si existen, los supremos, ínfimos, máximos y mínimos de los conjuntos $A$, $B$ y $C$
+%           \part Calcula $A \cup  B$ , $A \cap B$ y $(A \cup B) \cap C$ , 
+% y expresa los resultados en forma de Intervalos.
+%          \end{parts}
+         
+% \begin{solution}  $ C=\left[-9, 15\right] \ \ A \cup  B = \left(-\infty, -3\right) \cup \left(3, \infty\right)  \\  A \cap B= \left[6, 8\right)   \\  (A \cup B) \cap C= \left[-9, -3\right) \cup \left(3, 15\right] $  \end{solution}
+
+       
+        
+% \question[1\half] Halla el término general de las siguientes sucesiones. Indica cuáles de ellas son progresiones aritméticas y cuáles progresiones geométricas:
+% \begin{parts}
+%     \part \( 4, 9, 14, 19, 24, 29, \ldots \)
+%     \part \( 2, -6, 18, -54, 162, \ldots \)
+% \end{parts}
+% \begin{solution}
+% $\text{PA: 1. } a_n = 5n - 1; \, \text{SG: -3. } a_n = (-3)^{n-1}\cdot 2$\end{solution}
+
+
+\question Resuelve las siguientes ecuaciones:
+
+\begin{parts}
+%     \part[2]$2 \sqrt{x + 4} - \sqrt{x - 1} = 4$
+%     \begin{solution}
+% 1. Aislamos uno de los radicales:
+%    \[
+%    2 \sqrt{x + 4} = \sqrt{x - 1} + 4
+%    \]
+% 2. Elevamos ambos lados al cuadrado:
+%    \[
+%    4(x + 4) = (\sqrt{x - 1} + 4)^2
+%    \]
+%    \[
+%    4x + 16 = x - 1 + 8 \sqrt{x - 1} + 16
+%    \]
+% 3. Simplificamos y resolvemos la ecuación resultante.
+% $3x+1=8 \sqrt{x - 1} \to x=13/9, x=5
+%  $
+
+% \end{solution}
+%     \part[1\half] $\sqrt{2x+3}-\sqrt{x+2}=2$
+%     \begin{solution}
+%     $2x+3=4+4\sqrt{x+2}+x+2 \to x-3=4\sqrt{x+2} \to x^2-6x+9=16x+32\to x^2-22x-23=0$\\
+%     $x=23$ sí, $x=-1$ No
+% \end{solution}
+%     \part[1\half] $\sqrt[3]{x + 6} = x$ \begin{solution}
+% 1. Elevamos ambos lados al cubo:
+%    \[
+%    x + 6 = x^3
+%    \]
+% 2. Reorganizamos la ecuación:
+%    \[
+%    x^3 - x - 6 = 0
+%    \]
+% 3. Intentamos con divisores de 6 para encontrar posibles raíces.
+% $$x^3 - x - 6=\left(x - 2\right) \left(x^{2} + 2 x + 3\right)\to x=2$$
+% \end{solution}
+%     \part[1\half] $9^x - 6 \cdot {3^{x + 1}} + 81 = 0 $
+% \begin{solution}
+%     $\rightarrow \left [ 2\right ]$
+% \end{solution}
+\part[1]  $ 2 \log x - \log (x + 6) = 3 \log 2 $  \begin{solution}  $ \left [ 12\right ] $  \end{solution}
+    \part[1] $|2x-4|=|x+2|$ \begin{solution} $\left[ \frac{2}{3}, \  6\right]$\end{solution}
+\end{parts}
+
+
+\question[1] Da una cota del error absoluto y otra del error relativo cometidos al aproximar el número aúreo $\left(\phi\right)$ a $1.62$
+
+        \question[3] Resuelve, justificadamente, los siguientes sistemas de inecuaciones:
+        \begin{multicols}{2}
+        \begin{parts} 
+         \part  $$ \left\{\begin{matrix}{( {x - 1} )^2} - {( {x + 3} )^2} \leq 0\\x - 3( {x - 1} ) \geq 3 \end{matrix}\right. $$  
+         \begin{solution}  $ \left[-1, 0\right] $  \end{solution}
+         % \part[2]  $$ \left\{\begin{matrix}x \geq 0 \\0 \leq y \leq 3\\x - 2y \leq 10\\x + y \geq 10\\\end{matrix}\right. $$  \begin{solution}    \end{solution}  
+
+         \part  $$ \left\{\begin{matrix}x \geq 0 \\0 \leq y \leq 3 \\x + y \leq 5\\\end{matrix}\right. $$  \begin{solution}    \end{solution} 
+        \end{parts}
+                  
+
+        
+        % \question Calcula expresando el resultado en forma de fracción algebraica irreducible:
+        % \begin{multicols}{1}
+        % \begin{parts} \part[1]  $ \dfrac{2+{ \dfrac{1}{x}}}{{2 + \dfrac{1}{{1 + \dfrac{1}{x}}}}} $  \begin{solution}  $ \dfrac{2 x^{2} + 3 x + 1}{3 x^{2} + 2 x} $  \end{solution}
+        % \end{parts}
+        % \end{multicols}
+            
+        \end{multicols}
+
+% \question[1] Resolver la ecuación
+% \[
+% 4x^3 - 6x^2 - x = -\frac{3}{2},
+% \]
+% sabiendo que una solución es \( \frac{1}{2} \).
+
+% \begin{solution}
+% 1. Llevamos todos los términos a un lado:
+%    \[
+%    4x^3 - 6x^2 - x + \frac{3}{2} = 0
+%    \]
+% 2. Multiplicamos por 2 para eliminar fracciones:
+%    \[
+%    8x^3 - 12x^2 - 2x + 3 = 0
+%    \]
+% 3. Factorizando el polinomio 
+% $\frac{\left(2 x - 3\right) \left(2 x - 1\right) \left(2 x + 1\right)}{2} \to \left[ - \frac{1}{2}, \  \frac{1}{2}, \  \frac{3}{2}\right]
+% $
+% \end{solution}
+
+% \question[1] Resolver la ecuación
+% \[
+% 2x^3 - 3x^2 = -\frac{1}{2},
+% \]
+% sabiendo que una de sus raíces es \( \frac{1}{2} \).
+
+% \begin{solution}
+% 1. Llevamos todos los términos a un lado:
+%    \[
+%    2x^3 - 3x^2 + \frac{1}{2} = 0
+%    \]
+% 2. Multiplicamos por 2 para eliminar fracciones:
+%    \[
+%    4x^3 - 6x^2 + 1 = 0
+%    \]
+% 3. $$\left(2 x - 1\right) \left(2 x^{2} - 2 x - 1\right) \to \left[ \frac{1}{2}, \  \frac{1}{2} - \frac{\sqrt{3}}{2}, \  \frac{1}{2} + \frac{\sqrt{3}}{2}\right]$$
+% \end{solution}
+
+% \question Resuelve la siguiente ecuación:
+% $9^x - 6 \cdot {3^{x + 1}} + 81 = 0 $
+% \begin{solution}
+%     $\rightarrow \left [ 2\right ]$
+% \end{solution}
+
+
+% \question Resuelve los siguientes sistemas:
+% \begin{parts}
+%     \part[1\half] $\left\{\begin{matrix}{2^x} + {2^y} = 24\\ \\{2^{x + y}} = 128\end{matrix}\right. $
+
+% \begin{solution}
+%     $\rightarrow \left [ \left \{ x : 3, \quad y : 4\right \}, \quad \left \{ x : 4, \quad y : 3\right \}\right ]$
+% \end{solution}
+
+%     \part[1\half] $\left\{\begin{matrix}\log_{2}(x) + \log_{2}(x + y) = 4\\ \\x + y = 2 \end{matrix}\right. $
+% \begin{solution}
+%     $\rightarrow \left [ \left \{ x : 8, \quad y : -6\right \}\right ]$
+% \end{solution}
+
+% \end{parts}
+
+
+% \question Resuelve:
+% $$\left\{\begin{matrix}3\log x - 2\log y = 10\\\log x + 3\log y = 7\end{matrix}\right. $$
+
+% \begin{solution}
+%     $\rightarrow \left [ \left \{ x : 10000, \quad y : 10\right \}\right ]$
+% \end{solution}
+
+% \question[2] Resuelve el siguiente sistema de ecuaciones:
+% \[
+% \begin{cases}
+% \dfrac{1}{x} + y = 3 \\ \\
+% \dfrac{1}{x} - \dfrac{1}{y} = \dfrac{1}{2}
+% \end{cases}
+% \]
+
+\begin{solution}
+1. Llamamos \(u = \frac{1}{x}\) y \(v = y\), para obtener el sistema:
+   \[
+   u + v = 3
+   \]
+   \[
+   u - \frac{1}{v} = \frac{1}{2}
+   \]
+2. Resolvemos este sistema para \(u\) y \(v\), y luego encontramos \(x\) y \(y\) a partir de \(u\) y \(v\).
+\end{solution}
+
+% \question Resuelve las siguientes ecuaciones:
+% \begin{parts}
+%     \part $|2x-4|=|x+2|$ \begin{solution} $\left[ \frac{2}{3}, \  6\right]$\end{solution}
+% \end{parts}
+
+
+% https://lareinadelasciencias.wordpress.com/wp-content/uploads/2014/01/problemas-ecuaciones-sistemas-no-lineales.pdf
+
+%https://matematicasiesoja.wordpress.com/wp-content/uploads/2013/10/problemas-_metodo_gauss2.pdf
+
+\question Resuelve mediante expresiones algebraicas y, en caso que se pueda, por Gauss:
+\begin{parts}
+    \part[1] Un padre ha comprado un jersey para cada uno de sus cinco hijos, gastándose en total
+108,75 euros. Tres de los jerseys tenían un 15\% de descuento, y otro de ellos tenía un 20\%
+de descuento. Sabiendo que inicialmente costaban lo mismo, ¿cuánto ha tenido que pagar
+por cada jersey? 
+\begin{solution}$3\cdot0.85x+0.8x+x=108.75 \to x=25 \to 21.25; 20; 25$\end{solution}
+
+    \part[1] El área de un triángulo es 78 $cm^2$  y entre la base y la altura suman 25 $cm$. Calcula la base y la altura.
+% \begin{solution}  $ \left\{\begin{matrix}\frac{xy}{2}=78\\ x+y=25\\ \end{matrix}\right.  \rightarrow  \\\left[\begin{matrix}1 & 1 & 25\\0 & \frac{x}{2} - \frac{y}{2} & - \frac{25 y}{2} + 78\end{matrix}\right] \rightarrow  \left [ \left \{ x : 12, \quad y : 13\right \}, \quad \left \{ x : 13, \quad y : 12\right \}\right ] $  \end{solution}
+
+    \part[1] Miguel y Ana tiene un perro. Averigua el peso de cada uno de los tres sabiendo que Miguel y Ana pesan 50
+kg juntos, y Ana y su perro 29 kg y, finalmente, Miguel y el perro 35 kg.  \begin{solution}  $ \left\{\begin{matrix}x+y = 50\\ y+z=29\\ x+z=35\\ \end{matrix}\right.  \rightarrow  \\\left[\begin{matrix}1 & 1 & 0 & 50\\0 & 1 & 1 & 29\\0 & 0 & 2 & 14\end{matrix}\right] \rightarrow  \left \{ x : 28, \quad y : 22, \quad z : 7\right \} $  \end{solution}
+  
+    \part[2] En una residencia de estudiantes se compran semanalmente 110 helados de distintos
+sabores: vainilla, chocolate y nata. El presupuesto destinado para esta compra es de 540
+euros y el precio de cada helado es de 4 euros el de vainilla, 5 euros el de chocolate y 6
+euros el de nata. Conocidos los gustos de los estudiante, se sabe que entre helados de
+chocolate y de nata se han de comprar el 20\% más que de vainilla 
+\begin{solution}    
+\textbf{Resolución del problema:}
+
+Sea:
+\[
+x: \text{número de helados de vainilla}, \quad
+y: \text{número de helados de chocolate}, \quad
+z: \text{número de helados de nata}.
+\]
+
+Planteamos las ecuaciones:
+\[
+x + y + z = 110, \quad 4x + 5y + 6z = 540, \quad y + z = 1.2x.
+\]
+
+\textbf{Sistema matricial:}
+\[
+\begin{bmatrix}
+1 & 1 & 1 \\ 
+4 & 5 & 6 \\ 
+-1.2 & 1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ 
+y \\ 
+z
+\end{bmatrix}
+=
+\begin{bmatrix}
+110 \\ 
+540 \\ 
+0
+\end{bmatrix}.
+\]
+
+\textbf{Eliminación de Gauss:}
+
+Partimos de la matriz ampliada:
+\[
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 110 \\ 
+4 & 5 & 6 & 540 \\ 
+-1.2 & 1 & 1 & 0
+\end{array}
+\right].
+\]
+
+Tras operaciones elementales:
+\[
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 110 \\ 
+0 & 1 & 2 & 100 \\ 
+0 & 0 & 1 & 40
+\end{array}
+\right].
+\]
+
+\textbf{Sustitución hacia atrás:}
+\[
+z = 40, \quad y + 2z = 100 \implies y = 20, \quad x + y + z = 110 \implies x = 50.
+\]
+
+\textbf{Solución final:}
+\[
+x = 50 \quad \text{(vainilla)}, \quad y = 20 \quad \text{(chocolate)}, \quad z = 40 \quad \text{(nata)}.
+\]
+\end{solution}
+
+
+\part[2] Una empresa envasadora ha comprado un total de 1500 cajas de pescado en tres mercados 
+diferentes, a un precio por caja 30, 20 y 40  euros respectivamente. el coste total de la operación ha sido 
+de 40500\euro. Calcular cuánto ha pagado la empresa en cada mercado, sabiendo que en el primero de ellos ha 
+comprado el 30\% de las cajas
+
+\begin{solution}
+    Llamamos $x$, $y$ y $z$ cajas de 30, 20 y 40\euro \  respectivamente.
+    El sistema a resolver es:$\left\{ \begin{matrix}x + y + z = 1500 \\ 30 x + 20 y + 40 z = 40500 \\ x = 450 \\ \end{matrix}\right.$ \\ 
+    \textbf{Discusión y resolución por Gauss:} Escalonando la matriz ampliada tenemos\\$A^*= \left(\begin{matrix}1 & 1 & 1 & 1500\\30 & 20 & 40 & 40500\\1 & 0 & 0 & 450\end{matrix}\right) \thicksim \left(\begin{matrix}1 & 1 & 1 & 1500\\0 & -10 & 10 & -4500\\0 & 0 & -2 & -600\end{matrix}\right)$. \\  De los valores de la última fila podemos concluir:\begin{itemize}\item S.C.D.\begin{itemize}\item $\left(\begin{matrix}0 & 0 & -2 & -600\end{matrix}\right) \to z = 300$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}0 & -10 & 10 & -4500\end{matrix}\right) \to y = 750$\end{itemize}\begin{itemize}\item $\left(\begin{matrix}1 & 1 & 1 & 1500\end{matrix}\right) \to x = 450$\end{itemize}\end{itemize}  \textbf{Por rangos y determinantes:} \\$\left|A\right|=\left|\begin{matrix}1 & 1 & 1\\30 & 20 & 40\\1 & 0 & 0\end{matrix}\right|=20  \neq 0 $\begin{itemize} \item $rg(A)=3 \land rg(A^*)=3 \to $ S.C.D.  \\ \\ Por Cramer: \begin{itemize}\item $x=\frac{\left|\begin{matrix}1500 & 1 & 1\\40500 & 20 & 40\\450 & 0 & 0\end{matrix}\right|}{20}=\frac{9000}{20}=450$\item $y=\frac{\left|\begin{matrix}1 & 1500 & 1\\30 & 40500 & 40\\1 & 450 & 0\end{matrix}\right|}{20}=\frac{15000}{20}=750$\item $z=\frac{\left|\begin{matrix}1 & 1 & 1500\\30 & 20 & 40500\\1 & 0 & 450\end{matrix}\right|}{20}=\frac{6000}{20}=300$\end{itemize}\end{itemize}
+    \textbf{SOLUCIÓN: } 13500 (450x30), 15000 y 12000 \euro.
+\end{solution}
+
+    
+%     \part[1] En una reunión hay 22 personas, entre hombres, mujeres y niños. El doble del
+% número de mujeres más el triple del número de niños, es igual al doble del número de 
+% hombres. 
+% \begin{solution}
+%     Sea:
+% \[
+% x: \text{número de hombres}, \quad
+% y: \text{número de mujeres}, \quad
+% z: \text{número de niños}.
+% \]
+
+% Planteamos las ecuaciones:
+% \[
+% x + y + z = 22, \quad 2y + 3z = 2x.
+% \]
+
+% \textbf{Sistema matricial:}
+% \[
+% \begin{bmatrix}
+% 1 & 1 & 1 \\ 
+% -2 & 2 & 3
+% \end{bmatrix}
+% \begin{bmatrix}
+% x \\ 
+% y \\ 
+% z
+% \end{bmatrix}
+% =
+% \begin{bmatrix}
+% 22 \\ 
+% 0
+% \end{bmatrix}.
+% \]
+
+% \textbf{Eliminación de Gauss:}
+
+% Partimos de la matriz ampliada:
+% \[
+% \left[
+% \begin{array}{ccc|c}
+% 1 & 1 & 1 & 22 \\ 
+% -2 & 2 & 3 & 0
+% \end{array}
+% \right].
+% \]
+
+% Operaciones elementales eliminan el coeficiente de \(x\) en la segunda fila:
+% \[
+% \left[
+% \begin{array}{ccc|c}
+% 1 & 1 & 1 & 22 \\ 
+% 0 & 4 & 5 & 44
+% \end{array}
+% \right].
+% \]
+
+% Simplificamos la segunda fila:
+% \[
+% \left[
+% \begin{array}{ccc|c}
+% 1 & 1 & 1 & 22 \\ 
+% 0 & 1 & \frac{5}{4} & 11
+% \end{array}
+% \right].
+% \]
+
+% \textbf{Sustitución hacia atrás:}
+
+% De la segunda fila:
+% \[
+% y + \frac{5}{4}z = 11 \quad \implies \quad y = 11 - \frac{5}{4}z.
+% \]
+
+% De la primera fila:
+% \[
+% x + y + z = 22 \quad \implies \quad x = 22 - y - z.
+% \]
+
+% Sustituyendo \(y\):
+% \[
+% x = 22 - \left(11 - \frac{5}{4}z\right) - z \quad \implies \quad x = 11 - \frac{1}{4}z.
+% \]
+
+% Para que \(x, y, z\) sean números enteros, \(z = 4\):
+% \[
+% y = 11 - \frac{5}{4}(4) = 6, \quad x = 11 - \frac{1}{4}(4) = 10.
+% \]
+
+% \textbf{Solución final:}
+% \[
+% x = 10 \quad \text{(hombres)}, \quad y = 6 \quad \text{(mujeres)}, \quad z = 4 \quad \text{(niños)}.
+% \]    
+% \end{solution}
+
+
+\end{parts}
+
+
+\question Resuelve los siguientes sistemas de ecuaciones no lineales
+
+\begin{parts}
+
+\part[1] 
+\[
+\begin{cases}
+2x - y = 1 \\
+3x - 2y^2 = 1
+\end{cases}
+\]
+
+\begin{solution}
+$x = \frac{5}{4}, \, y = \frac{3}{2}$ \quad y \quad $x = -\frac{1}{4}, \, y = \frac{1}{2}$
+\end{solution}
+
+\part[1] 
+\[
+\begin{cases}
+x^2 - 2y^2 = 1 \\
+x \cdot y = 6
+\end{cases}
+\]
+
+\begin{solution}
+$x = 3, \, y = 2$ \quad y \quad $x = -3, \, y = -2$
+\end{solution}
+
+\part[1] 
+\[
+\begin{cases}
+\sqrt{x + y} + y = 1 \\
+2x + y = 2
+\end{cases}
+\]
+
+\begin{solution}
+$x = 1, \, y = 0$
+\end{solution}
+
+\part[1] 
+\[
+\begin{cases}
+2x^2 + 3y^2 = 21 \\
+-5x^2 + 2y^2 = -43
+\end{cases}
+\]
+
+\begin{solution}
+$x = \pm 2, \, y = \pm 3$
+\end{solution}
+
+\part[1] 
+\[
+\begin{cases}
+\frac{y}{x} - \frac{3}{y} = \frac{1}{2} \\
+x - 3y = -5
+\end{cases}
+\]
+
+\begin{solution}
+$x = 1, \, y = 2$
+\end{solution}
+
+\end{parts}
+
+\question[2] Resuelve por Gauss el siguiente sistema de ecuaciones:
+\[
+\begin{cases}
+3x + 2y - 2z = 4 \\
+4x + y - z = 7 \\
+x + 4y - 4z = 0
+\end{cases}
+\]
+
+\begin{solution}
+$\left[\begin{matrix}3 & 2 & -2 & 4\\0 & - \frac{5}{3} & \frac{5}{3} & \frac{5}{3}\\0 & 0 & 0 & 2\end{matrix}\right]$ Luego S.I.
+\end{solution}
+
+
+
+\question Resuelve las siguientes inecuaciones:
+\begin{parts}
+            \part[1]  $ \dfrac{{{x^3} - 5{x^2} + 2x + 8}}{1-x^2} \leq 0 $  \begin{solution}  $  \left(1, 2\right] \cup \left[4, \infty\right) $  \end{solution}
+        \part[1] $1-\dfrac{{x + 3}}{{x + 6}} \geq 0 $ \begin{solution} $\rightarrow \left(-6, \infty\right)$\end{solution}
+\end{parts}
+
+
+
+        
+
+\addpoints
+
+% Preguntas extraídas de: 03_2425_par2.tex
+\question Resuelve las siguientes ecuaciones trigonométricas:
+\begin{parts}
+    % \part[1]$\cos^2{x}-\sen^2{x}=0$
+    \part[1]$\sqrt{2}\sen{x}=1$
+\end{parts}
+
+\question Dado $\alpha \in III$ y $\cos{\alpha}=-\frac{1}{2}$, hallar, utilizando la fórmula correspondiente (resultados simplificados y racionalizados; no vale utilizar decimales):
+\begin{parts}
+    \part[1] $\sen{2\alpha}$
+    % \part[1] $\cos{\frac{\alpha}{2}}$
+\end{parts}
+
+\question Dado $z=\sqrt{2}-\sqrt{2}i$
+\begin{parts}
+    \part[1] calcula el opuesto y el conjugado y represéntalos en el plano complejo junto con $z$
+    \part[1] calcular 
+ $z^5\cdot\overline{z}$
+ \begin{solution}
+     $64$
+ \end{solution}
+    
+\end{parts}
+
+ \question Resolver las siguientes ecuaciones: (soluciones complejas incluidas)
+ \begin{parts}
+     % \part[2] $z^5=1$ \begin{solution}\end{solution}
+     \part[2] $x^4-16=0$ \begin{solution}$\pm 2, \pm 2i$\end{solution}
+ \end{parts}
+
+
+    \question[2] Desde un determinado punto se ve la parte superior de una antena de comunicaciones bajo un ángulo de $50^\circ$ con respecto a la horizontal. Nos alejamos 10 m y la visual forma ahora $40^\circ$. Queremos saber la distancia de ambos puntos de observación a la cúspide de la antena, con el fin de fijar sendos cables de sujeción.
+\begin{solution}
+    \begin{tikzpicture}[scale=1.5, every node/.style={font=\small}]
+
+    % Ejes y antena
+    \draw[thick] (0,0) -- (0,5) node[above]{Cúspide de la antena};
+    \draw[dashed] (0,0) -- (6,0) node[below right]{Base de la antena};
+    
+    % Puntos de observación
+    \draw[fill] (2,0) circle (0.05) node[below]{Primer punto};
+    \draw[fill] (4,0) circle (0.05) node[below]{Segundo punto};
+    
+    % Líneas visuales
+    \draw[thick] (2,0) -- (0,5) node[midway,left]{Visual $50^\circ$};
+    \draw[thick] (4,0) -- (0,5) node[midway,left]{Visual $40^\circ$};
+    
+    % Ángulos
+    \draw[-] (2,0) ++(-0.4,0) arc[start angle=180,end angle=130,radius=0.4] node[midway,left]{$50^\circ$};
+    \draw[-] (4,0) ++(-0.4,0) arc[start angle=180,end angle=140,radius=0.4] node[midway,left]{$40^\circ$};
+    
+    % Distancias
+    \draw[-,dashed] (2,-0.5) -- (4,-0.5) node[midway,below]{$10 \, \text{m}$};
+    
+    \end{tikzpicture}
+
+    En el triángulo pequeño de la derecha se cumple que los ángulos son $180-50=130^\circ$ y $180-130-40=10^\circ$. Aplicando el teorema del seno:
+    $$\dfrac{10}{\sin{10}}=\dfrac{cable\ corto}{\sin{40}} \to cable\ corto=\dfrac{10\cdot\sin{40}}{\sin{10}}\approx 37.0166631359329
+    $$
+    Por el teorema del coseno:
+    $$cable\ largo^2=10^2 + cable\ corto^2 - 2\cdot 10\cdot cable \ corto \cdot \cos{130^\circ}$$
+    
+    $$cable \ largo =\sqrt{10^2 + cable\ corto^2 - 2\cdot 10\cdot cable \ corto \cdot \cos{130^\circ}}\approx 44.1147412780977$$
+
+\end{solution}
+
+\addpoints
+
+% Preguntas extraídas de: 04_2425_final2.tex
+\question Dados los vectores $\vec{u}=(\frac{1}{2},-1)$ y $\vec{v}=(0,-2)$ calcula:
+\begin{parts}
+    \part[1] $|\vec{u}|$
+    \part[1] $2\vec{u}-3\vec{v}$
+    \part[1] $\vec{u}\cdot \vec{v}$
+\end{parts}
+
+% \question[1] Expresa
+% $\vec{a} =(9,5)$
+% como combinación lineal de
+%  $\vec{u}=(1,3)$ y $\vec{v} =(3,-2)$
+% \begin{solution}
+%     $3\vec{u}+2\vec{v}$
+% \end{solution}
+
+\question[1] Determinar el ángulo formado por las rectas: $ r\equiv2x-y-2=0\  y \ s\equiv3x+2y-4=0 $  \begin{solution}  $ 119.74488129694222 $  \end{solution}
+
+\question Dada la recta $r\equiv x+y-3=0$ y el punto $P(-1,2)$, se pide:
+\begin{parts}
+    \part[1] Halla la ecuación general de la recta perpendicular a r que pasa por P
+    \begin{solution}
+        $x-y+3=0$
+    \end{solution}
+    \part[1] Calcula el punto de corte de la recta anterior y la recta r
+    \begin{solution}
+        $(0,3)$
+    \end{solution}
+    \part[1] Calcula el punto simétrico de P respecto del calculado en el apartado anterior
+    \begin{solution}
+        $(1,4)$
+    \end{solution}
+    \part[1]  Halla la ecuación general de la recta paralela a r que pasa por P
+    \begin{solution}
+        $x+y-1=0$
+    \end{solution}
+\end{parts}
+
+\question[2]  Comprueba analíticamente que los puntos A(-3,2), B(1,9) y C(4,-2) forman un triángulo rectángulo en A.
+\begin{solution}
+    $\vec{AB}=(4,7)$ , $\vec{AC}=(7,-4)$ y $\vec{AB}\cdot\vec{AC}=0$
+\end{solution}
+
+% \question[2] Calcula el vértice C de un triángulo isósceles (dos lados iguales) ABC, sabiendo que: 
+% $A(2, -3)$, $\ B(5, 2)$ y $C \in r\equiv y=4 $  \begin{solution}  $ \left [ \left \{ x : -4, \quad y : 4\right \}\right ] $  \end{solution}
+
+% \question[2] Calcula el vértice C de un triángulo isósceles (dos lados iguales) ABC, sabiendo que: 
+% $A(2, -3)$, $\ B(5, 2)$ y $C \in r\equiv -x+3y-16=0 $  \begin{solution}  $ \left [ \left \{ x : -4, \quad y : 4\right \}\right ] $  \end{solution}
+
+% \question[1] Calcula k para que el triángulo ABC sea isósceles, siendo $A(2, -3)\ , \ B=(5, 2) \ y \ C(k,4)$  \begin{solution}  $ \left [ \left \{ x : -4, \quad y : 4\right \}\right ] $  \end{solution}
+
+% \question[2] Calcula, sin usar la trigonometría, el área del triángulo de vértices $A\left(-1, 3\right)$, $B\left(6, 5\right)$, $C\left(2, 1\right)$.
+% \begin{solution}
+% $\mathtt{\text{altura}} : \frac{5 \sqrt{2}}{2}, \  \mathtt{\text{area}} : 10, \  \mathtt{\text{base}} : 4 \sqrt{2}$
+% \end{solution}
+
+
+\question[2] Calcula $(2+5i) (3+4i)$. Da el resultado en binómico y en polar
+\begin{solution}
+    $-14+23i$
+\end{solution}
+
+% Preguntas extraídas de: 05_2425_par3.tex
+\question[1\half] Calcula los límites de la siguiente función:
+
+\begin{tikzpicture}[scale=0.6]
+    % Configuración de ejes
+    \draw[-] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
+    \draw[-] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
+
+    % Cuadrícula
+    \draw[help lines, color=gray!20] (-8, -2) grid (8, 8);
+
+    % Etiquetas de cuadrícula
+    \foreach \x in {-8, -6, -4, -2, 2, 4, 6, 8}
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+    \foreach \y in {-2, 2, 4, 6, 8}
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+
+    % Primer trozo: Parábola que termina en (-4, 4)
+    \draw[thick, red, domain=-8:-4, samples=50] plot (\x, {4+(0.25*(\x+4)*(\x+4))}) node[above] {};
+    \filldraw[red] (-4, 4) circle (2pt); % Punto final en (-4, 4)
+
+    % Segundo trozo: Recta de (-4, 1) a (-2, 3)
+    \draw[thick, red] (-4, 1) -- (-2, 3);
+    \filldraw[fill=white, draw=red] (-4, 1) circle (2pt); % Punto inicial
+    % \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+
+    % Tercer trozo: Recta de (-2, 3) a (1, 0)
+    \draw[thick, red] (-2, 3) -- (1, 0);
+    % \draw[red] (1, 0) circle (2pt); % Punto final en (1, 0)
+
+    \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+    \filldraw[red] (-2, 1) circle (2pt); % Punto final
+
+    % Cuarto trozo: Proporcionalidad inversa creciente con mayor excentricidad
+    \draw[thick, red, domain=1:2.883, samples=50] plot (\x, {-1*(\x-1)/(2*(\x-3))}) node[above] {};
+    \draw[dashed] (3, 0) -- (3, 8); % Asíntota vertical en x = 3
+    % \filldraw[red] (1, 0) circle (2pt); % Punto inicial en (1, 0)
+
+    % Quinto trozo: Exponencial que pasa por (3, 5) y tiene asíntota horizontal y = 3
+    \draw[thick, red, domain=3:8, samples=50] plot (\x, {3 + 2*exp(-0.5*(\x-3))});
+    \draw[dashed] (0, 3) -- (8, 3); % Asíntota horizontal en y = 3
+    \filldraw[fill=white, draw=red] (3, 5) circle (2pt); % Punto en (3, 5)
+
+\end{tikzpicture}
+\begin{multicols}{3}
+\begin{parts}
+    \part $\lim_{x \to -\infty} f(x)$
+    \part $\lim_{x \to -4^-} f(x)$
+    \part $\lim_{x \to -4^+} f(x)$
+    \part $\lim_{x \to -4} f(x)$
+    \part $\lim_{x \to -2} f(x)$
+    \part $\lim_{x \to 1} f(x)$
+    \part $\lim_{x \to -3^-} f(x)$
+    \part $\lim_{x \to -3^+} f(x)$
+    \part $\lim_{x \to +\infty} f(x)$
+\end{parts}
+\end{multicols}
+
+        \question Determina el dominio de definición de las siguientes funciones:
+        \begin{parts}
+        % reduce_inequalities([(x**2-x)/(x+2)>=0]).as_set()
+        \part[1] $f(x)=\sqrt{\dfrac{x^2 -x}{x+2}}$\begin{solution}  $\left(-2, 0\right] \cup \left[1, \infty\right)$\end{solution}
+        \part[1] $f(x)=\dfrac{3x+2}{x^4-5x^2-36}$\begin{solution}$\left(-\infty, -3\right] \cup \left[3, \infty\right)$\end{solution}
+        \end{parts}
+        
+        \question Dada la función $f(x)=\dfrac{3 x - 2}{2}$:
+                \begin{parts} \part[1] Calcula $f^{-1}(x)$, es decir la inversa de $f(x)$  \begin{solution}   $f^{-1}(x)=\frac{2 x}{3} + \frac{2}{3}$ \\ $f^{-1} \circ f(x)=x=x$ \\ 
+               \end{solution}
+               \part[1] Comprueba que efectivamente son inversas
+        % \part[1] $f(x)=\frac{x}{- x + 1}$  \begin{solution}   $f^{-1}(x)=\frac{x}{x + 1}$ \\ $f^{-1} \circ f(x)=\frac{x}{\left(- x + 1\right) \left(\frac{x}{- x + 1} + 1\right)}=x$   \end{solution}
+        \end{parts}
+        
+        
+        \question Calcula los siguientes límites:
+
+        \begin{parts} 
+        \part[1] $$\lim_{x \to -1}\left(x^{2} - 3\right)$$  \begin{solution}   $\lim_{x \to -1^-}\left(x^{2} - 3\right)=-2$ y  \\ $\lim_{x \to -1^+}\left(x^{2} - 3\right)=-2$   \end{solution} 
+        \part[1] $$\lim_{x \to 2}\left(\frac{x^{3} - 2 x^{2} + 2 x - 4}{3 x^{2} - 8 x + 4}\right)$$  \begin{solution}   $\frac{3}{2}$   \end{solution} 
+        % \part[1] $$\lim_{x \to -\infty} e^{x - 1}$$  \begin{solution}   $0$   \end{solution} 
+        \part[1] $$\lim_{x \to -1}\left(\frac{x^{3} + 1}{x^{2} + 2 x + 1}\right)$$  \begin{solution}   No existe el límite   \end{solution} 
+        % \part[2] $$\lim_{x \to 3} \left(\frac{x^{2} - x}{x + 3}\right)^{\frac{1}{x - 3}}$$  \begin{solution}   $e^{\frac{2}{3}}$   \end{solution}
+        \part[2] $$\lim_{x \to \infty}\left(\dfrac{x^{2} - 1}{x} - \dfrac{2 x^{2} + 1}{2 x - 1}\right)$$\begin{solution}$-\frac{1}{2}$\end{solution}
+        
+        \end{parts}
+        
+        
+        
+%        \question Dada la función:$f(x)=\frac{x^{2} - 2 x + 1}{2 x + 3}$, calcular:
+%        \begin{multicols}{1}
+%        \begin{parts} \part[1] Dominio de $f(x)$  \begin{solution}   $Dom(f)=\left(-\infty, - \frac{3}{2}\right) \cup \left(- \frac{3}{2}, \infty\right)$\\ \resizebox{0.4\textwidth}{!}{\includegraphics[width=1\columnwidth]{fin301-0}}   \end{solution} \part[2] Asíntotas verticales, horizontales y oblicuas, en caso que existan  \begin{solution}   Asíntotas:\\A.V. $x=-3/2$\\A.O. $y=\frac{x}{2} - \frac{7}{4}$ \\A.O. $y=\frac{x}{2} - \frac{7}{4}$ \\   \end{solution}
+%        \end{parts}
+%        \end{multicols}
+%        \question Dada la función:$f(x)=\frac{- x^{2} - x + 3}{x^{2} + x - 2}$, calcular:
+%        \begin{multicols}{1}
+%        \begin{parts} \part[1] Dominio de $f(x)$  \begin{solution}   $Dom(f)=\left(-\infty, -2\right) \cup \left(-2, 1\right) \cup \left(1, \infty\right)$\\ \resizebox{0.4\textwidth}{!}{\includegraphics[width=1\columnwidth]{fin301-1}}   \end{solution} \part[2] Asíntotas verticales, horizontales y oblicuas, en caso que existan  \begin{solution}   Asíntotas:\\A.V. $x=-2$\\, A.V. $x=1$\\A.H. $y=-1$\\A.H. $y=-1$\\A.O. $y=-1$ \\A.O. $y=-1$ \\   \end{solution}
+%        \end{parts}
+%        \end{multicols}
+
+
+        % \question Dada la función:$f(x)=\sqrt{\frac{x}{x - 1}}$, calcular:
+        % \begin{multicols}{1}
+        % \begin{parts} \part[1] Dominio de $f(x)$  \begin{solution}   $Dom(f)=\left(-\infty, 0\right] \cup \left(1, \infty\right)$\\ \resizebox{0.4\textwidth}{!}{\includegraphics[width=1\columnwidth]{fin301-2}}   \end{solution} \part[2] Asíntotas verticales, horizontales y oblicuas, en caso que existan  \begin{solution}   Asíntotas:\\A.V. $x=1$\\A.H. $y=1$\\A.H. $y=1$\\A.O. $y=1$ \\A.O. $y=1$ \\   \end{solution}
+        % \end{parts}
+        % \end{multicols}
+
+       \question Estudia en qué puntos de $\mathbb{R}$ la función no es continua: 
+
+       \begin{parts} \part[2] $f(x)=\begin{cases} \dfrac{2 x^{2} + 7 x}{x^{2} - 9} & \text{si}\: x \leq -2 \\\dfrac{x+2}{x^{2} + 2 x} & \text{si} \: x > -2\end{cases}$  \begin{solution}   Singularidades de las expresiones analíticas: $\left\{-3, 0\right\}$.\\ Posibles discontinuidades en los extremos de los trozos:-2.\\En -2 no es continua porque no existe límite. Límites laterales: $\frac{6}{5}$ y $- \frac{1}{2}$   \end{solution}
+       \part  Indica, razonadamente, los tipos de discontinuidad que hay la función anterior
+       \begin{solution}
+       En $x=-3$ salto infinito \end{solution}
+       \end{parts}
+       
+
+       \question Estudia en qué puntos de $\mathbb{R}$ la función no es continua: 
+
+       \begin{parts} \part[2] $f(x)=\begin{cases} \dfrac{2 x^{2} + 7 x + 3}{x^{2} - 9} & \text{si}\: x \leq -2 \\\dfrac{\sqrt{x + 3} - 1}{x^{2} + 2 x} & \text{si} \: x > -2\end{cases}$  \begin{solution}   Singularidades de las expresiones analíticas: $\left\{-3, 0\right\}$.\\ Posibles discontinuidades en los extremos de los trozos:-2.\\En -2 no es continua porque no existe límite. Límites laterales: $\frac{3}{5}$ y $- \frac{1}{4}$   \end{solution}
+       \part \textbf{(2 puntos extra)} Indica, razonadamente, los tipos de discontinuidad que hay
+       \end{parts}
+
+        
+        
+        \question Estudia en qué puntos de $\mathbb{R}$ la función no es continua: 
+        \begin{multicols}{1}
+        \begin{parts} \part[2] $f(x)=\begin{cases} \frac{x^{2} - 4}{x^{2} - 3 x + 2} & \text{si}\: x < 2 \\4 & \text{si}\: 2\leq x < 5 \\e^{x - 5} + 3 & \text{si}\: x > 5 \end{cases}$  \begin{solution}   Singularidades de las expresiones analíticas: $\left\{1\right\}$.\\ Posibles discontinuidades en los extremos de los trozos:2, 5.\\En 2 es continua ya que hay límite y $\lim = f(2)=4$. \\En 5 es continua ya que hay límite y $\lim = f(5)=4$   \end{solution}
+        \end{parts}
+        \end{multicols}
+        
+       \question Halla a y b de modo que las siguientes funciones sean continuas:
+       \begin{multicols}{1}
+       \begin{parts} \part[2] $$f(x)=\begin{cases} a + e^{x + 2} & \text{si}\: x \leq -2 \\\frac{x + 1}{3 - x} & \text{si}\: -2 < x < 1 \\b x + 3 & \text{si}\: x \geq 1 \end{cases}$$  \begin{solution}   $\left\{ a : - \frac{6}{5}, \  b : -2\right\}$   \end{solution}
+       \end{parts}
+       \end{multicols}
+        
+        \question Halla a y b de modo que las siguientes funciones sean continuas:
+        \begin{multicols}{1}
+        \begin{parts} \part[2] $$f(x)=\begin{cases} a + e^{x + 3} & \text{si}\: x \leq -3 \\\frac{x + 2}{4 - x} & \text{si}\: -3 < x < 1 \\b x + 6 & \text{si}\: x \geq 1 \end{cases}$$  \begin{solution}   $\left\{ a : - \frac{8}{7}, \  b : -5\right\}$   \end{solution}
+        \end{parts}
+        \end{multicols}
+        
+        
+        
+       \question Deriva las siguientes funciones (simplificando el resultado al máximo):
+       \begin{multicols}{1}
+       \begin{parts} \part[1] $y=\frac{3 x^{2} - 2 x + 1}{\left(x - 1\right)^{2}}$  \begin{solution}   $y'=- \frac{4 x}{x^{3} - 3 x^{2} + 3 x - 1}$   \end{solution} \part[1] $y=\sqrt{\sqrt{x} + 1}$  \begin{solution}   $y'=\frac{1}{4 \sqrt{x} \sqrt{\sqrt{x} + 1}}$   \end{solution} \part[1] $y=\frac{\log{\left(x^{2} \right)}}{x}$  \begin{solution}   $y'=\frac{2 - \log{\left(x^{2} \right)}}{x^{2}}$   \end{solution} \part[1] $y=3 \sin{\left(\cos{\left(2 x \right)} \right)}$  \begin{solution}   $y'=- 6 \sin{\left(2 x \right)} \cos{\left(\cos{\left(2 x \right)} \right)}$   \end{solution}
+       \end{parts}
+       \end{multicols}
+        
+        \question Deriva las siguientes funciones (simplificando el resultado al máximo):
+        \begin{multicols}{1}
+        \begin{parts} \part[1] $y=\frac{2 x^{2} - 2 x + 1}{\left(x - 1\right)^{2}}$  \begin{solution}   $y'=- \frac{2 x}{x^{3} - 3 x^{2} + 3 x - 1}$   \end{solution} \part[1] $y=\sqrt{2 - \sqrt{x}}$  \begin{solution}   $y'=- \frac{1}{4 \sqrt{x} \sqrt{2 - \sqrt{x}}}$   \end{solution} \part[1] $y=\frac{\log{\left(x \right)}}{x}$  \begin{solution}   $y'=\frac{1 - \log{\left(x \right)}}{x^{2}}$   \end{solution} \part[1] $y=2 \cos{\left(\sin{\left(2 x \right)} \right)}$  \begin{solution}   $y'=- 4 \sin{\left(\sin{\left(2 x \right)} \right)} \cos{\left(2 x \right)}$   \end{solution}
+        \end{parts}
+        \end{multicols}
+
+
+\addpoints
+
+% Preguntas extraídas de: 06_2425_final3.tex
+% \question[1\half] Calcula los límites de la siguiente función:
+
+% \begin{tikzpicture}[scale=0.4]
+%     % Configuración de ejes
+%     \draw[thick] (-8, 0) -- (8, 0) node[right] {$X$}; % Eje X
+%     \draw[thick] (0, -2) -- (0, 8) node[above] {$Y$}; % Eje Y
+
+%     % Cuadrícula
+%     \draw[help lines, color=gray!20] (-8, -2) grid (8, 8);
+
+%     % Etiquetas de cuadrícula
+%     \foreach \x in {-8, -6, -4, -2, 2, 4, 6, 8}
+%         \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+%     \foreach \y in {-2, 2, 4, 6, 8}
+%         \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+
+%     % Primer trozo: Parábola que termina en (-4, 4)
+%     \draw[thick, red, domain=-8:-4, samples=50] plot (\x, {4+(0.25*(\x+4)*(\x+4))}) node[above] {};
+%     \filldraw[red] (-4, 4) circle (2pt); % Punto final en (-4, 4)
+
+%     % Segundo trozo: Recta de (-4, 1) a (-2, 3)
+%     \draw[thick, red] (-4, 1) -- (-2, 3);
+%     \filldraw[fill=white, draw=red] (-4, 1) circle (2pt); % Punto inicial
+%     % \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+
+%     % Tercer trozo: Recta de (-2, 3) a (1, 0)
+%     \draw[thick, red] (-2, 3) -- (1, 0);
+%     % \draw[red] (1, 0) circle (2pt); % Punto final en (1, 0)
+
+%     \filldraw[fill=white, draw=red] (-2, 3) circle (2pt); % Punto final
+%     \filldraw[red] (-2, 1) circle (2pt); % Punto final
+
+%     % Cuarto trozo: Proporcionalidad inversa creciente con mayor excentricidad
+%     \draw[thick, red, domain=1:2.883, samples=50] plot (\x, {-1*(\x-1)/(2*(\x-3))}) node[above] {};
+%     \draw[dashed] (3, 0) -- (3, 8); % Asíntota vertical en x = 3
+%     % \filldraw[red] (1, 0) circle (2pt); % Punto inicial en (1, 0)
+
+%     % Quinto trozo: Exponencial que pasa por (3, 5) y tiene asíntota horizontal y = 3
+%     \draw[thick, red, domain=3:8, samples=50] plot (\x, {3 + 2*exp(-0.5*(\x-3))});
+%     \draw[dashed] (0, 3) -- (8, 3); % Asíntota horizontal en y = 3
+%     \filldraw[fill=white, draw=red] (3, 5) circle (2pt); % Punto en (3, 5)
+
+% \end{tikzpicture}
+% \begin{multicols}{3}
+% \begin{parts}
+%     \part $\lim_{x \to -\infty} f(x)$
+%     \part $\lim_{x \to -4^-} f(x)$
+%     \part $\lim_{x \to -4^+} f(x)$
+%     \part $\lim_{x \to -4} f(x)$
+%     \part $\lim_{x \to -2} f(x)$
+%     \part $\lim_{x \to 1} f(x)$
+%     \part $\lim_{x \to -3^-} f(x)$
+%     \part $\lim_{x \to -3^+} f(x)$
+%     \part $\lim_{x \to +\infty} f(x)$
+% \end{parts}
+% \end{multicols}
+
+\question[2] Calcula los siguientes límites:
+\begin{multicols}{2}
+\begin{parts}
+    \part $$\lim_{x \to 2}\dfrac{2 x^{3} - 4 x^{2} - x + 2}{x^2-5x+6}$$
+
+    \begin{solution}
+    Primero factorizamos el denominador:
+    \[
+    x^2 - 5x + 6 = (x - 2)(x - 3)
+    \]
+
+    Ahora intentamos factorizar el numerador:
+    \[
+    2x^3 - 4x^2 - x + 2
+    \]
+    Agrupamos:
+    \[
+    (2x^3 - 4x^2) + (-x + 2) = 2x^2(x - 2) -1(x - 2)
+    \]
+    Sacamos factor común:
+    \[
+    = (x - 2)(2x^2 - 1)
+    \]
+
+    Sustituimos ambas factorizaciones en la fracción:
+    \[
+    \frac{(x - 2)(2x^2 - 1)}{(x - 2)(x - 3)}
+    \]
+
+    Simplificamos el factor común \( (x - 2) \):
+    \[
+    \frac{2x^2 - 1}{x - 3}
+    \]
+
+    Ahora evaluamos el límite:
+    \[
+    \lim_{x \to 2} \frac{2x^2 - 1}{x - 3} = \frac{2(2)^2 - 1}{2 - 3} = \frac{8 - 1}{-1} = \frac{7}{-1} = -7
+    \]
+
+    \textbf{Resultado final:} \fbox{\( \lim_{x \to 2} \frac{2x^3 - 4x^2 - x + 2}{x^2 - 5x + 6} = -7 \)}
+    \end{solution}
+
+    \part {$$\lim_{x \to \infty} \dfrac{2x^3 - 4x^2 - x + 2}{5x^3 - 25x^2 + 30x}$$}
+
+    \begin{solution}
+    Dividimos numerador y denominador entre $x^3$:
+    
+    \[
+    \lim_{x \to \infty} \frac{2x^3 - 4x^2 - x + 2}{5x^3 - 25x^2 + 30x}
+    = \lim_{x \to \infty} \frac{2 - \frac{4}{x} - \frac{1}{x^2} + \frac{2}{x^3}}{5 - \frac{25}{x} + \frac{30}{x^2}}
+    \]
+    
+    Al tomar el límite cuando $x \to \infty$, los términos con $1/x$, $1/x^2$ y $1/x^3$ tienden a cero:
+    
+    \[
+    = \frac{2}{5}
+    \]
+    \end{solution}
+\end{parts}
+    
+\end{multicols}
+
+\question[2] Calcula las derivadas de las siguientes funciones dando el resultado simplificado:
+\begin{multicols}{2}
+\begin{parts}
+    \part $f(x)=(x^2 +x)(x^2 -x ) $
+    \begin{solution}
+        $f'(x)=4x^3-2x$
+    \end{solution}
+  % \part $f(x)=\dfrac{2x}{x^2+x+1}$
+  % \begin{solution}
+  %     $f'(x)=\dfrac{2-2x^2}{(x^2+x+1)^2}$
+  % \end{solution}
+  \part $f(x)=\ln\frac{1-x}{1+x}$
+  \begin{solution}
+      $f'(x)=\frac{2}{x^{2} - 1}$
+  \end{solution}
+\end{parts}
+\end{multicols}
+
+  \question  Dada la función: $$f(x)=\dfrac{x^2}{x-1}$$ 
+\begin{parts}
+    \part[0\half] Estudia la continuidad de la función
+    \begin{solution}
+        f es continua en todo su dominio. $Dom(f)=\mathrm{R}-\{1\}$
+    \end{solution}
+    \part[1] Estudia el crecimiento y decrecimiento de la función.
+    
+    \begin{solution}
+    La derivada de la función es:
+    \[
+    f'(x) = \frac{x(x - 2)}{(x - 1)^2}
+    \]
+    El signo de \( f'(x) \) depende del numerador \( x(x - 2) \), ya que el denominador \( (x - 1)^2 \) siempre es positivo.
+
+    - \( f'(x) > 0 \) cuando \( x < 0 \) o \( x > 2 \), lo que indica que la función es **creciente** en los intervalos \( (-\infty, 0) \cup (2, \infty) \).
+    - \( f'(x) < 0 \) cuando \( 0 < x < 2 \), lo que indica que la función es **decreciente** en el intervalo \( (0, 2) \).
+    \end{solution}
+    
+    \part[1] Encuentra los extremos relativos.
+
+
+    \begin{solution}
+    Los puntos críticos se encuentran donde \( f'(x) = 0 \), es decir, cuando \( x(x - 2) = 0 \). Esto da los puntos \( x = 0 \) y \( x = 2 \).
+    
+    - En \( x = 0 \), \( f'(x) \) cambia de positivo a negativo, por lo que hay un **máximo relativo** en \( (0, 0) \).
+    - En \( x = 2 \), \( f'(x) \) cambia de negativo a positivo, por lo que hay un **mínimo relativo** en \( (2, 4) \).
+    
+    Los valores de la función en estos puntos son:
+    - \( f(0) = 0 \)
+    - \( f(2) = 4 \)
+    \end{solution}
+        \part[0\half] Encuentra los extremos absolutos.
+        \begin{solution}
+            $-\infty$, $+\infty$
+        \end{solution}
+\end{parts}
+
+\question La obsolescencia tecnológica implica una disminución del valor de un producto con el tiempo. En cierto dispositivo, el valor $V(t)>0$, viene dado por la expresión $V(t)=200-\dfrac{100t}{10+2t}$ \euro, siendo t los años transcurridos desde la compra del dispositivo.
+\begin{parts}
+    \part[1] Calcule el valor inicial del producto y su valor en un horizonte infinito de tiempo
+    \begin{solution}
+        $V(0)=100$ y $\lim_{x \to \infty}V=200-\frac{100}{2}=150$
+    \end{solution}
+    \part[1] Calcule $V'(t)$ y justifique que $V(t )$ es decreciente. Utilice esta conclusión y los resultados del apartado anterior para argumentar que no será posible que el valor de $V(t)$ sea igual a 125\euro.
+    \begin{solution}
+        $V'(t)=- \frac{250}{\left(x + 5\right)^{2}}$ luego $V'(t)<0 \ 
+\forall t \to$ V es decreciente
+    \end{solution}
+    \part[0\half] ¿Cuánto tiempo tiene que pasar para que el dispositivo tenga un valor de 175 \euro?
+    \begin{solution}
+        $175=200-\dfrac{100t}{10+2t} \to t=5$. 5 años
+    \end{solution}
+\end{parts}
+
+\end{questions}
+\end{document}
