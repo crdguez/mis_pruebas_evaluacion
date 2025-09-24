@@ -1,0 +1,242 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{1 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Geometría y estadística}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Justifica todos los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+Está permitido el uso de calculadora y los ejercicios han de resolverse utilizando la notación algebraica adecuada
+
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+   
+\end{center}
+% \textbf{Nota:} Se tendrán en cuenta los ejercicios 1 y 2 para recuperar contenidos previos.
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+% \question[2] El lado mayor de un triángulo rectángulo mide 15 cm y uno de los dos lados menores mide 9 cm. ¿Cuánto mide el tercer lado? (se recomienda hacer el dibujo)
+% \vspace{60pt}
+
+
+
+
+% \question[2] Si los lados de un rectángulo miden, respectivamente, 16 cm y 30 cm, ¿cuánto mide su diagonal? (se recomienda hacer el dibujo)
+% \vspace{60pt}
+
+\question[3] Cálcula el área y el perímetro de las siguientes figuras:\\
+
+
+\begin{tikzpicture}[scale=0.2]
+
+  % Hexágono más grande visualmente, mismo etiquetado
+  \begin{scope}[shift={(0,3)}]
+    \draw[thick] (0:6.5) \foreach \x in {60,120,...,360} { -- (\x:6.5) };
+    \draw[dashed] (0,0) -- (90:5.2); % apotema visual para etiqueta
+    \node at (0,-4.5) {6 cm};
+    \node at (0,2.6) {5,2 cm};
+  \end{scope}
+
+  % Rectángulo
+  \draw[thick] (12,0) rectangle +(18,9);
+  \node at (21,9.8) {18 cm};
+  \node at (11.3,4.5) {9 cm};
+
+  % Círculo
+  \draw[thick] (40,4.5) circle (7);
+  \draw[dashed] (40,4.5) -- (47,4.5);
+  \node at (43.5,5.7) {7 cm};
+
+\end{tikzpicture}
+\vspace{60pt}
+
+% \question[3] Calcula el área y el perímetro de las siguientes figuras \\
+
+
+% \begin{tikzpicture}[scale=0.1]
+
+% % PARALELOGRAMO
+% \draw[thick] (0,0) -- (16,0) -- (13,8) -- (-3,8) -- cycle;
+% \draw[dashed] (3,0) -- (3,8);
+% \node[left] at (-3,4) {10 cm};
+% \node[below] at (8,0) {16 cm};
+% \node[left] at (10,4) {8 cm};
+
+% % TRAPECIO MÁS ACHATADO (alineado horizontalmente con el paralelogramo)
+% \begin{scope}[shift={(30,0)}] % desplazar a la derecha
+%   \def\h{12} % altura más baja
+
+%   \draw[thick] (0,0) -- (24,0) -- (19,\h) -- (5,\h) -- cycle;
+%   \draw[dashed] (5,0) -- (5,\h);
+
+%   % Etiquetas (mismas que antes, aunque no coincidan con escala)
+%   \node[below] at (12,0) {92 cm};
+%   \node[above] at (12,\h) {68 cm};
+%   \node[left] at (5,\h/2) {35 cm};
+%   \node[right] at (24,\h/2) {37 cm};
+% \end{scope}
+
+% \end{tikzpicture}
+% \vspace{60pt}
+
+% \question[1] El perímetro de un rombo es de 40 cm y una de sus diagonales mide 16 cm. ¿Cuánto mide la otra diagonal?
+% \vspace{30pt}
+
+\question[2]  Si en la figura siguiente $a=10$cm , calcula el área y el perímetro \\
+\begin{tikzpicture}[scale=0.5]
+  % Coordenadas clave
+  \coordinate (A) at (0,0);        % Esquina inferior izquierda
+  \coordinate (B) at (0,2);        % Esquina superior izquierda
+  \coordinate (C) at (2,2);        % Punto de unión cuadrado-triángulo arriba
+  \coordinate (D) at (4,0);        % Esquina inferior derecha
+  \coordinate (E) at (2,0);        % Punto de unión cuadrado-triángulo abajo
+
+  % Cuadrado y triángulo
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+  % \draw[dashed] (C) -- (E);
+
+  % Etiquetas
+  \draw[-] (0,1) -- +(0,0) node[left] {\(a\)};
+  \draw[-] (1,2) -- +(0,0) node[above] {\(a\)};
+  % \draw[-] (3,0) -- +(0,0) node[below] {\(a\)};
+  % \draw[-] (3.1,1.1) -- +(0,0) node[right] {\(b\)};
+  \draw[-] (0,-0.4) -- (4,-0.4) node[midway,below] {\(2a\)};
+  
+\end{tikzpicture}
+
+\vspace{80pt}
+
+\question Calcula el perímetro y el área de las siguientes figuras:
+
+
+\begin{parts}
+    \part[2] \begin{tikzpicture}[scale=0.3]
+  % Dibujo del polígono
+  \fill[gray!50] (0,0) -- (0,7.5) -- (7,7.5) -- (7,4.5) -- (13,4.5) -- (13,0) -- cycle;
+  \draw[thick] (0,0) -- (0,7.5) -- (7,7.5) -- (7,4.5) -- (13,4.5) -- (13,0) -- cycle;
+
+  % Etiquetas de medidas (posiciones ajustadas a la escala)
+  \node at (-1.8,3.75) {15 m};
+  \node at (3.5,8) {14 m};
+  \node at (10,5) {12 m};
+  \node at (14.5,2.25) {12 m};
+\end{tikzpicture}
+
+\vspace{80pt}
+
+    \part[2] \begin{tikzpicture}[scale=0.2]
+  % Dibujo del polígono con hueco triangular
+  \fill[gray!50]
+    (0,0) -- (0,10) -- (23,10) -- (12,5) -- (23,0) -- cycle;
+  \draw[thick]
+    (0,0) -- (0,10) -- (23,10) -- (12,5) -- (23,0) -- cycle;
+
+  % Etiquetas
+  \node at (-1,5) {10 cm};
+  \node at (11.5,-1) {23 cm};
+  \draw[-] (12,10.8) -- (23,10.8);
+  \node at (17.5,11.5) {11 cm};
+\end{tikzpicture}
+\end{parts}
+
+\vspace{80pt}
+
+% https://crdguez-taller-estadistica-main-2fsnec.streamlit.app/
+\question Las notas en matemáticas de los alumnos de una clase han sido:
+
+5 7 8 7 6 4 3 9 10 8 7 6 8 7 9 10 1 3 2 5
+
+Queremos hacer un estudio estadístico sobre las notas de matemáticas. Responde a las siguientes cuestiones:
+\begin{parts}
+   \part[1] ¿Cuál es la variable estadística? ¿De qué tipo es (cualitativa o cuantitativa)? ¿Por qué?
+   
+\vspace{40pt}
+
+   \part[1] Realiza una tabla de frecuencias que organice la información y un diagrama de barras
+ 
+\vspace{250pt}
+
+   \part[1] Calcula la nota media
+   
+\end{parts} 
+
+
+\end{questions}
+
+
+
+\end{document}
+\grid

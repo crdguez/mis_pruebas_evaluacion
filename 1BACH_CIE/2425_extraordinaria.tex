@@ -1,6 +1,6 @@
 \documentclass[addpoints,spanish, 12pt,a4paper]{exam}
 %\documentclass[answers, spanish, 12pt,a4paper]{exam}
-% \printanswers
+\printanswers
 \renewcommand*\half{.5}
 \pointpoints{punto}{puntos}
 \hpword{Puntos:}
@@ -30,13 +30,13 @@
 
 \graphicspath{{../img/}} 
 
-\newcommand{\class}{1º Bachillerato CIE}
+\newcommand{\class}{Matemáticas I}
 \newcommand{\examdate}{\today}
-\newcommand{\examnum}{Global}
+\newcommand{\examnum}{Extraordinaria}
 \newcommand{\tipo}{A}
 
 
-\newcommand{\timelimit}{45 minutos}
+\newcommand{\timelimit}{90 minutos}
 
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
 
@@ -62,9 +62,9 @@
 \textbf{Tiempo: \timelimit} & Tipo: \tipo 
 \end{tabular*}
 \rule[2ex]{\textwidth}{2pt}
-% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
 
-\textbf{INSTRUCCIONES:} Si haces el examen para aprobar, tienes que hacer todos los ejercicios menos el último. Si lo haces para subir nota, el último es obligatorio y luego elige otros ejercicios u apartados que sumen exáctamente 8 puntos
+
 
 \begin{center}
 
@@ -151,7 +151,8 @@ $\left\{\begin{matrix}x + y + z = 480\\x = 2 y + 2 z\\x + z = 3 y\\\end{matrix}\
     % \begin{solution}
     %     $[0, 180, 270]$
     % \end{solution}
-    \part[2]  Resuelve la ecuación $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
+    \part[1] Resuelve la ecuación $$ \sen{x}- \sqrt{3}\cos{x}=0 $$  \begin{solution}  $ \left [ 60, \quad 240\right ] $  \end{solution}
+    % \part[2]  Resuelve la ecuación $ 2\cos^2{x}-\sqrt{3}\cos{x}=0 $  \begin{solution}  $ \left [ 30, \quad 90, \quad 270, \quad 330\right ] $  \end{solution}
     % \part Resuelve la ecuación  $ \cos{2x}-3\cos{x}+1=0 $  \begin{solution}  $ \left [ -90, \quad 90\right ] $  \end{solution}
     % \part[1] Desde un punto del suelo se ve la copa de un pino bajo un ángulo de 42°. Si nos alejamos 2,5 m hacia otro punto del suelo, alineado con el anterior y con el pie del pino, vemos la copa bajo un ángulo de 24°. Calcula la altura del pino. \begin{solution}
     %     Aplicamos el teorema del seno para saber la hipotenusa del triángulo pequeño. Después calculamos la altura con el seno
@@ -195,10 +196,10 @@ $\left\{\begin{matrix}x + y + z = 480\\x = 2 y + 2 z\\x + z = 3 y\\\end{matrix}\
         \end{solution}
         \end{parts}
 
-% \question Dada la función:$f(x)=\dfrac{- x^{2} - x + 3}{x^{2} + x - 2}$. Calcular:
+\question Dada la función:$f(x)=\dfrac{- x^{2} - x + 3}{x^{2} + x - 2}$. Calcular:
 
-%         \begin{parts} \part[1] Dominio de $f(x)$  \begin{solution}   $Dom(f)=\left(-\infty, -2\right) \cup \left(-2, 1\right) \cup \left(1, \infty\right)$\\  \end{solution} \part[2] Asíntotas verticales, horizontales y oblicuas, en caso que existan  \begin{solution}   Asíntotas:\\A.V. $x=-2$\\, A.V. $x=1$\\A.H. $y=-1$\\A.H. $y=-1$\\A.O. $y=-1$ \\A.O. $y=-1$ \\   \end{solution}
-%         \end{parts}
+        \begin{parts} \part[0\half] Dominio de $f(x)$  \begin{solution}   $Dom(f)=\left(-\infty, -2\right) \cup \left(-2, 1\right) \cup \left(1, \infty\right)$\\  \end{solution} \part[1\half] Asíntotas verticales, horizontales y oblicuas, en caso que existan  \begin{solution}   Asíntotas:\\A.V. $x=-2$\\, A.V. $x=1$\\A.H. $y=-1$\\A.H. $y=-1$\\A.O. $y=-1$ \\A.O. $y=-1$ \\   \end{solution}
+        \end{parts}
 
 % \question[2] Determina \( a \) y \( b \) para que \( f(x) \) sea continua en todo \( \mathbb{R} \):
 % \[
@@ -235,65 +236,240 @@ producida es $p = 30$, se desea conocer:
     
 \end{parts}
 
-\question Se considera la función real:
-\[
-f(x) = x^3 + ax^2 + bx \quad a, b \in \mathbb{R}
-\]
+% \question Se considera la función real:
+% \[
+% f(x) = x^3 + ax^2 + bx \quad a, b \in \mathbb{R}
+% \]
 
-\begin{parts}
-\part[1] ¿Qué valores deben tomar \( a \) y \( b \) para que \( f(x) \) tenga un máximo relativo en el punto \( P(1,4) \)?
-\begin{solution}
-    $f'(x)=2 a x + b + 3 x^{2} \to \left\{\begin{matrix}
-        f'(1)=0\\
-        f(1)=4
-    \end{matrix}\right. \to \left\{\begin{matrix}
-        2 a + b + 3\\
-        a + b - 3 = 0
-    \end{matrix}\right. \to \left\{ a : -6, \  b : 9\right\}
-$
-\end{solution}
-\end{parts}
+% \begin{parts}
+% \part[1] ¿Qué valores deben tomar \( a \) y \( b \) para que \( f(x) \) tenga un máximo relativo en el punto \( P(1,4) \)?
+% \begin{solution}
+%     $f'(x)=2 a x + b + 3 x^{2} \to \left\{\begin{matrix}
+%         f'(1)=0\\
+%         f(1)=4
+%     \end{matrix}\right. \to \left\{\begin{matrix}
+%         2 a + b + 3\\
+%         a + b - 3 = 0
+%     \end{matrix}\right. \to \left\{ a : -6, \  b : 9\right\}
+% $
+% \end{solution}
+% \end{parts}
 
-        \question (2 puntos) \textbf{SOLO PARA AQUELLOS QUE VAN A SUBIR NOTA} La temperatura media en los meses de invierno en varias ciudades y el gasto medio por habitante en
-calefacción ha sido: \\ \\\begin{tabular}{lrrrr}
-\hline
-                      &   Dic &   Ene &   Feb &   Mar \\
-\hline
- Temperatura (grados) &  10 &  12 &  14 &  16 \\
- Gasto (euros)        & 150 & 120 & 102 &  90 \\
-\hline
-\end{tabular} \\ \\
-Se proporciona la siguiente tabla de frecuencias:
+%         \question (2 puntos) \textbf{SOLO PARA AQUELLOS QUE VAN A SUBIR NOTA} La temperatura media en los meses de invierno en varias ciudades y el gasto medio por habitante en
+% calefacción ha sido: \\ \\\begin{tabular}{lrrrr}
+% \hline
+%                       &   Dic &   Ene &   Feb &   Mar \\
+% \hline
+%  Temperatura (grados) &  10 &  12 &  14 &  16 \\
+%  Gasto (euros)        & 150 & 120 & 102 &  90 \\
+% \hline
+% \end{tabular} \\ \\
+% Se proporciona la siguiente tabla de frecuencias:
 
-\begin{tabular}{rrrrrr}
-\hline
-    &   x &   y &   xy &   x2 &    y2 \\
-\hline
-  &  10 & 150 & 1500 &  100 & 22500 \\
-  &  12 & 120 & 1440 &  144 & 14400 \\
-  &  14 & 102 & 1428 &  196 & 10404 \\
-  &  16 &  90 & 1440 &  256 &  8100 \\
-  Sumas &  52 & 462 & 5808 &  696 & 55404 \\
-\hline
-
-\end{tabular}
-        \begin{parts} 
-%         \part Haz una tabla de frecuencias con los datos que necesites para hace el resto de apartados  \begin{solution}   \begin{tabular}{rrrrrr}
+% \begin{tabular}{rrrrrr}
 % \hline
 %     &   x &   y &   xy &   x2 &    y2 \\
 % \hline
-%   0 &  10 & 150 & 1500 &  100 & 22500 \\
-%   1 &  12 & 120 & 1440 &  144 & 14400 \\
-%   2 &  14 & 102 & 1428 &  196 & 10404 \\
-%   3 &  16 &  90 & 1440 &  256 &  8100 \\
-%   4 &  52 & 462 & 5808 &  696 & 55404 \\
+%   &  10 & 150 & 1500 &  100 & 22500 \\
+%   &  12 & 120 & 1440 &  144 & 14400 \\
+%   &  14 & 102 & 1428 &  196 & 10404 \\
+%   &  16 &  90 & 1440 &  256 &  8100 \\
+%   Sumas &  52 & 462 & 5808 &  696 & 55404 \\
 % \hline
-% \end{tabular}   \end{solution} 
 
-% \part Calcula el gasto medio  \begin{solution}   {'media': 115.5}   \end{solution} 
+% \end{tabular}
+%         \begin{parts} 
+% %         \part Haz una tabla de frecuencias con los datos que necesites para hace el resto de apartados  \begin{solution}   \begin{tabular}{rrrrrr}
+% % \hline
+% %     &   x &   y &   xy &   x2 &    y2 \\
+% % \hline
+% %   0 &  10 & 150 & 1500 &  100 & 22500 \\
+% %   1 &  12 & 120 & 1440 &  144 & 14400 \\
+% %   2 &  14 & 102 & 1428 &  196 & 10404 \\
+% %   3 &  16 &  90 & 1440 &  256 &  8100 \\
+% %   4 &  52 & 462 & 5808 &  696 & 55404 \\
+% % \hline
+% % \end{tabular}   \end{solution} 
 
-\part Halla el coeficiente de correlación lineal e interprétalo  \begin{solution}   {'media de x': 13.0, 'desviación de x': 2.23606797749979, 'media de y': 115.5, 'desviación de y': 22.599778759979046, 'covarianza': -49.5, 'coeficiente de correlación': -0.9795260923726159}   \end{solution} \part Estima el gasto medio por habitante de una ciudad si la temperatura media hubiera sido 11ºC  \begin{solution}   $y = - 9.9 x + 244.2$ \\La estimación para x=11 es: 135.3   \end{solution}
-        \end{parts}
+% % \part Calcula el gasto medio  \begin{solution}   {'media': 115.5}   \end{solution} 
+
+% \part Halla el coeficiente de correlación lineal e interprétalo  \begin{solution}   {'media de x': 13.0, 'desviación de x': 2.23606797749979, 'media de y': 115.5, 'desviación de y': 22.599778759979046, 'covarianza': -49.5, 'coeficiente de correlación': -0.9795260923726159}   \end{solution} \part Estima el gasto medio por habitante de una ciudad si la temperatura media hubiera sido 11ºC  \begin{solution}   $y = - 9.9 x + 244.2$ \\La estimación para x=11 es: 135.3   \end{solution}
+%         \end{parts}
+
+%EJERCICIO 1
+%     \question[1\half] Resuelve las siguientes ecuaciones:
+%         \begin{parts}
+%         \part   \[
+%                 \log(x^3) = 3
+%                 \]
+        
+%         \part   \[
+%                 \log_2(x+1) - \log_2(x) = 1
+%                 \]
+    
+%         \part   \[
+%                 \sqrt{x+4} + \sqrt{x-2} = 4
+%                 \]
+%         \end{parts}
+% %EJERCICIO 2
+%     \question[1] Resuelve el siguiente sistema de ecuaciones utilizando el método de Gauss:
+
+%         \[
+%         \begin{cases}
+%         x + 2y - z = 3 \\
+%         2x - y + 3z = 9 \\
+%         -x + 3y + 2z = 4
+%         \end{cases}
+%         \]
+%     %EJERCICIO 3
+%     \question[1\half] Resuelve el siguiente sistema de inecuaciones y representa gráficamente:
+%         \[
+%         \begin{cases}
+%         x - y \geq 4 \\
+%         3x + 2y < 14
+%         \end{cases}
+%         \]
+% %EJERCICIO 4
+%     \question[1] Calcula los siguientes límites:
+%         \begin{parts}
+%             \part \( \displaystyle \lim_{x \to 1} \frac{x^2 - 1}{x - 1} \)
+%             \part \( \displaystyle \lim_{x \to 3} \frac{x^3 - 4x^2 + 5x}{x^3 - 6x^2 + 11x - 6} \)
+%         \end{parts}
+% %EJERCICIO 5
+%     \question[1\half] Di cuáles son las tres condiciones de continuidad, después, estudia la continuidad de la siguiente función en todo su dominio:
+%         \[
+%         f(x) = 
+%         \begin{cases}
+%             x^2 + 2x & \text{si } x < 1 \\
+%             4x - 3 & \text{si } x \geq 1
+%         \end{cases}
+%         \]
+%     \newpage
+% %EJERCICIO 6
+%     \question[1\half] Calcula la derivada de las siguientes funciones:
+%         \begin{parts}
+%             \part \[f(x) = \frac{3x^2 + 4x - 5 }{x+2} \]
+%             \part \[f(x) = \frac{1}{x} + 2x^3 \]
+%             \part  \[f(x) = \sin(2x+3) + \cos(5x) \]
+%         \end{parts}
+    
+% %EJERCICIO 7    
+%     \question Dada la siguiente función y conociendo sus asíntotas como se muestran en la gráfica, calcula:
+% \[
+% f(x) = x^3 + 2x^2 - x + 4
+% \]
+
+% \begin{parts}
+%     \part [0\half] Limites en el + \(\infty\) y \(- \infty\)
+%     \part [0\half] Derivada 
+%     \part [0\half] Máximos y mínimos
+%     \part [0\half] Con todo lo anterior, representa la función
+% \end{parts}
+
+%    \question[1\half] Resuelve las siguientes ecuaciones:
+%         \begin{parts}
+%         \part   \[
+%                 4\log({x}) = 2
+%                 \]
+   
+%         \part   \[
+%                 \log_3(x) - \log_3(x-1) = 3
+%                 \]
+
+%         \part   \[
+%                 \sqrt{x+5} + \sqrt{x-1} = 6
+%                 \]
+%         \end{parts}
+    
+%     \question[1\half] Resuelve el siguiente sistema de inecuaciones y representa gráficamente:
+%         \[
+%         \begin{cases}
+%             x + y > 9 \\
+%             -2x +3y  \leq 12
+%         \end{cases}
+%         \]
+
+%     \question[1] 
+%         \begin{parts}
+%             \part Escribe el teorema del seno y el teorema del coseno.
+%             \part En un triángulo se conocen dos lados y el ángulo comprendido entre ellos: 
+%                 \[
+%                 a = 7,\quad b = 9,\quad C = 60^\circ
+%                 \]
+%                 Calcula el lado \( c \) y los ángulos \( A \) y \( B \).
+%         \end{parts}
+
+%     \question[1] Calcula los siguientes límites:
+%         \begin{parts}
+%             \part \( \displaystyle \lim_{x \to 2} \frac{x^2-4}{x-2} \)
+%             \part \( \displaystyle \lim_{x \to 2} \frac{x^3 - 5x^2+6x}{x^3-7x^2+16x-12} \)
+%         \end{parts}
+    
+%     \question[1\half] Di cuáles son las tres condiciones de continuidad, después, estudia la continuidad de la siguiente función en todo su dominio:
+%         \[
+%         f(x) = 
+%         \begin{cases}
+%             x^2 - 1 & \text{si } x < 2 \\
+%             3x - 4 & \text{si } x \geq 2
+%         \end{cases}
+%         \]
+%     \newpage
+    
+%     \question[1\half] Calcula la derivada de las siguientes funciones:
+%         \begin{parts}
+%             \part   \[
+%                     f(x) = \frac{x^2 + 3x - 1}{x - 2}
+%                     \]
+%             \part   \[
+%                     f(x) = \sin{(3x^2 + 2)}
+%                     \]
+%             \part   \[
+%                     f(x) = e^{\log{2x}}
+%                     \]
+%         \end{parts}
+    
+   
+    
+    
+%     \question Dada la siguiente función y conociendo sus asíntotas como se muestran en la gráfica, calcula:
+%         \[
+%         f(x) = \frac{x^2 +3x + 11}{x + 1} 
+%         \]
+     
+%         \begin{parts}
+%             \part [0\half] Dominio
+%             \part [1] Derivada y extremos relativos
+%             \part [0\half] Representa la función
+%         \end{parts}        
+%         \begin{tikzpicture}
+%             \begin{axis}[ 
+%                 axis lines = middle, 
+%                 grid = both,              % Cuadrícula activa
+%                 xmin = -10, xmax = 10,    % Rango de -10 a 10 en X
+%                 ymin = -10, ymax = 10,    % Rango de -10 a 10 en Y
+%                 xlabel = \( x \), ylabel = \( y \),
+%                 enlargelimits, 
+%                 width=15cm, height=15cm,    % Tamaño del gráfico
+%                 tick label style={font=\small},
+%                 axis line style={-Stealth},
+%                 every axis label/.append style={font=\small},
+%                 major grid style={dashed, thin, gray},   % Estilo de la cuadrícula mayor
+%                 minor grid style={dotted, thin, gray},  % Estilo de la cuadrícula menor
+%                 grid style={gray!30}        % Color y transparencia de la cuadrícula
+%             ]
+%                 % Recta vertical x = -1 (discontinua y roja)
+%                 \addplot[red, dashed, thick] coordinates {(-1,-15)(-1,15)};
+                
+%                 % Recta diagonal y = x + 2 (discontinua y roja)
+%                 \addplot[red, dashed, thick, domain=-15:15] {x + 2};
+        
+%             \end{axis}
+%         \end{tikzpicture}
+       
+
+    \addpoints
+
+
 
 
 \addpoints
