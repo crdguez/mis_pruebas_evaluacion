@@ -1,0 +1,249 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../img/}} 
+
+\newcommand{\class}{2 ESO}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Fracciones}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+\textbf{Instrucciones:} Prohibido el uso de calculadora. Justifica los
+resultados.
+Esta prueba tiene \numquestions\ ejercicios con una puntuación máxima de \numpoints. 
+La nota del examen se calculará de manera proporcional a la puntuación obtenida. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+
+\textbf{Pendientes:} Se tendrán en cuenta los apartados del ejercicio  3, 4, y 6a
+\textbf{Tema anterior:} Se tendrán en cuenta los apartados del ejercicio 1, 2 
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+
+
+
+
+% \question[1\half] Expresa como una única potencia:
+% \begin{multicols}{3}
+% \begin{parts}
+%     \part $\left(6^3\right)^4=$
+%     \vspace{10pt}
+%     \part $5^2\cdot 5^3=$
+%     \vspace{10pt}
+%     \part $n^4 : n^2=$
+%     \vspace{10pt}
+% \end{parts}
+% \end{multicols}
+
+
+
+\question[2] Aplica las propiedades para expresar como una única potencia y después calcula su valor:
+\begin{multicols}{2}
+\begin{parts}
+    % \part $3^2\cdot 3^3 : 3^5=$\vspace{20pt}
+    \part $\left(2^2\right)^3\cdot\left(5^2\right)^3=$\vspace{20pt}
+    \part $20^{6} :10^6=$\vspace{20pt}
+    % \part $18^4:\left(2^4\cdot3^4\right)=$\vspace{20pt}
+    \part $24^5:\left(2^5\cdot6^5\right)=$\vspace{20pt}
+    \part $\left[\left(12^3:4^3\right)^2:\left(15^2:5^2\right)^3\right]^8=$\vspace{20pt}
+\end{parts}
+\end{multicols}
+
+
+
+
+\question Resuelve las siguientes operaciones:
+\begin{parts}
+    \part[1] $3^4:\sqrt{1+\left(20+6\cdot10\right)}=$
+    \vspace{50pt}
+    \part[1] $\left(6 + 2 \cdot 3^2 + 3 \cdot 2^2 \right) : \left(3 - \sqrt{81} \right)^2 =
+$ \begin{solution} $1$ \end{solution}\vspace{90pt}
+%     \part[1] $\left[ 9 - \sqrt{25} \cdot (-2)^3 \right] : \left[ (-3 - 1)^2 - 9 \right] =
+% $\begin{solution}$7$\end{solution}\vspace{100pt}
+
+
+%     \part[1\half] $\dfrac{\left[(-3)^3\right]^2 \cdot \left[3 \cdot (-9)\right]^6}{81^5} =
+% $\begin{solution}
+%     $3^4$
+% \end{solution} \vspace{100pt}
+\end{parts}
+
+% \question[1]
+%     Comprobar si son equivalentes las siguientes fracciones:
+%     \begin{multicols}{2}
+        
+    
+% \begin{parts}
+%   \part \( \dfrac{84}{60} \) y \( \dfrac{14}{10} \)
+%   \part \( \dfrac{14}{35} \) y \( \dfrac{26}{10} \)
+% \end{parts}
+
+% \end{multicols}
+% \vspace{100pt}
+
+\question[1]
+Hallar \( x \) para que las siguientes fracciones sean equivalentes:
+\begin{multicols}{2}    
+\begin{parts}
+  \part \( \dfrac{22}{14} \) = \( \dfrac{x}{91} \)
+  \part \( \dfrac{21}{15} \) = \( \dfrac{25}{x} \)
+\end{parts}
+\end{multicols}
+\vspace{80pt}
+
+
+\question[2]
+Simplifica las siguientes fracciones:
+\begin{parts}
+  \part \( \dfrac{756}{198} \)\vspace{30pt}
+  \part \( \dfrac{1225}{455} \)\vspace{30pt}
+\end{parts}
+
+\question[3]
+Ordena de mayor a menor, utilizando fracciones, los siguientes números:
+$$1,4; \ 1,2\wideparen{3}; \ 1,36; \  \dfrac{43}{30} ; \ \dfrac{15}{22}$$
+\vspace{100pt}
+
+
+\question
+Calcula y simplifica:
+\begin{parts}
+  \part[2] \( \left( 2 - \dfrac{1}{5} \right) \) + \( 7 - \dfrac{5}{12} =\) \vspace{50pt}
+  \part[2] \( \dfrac{3}{5} - \dfrac{2}{5} \cdot \left( 1 - \dfrac{1}{3} \right) - 3 \cdot \dfrac{2}{9}=\)\vspace{50pt}
+  \part[2] \( \dfrac{7}{5} : \left[ \dfrac{3}{5} - 2 \left( 1 - \dfrac{4}{5} \right) \right]= \)\vspace{50pt}
+  \part[3] $\dfrac{\left[ (-2)^4 \right]^6 : \left( (2^2 \cdot 8)^4 \right)}{\left( \dfrac{4}{3} \right)^8 : \left( \dfrac{4}{3} \right)^6 \cdot (-1)^8}=$ \vspace{50pt}
+
+\end{parts}
+
+\question
+Una cisterna está llena de agua. Se sacan los \( \dfrac{3}{5} \) de su contenido y después los \( \dfrac{3}{4} \) del resto:
+\begin{parts}
+  \part[1] ¿Qué fracción de la capacidad de la cisterna se ha sacado?\vspace{60pt}
+  \part[2] Quedan en la cisterna 12 litros. ¿Cuál es su capacidad?\vspace{60pt}
+\end{parts}
+
+\question[3]
+Un comerciante tiene una deuda, paga primero \( \dfrac{1}{4} \) de ella, y luego \( \dfrac{1}{6} \). Todavía le quedan por pagar 700 €. ¿A cuánto ascendía la deuda?\vspace{100pt}
+
+\question[2]
+Con el contenido de un bidón de agua se han llenado 40 botellas de \( \dfrac{3}{4} \) de litro. ¿Cuántos litros de agua había en el bidón?
+\vspace{100pt}
+
+
+\newpage
+
+\question[] Encuentra las siguientes palabras: numerador, denominador, generatriz, periódico \\ \newline 
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+G & E & N & E & R & A & T & R & I & Z & V & I & T \\ \hline
+O & R & B & C & L & X & N & K & Z & W & D & S & V \\ \hline
+D & E & N & O & M & I & N & A & D & O & R & T & U \\ \hline
+U & M & G & S & G & J & F & T & R & D & C & V & R \\ \hline
+Y & X & Y & Y & N & S & P & E & S & Y & X & J & S \\ \hline
+J & U & G & C & X & U & C & J & A & S & K & I & O \\ \hline
+J & X & C & B & G & U & M & I & R & T & B & Q & H \\ \hline
+M & N & E & W & G & C & H & E & R & O & X & D & E \\ \hline
+I & I & V & C & Q & C & L & U & R & T & H & G & L \\ \hline
+S & L & F & O & J & Z & J & Y & F & A & N & Q & Z \\ \hline
+K & H & T & R & O & U & J & V & B & U & D & X & H \\ \hline
+U & P & E & R & I & O & D & I & C & O & A & O & G \\ \hline
+X & R & J & G & E & B & C & F & T & B & H & Y & R \\ \hline
+\end{tabular} \begin{solution}  \newline 
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{G} & \textbf{E} & \textbf{N} & \textbf{E} & \textbf{R} & \textbf{A} & \textbf{T} & \textbf{R} & \textbf{I} & \textbf{Z} & V & I & T \\ \hline
+O & R & B & C & L & X & N & K & Z & W & D & S & V \\ \hline
+\textbf{D} & \textbf{E} & \textbf{N} & \textbf{O} & \textbf{M} & \textbf{I} & \textbf{N} & \textbf{A} & \textbf{D} & \textbf{O} & \textbf{R} & T & U \\ \hline
+U & M & G & S & G & J & F & T & R & D & C & V & R \\ \hline
+Y & X & Y & Y & \textbf{N} & S & P & E & S & Y & X & J & S \\ \hline
+J & U & G & C & X & \textbf{U} & C & J & A & S & K & I & O \\ \hline
+J & X & C & B & G & U & \textbf{M} & I & R & T & B & Q & H \\ \hline
+M & N & E & W & G & C & H & \textbf{E} & R & O & X & D & E \\ \hline
+I & I & V & C & Q & C & L & U & \textbf{R} & T & H & G & L \\ \hline
+S & L & F & O & J & Z & J & Y & F & \textbf{A} & N & Q & Z \\ \hline
+K & H & T & R & O & U & J & V & B & U & \textbf{D} & X & H \\ \hline
+U & \textbf{P} & \textbf{E} & \textbf{R} & \textbf{I} & \textbf{O} & \textbf{D} & \textbf{I} & \textbf{C} & \textbf{O} & A & \textbf{O} & G \\ \hline
+X & R & J & G & E & B & C & F & T & B & H & Y & \textbf{R} \\ \hline
+\end{tabular}\end{solution}
+
+
+\end{questions}
+
+\end{document}
+\grid

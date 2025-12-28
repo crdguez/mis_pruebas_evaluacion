@@ -1,0 +1,175 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+% \printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{Matemáticas II}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Examen Final 1ªEv.}
+\newcommand{\tipo}{B}
+
+
+\newcommand{\timelimit}{90 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+% ##################### si queremos decimales distintos de 0.5 pero ojo, nos cargamos la tabla. Solo funciona  \gradetable 
+\usepackage{fp}
+\usepackage{numprint}
+\npdecimalsign{.}
+\nprounddigits{2}
+\usepackage{etoolbox}
+\makeatletter
+% points printed at each question
+\patchcmd{\point@block}{\@points}{\FPdiv\pointdiv{\@points}{100}\numprint{\pointdiv}}{}{}
+% points printed for each question in grade table
+\patchcmd{\do@oneline@v}{\pointsof@index{pq@index}}{\FPdiv\pointsdiv{\pointsof@index{pq@index}}{100}\numprint{\pointsdiv}}{}{}
+% total number of points in grade table
+\patchcmd{\prt@tablepoints}{\prt@hlfcntr{tbl@points}}{\FPdiv\pointsdiv{\prt@hlfcntr{tbl@points}}{100}\numprint{\pointsdiv}}{}{}
+% patching needed in many other places
+\makeatother
+% ##################### fin de si queremos decimales
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+% \rule[2ex]{\textwidth}{2pt}
+% Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+% La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+% \begin{center}
+
+
+% \addpoints
+%  % \gradetable[h][questions]
+%  % \gradetable[h]
+% 	% \pointtable[h][questions]
+%     \pointtable[h]
+    
+% \end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question Dada la función $$f(x) = (x+2)e^{-x} $$
+
+\begin{parts}
+
+\part[100] Encuentra los extremos relativos, absolutos y los intervalos de crecimiento y decrecimiento de \( f \).
+
+\part[50] Determina la concavidad y convexidad y los puntos de inflexión de la función \( f \).
+
+\part[100] Estudia las asíntotas de \( f \).
+
+\part[100] Halla la recta tangente a la gráfica de la función en $x=-1$
+\end{parts}
+
+\question[150] La vela de un barco tiene forma de triángulo rectángulo. Si la hipotenusa mide \( 8\,\text{m} \), calcula las dimensiones para que la superficie de la vela sea máxima.
+
+% \question[200] Sea la función \( f(x) = -x^{2} + \alpha x + 10 \), donde \( \alpha \) es un parámetro real. 
+% \begin{parts}
+%     \part Calcula el valor de \( \alpha \) para que \( f(x) \) tenga un máximo relativo en \( x = \dfrac{1}{2} \).
+%     \part Calcula el valor de \( \alpha \) para que \( f(x) \) tenga un máximo relativo en \( x = \dfrac{1}{2} \).
+%     % \part Para ese valor de \( \alpha \), calcula el área encerrada entre las gráficas \( f(x) \) y \( f'(x) \).
+% \end{parts}
+
+\question Dada la función $f(x) = 3x^5
++ 10x^3
++ ax + b $:
+\begin{parts}
+    \part[100] Comprueba que la función tiene un único punto de
+inflexión
+    \part[100] Hallar a y b para que la tangente a la gráfica de dicha función en el punto de
+inflexión sea la recta $y = x + 2$
+\end{parts}
+
+% \question Calcula las siguientes integrales
+% \begin{parts}
+%     \part[100] $\int \dfrac{1}{9 x^{2} + 4}\, dx
+% $
+% \part[100] $\int \left(x^{2} + 2 x\right) \ln{\left(x \right)}\, dx$
+% \end{parts}
+% \begin{solution}
+%     $\frac{\operatorname{atan}{\left(\frac{3 x}{2} \right)}}{6}
+% , $ \\ $\frac{x^{2} \left(- 2 x + 6 \left(x + 3\right) \ln{\left(x \right)} - 9\right)}{18}$
+% \end{solution}
+
+
+\question[200] Hallar \( a, b, c \) y \( d \) para que la función
+\[
+f(x)=
+\begin{cases}
+ax+b, & \text{si } x<-1,\\[4pt]
+x^{3}+x^{2}+cx+d, & \text{si } x\ge -1
+\end{cases}
+\]
+sea derivable en \( \mathbb{R} \), corte al eje de ordenadas en el punto \( 3 \) y además alcance un extremo relativo en \( x=1 \).
+
+\question[100] Calcula:
+$$\lim_{x \to 0}\left(\frac{\ln{\left(x + e^{x} \right)}}{x}\right)$$
+    \begin{solution}
+        $2$
+    \end{solution}
+
+% \begin{parts}
+%     \part $$\lim_{x \to 0}\left(\frac{\ln{\left(x + e^{x} \right)}}{x}\right)$$
+%     \begin{solution}
+%         $2$
+%     \end{solution}
+% \end{parts}
+
+\addpoints
+
+\end{questions}
+% \gradetable \\
+% \gradetable[h] \\
+% \pointtable
+\end{document}
+\grid

@@ -1,0 +1,704 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\renewcommand*\half{.5}
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CCSS}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 1ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ de \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+
+
+
+
+
+\question En un comercio de bricolaje se venden listones de madera de tres longitudes: 90 cm, 1,5 m y 2,4 m, cuyos precios respectivos son 4 euros, 6 euros y 10 euros. Un cliente ha comprado 19 listones, con una longitud total de 30 m, que le han costado 126 euros en total.
+
+Calcula el número de listones de cada tipo que ha comprado el cliente.
+
+\begin{parts}
+
+\part[2] Plantea el problema usando expresiones algebraicas
+
+\begin{solution}
+Llamamos:
+
+\begin{itemize}
+    \item \(x\): número de listones de 0,9 m (4 €)
+    \item \(y\): número de listones de 1,5 m (6 €)
+    \item \(z\): número de listones de 2,4 m (10 €)
+\end{itemize}
+
+El problema se traduce al siguiente sistema de ecuaciones:
+
+\[
+\left\{
+\begin{aligned}
+x + y + z &= 19 \\
+0.9x + 1.5y + 2.4z &= 30 \\
+4x + 6y + 10z &= 126
+\end{aligned}
+\right.
+\]
+
+\[
+\left\{
+\begin{aligned}
+x + y + z &= 19 \\
+9x + 15y + 24z &= 300 \\
+4x + 6y + 10z &= 126
+\end{aligned}
+\right.
+\]
+\end{solution}
+
+\part[2] Resuelve el problema utilizando técnicas matriciales
+
+\begin{solution}
+Escribimos la matriz aumentada del sistema:
+
+\[
+\begin{bmatrix}
+1 & 1 & 1 & | & 19 \\
+9 & 15 & 24 & | & 300 \\
+4 & 6 & 10 & | & 126 \\
+\end{bmatrix}
+\]
+
+\textbf{Paso 1:} Restamos 9 veces la fila 1 a la fila 2:
+
+\[
+F_2 \leftarrow F_2 - 9F_1
+\Rightarrow
+\begin{bmatrix}
+1 & 1 & 1 & | & 19 \\
+0 & 6 & 15 & | & 129 \\
+4 & 6 & 10 & | & 126 \\
+\end{bmatrix}
+\]
+
+\textbf{Paso 2:} Restamos 4 veces la fila 1 a la fila 3:
+
+\[
+F_3 \leftarrow F_3 - 4F_1
+\Rightarrow
+\begin{bmatrix}
+1 & 1 & 1 & | & 19 \\
+0 & 6 & 15 & | & 129 \\
+0 & 2 & 6 & | & 50 \\
+\end{bmatrix}
+\]
+
+\textbf{Paso 3:} Eliminamos la segunda columna de la fila 3:
+
+\[
+F_3 \leftarrow F_3 - \left(\frac{1}{3}F_2\right)
+\Rightarrow
+F_3 \leftarrow F_3 - \left(\frac{1}{3} \cdot 6 = 2\right)
+\]
+
+\[
+F_3 \leftarrow F_3 - \left(\frac{2}{6}F_2\right)
+\Rightarrow
+\begin{bmatrix}
+1 & 1 & 1 & | & 19 \\
+0 & 6 & 15 & | & 129 \\
+0 & 0 & 3 & | & 21 \\
+\end{bmatrix}
+\]
+
+\textbf{Paso 4:} Resolvemos por sustitución hacia atrás.
+
+De la tercera fila:
+\[
+3z = 21 \Rightarrow z = 7
+\]
+
+Sustituimos en la segunda fila:
+\[
+6y + 15z = 129 \Rightarrow 6y + 105 = 129 \Rightarrow y = 4
+\]
+
+Sustituimos en la primera fila:
+\[
+x + y + z = 19 \Rightarrow x + 4 + 7 = 19 \Rightarrow x = 8
+\]
+
+\end{solution}
+
+\end{parts}
+
+\question Se considera la matriz $A$ dada por:
+$$A=\left(\begin{matrix}0 & 0 & 6\\\frac{1}{2} & 0 & 0\\0 & \frac{1}{3} & 0\end{matrix}\right)$$
+% A= Matrix(3,3,[nsimplify(i) for i in [0,0,6,1/2,0,0,0,1/3,0]])
+\begin{parts}
+    \part[2] Determina razonadamente $A^3$ y $A^{2023}$
+    \begin{solution}
+        $A^2=\left(\begin{matrix}0 & 2 & 0\\0 & 0 & 3\\\frac{1}{6} & 0 & 0\end{matrix}\right)$, $A^3=\left(\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right)$, $A^4=\left(\begin{matrix}0 & 0 & 6\\\frac{1}{2} & 0 & 0\\0 & \frac{1}{3} & 0\end{matrix}\right)$,
+        $2023=3\cdot674+1 \to A^{2023}=A=\left(\begin{matrix}0 & 0 & 6\\\frac{1}{2} & 0 & 0\\0 & \frac{1}{3} & 0\end{matrix}\right)$
+    \end{solution}
+    % \part[1] Determina justificadamente, sin calcularla, si la matriz A tiene inversa. 
+    % \begin{solution}
+    %     $|A|=1 \to \left(\begin{matrix}0 & 2 & 0\\0 & 0 & 3\\\frac{1}{6} & 0 & 0\end{matrix}\right)$
+    % \end{solution}
+\end{parts}
+
+\question Dadas las matrices  $A=\left(\begin{matrix}-2 & -1 & 1\\-1 & 0 & 1\end{matrix}\right)$ y $B=\left(\begin{matrix}1 & -1\\2 & 0\\-2 & 1\end{matrix}\right)$
+%\noaddpoints % to omit double points count
+
+\begin{parts}
+\part[2] Calcula $C=B\cdot A - A^t \cdot B^t$
+\begin{solution}
+$B\cdot A=\left(\begin{matrix}-1 & -1 & 0\\-4 & -2 & 2\\3 & 2 & -1\end{matrix}\right)$ y $A^t\cdot B^t=\left(\begin{matrix}-1 & -4 & 3\\-1 & -2 & 2\\0 & 2 & -1\end{matrix}\right)$.Luego $C=B\cdot A - A^t \cdot B^t=\left(\begin{matrix}0 & 3 & -3\\-3 & 0 & 0\\3 & 0 & 0\end{matrix}\right)$.
+\end{solution}
+
+%\part[1] Sea $D=A\cdot B$. Halla $D^{-1}$
+%\part[1] Halle la matriz $X$ siendo $D \cdot X =\left(\begin{matrix}4\\2\end{matrix}\right)$
+% \part[2] Halle la matriz $X$ siendo $A\cdot B \cdot X =\left(\begin{matrix}4\\2\end{matrix}\right)$
+%  \begin{solution}
+% $A \cdot B = \left(\begin{matrix}-6 & 3\\-3 & 2\end{matrix}\right)$ y $(A \cdot B)^{-1}=\left(\begin{matrix}- \frac{2}{3} & 1\\-1 & 2\end{matrix}\right)\xrightarrow{X} X=\left(\begin{matrix}- \frac{2}{3} & 1\\-1 & 2\end{matrix}\right)\cdot \left(\begin{matrix}4\\2\end{matrix}\right)=\left(\begin{matrix}- \frac{2}{3}\\0\end{matrix}\right)$
+%  \end{solution}
+
+\end{parts}
+\addpoints
+
+% \question Dadas las matrices  $A=\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)$, $B=\left(\begin{matrix}2 & 1\\0 & -1\\1 & 2\end{matrix}\right)$ y $C=\left(\begin{matrix}1 & -1 & 0\\1 & 0 & 1\end{matrix}\right)$.
+% %\noaddpoints % to omit double points count
+% \begin{parts}
+% \part[1] Encontrar si existe una matriz $X$ tal que $3\cdot X + 2\cdot A = B \cdot C$. 
+% \begin{solution}
+% $X = \frac{1}{3}\cdot (B \cdot C - 2 \cdot A)=\frac{1}{3}\left(\left(\begin{matrix}3 & -2 & 1\\-1 & 0 & -1\\3 & -1 & 2\end{matrix}\right)-\left(\begin{matrix}2 & 0 & -2\\-6 & 4 & 6\\-2 & 6 & 0\end{matrix}\right)\right)=\left(\begin{matrix}\frac{1}{3} & - \frac{2}{3} & 1\\\frac{5}{3} & - \frac{4}{3} & - \frac{7}{3}\\\frac{5}{3} & - \frac{7}{3} & \frac{2}{3}\end{matrix}\right)$ 
+% \end{solution}
+
+
+% \part[1] Encontrar si existe la matriz inversa de $A$, por determinantes
+% \begin{solution}
+% $\left(\begin{matrix}1 & 0 & -1\\-3 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & -3 & -1\\0 & 2 & 3\\-1 & 3 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}-9 & -3 & 2\\-3 & -1 & 0\\-7 & -3 & 2\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{9}{2} & \frac{3}{2} & -1\\\frac{3}{2} & \frac{1}{2} & 0\\\frac{7}{2} & \frac{3}{2} & -1\end{matrix}\right)$.
+% \end{solution}
+
+
+
+% \end{parts}
+% \addpoints
+
+
+
+% \question Dada: $$A=\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)$$ 
+% %\noaddpoints % to omit double points count
+
+% \begin{parts}
+% \part[1] Calcula $$A-2\cdot I$$ siendo $I$ la matriz identidad de orden 3. 
+% \begin{solution}
+% $A-2\cdot I=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$.  
+% \end{solution}
+% \part[2] Determina los valores del parámetro $k$ para que tenga inversa la matriz: $$A-k\cdot I$$
+% \begin{solution}
+% $A-k\cdot I =\left(\begin{matrix}2 & 0 & 1\\0 & 0 & 0\\1 & 0 & 2\end{matrix}\right)-k \cdot \left(\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right)=\left(\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right)$$\to \left|\begin{matrix}2 - k & 0 & 1\\0 & - k & 0\\1 & 0 & 2 - k\end{matrix}\right|=- k \left(k - 3\right) \left(k - 1\right)$$\to k \neq\left( 0, \  1, \  3\right)$.
+% \end{solution}
+
+% \part[2] Encuentra la matriz $X$ que verifica que:$$(A-2\cdot I )\cdot X = 2\cdot I$$.
+% \begin{solution}
+
+% $(A-2\cdot I )\cdot X = 2\cdot I \to X=(A-2\cdot I)^{-1}\cdot 2I$\\Obtengamos las matrices que necesitamos: $(A-2\cdot I )=\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)$ y $\left|\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right|=2$.$\rightarrow$ $\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}0 & 0 & 1\\0 & -2 & 0\\1 & 0 & 0\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)$.\\Por tanto $X=\left(\begin{matrix}0 & 0 & 1\\0 & - \frac{1}{2} & 0\\1 & 0 & 0\end{matrix}\right)\cdot\left(\begin{matrix}2 & 0 & 0\\0 & 2 & 0\\0 & 0 & 2\end{matrix}\right)=\left(\begin{matrix}0 & 0 & 2\\0 & -1 & 0\\2 & 0 & 0\end{matrix}\right)$
+% \end{solution}
+% \end{parts}
+
+% \addpoints
+
+
+
+
+
+
+% \question[2\half] Dada la matriz: $$A=\left(\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right)$$ 
+
+% \begin{parts}
+
+
+% \part Determine el rango de A según los diferentes valores de k  \begin{solution} El único menor es el propio determinante $\to\left|\begin{matrix}k & 0 & k\\0 & k + 2 & 0\\1 & 1 & k + 2\end{matrix}\right|=k \left(k + 1\right) \left(k + 2\right)\to k\neq\left( -2, \  -1, \  0\right)$ rango será 3 \\ 
+% \\ caso k=-2: \\ $B=\left(\begin{matrix}-2 & 0 & -2\\0 & 0 & 0\\1 & 1 & 0\end{matrix}\right) \to ran(B)=2$. 
+% \\ caso k=-1: \\ $B=\left(\begin{matrix}-1 & 0 & -1\\0 & 1 & 0\\1 & 1 & 1\end{matrix}\right) \to ran(B)=2$. 
+% \\ caso k=0: \\ $B=\left(\begin{matrix}0 & 0 & 0\\0 & 2 & 0\\1 & 1 & 2\end{matrix}\right) \to ran(B)=2$.  \end{solution}
+% % \part[] Determine la inversa de A para k=1  
+% % \begin{solution} $\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 0\\1 & 1 & 3\end{matrix}\right)\xrightarrow{traspuesta}\left(\begin{matrix}1 & 0 & 1\\0 & 3 & 1\\1 & 0 & 3\end{matrix}\right)\xrightarrow{adjunta}\left(\begin{matrix}9 & 1 & -3\\0 & 2 & 0\\-3 & -1 & 3\end{matrix}\right)\xrightarrow{inversa}\left(\begin{matrix}\frac{3}{2} & \frac{1}{6} & - \frac{1}{2}\\0 & \frac{1}{3} & 0\\- \frac{1}{2} & - \frac{1}{6} & \frac{1}{2}\end{matrix}\right)$. \end{solution}
+% \end{parts}
+
+% \question Sabiendo que $\left|\begin{matrix}x & -3 & 1\\y & 0 & 1\\z & 7 & 1\end{matrix}\right|=6$, calcula usando las propiedades de los determinantes:
+% \begin{parts}
+% \part[1] $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|$
+% \begin{solution}
+% $\left|\begin{matrix}\frac{z}{2} & z+7 & 3\\\frac{y}{2} & y+0 & 3\\\frac{x}{2} & x-3 & 3\end{matrix}\right|=
+% \frac{3}{2}\cdot\left|\begin{matrix}z & z+7 & 1\\y & y+0 & 1\\x & x-3 & 1\end{matrix}\right|=
+% \frac{3}{2}\cdot\left|\begin{matrix}z & z & 1\\y & y & 1\\x & x & 1\end{matrix}\right|+\frac{3}{2}\cdot\left|\begin{matrix}z & 7 & 1\\y & 0 & 1\\x & -3 & 1\end{matrix}\right|=\frac{3}{2}\cdot 0+\frac{3}{2}\cdot\left|\begin{matrix}z & 7 & 1\\y & 0 & 1\\x & -3 & 1\end{matrix}\right|=-\frac{3}{2}\cdot\left|\begin{matrix}x & -3 & 1\\y & 0 & 1\\z & 7 & 1\end{matrix}\right|=-\frac{3}{2}\cdot 6=-9
+% $
+% \end{solution}
+% \part[1] $\left|\begin{matrix}x & -3 & 1 & 2\\ y & 0 & 1 &2\\z & 7 & 1&2 \\ 0&6&0&2\end{matrix}\right|$
+% \begin{solution}
+% Desarrollando por los ajuntos de la última fila: \\
+% $\left|\begin{matrix}x & -3 & 1 & 2\\ y & 0 & 1 &2\\z & 7 & 1&2 \\ 0&6&0&2\end{matrix}\right|=
+% 0\cdot A_{41}+6\cdot A_{42}+0\cdot A_{43}+2\cdot A_{44}=6\cdot \left|\begin{matrix}x&1&2\\y&1&2\\z&1&2 \end{matrix}\right|+2\cdot \left|\begin{matrix}x&-3&1\\y&0&1\\z&7&1 \end{matrix}\right|=6\cdot 0+2\cdot 6=12
+% $
+% \end{solution}
+% \end{parts}
+
+% \question[1\half] Un arquitecto está diseñando un pequeño centro comercial con tres tiendas principales.
+% Para asegurar una buena distribución de productos y servicios, ha identificado tres tipos de
+% tiendas:
+% \begin{itemize}
+%     \item A: Ropa
+%     \item B:Electrónica
+%     \item C:Alimentos
+% \end{itemize}
+% El arquitecto tiene que decidir cómo asignar metros cuadrados a cada tipo de tienda en tres
+% plantas diferentes del edificio. Los metros cuadrados disponibles en cada planta están
+% organizados en la siguiente tabla:
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|c|c|c|c|}
+%         \hline
+%         \textbf{Planta} & \textbf{Tienda A (Ropa)} & \textbf{Tienda B (Electrónica)} & \textbf{Tienda C (Alimentos)} \\
+%         \hline
+%         Planta 1 & 200 m\(^2\) & 100 m\(^2\) & 150 m\(^2\) \\
+%         \hline
+%         Planta 2 & 180 m\(^2\) & 120 m\(^2\) & 130 m\(^2\) \\
+%         \hline
+%         Planta 3 & 220 m\(^2\) & 140 m\(^2\) & 170 m\(^2\) \\
+%         \hline
+%     \end{tabular}
+%     \caption{Distribución de metros cuadrados por planta y tipo de tienda}
+% \end{table}
+
+% Además, las rentas por metro cuadrado varían según el tipo de tienda:
+
+% \begin{itemize}
+%     \item Tienda A (Ropa): 12 \euro/m\(^2\)
+%     \item Tienda B (Electrónica): 15 \euro/m\(^2\)
+%     \item Tienda C (Alimentos): 10 \euro/m\(^2\)
+% \end{itemize}
+
+% \begin{parts}
+%     \part Representa los metros cuadrados asignados a cada tipo de tienda en cada planta
+% mediante una matriz de distribución.
+%     \part Crea una matriz de rentas, donde cada elemento corresponde a la renta por metro
+% cuadrado de cada tipo de tienda. Luego, utilizando la multiplicación de matrices, calcula los
+% ingresos totales que generaría el centro comercial en función de los metros cuadrados
+% asignados y las rentas por metro cuadrado.
+%     \part Si se decide aumentar en un 10\% el área asignada a la Tienda A en cada planta y reducir
+% en un 5\% el área asignada a la Tienda B en la Planta 3, ¿cómo quedaría la nueva matriz de
+% distribución?
+% \end{parts}
+% \newpage
+% \question Un arquitecto está diseñando un pequeño centro comercial. Para asegurar una buena distribución de productos y servicios, ha identificado tres tipos de tiendas:
+% \begin{itemize}
+%     \item A: Ropa
+%     \item B: Electrónica
+%     \item C: Alimentos
+% \end{itemize}
+% El arquitecto decide asignar una tienda de cada tipo en cada una de las 3 plantas del centro comercial. Los metros cuadrados asignados por tipo de tienda en cada planta están organizados en la tabla siguiente:
+
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|c|c|c|c|}
+%         \hline
+%         \textbf{Planta} & \textbf{Tienda A (Ropa)} & \textbf{Tienda B (Electrónica)} & \textbf{Tienda C (Alimentos)} \\
+%         \hline
+%         Planta 1 & 200 m\(^2\) & 100 m\(^2\) & 150 m\(^2\) \\
+%         \hline
+%         Planta 2 & 180 m\(^2\) & 120 m\(^2\) & 130 m\(^2\) \\
+%         \hline
+%         Planta 3 & 220 m\(^2\) & 140 m\(^2\) & 170 m\(^2\) \\
+%         \hline
+%     \end{tabular}
+%     \caption{Distribución de metros cuadrados por planta y tipo de tienda}
+% \end{table}
+
+% Además, la renta (ingresos) por metro cuadrado varían según el tipo de tienda:
+% \begin{itemize}
+%     \item Tienda A (Ropa): 12 \euro/m\(^2\)
+%     \item Tienda B (Electrónica): 15 \euro/m\(^2\)
+%     \item Tienda C (Alimentos): 10 \euro/m\(^2\)
+% \end{itemize}
+
+% \begin{parts}
+%     \part[0\half] Representa los metros cuadrados asignados a cada tipo de tienda en cada planta mediante una matriz
+    
+%     \begin{solution}
+%     La matriz de distribución de los metros cuadrados asignados a cada tipo de tienda en cada planta es:
+
+%     \[
+%     D = \begin{pmatrix}
+%     200 & 100 & 150 \\
+%     180 & 120 & 130 \\
+%     220 & 140 & 170
+%     \end{pmatrix}
+%     \]
+%     \end{solution}
+
+%     \part[0\half] Crea una matriz de rentas, donde cada elemento corresponda a la renta por metro cuadrado de cada tipo de tienda. Luego, utilizando la multiplicación de matrices, calcula los ingresos por planta y el total que generaría el centro comercial en función de los metros cuadrados asignados y las rentas por metro cuadrado.
+
+%     \begin{solution}
+%     La matriz de rentas se puede expresar como:
+
+%     \[
+%     R = \begin{pmatrix}
+%     12  \\
+%     15 \\
+%     10
+%     \end{pmatrix}
+%     \]
+
+%     Calculamos los ingresos totales multiplicando \( D \) por \( R \):
+
+%     \[
+%     I = D \cdot R = \begin{pmatrix}
+%     200 & 100 & 150 \\
+%     180 & 120 & 130 \\
+%     220 & 140 & 170
+%     \end{pmatrix}
+%     \cdot
+%     \begin{pmatrix}
+%     12  \\
+%     15 \\
+%     10
+%     \end{pmatrix}
+%     \]
+
+%     Multiplicamos las matrices:
+
+%     \[
+%     I = \begin{pmatrix}5400\\5260\\6440\end{pmatrix}
+%     \]
+
+%     Los ingresos totales de cada planta son:
+%     \begin{itemize}
+%         \item Planta 1: \( 2400 + 1500 + 1500 = 5400 \, \euro \)
+%         \item Planta 2: \( 2160 + 1800 + 1300 = 5260 \, \euro \)
+%         \item Planta 3: \( 2640 + 2100 + 1700 = 6440 \, \euro \)
+%     \end{itemize}
+
+%     Por lo tanto, los ingresos totales del centro comercial son:
+
+%     \[
+%     5400 + 5260 + 6440 = 17100 \, \euro
+%     \]
+%     \end{solution}
+
+%     \part[0\half] Si se decide aumentar en un 10\% el área asignada a la Tienda A en cada planta y reducir en un 5\% el área asignada a la Tienda B en la Planta 3, ¿cómo quedaría la matriz del primer apartado?
+
+%     \begin{solution}
+%     Aumentamos en un 10\% el área asignada a la Tienda A:
+%     \begin{itemize}
+%         \item Planta 1: \( 200 \, m^2 \times 1.10 = 220 \, m^2 \)
+%         \item Planta 2: \( 180 \, m^2 \times 1.10 = 198 \, m^2 \)
+%         \item Planta 3: \( 220 \, m^2 \times 1.10 = 242 \, m^2 \)
+%     \end{itemize}
+
+%     Reducimos en un 5\% el área asignada a la Tienda B en la Planta 3:
+%     \begin{itemize}
+%         \item Planta 3: \( 140 \, m^2 \times 0.95 = 133 \, m^2 \)
+%     \end{itemize}
+
+%     La nueva matriz de distribución es:
+
+%     \[
+%     D_{\text{nuevo}} = \begin{pmatrix}
+%     220 & 100 & 150 \\
+%     198 & 120 & 130 \\
+%     242 & 133 & 170
+%     \end{pmatrix}
+%     \]
+%     \end{solution}
+
+% \end{parts}
+
+
+\question 
+Para dos matrices \( A \) y \( B \) se verifica que:
+\[
+A - B = \begin{pmatrix} 1 & 1 \\ -5 & 2 \end{pmatrix}, 
+\quad \text{y} \quad 
+2A + B = \begin{pmatrix} 5 & 2 \\ 2 & 7 \end{pmatrix}.
+\]
+
+\begin{parts}
+
+\part[2] Calcule las matrices \( A \) y \( B \).
+\begin{solution}
+Llamemos a las ecuaciones:
+
+(1) \( A - B = \begin{pmatrix} 1 & 1 \\ -5 & 2 \end{pmatrix} \) \\
+(2) \( 2A + B = \begin{pmatrix} 5 & 2 \\ 2 & 7 \end{pmatrix} \)
+
+Sumamos (1) y (2):
+
+\[
+(A - B) + (2A + B) = \begin{pmatrix} 1 & 1 \\ -5 & 2 \end{pmatrix} + \begin{pmatrix} 5 & 2 \\ 2 & 7 \end{pmatrix}
+\Rightarrow 3A = \begin{pmatrix} 6 & 3 \\ -3 & 9 \end{pmatrix}
+\Rightarrow A = \begin{pmatrix} 2 & 1 \\ -1 & 3 \end{pmatrix}
+\]
+
+Sustituimos en (1) para obtener \( B \):
+
+\[
+B = A - \begin{pmatrix} 1 & 1 \\ -5 & 2 \end{pmatrix} = 
+\begin{pmatrix} 2 & 1 \\ -1 & 3 \end{pmatrix} - \begin{pmatrix} 1 & 1 \\ -5 & 2 \end{pmatrix} = 
+\begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}
+\]
+\end{solution}
+
+\part[2] Despeje la matriz \( X \) en la ecuación matricial \( A \cdot X - B = X \) y calcule su valor.
+\begin{solution}
+Dada la ecuación:
+
+\[
+A \cdot X - B = X
+\Rightarrow A \cdot X - X = B
+\Rightarrow (A - I)X = B
+\]
+
+Calculamos \( A - I \), donde \( I \) es la matriz identidad:
+
+\[
+A - I = \begin{pmatrix} 2 & 1 \\ -1 & 3 \end{pmatrix} - \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = 
+\begin{pmatrix} 1 & 1 \\ -1 & 2 \end{pmatrix}
+\]
+
+Ahora resolvemos \( (A - I)X = B \):
+
+\[
+\begin{pmatrix} 1 & 1 \\ -1 & 2 \end{pmatrix} X = \begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}
+\]
+
+Multiplicamos ambos lados por \( (A - I)^{-1} \):
+
+Primero hallamos la inversa de \( A - I \):
+
+\[
+\text{Determinante} = 1(2) - (-1)(1) = 2 + 1 = 3
+\]
+\[
+(A - I)^{-1} = \frac{1}{3} \begin{pmatrix} 2 & -1 \\ 1 & 1 \end{pmatrix}
+\]
+
+Entonces:
+\[
+X = (A - I)^{-1} \cdot B = \frac{1}{3} \begin{pmatrix} 2 & -1 \\ 1 & 1 \end{pmatrix} \cdot \begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}
+\]
+
+Multiplicamos las matrices:
+
+\[
+X = \frac{1}{3} \begin{pmatrix} 2(1) + (-1)(4) & 2(0) + (-1)(1) \\ 1(1) + 1(4) & 1(0) + 1(1) \end{pmatrix} 
+= \frac{1}{3} \begin{pmatrix} -2 & -1 \\ 5 & 1 \end{pmatrix}
+= \begin{pmatrix} -\frac{2}{3} & -\frac{1}{3} \\ \frac{5}{3} & \frac{1}{3} \end{pmatrix}
+\]
+
+\end{solution}
+
+\end{parts}
+
+
+% \question 
+% Se considera el siguiente sistema de ecuaciones lineales dependiente del parámetro real \( a \):
+
+% \[
+% \left\{
+% \begin{array}{rcl}
+% x - y + z &=& -1 \\
+% a x + ( -a + 2 ) y &=& 2 \\
+% 2x - (a + 3)y + (a + 2)z &=& -5
+% \end{array}
+% \right.
+% \]
+
+% \begin{parts}
+
+% \part[1\half] Discuta el sistema en función de los valores del parámetro \( a \).
+% \begin{solution}
+% Para discutir el sistema, se puede expresar en forma matricial aumentada:
+
+% \[
+% \left[
+% \begin{array}{ccc|c}
+% 1 & -1 & 1 & -1 \\
+% a & -a + 2 & 0 & 2 \\
+% 2 & -a - 3 & a + 2 & -5
+% \end{array}
+% \right]
+% \]
+
+% A partir de aquí se puede aplicar el método de Gauss para escalonar la matriz y analizar la compatibilidad del sistema según el rango de la matriz de coeficientes y el rango de la ampliada, en función del parámetro \( a \).
+
+% (Sigue el desarrollo del análisis según lo necesites...)
+% \end{solution}
+
+% \part[0\half] Resuelva el sistema de ecuaciones para \( a = 1 \).
+% \begin{solution}
+% Sustituimos \( a = 1 \) en el sistema:
+
+% \[
+% \left\{
+% \begin{array}{rcl}
+% x - y + z &=& -1 \\
+% x + y &=& 2 \\
+% 2x - 4y + 3z &=& -5
+% \end{array}
+% \right.
+% \]
+
+% Resolviendo paso a paso:
+
+% 1. De la segunda ecuación: \( x + y = 2 \Rightarrow x = 2 - y \)
+
+% 2. Sustituimos en la primera:
+% \[
+% (2 - y) - y + z = -1 \Rightarrow 2 - 2y + z = -1 \Rightarrow z = 2y - 3
+% \]
+
+% 3. Sustituimos en la tercera:
+% \[
+% 2(2 - y) - 4y + 3(2y - 3) = -5
+% \Rightarrow 4 - 2y - 4y + 6y - 9 = -5
+% \Rightarrow -5 = -5 \quad \text{(Identidad)}
+% \]
+
+% Esto indica que el sistema es compatible indeterminado. Hay una variable libre.
+
+% Sea \( y = t \), entonces:
+% \[
+% x = 2 - t, \quad z = 2t - 3
+% \]
+
+% Solución general:
+% \[
+% (x, y, z) = (2 - t, \, t, \, 2t - 3), \quad t \in \mathbb{R}
+% \]
+% \end{solution}
+
+% \end{parts}
+
+\question[3] Discutir el sistema lineal de ecuaciones en función de los valores del parámetro \( a \):
+\[
+\begin{cases}
+x + 3y + z = 5 \\
+ax + 2z = 0 \\
+ay - z = a
+\end{cases}
+\]
+\begin{solution}
+    $A\sim\left(\begin{matrix}1 & 3 & 1 & 5\\0 & - 3 a & 2 - a & - 5 a\\0 & 0 & a+1 & 2a\end{matrix}\right)
+$
+\\
+Si $a=-1 \to \left(\begin{matrix}1 & 3 & 1 & 5\\0 & 3 & 3 & 5\\0 & 0 & 0 & 2\end{matrix}\right)$ S.I.
+
+Si $a=0 \to \left(\begin{matrix}1 & 3 & 1 & 5\\0 & 0 & 2 & 0\\0 & 0 & 1 & 0\end{matrix}\right) \sim \left(\begin{matrix}1 & 3 & 1 & 5\\0 & 0 & 2 & 0\\0 & 0 & 0 & 0\end{matrix}\right)
+$ S.C.I
+
+Si $a \neq 0 \land a \neq -1$ S.C.D
+\end{solution}
+
+% \question[1] Sean las matrices \( A = \begin{pmatrix} 1 & 0 \\ -1 & 2 \end{pmatrix} \) y \( B = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \). Hallar la matriz \( X \) que verifica
+% \[
+% AX - A = BX + B.
+% \]
+% \begin{solution}
+%     $(A-B)X=A+B \to X=(A-B)^{-1}(A+B)$\\
+%     $A-B=\left(\begin{matrix}-1 & -1\\-2 & 0\end{matrix}\right) \to (A-B)^{-1}= \left(\begin{matrix}0 & - \frac{1}{2}\\-1 & \frac{1}{2}\end{matrix}\right)$ \\
+%     $A+B=\left(\begin{matrix}3 & 1\\0 & 4\end{matrix}\right) \to X=\left(\begin{matrix}0 & -2\\-3 & 1\end{matrix}\right)
+% $
+
+    
+% \end{solution}
+
+
+
+
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid

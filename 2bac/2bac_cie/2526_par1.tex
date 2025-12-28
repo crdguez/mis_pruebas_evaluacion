@@ -1,0 +1,424 @@
+\documentclass[addpoints,spanish, 12pt,a4paper]{exam}
+%\documentclass[answers, spanish, 12pt,a4paper]{exam}
+\printanswers
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos:}
+\htword{Total}
+\vtword{Total}
+\hsword{Resultado:}
+\hqword{Ejercicio:}
+\vqword{Ejercicio:}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{eurosym}
+%\usepackage[spanish,es-lcroman, es-tabla, es-noshorthands]{babel}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{yhmath}
+
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-2.4cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+\usepackage{graphicx}
+
+\graphicspath{{../../img/}} 
+
+\newcommand{\class}{2º Bachillerato CIT}
+\newcommand{\examdate}{\today}
+\newcommand{\examnum}{Parcial 1ªEv.}
+\newcommand{\tipo}{A}
+
+
+\newcommand{\timelimit}{45 minutos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución:}\enspace}
+
+
+\pagestyle{head}
+\firstpageheader{\includegraphics[width=0.2\columnwidth]{header_left}}{\textbf{Departamento de Matemáticas\linebreak \class}\linebreak \examnum}{\includegraphics[width=0.1\columnwidth]{header_right}}
+\runningheader{\class}{\examnum}{Página \thepage\ of \numpages}
+\runningheadrule
+
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} }
+\textbf{Nombre:} \makebox[3.5in]{\hrulefill} & \textbf{Fecha:}\makebox[1in]{\hrulefill} \\
+ & \\
+\textbf{Tiempo: \timelimit} & Tipo: \tipo 
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+Esta prueba tiene \numquestions\ ejercicios. La puntuación máxima es de \numpoints. 
+La nota final de la prueba será la parte proporcional de la puntuación obtenida sobre la puntuación máxima. 
+
+\begin{center}
+
+
+\addpoints
+ %\gradetable[h][questions]
+	\pointtable[h][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+%\question 
+%
+%\begin{parts}
+%\part[2] 
+%\begin{solution}
+%\end{solution}
+%
+%
+%\end{parts}
+%\addpoints
+
+\question[1] Calcula el siguiente límite:
+
+$$\lim_{x \to 1}\left(\frac{1 - \sqrt{2 - x}}{x^{2} - 3 x + 2}\right)$$
+
+\begin{solution}$- \frac{1}{2}$\end{solution}
+
+% \question[1] Calcula el siguiente límite:
+
+% $$\lim_{x \to 3}\left(\frac{2 - \sqrt{1 + x}}{x -3}\right)$$
+
+% \begin{solution}$- \frac{1}{4}$\end{solution}
+
+% \question[1] Calcula el siguiente límite:
+
+% $$\lim_{x \to \infty} \left(\frac{x + 5}{x - 1}\right)^{2 x + 1}$$
+
+% \begin{solution}$e^{12}$\end{solution}
+
+
+\question[2] Calcula el siguiente límite:
+
+\[
+\lim_{x \to 0} \cos(2x)^{\frac{4}{x^2}}
+\]
+
+\begin{solution}
+Cuando \(x \to 0\), se tiene:
+
+\[
+\cos(2x) \to 1 \quad \text{y} \quad \frac{4}{x^2} \to \infty,
+\]
+
+lo que nos da una forma indeterminada del tipo \(1^\infty\).
+
+Tomamos logaritmo natural:
+
+\[
+\ln L = \lim_{x \to 0} \frac{4}{x^2} \ln(\cos(2x))
+\]
+
+Usamos el desarrollo de Taylor de \(\cos(2x)\):
+
+\[
+\cos(2x) = 1 - \frac{(2x)^2}{2} + \cdots = 1 - 2x^2 + \cdots
+\]
+
+Entonces:
+
+\[
+\ln(\cos(2x)) \approx \ln(1 - 2x^2) \approx -2x^2
+\]
+
+Sustituyendo:
+
+\[
+\ln L = \lim_{x \to 0} \frac{4}{x^2} \cdot (-2x^2) = -8
+\]
+
+Por lo tanto:
+
+\[
+L = e^{-8}
+\]
+
+\[
+\boxed{e^{-8}}
+\]
+\end{solution}
+
+% \question[1] Calcula el siguiente límite:
+
+% $$\lim_{x \to \infty} \left(\frac{x + 2}{x - 3}\right)^{2 x}$$
+
+% \begin{solution}$e^{10}$\end{solution}
+
+% \question Sea la función: $$g(x)=\dfrac{x^2-4}{x-2}$$
+% \begin{parts}
+% \part[1] Estudia la continuidad de la función
+% \begin{solution}$\mathbb{R}-\left\{ 2\right\}=\left(-\infty,2\right)\cup \left(2,\infty\right)
+% $\end{solution}
+
+% \part[2] Redefine la función para que sea continua en $\mathbb{R}$
+% \begin{solution} $f(x)=\left\{ \begin{array}{ccl} \dfrac{x^2-4}{x-2} & , & x \neq 2 \\ 4 & , & x=2 \end{array} \right.$ \end{solution}
+% \end{parts}
+
+\question Dada la función:
+$$f(x)=\left\{ \begin{array}{ccl} \dfrac{e^{-x}}{2} & , & x < 0 \\ & \\ -x^2+k & , & x\geqslant 0 \end{array} \right.$$
+\begin{parts}
+\part[2] Calcula el valor de $k$ para que la función sea continua
+\begin{solution}
+$k=\frac{1}{2}$
+\end{solution}
+\part[1] Representa gráficamente la función (esbozo razonado)
+\begin{solution}
+\includegraphics[width=0.3\columnwidth]{funcion1}
+\end{solution}
+\end{parts}
+
+% \question Dada la función:
+% $$f(x)=\dfrac{x^2+5x+3}{x+2}$$
+% \begin{parts}
+% \part[2] Calcula las asíntotas
+% \begin{solution}
+% $x=-2$ y $y=x+3$
+% \end{solution}
+% \part[1] Determina si la gráfica corta a alguna de las asíntotas
+% \begin{solution}
+% No corta a ninguna
+% \end{solution}
+% \end{parts}		
+
+\question Dada la función:
+$$f(x)=\dfrac{x^3-2x+1}{x^2-1}$$
+\begin{parts}
+\part[2] Calcula las asíntotas
+\begin{solution}
+$f(x)=\frac{\left(x - 1\right) \left(x^{2} + x - 1\right)}{(x+1)(x-1)}$ \\
+$x=-1$ y $y=x$
+\end{solution}
+\part[1] Determina si la gráfica corta a alguna de las asíntotas
+\begin{solution}
+No corta a ninguna
+\end{solution}
+\end{parts}		
+
+\question[3] Calcula las siguientes derivadas
+\begin{parts}
+    \part $y=1+x^2\cdot e^{-x^2}$  
+    \begin{solution}
+        Para derivar \( y \) con respecto a \( x \), aplicamos la regla del producto y la regla de la cadena:
+        
+        \[
+        y' = \frac{d}{dx} \left( 1 + x^2 e^{-x^2} \right)
+        \]
+        
+        La derivada de \( 1 \) es \( 0 \), y derivamos \( x^2 e^{-x^2} \) utilizando la regla del producto:
+        
+        \[
+        y' = 2x e^{-x^2} + x^2 \cdot \frac{d}{dx}(e^{-x^2})
+        \]
+        
+        La derivada de \( e^{-x^2} \) con respecto a \( x \) es \( -2x e^{-x^2} \), entonces:
+        
+        \[
+        y' = 2x e^{-x^2} + x^2 \cdot (-2x e^{-x^2})
+        \]
+        
+        Simplificando:
+        
+        \[
+        y' = 2x e^{-x^2} - 2x^3 e^{-x^2}
+        \]
+        
+        Finalmente, factorizamos \( 2x e^{-x^2} \):
+        
+        \[
+        y' = 2x e^{-x^2} (1 - x^2)
+        \]
+    \end{solution}
+    \part $y = \ln \sqrt{\dfrac{x^2-1}{x^2+x}}$    \begin{solution}
+        Primero, simplificamos la expresión utilizando la propiedad de los logaritmos \( \ln \sqrt{a} = \frac{1}{2} \ln a \):
+        
+        \[
+        y = \frac{1}{2} \ln \left( \frac{x^2 - 1}{x^2 + x} \right)
+        \]
+        
+        Ahora derivamos con respecto a \( x \). Usamos la regla de la cadena y la regla del cociente para derivar el logaritmo:
+        
+        \[
+        y' = \frac{1}{2} \cdot \frac{1}{\frac{x^2 - 1}{x^2 + x}} \cdot \frac{d}{dx} \left( \frac{x^2 - 1}{x^2 + x} \right)
+        \]
+        
+        La derivada de \( \frac{x^2 - 1}{x^2 + x} \) la obtenemos utilizando la regla del cociente:
+        
+        \[
+        \frac{d}{dx} \left( \frac{x^2 - 1}{x^2 + x} \right) = \frac{(2x)(x^2 + x) - (x^2 - 1)(2x + 1)}{(x^2 + x)^2}
+        \]
+        
+        Simplificando el numerador:
+        
+        \[
+        (2x)(x^2 + x) = 2x^3 + 2x^2
+        \]
+        \[
+        (x^2 - 1)(2x + 1) = (x^2 - 1)(2x) + (x^2 - 1)(1) = 2x^3 - 2x + x^2 - 1
+        \]
+        
+        Ahora, restamos ambos términos:
+        
+        \[
+        (2x^3 + 2x^2) - (2x^3 - 2x + x^2 - 1) = 2x^3 + 2x^2 - 2x^3 + 2x - x^2 + 1 = x^2 + 2x + 1
+        \]
+        
+        Entonces, la derivada es:
+        
+        \[
+        \frac{d}{dx} \left( \frac{x^2 - 1}{x^2 + x} \right) = \frac{x^2 + 2x + 1}{(x^2 + x)^2}
+        \]
+        
+        Sustituyendo en la expresión original de la derivada:
+        
+        \[
+        y' = \frac{1}{2} \cdot \frac{1}{\frac{x^2 - 1}{x^2 + x}} \cdot \frac{x^2 + 2x + 1}{(x^2 + x)^2}
+        \]
+        
+        Simplificamos el cociente:
+        
+        \[
+        y' = \frac{1}{2} \cdot \frac{x^2 + 2x + 1}{(x^2 - 1)(x^2 + x)}
+        \]
+        
+        Finalmente, podemos factorizar el numerador \( x^2 + 2x + 1 \) como \( (x + 1)^2 \), obteniendo la derivada final:
+        
+        \[
+        y' = \frac{(x + 1)^2}{2(x^2 - 1)(x^2 + x)}
+        \]
+    \end{solution}
+
+    \part $y=\arcsen{\left(x^2-4\right)}$
+        \begin{solution}
+        Para derivar \( y = \arcsin(x^2 - 4) \), utilizamos la fórmula para la derivada de \( \arcsin(u) \), que es:
+        
+        \[
+        \frac{d}{dx} \arcsin(u) = \frac{1}{\sqrt{1 - u^2}} \cdot \frac{du}{dx}
+        \]
+        
+        En este caso, \( u = x^2 - 4 \). Derivamos \( u \) con respecto a \( x \):
+        
+        \[
+        \frac{du}{dx} = 2x
+        \]
+        
+        Ahora, sustituimos en la fórmula de la derivada de \( \arcsin \):
+        
+        \[
+        y' = \frac{1}{\sqrt{1 - (x^2 - 4)^2}} \cdot 2x
+        \]
+        
+        Simplificamos la expresión dentro de la raíz:
+        
+        \[
+        y' = \frac{2x}{\sqrt{1 - (x^2 - 4)^2}}
+        \]
+        
+        Expandimos \( (x^2 - 4)^2 \):
+        
+        \[
+        (x^2 - 4)^2 = x^4 - 8x^2 + 16
+        \]
+        
+        Entonces, la derivada queda:
+        
+        \[
+        y' = \frac{2x}{\sqrt{1 - (x^4 - 8x^2 + 16)}}
+        \]
+        
+        Finalmente, simplificamos el término en el denominador:
+        
+        \[
+        y' = \frac{2x}{\sqrt{1 - x^4 + 8x^2 - 16}}
+        \]
+    \end{solution}
+
+\end{parts}
+
+\question[2] Deriva tomando logaritmos la siguiente función:
+ $$y=\left(2x\right)^{2x}$$
+        \begin{solution}
+ Aplicamos logaritmos en ambos lados de la ecuación:
+
+
+
+\[
+\ln y = \ln\left((2x)^{2x}\right)
+\]
+
+
+
+Usamos la propiedad del logaritmo: \( \ln(a^b) = b \ln a \):
+
+
+
+\[
+\ln y = 2x \cdot \ln(2x)
+\]
+
+
+
+Derivamos ambos lados con respecto a \( x \). Usamos la regla de la cadena en el lado izquierdo:
+
+
+
+\[
+\frac{1}{y} \cdot \frac{dy}{dx} = \frac{d}{dx}\left(2x \cdot \ln(2x)\right)
+\]
+
+
+
+Aplicamos la regla del producto en el lado derecho:
+
+
+
+\[
+\frac{dy}{dx} = y \cdot \left[2 \cdot \ln(2x) + 2x \cdot \frac{1}{2x} \cdot 2\right]
+\]
+
+
+
+Simplificamos:
+
+
+
+\[
+\frac{dy}{dx} = y \cdot \left[2 \cdot \ln(2x) + 2\right]
+\]
+
+
+
+Recordando que \( y = (2x)^{2x} \), sustituimos:
+
+
+
+\[
+\frac{dy}{dx} = (2x)^{2x} \cdot \left[2 \cdot \ln(2x) + 2\right]
+\]
+    \end{solution}
+
+
+\addpoints
+
+\end{questions}
+
+\end{document}
+\grid
